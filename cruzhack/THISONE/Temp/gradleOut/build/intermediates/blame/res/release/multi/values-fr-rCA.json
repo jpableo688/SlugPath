@@ -1,0 +1,425 @@
+[
+    {
+        "outputFile": "/Users/jovenpableo/Desktop/THISONE/Temp/gradleOut/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 98,
+                    "endOffset": 199
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 262,
+                        "endColumn": 94,
+                        "endOffset": 356
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 204,
+                    "endColumn": 79,
+                    "endOffset": 279
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 357,
+                        "endColumn": 75,
+                        "endOffset": 432
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 284,
+                    "endColumn": 81,
+                    "endOffset": 361
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 433,
+                        "endColumn": 77,
+                        "endOffset": 510
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 366,
+                    "endColumn": 113,
+                    "endOffset": 475
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 511,
+                        "endColumn": 109,
+                        "endOffset": 620
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 480,
+                    "endColumn": 199,
+                    "endOffset": 675
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 621,
+                        "endColumn": 195,
+                        "endOffset": 816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 680,
+                    "endColumn": 157,
+                    "endOffset": 833
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 817,
+                        "endColumn": 153,
+                        "endOffset": 970
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 838,
+                    "endColumn": 81,
+                    "endOffset": 915
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 971,
+                        "endColumn": 77,
+                        "endOffset": 1048
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 920,
+                    "endColumn": 112,
+                    "endOffset": 1028
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1049,
+                        "endColumn": 108,
+                        "endOffset": 1157
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1033,
+                    "endColumn": 112,
+                    "endOffset": 1141
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1158,
+                        "endColumn": 108,
+                        "endOffset": 1266
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1146,
+                    "endColumn": 113,
+                    "endOffset": 1255
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1267,
+                        "endColumn": 109,
+                        "endOffset": 1376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1260,
+                    "endColumn": 91,
+                    "endOffset": 1347
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1377,
+                        "endColumn": 87,
+                        "endOffset": 1464
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1352,
+                    "endColumn": 269,
+                    "endOffset": 1617
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1465,
+                        "endColumn": 265,
+                        "endOffset": 1730
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1622,
+                    "endColumn": 276,
+                    "endOffset": 1894
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 1731,
+                        "endColumn": 272,
+                        "endOffset": 2003
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1899,
+                    "endColumn": 110,
+                    "endOffset": 2005
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 2004,
+                        "endColumn": 106,
+                        "endOffset": 2110
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 2010,
+                    "endColumn": 115,
+                    "endOffset": 2121
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2111,
+                        "endColumn": 111,
+                        "endOffset": 2222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 2126,
+                    "endColumn": 114,
+                    "endOffset": 2236
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2223,
+                        "endColumn": 110,
+                        "endOffset": 2333
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 2241,
+                    "endColumn": 139,
+                    "endOffset": 2376
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 0,
+                        "startOffset": 2334,
+                        "endColumn": 135,
+                        "endOffset": 2469
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 2381,
+                    "endColumn": 169,
+                    "endOffset": 2546
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 0,
+                        "startOffset": 2470,
+                        "endColumn": 169,
+                        "endOffset": 2639
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2551,
+                    "endColumn": 104,
+                    "endOffset": 2651
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 0,
+                        "startOffset": 2640,
+                        "endColumn": 100,
+                        "endOffset": 2740
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2656,
+                    "endColumn": 79,
+                    "endOffset": 2731
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 0,
+                        "startOffset": 2741,
+                        "endColumn": 75,
+                        "endOffset": 2816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2736,
+                    "endColumn": 86,
+                    "endOffset": 2818
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 0,
+                        "startOffset": 2817,
+                        "endColumn": 82,
+                        "endOffset": 2899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2823,
+                    "endColumn": 101,
+                    "endOffset": 2920
+                },
+                "from": {
+                    "file": "/Users/jovenpableo/.android/build-cache/f7585a7e47c2d318df22af8dfa8409bb3a6a8d4b/output/res/values-fr-rCA/values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 0,
+                        "startOffset": 2900,
+                        "endColumn": 97,
+                        "endOffset": 2997
+                    }
+                }
+            }
+        ]
+    }
+]
