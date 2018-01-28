@@ -1,0 +1,14 @@
+// This file attempts to convey the formatting used for data representation used for reading information when calculating shortest paths between nodes for SlugPath. 
+// The format is as follows: 
+// <node #>, <node name>, <node area> <latitude>, <longitude>, <node type, additional node type, additional node type, ...>;
+// 
+// Node ID will always be six digits: the first pair denote the area, the second pair denote a non-map node, and the last three indicate a map node. 
+// Node area defines the proximity in which the node is located
+// Node types include: acad, coll, mark, dine, ftgo, resd, actv, stsr, othr
+// Node types indicate academic structures, colleges, markets, dining halls, food to go (cafes, etc.), residences, activity centers, and student services. 
+
+1000000, Rachel Carson College, Rachel Carson College, 36.991519, -122.064845, resd; 
+ 
+0201000, College 9 & 10 Dining Hall, College 9 & 10, 37.000731,-122.057769, dine;
+ 
+1100000, Jack Basking School of Engineering, Science Hill, 37.000362, -122.063147, acad;
