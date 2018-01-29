@@ -4,7 +4,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/t
 var startmarkers;
 var endmarkers;
 var polyline;
-
 function drawMap(searchArray){
    
    
@@ -17,6 +16,7 @@ function drawMap(searchArray){
    var latlng = [];
    var pathcount = path.length;
    var nodecount = nodes.length;
+
    for(i = 0; i < pathcount; i++){
       for(j = 0; j < nodecount; j++){
          if (path[i] === nodes[j].id){
@@ -35,8 +35,7 @@ function drawMap(searchArray){
    }
    
    polyline = L.polyline(latlng);
-   
-   mymap.fitBounds(polyline.getBounds());
+   mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
    mymap.addLayer(polyline);
    
    

@@ -1,8 +1,8 @@
+var pathcheck = [];
 function aStar(){
-   var path = [];
-   for(i=0; i < nodes.length; i++){
-      curr = Math.floor(Math.random() * 8) + 1; 
-      path.push(curr);
+   for(i=0; i < 30; i++){
+      curr = Math.floor(Math.random() * nodes.length); 
+      pathcheck.push(nodes[curr].id);
    }
-   clearMap(path);
+   clearMap(pathcheck);
 }
