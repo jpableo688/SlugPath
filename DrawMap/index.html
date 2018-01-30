@@ -24,7 +24,7 @@
                <option value"Activities">Activities</option>
                <option value"Classroom">Classroom</option>
             </select>
-            <select id="dynafrom" name="dynafrom""></select>
+            <select id="dynafrom" name="dynafrom" onchange="checkDropDownFrom(this.id,)"></select>
          <hr />
          To:
             <select id="initto" name="initto" onchange="opttoquery(this.id,'dynato')">
@@ -34,7 +34,8 @@
                <option value"Activities">Activities</option>
                <option value"Classroom">Classroom</option>
             </select>
-            <select id="dynato" name="dynato" onchange="aStar()"></select>
+            
+            <select id="dynato" name="dynato" onchange="checkDropDownTo(this.id,)"></select>
          <hr />
          <script type="text/javascript" src="js/dropdown.js"></script>
          
