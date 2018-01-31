@@ -1,7 +1,12 @@
-var collegelist = ["",];
+var residentiallist = ["",];
 var marketlist = ["",];
 var activitieslist = ["",];
-var classroomlist = ["",];
+var academiclist = ["",];
+var studentservlist = ["",];
+var dininghalllist = ["",];
+var foodgolist = ["",];
+var otherlist = ["",];
+
 var collectedAlready = false;
 var checkTo = false;
 var checkFrom = false;
@@ -13,8 +18,8 @@ var optionToArr;
 function collectData(){
    if (collectedAlready === false){
       for(i = 0; i < nodes.length; i++){
-         if(nodes[i].type == "College"){
-            collegelist.push(nodes[i]);
+         if(nodes[i].type == "Residential"){
+            residentiallist.push(nodes[i]);
          }
          if(nodes[i].type == "Market"){
             marketlist.push(nodes[i]);
@@ -22,9 +27,21 @@ function collectData(){
          if(nodes[i].type == "Activities"){
             activitieslist.push(nodes[i]);
          }
-         if(nodes[i].type == "Classroom"){
-            classroomlist.push(nodes[i]);
+         if(nodes[i].type == "Academic"){
+            academiclist.push(nodes[i]);
          }
+         if(nodes[i].type == "Student Services"){
+            studentservlist.push(nodes[i]);
+         } 
+         if(nodes[i].type == "Dining Hall"){
+            dininghalllist.push(nodes[i]);
+         } 
+         if(nodes[i].type == "Food To Go"){
+            foodgolist.push(nodes[i]);
+         }
+         if(nodes[i].type == "Other"){
+            otherlist.push(nodes[i]);
+         }  
       }
       collectedAlready = true;
    }
@@ -38,8 +55,8 @@ function optfromquery(initfrom, dynafrom){
    
    dynamic.innerHTML ="";
    
-   if(initial.value == "College"){
-      optionFromArr = collegelist;
+   if(initial.value == "Residential"){
+      optionFromArr = residentiallist;
    }
    if(initial.value == "Market"){
       optionFromArr = marketlist;
@@ -47,17 +64,28 @@ function optfromquery(initfrom, dynafrom){
    if(initial.value == "Activities"){
       optionFromArr = activitieslist;
    }
-   if(initial.value == "Classroom"){
-      optionFromArr = classroomlist;
+   if(initial.value == "Academic"){
+      optionFromArr = academiclist;
    }
-   
+   if(initial.value == "Student Services"){
+      optionFromArr = studentservlist;
+   }
+   if(initial.value == "Dining Hall"){
+      optionFromArr = dininghalllist;
+   }
+   if(initial.value == "Food To Go"){
+      optionFromArr = foodgolist;
+   }
+   if(initial.value == "Other"){
+      optionFromArr = otherlist;
+   }    
+    
    for(i = 0; i < optionFromArr.length; i++){
       var newOption = document.createElement("option");
       newOption.value = optionFromArr[i].name;
       newOption.innerHTML = optionFromArr[i].name;
       dynamic.options.add(newOption);
    }
-   
 }
 
 function opttoquery(initto, dynato){
@@ -69,8 +97,8 @@ function opttoquery(initto, dynato){
    
    dynamic.innerHTML ="";
    
-   if(initial.value == "College"){
-      optionToArr = collegelist;
+   if(initial.value == "Residential"){
+      optionToArr = residentiallist;
    }
    if(initial.value == "Market"){
       optionToArr = marketlist;
@@ -78,17 +106,29 @@ function opttoquery(initto, dynato){
    if(initial.value == "Activities"){
       optionToArr = activitieslist;
    }
-   if(initial.value == "Classroom"){
-      optionToArr = classroomlist;
+   if(initial.value == "Academic"){
+      optionToArr = academiclist;
    }
-   
+   if(initial.value == "Student Services"){
+      optionToArr = studentservlist;
+   }
+   if(initial.value == "Dining Hall"){
+      optionToArr = dininghalllist;
+   }
+   if(initial.value == "Food To Go"){
+      optionToArr = foodgolist;
+   }
+   if(initial.value == "Other"){
+      optionToArr = otherlist;
+   }    
+    
    for(i = 0; i < optionToArr.length; i++){
       var newOption = document.createElement("option");
       newOption.value = optionToArr[i].name;
       newOption.innerHTML = optionToArr[i].name;
       dynamic.options.add(newOption);
    }
-   
+
 }
 
 function checkDropDownTo(dropdownopt){

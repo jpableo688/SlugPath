@@ -4,6 +4,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/t
 var startmarkers;
 var endmarkers;
 var polyline;
+   var latlng = [];
 function drawMap(searchArray){
    
    
@@ -13,7 +14,7 @@ function drawMap(searchArray){
    //comparing or organizing data it will be faster
    //right now it's an array of nodes.
    var path = searchArray;
-   var latlng = [];
+
    var pathcount = path.length;
    var nodecount = nodes.length;
 
