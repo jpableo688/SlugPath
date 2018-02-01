@@ -8,37 +8,45 @@ var foodgolist = ["",];
 var otherlist = ["",];
 
 var collectedAlready = false;
+var checkTo = false;
+var checkFrom = false;
+var toID;
+var fromID;
+var optionFromArr;
+var optionToArr;
+
 function collectData(){
    if (collectedAlready === false){
-      for(i = 0; i < nodes.length; i++){
-         if(nodes[i].type == "Residential"){
-            residentiallist.push(nodes[i].name);
+      for(key in nodes){
+         if(nodes[key].type == "Residential"){
+            residentiallist.push(nodes[key]);
          }
-         if(nodes[i].type == "Market"){
-            marketlist.push(nodes[i].name);
+         if(nodes[key].type == "Market"){
+            marketlist.push(nodes[key]);
          }
-         if(nodes[i].type == "Activities"){
-            activitieslist.push(nodes[i].name);
+         if(nodes[key].type == "Activities"){
+            activitieslist.push(nodes[key]);
          }
-         if(nodes[i].type == "Academic"){
-            academiclist.push(nodes[i].name);
+         if(nodes[key].type == "Academic"){
+            academiclist.push(nodes[key]);
          }
-         if(nodes[i].type == "Student Services"){
-            studentservlist.push(nodes[i].name);
+         if(nodes[key].type == "Student Services"){
+            studentservlist.push(nodes[key]);
          } 
-         if(nodes[i].type == "Dining Hall"){
-            dininghalllist.push(nodes[i].name);
+         if(nodes[key].type == "Dining Hall"){
+            dininghalllist.push(nodes[key]);
          } 
-         if(nodes[i].type == "Food To Go"){
-            foodgolist.push(nodes[i].name);
+         if(nodes[key].type == "Food To Go"){
+            foodgolist.push(nodes[key]);
          }
-         if(nodes[i].type == "Other"){
-            otherlist.push(nodes[i].name);
+         if(nodes[key].type == "Other"){
+            otherlist.push(nodes[key]);
          }  
       }
       collectedAlready = true;
    }
 }
+
 function optfromquery(initfrom, dynafrom){
    collectData();
 
@@ -48,40 +56,40 @@ function optfromquery(initfrom, dynafrom){
    dynamic.innerHTML ="";
    
    if(initial.value == "Residential"){
-      var optionarr = residentiallist;
+      optionFromArr = residentiallist;
    }
    if(initial.value == "Market"){
-      var optionarr = marketlist;
+      optionFromArr = marketlist;
    }
    if(initial.value == "Activities"){
-      var optionarr = activitieslist;
+      optionFromArr = activitieslist;
    }
    if(initial.value == "Academic"){
-      var optionarr = academiclist;
+      optionFromArr = academiclist;
    }
    if(initial.value == "Student Services"){
-      var optionarr = studentservlist;
+      optionFromArr = studentservlist;
    }
    if(initial.value == "Dining Hall"){
-      var optionarr = dininghalllist;
+      optionFromArr = dininghalllist;
    }
    if(initial.value == "Food To Go"){
-      var optionarr = foodgolist;
+      optionFromArr = foodgolist;
    }
    if(initial.value == "Other"){
-      var optionarr = otherlist;
+      optionFromArr = otherlist;
    }    
     
-   for(i = 0; i < optionarr.length; i++){
+   for(i = 0; i < optionFromArr.length; i++){
       var newOption = document.createElement("option");
-      newOption.value = optionarr[i].toLowerCase;
-      newOption.innerHTML = optionarr[i];
+      newOption.value = optionFromArr[i].name;
+      newOption.innerHTML = optionFromArr[i].name;
       dynamic.options.add(newOption);
    }
-   
 }
 
 function opttoquery(initto, dynato){
+   
    collectData();
 
    var initial = document.getElementById(initto);
@@ -90,35 +98,72 @@ function opttoquery(initto, dynato){
    dynamic.innerHTML ="";
    
    if(initial.value == "Residential"){
-      var optionarr = residentiallist;
+      optionToArr = residentiallist;
    }
    if(initial.value == "Market"){
-      var optionarr = marketlist;
+      optionToArr = marketlist;
    }
    if(initial.value == "Activities"){
-      var optionarr = activitieslist;
+      optionToArr = activitieslist;
    }
    if(initial.value == "Academic"){
-      var optionarr = academiclist;
+      optionToArr = academiclist;
    }
    if(initial.value == "Student Services"){
-      var optionarr = studentservlist;
+      optionToArr = studentservlist;
    }
    if(initial.value == "Dining Hall"){
-      var optionarr = dininghalllist;
+      optionToArr = dininghalllist;
    }
-    if(initial.value == "Food To Go"){
-      var optionarr = foodgolist;
+   if(initial.value == "Food To Go"){
+      optionToArr = foodgolist;
    }
    if(initial.value == "Other"){
-      var optionarr = otherlist;
-   }
-   
-   for(i = 0; i < optionarr.length; i++){
+      optionToArr = otherlist;
+   }    
+    
+   for(i = 0; i < optionToArr.length; i++){
       var newOption = document.createElement("option");
-      newOption.value = optionarr[i].toLowerCase;
-      newOption.innerHTML = optionarr[i];
+      newOption.value = optionToArr[i].name;
+      newOption.innerHTML = optionToArr[i].name;
       dynamic.options.add(newOption);
    }
-   
+
+}
+
+function checkDropDownTo(dropdownopt){
+   optTo = document.getElementById(dropdownopt);
+   for(i = 0; i < optionToArr.length; i++){
+      if(optTo.value == optionToArr[i].name){
+         toID = optionToArr[i].id;
+      }
+   }
+   if (fromID != undefined && toID != undefined){
+      aStar(fromID, toID);
+   }
+}
+
+function checkDropDownFrom(dropdownopt){
+   optFrom = document.getElementById(dropdownopt);
+   for(i = 0; i < optionFromArr.length; i++){
+      if(optFrom.value == optionFromArr[i].name){
+         fromID = optionFromArr[i].id;
+      }
+   }
+   if (fromID != undefined && toID != undefined){
+      aStar(fromID, toID);
+   }
+}
+
+function check() {
+    var dropdown = document.getElementById("dynafrom");
+    var current_value = dropdown.options[dropdown.selectedIndex].value;
+
+    if (current_value == "undefined") {
+        document.getElementById("initto").style.display = "none";
+    }
+    else {
+        document.getElementById("initto").style.display = "inline-block";
+        document.getElementById("dynato").style.display = "inline-block";
+    }
 }

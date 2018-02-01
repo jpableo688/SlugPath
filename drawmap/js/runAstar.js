@@ -1,8 +1,11 @@
-var pathcheck = [];
-function aStar(){
-   for(i=0; i < 30; i++){
-      curr = Math.floor(Math.random() * nodes.length); 
-      pathcheck.push(nodes[curr].id);
+
+function aStar(optFrom, optTo){
+   var pathcheck = [];
+   pathcheck.push(optFrom);
+   
+   for(i=0; i < 10; i++){
+      pathcheck.push(Object.keys(nodes)[Math.floor(Math.random()*Object.keys(nodes).length)]);
    }
+   pathcheck.push(optTo);
    clearMap(pathcheck);
 }
