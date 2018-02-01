@@ -17,30 +17,30 @@ var optionToArr;
 
 function collectData(){
    if (collectedAlready === false){
-      for(i = 0; i < nodes.length; i++){
-         if(nodes[i].type == "Residential"){
-            residentiallist.push(nodes[i]);
+      for(key in nodes){
+         if(nodes[key].type == "Residential"){
+            residentiallist.push(nodes[key]);
          }
-         if(nodes[i].type == "Market"){
-            marketlist.push(nodes[i]);
+         if(nodes[key].type == "Market"){
+            marketlist.push(nodes[key]);
          }
-         if(nodes[i].type == "Activities"){
-            activitieslist.push(nodes[i]);
+         if(nodes[key].type == "Activities"){
+            activitieslist.push(nodes[key]);
          }
-         if(nodes[i].type == "Academic"){
-            academiclist.push(nodes[i]);
+         if(nodes[key].type == "Academic"){
+            academiclist.push(nodes[key]);
          }
-         if(nodes[i].type == "Student Services"){
-            studentservlist.push(nodes[i]);
+         if(nodes[key].type == "Student Services"){
+            studentservlist.push(nodes[key]);
          } 
-         if(nodes[i].type == "Dining Hall"){
-            dininghalllist.push(nodes[i]);
+         if(nodes[key].type == "Dining Hall"){
+            dininghalllist.push(nodes[key]);
          } 
-         if(nodes[i].type == "Food To Go"){
-            foodgolist.push(nodes[i]);
+         if(nodes[key].type == "Food To Go"){
+            foodgolist.push(nodes[key]);
          }
-         if(nodes[i].type == "Other"){
-            otherlist.push(nodes[i]);
+         if(nodes[key].type == "Other"){
+            otherlist.push(nodes[key]);
          }  
       }
       collectedAlready = true;

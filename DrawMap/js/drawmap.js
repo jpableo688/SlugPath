@@ -1,10 +1,11 @@
+//mapbox
 var mymap = new L.map('mapid').setView([36.995698, -122.059135], 15);
 L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ', {}).addTo(mymap);
 
 var startmarkers;
 var endmarkers;
 var polyline;
-   var latlng = [];
+
 function drawMap(searchArray){
    
    
@@ -17,22 +18,18 @@ function drawMap(searchArray){
 
    var pathcount = path.length;
    var nodecount = nodes.length;
-
+   var latlng = [];
    for(i = 0; i < pathcount; i++){
-      for(j = 0; j < nodecount; j++){
-         if (path[i] === nodes[j].id){
-            latlng.push([nodes[j].latitude, nodes[j].longitude]);
-            //as you can see I can call node[#].attributes
-            if(i === 0){
-               startmarkers = L.marker([nodes[j].latitude, nodes[j].longitude]).addTo(mymap);
-               startmarkers.bindPopup(nodes[j].name).openPopup();
-            }
-            if(i === path.length-1){
-               endmarkers = L.marker([nodes[j].latitude, nodes[j].longitude]).addTo(mymap);
-               endmarkers.bindPopup(nodes[j].name).openPopup();
-            }
-         }
-      }	
+      latlng.push([nodes[path[i]].lat, nodes[path[i]].lng]);
+      //as you can see I can call node[#].attributes
+      if(i === 0){
+         startmarkers = L.marker([nodes[path[i]].lat, nodes[path[i]].lng]).addTo(mymap);
+         startmarkers.bindPopup(nodes[path[i]].name).openPopup();
+      }
+      if(i === path.length-1){
+         endmarkers = L.marker([nodes[path[i]].lat, nodes[path[i]].lng]).addTo(mymap);
+         endmarkers.bindPopup(nodes[path[i]].name).openPopup();
+      }
    }
    
    polyline = L.polyline(latlng);
