@@ -1,50 +1,55 @@
-//Location object (Node)
-function Location(id, name, area, lat, long, map_type)
-{
+//Location node object (Node)
+function Node(id, name, area, lat, long, map_type){
   this.id = id;
   this.name = name;
   this.area = area;
   this.lat = lat;
   this.long = long;
   this.map_type = map_type;
+  this.successor = []; //used for search algorithm
 };
 
-  Location.prototype.getID = function()
-  {
+  Node.prototype.getID = function(){
     return this.id;
   };
 
-  Location.prototype.getName = function()
-  {
+  Node.prototype.getName = function(){
     return this.name;
   };
 
-  Location.prototype.getArea = function()
-  {
+  Node.prototype.getArea = function(){
     return this.area;
   };
 
-  Location.prototype.getLat = function()
-  {
+  Node.prototype.getLat = function(){
     return this.lat;
   };
 
-  Location.prototype.getLong = function()
-  {
+  Node.prototype.getLong = function(){
     return this.long;
   };
 
-  Location.prototype.getType = function()
-  {
+  Node.prototype.getType = function(){
     return this.map_type;
   };
 
-  Location.prototype.print = function()
-  {
-    var string = this.id + ', ' + this.name + ', ' + this.area + ', ' + this.lat + ', ' + this.long + ' ' + this.map_type;
+  Node.prototype.print = function(){
+    var string = '(' + this.id + ', ' + this.name + ', ' + this.area + ', ' + this.lat + ', ' + this.long + ' ' + this.map_type + ')';
     document.write(string);
     console.log(string);
   };
+
+  Node.prototype.printSucc = function(){
+    document.write("Parent Node: ");
+    this.print();
+    document.write("\nSuccessor Node(s): \n");
+    for(i = 0; i < this.successor.length; i++)
+    {
+      for()
+      document.write(this.successor[i] + ' || ');
+    }
+  }
+
 
 //Edge object
 function Edge(location1, location2)
@@ -56,14 +61,13 @@ function Edge(location1, location2)
   this.distance = 0;
 };
 
-Edge.prototype.getTime = function()
-{
-  var cont_speed = 3.1; //Average walk speed is 5.0 mph
+Edge.prototype.getTime = function(){
+  var cont_speed = 3; //Average walk speed is 2.0 mph
 
   var dist = this.getDistance();
 
   //Calculates time in decimal then calculates individual minutes then secods
-  var origin_time = (dist/cont_speed) * this.getDifficulty() * 10;
+  var origin_time = (dist/cont_speed) * this.getDifficulty() * 10; // 10 shifts decimal place
   var minutes = Math.floor(Math.abs(origin_time));
   var seconds = Math.floor((Math.abs(origin_time) * 60) % 60);
 
@@ -71,16 +75,14 @@ Edge.prototype.getTime = function()
   this.time.push(minutes);
   this.time.push(seconds);
 
-  return this.time;
+  return origin_time; // replaced this.time with origin_time
 };
 
-Edge.prototype.getDifficulty = function()
-{
+Edge.prototype.getDifficulty = function(){
   return this.difficulty;
 };
 
-Edge.prototype.getDistance = function()
-{
+Edge.prototype.getDistance = function(){
   //Assign lat & long to variables for cleaner format
   var x1 = this.orig.getLat();
   var x2 = this.terminus.getLat();
@@ -103,38 +105,56 @@ Edge.prototype.getDistance = function()
   return dist;
 };
 
+Edge.prototype.print = function(){
+  document.write('||' + this.orig.getID() + ' connected to ' + this.terminus.getID() + '|| ');
+};
+
 //Graph object
-function Graph()
-{
+function Graph(){
   this.vertex = [];
   this.edge = [];
   this.num_edges = 0;
 };
 
-Graph.prototype.addVertex = function(node)
-{
+Graph.prototype.addVertex = function(node){
   this.vertex.push(node);
   this.edge[node] = [];
 };
 
-Graph.prototype.addEdge = function(vertex1,vertex2)
-{
-  this.edge[vertex1].push(vertex2);
-  this.edge[vertex2].push(vertex1);
+Graph.prototype.addEdge = function(vertex1,vertex2){
+  var toInsert = new Edge(vertex1, vertex2);
+  this.edge.push(toInsert);
   this.num_edges++;
+
+  vertex1.successor.push([vertex2.getID(), toInsert.getDistance(), toInsert.getTime()]);
+};
+
+Graph.prototype.print = function(){
+  for(i = 0; i < this.num_edges; i++){
+    this.edge[i].print();
+  }
 };
 
 //Test here
-var newNode = new Location(100000, 'hi', 'this_area', 36.974117, -122.030792, 'resi');
-var newNode2 = new Location(100000, 'hi', 'next_area', 36.991216, -122.066210, 'coll');
+var newNode = new Node(100000, 'hi', 'this_area', 36.994905, -122.065353, 'resi');
+var newNode2 = new Node(200000, 'hi', 'next_area', 36.995171, -122.065299, 'coll');
+var newNode3 = new Node(300000, 'hi', 'next_area', 36.995171, -122.066299, 'coll');
+var newNode4 = new Node(400000, 'hi', 'next_area', 36.995171, -122.067299, 'coll');
 
-var newEdge = new Edge(newNode, newNode2);
+var the_graph = new Graph();
+the_graph.addVertex(newNode);
+the_graph.addVertex(newNode2);
+the_graph.addVertex(newNode3);
+the_graph.addVertex(newNode4);
 
-var distanceof2 = newEdge.getDistance();
-var timeof2 = newEdge.getTime();
+the_graph.addEdge(newNode, newNode2);
+the_graph.addEdge(newNode2, newNode3);
+the_graph.addEdge(newNode2, newNode4);
+the_graph.addEdge(newNode4, newNode);
 
+//document.write(the_graph.num_edges + newline);
+//document.write('\n');
 
-document.write(distanceof2 + "|| ");
-console.log(distanceof2 + "|| ");
-document.write(timeof2) + "|| ";
-console.log(timeof2 + "|| ");
+//the_graph.print();
+
+newNode2.printSucc();
