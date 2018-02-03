@@ -1,0 +1,211 @@
+// Rough draft of data representation in text format. See "Data formatting.txt" for format layout. 
+// This data to be used in the shortest-path algorithm and on the site for a drop-down menu. 
+// 
+// 1/28/18: 103 total nodes.
+
+0100000, Rachel Carson College, Rachel Carson College, 36.991519, -122.064845, resd;
+ 
+0200000, College 9, College 9 & 10, 37.001536, -122.057328, resd;
+ 
+0300000, College 10, College 9 & 10, 37.000545, -122.057994, resd;
+ 
+0400000, Cowell College, Cowell College, 36.997090, -122.054324, resd;
+ 
+0500000, Crown College, Crown College, 37.000000, -122.054592, resd;
+ 
+0600000, Kresge College, Kresge College, 36.997376, -122.066755, resd;
+ 
+0700000, Merrill College, Merrill College, 36.999826, -122.053284, resd;
+ 
+0800000, Oakes College, Oakes College, 36.989404, -122.064069, resd;
+ 
+0900000, Porter College, Porter College, 36.994903, -122.065389, resd;
+ 
+1000000, Stevenson College, Stevenson College, 36.997470, -122.052090, resd;
+ 
+1100000, Jack Baskin School of Engineering, Science Hill, 37.000720, -122.063096, acad;
+
+1200000, Physical Sciences Building, Science Hill, 36.999605, -122.062029, acad;
+
+1300000, Department of Chemistry & Biochemistry, Science Hill, 36.999541, -122.062132, acad;
+ 
+1400000, Science & Engineering Library, Science Hill, 36.999013, -122.060636, acad;
+
+1500000, Earth & Marine Sciences, Science Hill, 36.998060, -122.059596, acad;
+ 
+1600000, Media Theater, Media Theater, 36.994847, -122.061960, acad;
+ 
+1700000, Department of Music, Department of Music, 36.993059, -122.060619, acad;
+ 
+1800000, OPERS, OPERS, 36.994411, -122.055063, actv;
+ 
+1900000, Classroom Unit, Classroom Unit 36.997865, -122.057180, acad;
+ 
+2000000, McHenry Library, McHenry Library, 36.995744, -122.059150, acad;
+
+2100000, Student Health Center, Student Health Center, 36.9995522,-122.0577115, stsr;
+ 
+2200000, Kerr Hall, Kerr Hall, 36.997000, -122.062040, acad;
+ 
+2300000, Quarry Amphitheater, Quarry Plaza, 36.998589, -122.056024, actv;
+ 
+0101000, Rachel Carson/Oakes Dining Hall, Rachel Carson College, 36.991493, -122.065283, dine;
+ 
+0102000, ResNet, Rachel Carson College, 36.992149, -122.065012, stsr;
+ 
+0103000, College Eight Cafe, Rachel Carson College, 36.991527, -122.064551, ftgo;
+ 
+0104000, West Field House, Rachel Carson College, 36.991506, -122.063883, actv;
+ 
+0105000, Red Room, Rachel Carson College, 36.991306, -122.064770, othr;
+ 
+0106000, Rachel Carson & Oakes Residential Life, Rachel Carson College, 36.990977, -122.064736, stsr;
+ 
+0201000, College 9 & 10 Dining Hall, College 9 & 10, 37.000731,-122.057769, dine;
+ 
+0202000, Terry Fresca Restaurant & Coffee Bar, College 9 & 10, 37.000978,-122.057736, dine;
+ 
+0203000, Terry Frietas Cafe, College 9 & 10, 37.0003468,-122.057966, ftgo; 
+ 
+0204000, Recreational Lounge, College 9 & 10, 37.0006144,-122.0577187, actv;
+ 
+0205000, Namaste Lounge, College 9 & 10, 37.0007468,-122.0571587, actv;
+ 
+0206000, College 9 & 10 Residential Life, College 9 & 10, 37.001422, -122.056990, stsr;
+
+0207000, Social Science 1, College 9 & 10, 37.002115, -122.058030, acad;
+ 
+0208000, Social Science 2, College 9 & 10, 37.001527, -122.058747, acad;
+ 
+0209000, College 9 & 10 Multi-Purpose Room, College 9 & 10, 37.000767, -122.057835, actv;
+ 
+0210000, College 9 & 10 Lounge Room, College 9 & 10, 37.000618, -122.057719, actv;
+ 
+0211000, College 9 & 10 Community Room, 37.002229, -122.059317, actv;
+  
+0401000, Page Smith Library, Cowell College, 36.996893, -122.053601, acad;
+ 
+0402000, Cowell/Stevenson Dining Hall, Cowell College, 36.996826, -122.053062, dine;
+ 
+0403000, Cowell Coffee Shop, Cowell College, 36.997162, -122.053062, ftgo;
+ 
+0404000, Cowell College Administration, Cowell College, 36.997316, -122.053515, stsr;
+ 
+0405000, Mary Holmes Lounge, Cowell College, 36.997042, -122.053071, othr;
+ 
+0406000, Cowell Computer Lab, Cowell College, 36.997008, -122.055111, acad;
+
+0407000, Eloise Pickard Smith Gallery, Cowell College, 36.997036, -122.052881, othr;
+  
+0501000, Crown/Merrill Dining Hall, Crown College, 37.000126, -122.054424, dine;
+ 
+0502000, Banana Joe's, Crown College, 36.999989, -122.054432, ftgo;
+ 
+0503000, Crown Lounge, Crown College, 37.000116, -122.054575, othr;
+ 
+0504000, Crown Library, Crown College, 36.999844, -122.054801, acad;
+ 
+0505000, Crown Computer Lab, Crown College, 36.999844, -122.054801, acad;
+ 
+0601000, Porter/Kresge Housing & Residential Office, Kresge College, 36.996563, -122.065731, stsr;
+ 
+0602000, Kresge Lounge, Kresge College, 36.997492, -122.067002, othr;
+ 
+0603000, Kresge Food Co-Op, Kresge College, 36.997329, -122.065780, mark;
+ 
+0604000, STARS, Kresge College, 36.997488, -122.066416, stsr;
+ 
+0605000, Housing & Student Life Office, Kresge College, 36.998526, -122.066434, stsr;
+ 
+0606000, Kresge Town Hall, Kresge College, 36.998712, -122.066297, actv;
+ 
+0607000, Owl's Nest Cafe, Kresge College, 36.998853, -122.066139, ftgo;
+ 
+0608000, College Programs Office, Kresge College, 36.998727, -122.066067, stsr;
+ 
+0609000, Kresge Computer Room, Kresge College, 36.997622, -122.065783, acad;
+ 
+0701000, Vivas, Merrill College, 37.000156, -122.053374, dine;
+ 
+0702000, Baobab Lounge, Merrill College, 37.000081, -122.053418, acad;
+ 
+0703000, Ming Ong Computer Lab, Merrill College, 36.999728, -122.052379, acad;
+ 
+0704000, Merrill Library, Merrill College, 36.999401, -122.053302, acad;
+ 
+0705000, Cultural Center, Merrill College, 37.000064, -122.053806, othr;
+ 
+0706000, KZSC 88.1FM, Merrill College, 37.000627, -122.054123, othr;
+ 
+0707000, UCSC Cantú Queer Center, Merrill College, 37.000606, -122.053890, stsr;
+ 
+0801000, Oakes Cafe, Oakes, 36.989227,-122.063303, ftgo;
+ 
+0802000, Oakes Learning Center, Oakes, 36.989308, -122.063325, stsr;
+ 
+0803000, Oakes Library, Oakes, 36.989807, -122.062882, acad;
+ 
+0804000, Oakes Administration & Advising, Oakes, 36.990053, -122.062855, stsr;
+ 
+0901000, Porter/Kresge Dining Hall, Porter College, 36.994276, -122.065903, dine;
+ 
+0902000, Porter/Kresge Housing & Residential Office, Porter College, 36.996563, -122.065731, stsr;
+ 
+0903000, Hitchcock Lounge, Porter College, 36.994501, -122.065820, othr;
+ 
+0904000, Bowls by Cafe Brasil, Porter College, 36.994197, -122.065755, ftgo;
+ 
+0905000, Sesnon Art Gallery, Porter College, 36.994006, -122.065178, othr;
+ 
+0906000, Porter Computer Lab, Porter College, 36.994272, -122.065199, acad;
+ 
+0907000, Student Activities Office, Porter College, 36.994062, -122.065348, stsr;
+ 
+1001000, Stevenson Coffee House, Stevenson College, 36.997197, -122.052280, ftgo;
+ 
+1002000, Stevenson Event Center, Stevenson College, 36.996954, -122.052247, actv;
+ 
+1003000, Stevenson Library, Stevenson College, 36.997105, -122.051450, acad;
+ 
+1004000, UCSC Catering, Stevenson College, 36.996975, -122.052826, othr;
+ 
+1005000, Wagstaff Lounge, Stevenson College, 36.996869, -122.051667, othr;
+ 
+1006000, Silverman Conference Room, Stevenson College, 36.997084, -122.051851, actv;
+ 
+1007000, Cultural Arts & Diversity, Stevenson College, 36.997267, -122.052123, stsr;
+ 
+1008000, Hahn Art Faciliy, Stevenson College, 36.997895, -122.052708, othr;
+ 
+1101000, Perk Coffee Bar at Baskin Engineering, Science Hill, 37.000551, -122.063005, ftgo;
+ 
+1102000, Film & Digital Media Department, Science Hill, 37.000842, -122.061441, stsr;
+ 
+1201000, Perk Coffee Bar at Physical Sciences, Science Hill, 36.999680, -122.061970, ftgo;
+ 
+1501000, Perk Coffee Bar at Earth & Marine Sciences, Science Hill, 36.997944, -122.059834, ftgo;
+ 
+1601000, Digital Arts & New Media, Media Theater, 36.993883, -122.060756, acad;
+ 
+1701000, Recital Hall, Department of Music, 36.993151, -122.060834, acad;
+ 
+1801000, OPERS Multi-Purpose Room, OPERS, 36.993820, -122.054821, actv;
+ 
+1802000, OPERS Wellness Center, OPERS, 36.993625, -122.054676, stsr;
+ 
+1803000, East Field, OPERS, 36.994028, -122.052710, actv;
+ 
+1901000, International Education Office, 36.997873, -122.056586, stsr;
+ 
+2001000, Global Village Cafe, McHenry Library, 36.996086, -122.059356, ftgo;
+ 
+2301000, Cafe Iveta, Quarry Plaza, 36.998178, -122.055801, ftgo;
+ 
+2302000, Bay Tree Bookstore, Quarry Plaza, 36.998007, -122.055702, mark;
+ 
+2303000, Student Union, Quarry Plaza, 36.997930, -122.055915, stsr;
+ 
+2304000, Career Center, Quarry Plaza, 36.997666, -122.055561, stsr;
+ 
+2305000, Express Story, Quarry Plaza, 36.997697, -122.055603, mark;
+ 
