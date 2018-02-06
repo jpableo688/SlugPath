@@ -1,7 +1,7 @@
 var keymarkers;
 var newKey;
-function drawgraph(pass) {
-   var graph = pass;
+function drawgraph() {
+   var graph = tests;
    for(key in graph){
       keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
       keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
