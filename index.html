@@ -12,46 +12,35 @@
    crossorigin=""></script>
 
 
-      <body>
+      <body onload="opttoStart(); optfromStart()">
          <hr />
          <script type="text/javascript" src="DrawMap/js/locations.js"></script>
          <script type="text/javascript" src="DrawMap/js/dropdown.js"></script>
          <script type="text/javascript" src="DrawMap/js/test.js"></script>
          <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
          From:
-            <select id="initfrom" name="initfrom" onchange="optfromquery(this.id,'dynafrom')">
-               <option value=""></option>
-               <option value"Residential">Residential</option>
-               <option value"Market">Market</option>
-               <option value"Activities">Activities</option>
-               <option value"Academic">Academic</option>
-               <option value"Student Services">Student Services</option>
-               <option value"Dining Hall">Dining Hall</option>
-               <option value"Food To Go">Food To Go</option>
-               <option value"Other">Other</option>
+            <select id="initfrom" name="initfrom" onchange="optfromquery();checkFirstFrom();">
+            <option value="empty"></option>
+            <option value="My Location">My Location</option>
             </select>
-            <select id="dynafrom" name="dynafrom" onchange="checkDropDownFrom(this.id,)"></select>
+            <select id="dynafrom" name="dynafrom" onchange="checkSecondFrom()" style="display: none">
+            <option value=""></option>
+            </select>
          <hr />
          To:
-            <select id="initto" name="initto" onchange="opttoquery(this.id,'dynato')">
-               <option value=""></option>
-               <option value"Residential">Residential</option>
-               <option value"Market">Market</option>
-               <option value"Activities">Activities</option>
-               <option value"Academic">Academic</option>
-               <option value"Student Services">Student Services</option>
-               <option value"Dining Hall">Dining Hall</option>
-               <option value"Food To Go">Food To Go</option>
-               <option value"Other">Other</option>
+            <select id="initto" name="initto" onchange="opttoquery();checkFirstTo();">
+            <option value="empty"></option>
+            <option value="Nearby">Nearby</option>
             </select>
-
-            <select id="dynato" name="dynato" onchange="checkDropDownTo(this.id,)"></select>
+            <select id="dynato" name="dynato" onchange="checkSecondTo();" style="display: none">
+            <option value=""></option>
+            </select>
          <hr />
 
-
-         <button onclick="aStar()">Go</button>
+         <button onclick="drawgraph()">Go</button>
          <p id="go"></p>
          <div id="mapid" style="width: 600px; height: 800px;"></div>
+         
 
          <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
          <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>

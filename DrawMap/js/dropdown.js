@@ -1,141 +1,108 @@
-var residentiallist = ["",];
-var marketlist = ["",];
-var activitieslist = ["",];
-var academiclist = ["",];
-var studentservlist = ["",];
-var dininghalllist = ["",];
-var foodgolist = ["",];
-var otherlist = ["",];
-
-var collectedAlready = false;
 var checkTo = false;
 var checkFrom = false;
 var toID;
 var fromID;
-var optionFromArr;
-var optionToArr;
+var secondlist = [];
 
-function collectData(){
-   if (collectedAlready === false){
-      for(key in nodes){
-         if(nodes[key].type == "Residential"){
-            residentiallist.push(nodes[key]);
+function collectFirstData(){
+   var firstlist = [];
+   //console.log("am I here");
+   var alreadyhere = false;
+   for(key in nodes){
+      alreadyhere = false;
+      for(var index in firstlist){
+         if(nodes[key].type == firstlist[index].type){
+            alreadyhere = true;
          }
-         if(nodes[key].type == "Market"){
-            marketlist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Activities"){
-            activitieslist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Academic"){
-            academiclist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Student Services"){
-            studentservlist.push(nodes[key]);
-         } 
-         if(nodes[key].type == "Dining Hall"){
-            dininghalllist.push(nodes[key]);
-         } 
-         if(nodes[key].type == "Food To Go"){
-            foodgolist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Other"){
-            otherlist.push(nodes[key]);
-         }  
       }
-      collectedAlready = true;
+      if(alreadyhere == false){
+         firstlist.push(nodes[key]);
+      }
+   }
+   return firstlist;
+}
+
+function collectSecondData(value){
+   secondlist = [];
+   for(key in nodes){
+      if(nodes[key].type == value){
+         secondlist.push(nodes[key]);
+      }
+   }
+   return secondlist;
+}
+
+function optfromStart(){
+   var initial = document.getElementById("initfrom");
+   //initial.innerHTML ="";
+   var firstlist = collectFirstData();
+   for(i = 0; i < firstlist.length; i++){
+      var newOption = document.createElement("option");
+      newOption.value = firstlist[i].type;
+      newOption.innerHTML = firstlist[i].type;
+      initial.options.add(newOption);
    }
 }
 
-function optfromquery(initfrom, dynafrom){
-   collectData();
-
-   var initial = document.getElementById(initfrom);
-   var dynamic = document.getElementById(dynafrom);   
-   
-   dynamic.innerHTML ="";
-   
-   if(initial.value == "Residential"){
-      optionFromArr = residentiallist;
-   }
-   if(initial.value == "Market"){
-      optionFromArr = marketlist;
-   }
-   if(initial.value == "Activities"){
-      optionFromArr = activitieslist;
-   }
-   if(initial.value == "Academic"){
-      optionFromArr = academiclist;
-   }
-   if(initial.value == "Student Services"){
-      optionFromArr = studentservlist;
-   }
-   if(initial.value == "Dining Hall"){
-      optionFromArr = dininghalllist;
-   }
-   if(initial.value == "Food To Go"){
-      optionFromArr = foodgolist;
-   }
-   if(initial.value == "Other"){
-      optionFromArr = otherlist;
-   }    
-    
-   for(i = 0; i < optionFromArr.length; i++){
+function opttoStart(){
+   var initial = document.getElementById("initto");
+   //initial.innerHTML ="";
+   var firstlist = collectFirstData();
+   for(i = 0; i < firstlist.length; i++){
       var newOption = document.createElement("option");
-      newOption.value = optionFromArr[i].name;
-      newOption.innerHTML = optionFromArr[i].name;
+      newOption.value = firstlist[i].type;
+      newOption.innerHTML = firstlist[i].type;
+      initial.options.add(newOption);
+   }
+}
+
+function optfromquery(){
+   var initial = document.getElementById("initfrom");
+   var dynamic = document.getElementById("dynafrom");   
+   
+   //dynamic.innerHTML ="";
+   var secondlist = collectSecondData(initial.value);
+   
+   for(i = 0; i < secondlist.length; i++){
+      var newOption = document.createElement("option");
+      newOption.value = secondlist[i].name;
+      newOption.innerHTML = secondlist[i].name;
       dynamic.options.add(newOption);
    }
 }
 
-function opttoquery(initto, dynato){
+function opttoquery(){
+   var initial = document.getElementById("initto");
+   var dynamic = document.getElementById("dynato");
    
-   collectData();
-
-   var initial = document.getElementById(initto);
-   var dynamic = document.getElementById(dynato);
-   
-   dynamic.innerHTML ="";
-   
-   if(initial.value == "Residential"){
-      optionToArr = residentiallist;
-   }
-   if(initial.value == "Market"){
-      optionToArr = marketlist;
-   }
-   if(initial.value == "Activities"){
-      optionToArr = activitieslist;
-   }
-   if(initial.value == "Academic"){
-      optionToArr = academiclist;
-   }
-   if(initial.value == "Student Services"){
-      optionToArr = studentservlist;
-   }
-   if(initial.value == "Dining Hall"){
-      optionToArr = dininghalllist;
-   }
-   if(initial.value == "Food To Go"){
-      optionToArr = foodgolist;
-   }
-   if(initial.value == "Other"){
-      optionToArr = otherlist;
-   }    
+   //dynamic.innerHTML ="";
+   var secondlist = collectSecondData(initial.value);    
     
-   for(i = 0; i < optionToArr.length; i++){
+   for(i = 0; i < secondlist.length; i++){
       var newOption = document.createElement("option");
-      newOption.value = optionToArr[i].name;
-      newOption.innerHTML = optionToArr[i].name;
+      newOption.value = secondlist[i].name;
+      newOption.innerHTML = secondlist[i].name;
       dynamic.options.add(newOption);
    }
 
 }
-
-function checkDropDownTo(dropdownopt){
-   optTo = document.getElementById(dropdownopt);
-   for(i = 0; i < optionToArr.length; i++){
-      if(optTo.value == optionToArr[i].name){
-         toID = optionToArr[i].id;
+function checkFirstTo(){ 
+   optFirstTo = document.getElementById("initto");
+   if (optFirstTo.value == "Nearby" || optFirstTo.value == "empty"){
+      if(optFirstTo.value == "Nearby"){
+         //Nearby();
+      }
+      document.getElementById("dynato").style.display = "none";
+   } else {
+      document.getElementById("dynato").style.display = "inline-block";
+   }
+}
+function checkSecondTo(){
+   optSecondTo = document.getElementById("dynato");
+   
+   for(i = 0; i < secondlist.length; i++){
+      if(optSecondTo.value == secondlist[i].name){
+         toID = secondlist[i].id;
       }
    }
    if (fromID != undefined && toID != undefined){
@@ -143,11 +110,22 @@ function checkDropDownTo(dropdownopt){
    }
 }
 
-function checkDropDownFrom(dropdownopt){
-   optFrom = document.getElementById(dropdownopt);
-   for(i = 0; i < optionFromArr.length; i++){
-      if(optFrom.value == optionFromArr[i].name){
-         fromID = optionFromArr[i].id;
+function checkFirstFrom(){
+   optFirstFrom = document.getElementById("initfrom");
+   if (optFirstFrom.value == "My Location" || optFirstFrom.value == "empty"){
+      if(optFirstFrom.value == "My Location"){
+         //myLocation();
+      }
+      document.getElementById("dynafrom").style.display = "none";
+   } else {
+      document.getElementById("dynafrom").style.display = "inline-block";
+   }
+}
+function checkSecondFrom(){
+   optSecondFrom = document.getElementById("dynafrom");
+   for(i = 0; i < secondlist.length; i++){
+      if(optSecondFrom.value == secondlist[i].name){
+         fromID = secondlist[i].id;
       }
    }
    if (fromID != undefined && toID != undefined){

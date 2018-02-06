@@ -4,7 +4,7 @@ function drawgraph(pass) {
    var graph = pass;
    for(key in graph){
       keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
-      keymarkers.bindPopup(graph[key].id + "  " + graph[key].name ).openPopup();
+      keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
       console.log(key);
       for(var toArr in graph[key].to){
          var latlng2 = [];
