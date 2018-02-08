@@ -1,4 +1,4 @@
-//mapbox
+//mapbox, this has to be global or else the map would not get redrawn
 var mymap = new L.map('mapid').setView([36.995698, -122.059135], 15);
 L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ', {}).addTo(mymap);
 
@@ -54,15 +54,12 @@ function drawInfoGather(){
 function clearMap(){
     if (startmarkers != undefined){
         mymap.removeLayer(startmarkers);
-        console.log("working");
     }
     if (endmarkers != undefined){
         mymap.removeLayer(endmarkers);
-        console.log("working");
     }
     if(polyline != undefined){
         mymap.removeLayer(polyline);
-        console.log("working");
     }
 }
 
