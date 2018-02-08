@@ -319,7 +319,7 @@ var nodes = {
     "0211000":{
         "id":"0211000",
         "name":"College 9 & 10 Community Room",
-        "areas":"College 9 & 10 Community Room",
+        "areas":"College 9 & 10",
         "lat":37.002229,
         "lng":-122.059317,
         "type":"Activities"

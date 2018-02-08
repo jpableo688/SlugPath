@@ -1,19 +1,22 @@
 function collectAreaData(value){
-   nearbyList = [];
+   var areaList = [];
    for(key in nodes){
       if(nodes[key].areas == value){
-         nearbyList.push(nodes[key]);
+         areaList.push(nodes[key]);
       }
    }
    return areaList;
 }
 
 function nearTo(menu){
-    if (optNearTo.value == "Area"){
-        toList = collectAreaData(nodes[FromID].areas);
-        return toList
+    var nearID;
+    for(key in nodes){
+        if(nodes[key].name == menu){
+            nearID = nodes[key].id;
+        }
     }
-    if (optNearTo.value == "Proximity"){
-        return toList = collectAreaData(nodes[FromID].areas)
-    }
+    toList = collectAreaData(nodes[nearID].areas);
+    //console.log("nearToList" );
+    //console.log(toList);
+    return toList;
 }

@@ -40,21 +40,58 @@ function optStart(menu){
     }
 }
 
-//populate second From and To menus
-function checkIfNearbyOpts(menu){
-    if (menu.value == "Area"){
-        return true;
-    }
-    if (menu.value == "Proximity"){
-        return true;
-    }
-    return false;
-}
-function optQuery(init,dyna){
-    var initial = document.getElementById(init);
-    var dynamic = document.getElementById(dyna);
-    console.log(initial.value);
+function updateNearby(initial,dynamic,otherInit,otherDyna){
+
+    if (otherInit.value == "Nearby"){
+        //console.log("Updating for...");
+        otherDyna.innerHTML ="";
+        var blank = document.createElement("option");
+        blank.value = "";
+        blank.innerHTML = "";
+        otherDyna.options.add(blank);
     
+        if(initial.value == "My Location"){
+            secondList = nearTo(initial.value);
+        } else {
+            secondList = nearTo(dynamic.value);
+        }
+        
+        for(i = 0; i < secondList.length; i++){
+            var newOption = document.createElement("option");
+            newOption.value = secondList[i].name;
+            newOption.innerHTML = secondList[i].name;
+            otherDyna.options.add(newOption);
+        }
+        
+    } else {
+        
+        //console.log("Updating else...");
+        dynamic.innerHTML ="";
+        var blank = document.createElement("option");
+        blank.value = "";
+        blank.innerHTML = "";
+        dynamic.options.add(blank);
+        
+        if(otherInit.value == "My Location"){
+                secondList = nearTo(otherInit.value);
+        } else {
+                secondList = nearTo(otherDyna.value);
+        }
+        for(i = 0; i < secondList.length; i++){
+            var newOption = document.createElement("option");
+            newOption.value = secondList[i].name;
+            newOption.innerHTML = secondList[i].name;
+            dynamic.options.add(newOption);
+        }
+    }
+}
+
+function optQuery(menuInit, menuDyna, menuOtherInit,menuOtherDyna){
+    var secondList = [];
+    var initial = document.getElementById(menuInit);
+    var dynamic = document.getElementById(menuDyna);
+    var otherInit = document.getElementById(menuOtherInit);
+    var otherDyna = document.getElementById(menuOtherDyna);
     
     //for blanks in as default
     dynamic.innerHTML ="";
@@ -64,24 +101,21 @@ function optQuery(init,dyna){
     dynamic.options.add(blank);
     
     if(initial.value != "Nearby"){
-        var secondList = collectSecondData(initial.value);
+        secondList = collectSecondData(initial.value);
         for(i = 0; i < secondList.length; i++){
             var newOption = document.createElement("option");
             newOption.value = secondList[i].name;
             newOption.innerHTML = secondList[i].name;
             dynamic.options.add(newOption);
         }
+    } else {
+        updateNearby(initial,dynamic,otherInit,otherDyna);
     }
-    
-    if(checkIfNearbyOpts(initial.value)){
-        var secondList = nearTo(initial.value);
-        for(i = 0; i < secondList.length; i++){
-            var newOption = document.createElement("option");
-            newOption.value = secondList[i].name;
-            newOption.innerHTML = secondList[i].name;
-            dynamic.options.add(newOption);
-        }
+    if(otherInit == "Nearby"){
+        //console.log("otherinitnearby");
+        //updateNearby(initial,dynamic,otherInit,otherDyna);
     }
+
 }
 
 
@@ -96,23 +130,17 @@ function checkIfNode(optValue){
     return false;
 }
 
-function checkFirstMenu(menu, second, nearby){ 
+function checkFirstMenu(menu, second){ 
     //check if the first menu is chosen and if second menu should be shown
     var optFirst = document.getElementById(menu);
     
-   
-    
     if (checkIfNode(optFirst.value)){
         if(optFirst.value == "My Location"){
-            //getLocation();
+            findIDs('initFrom', 'initTo', 'dynaFrom', 'dynaTo');
         }
         document.getElementById(second).style.display = "none";
     } else {
-        if(optFirst.value == "Nearby"){
-            document.getElementById(nearby).style.display = "inline-block";
-        } else {
-            document.getElementById(second).style.display = "inline-block";
-        }
+        document.getElementById(second).style.display = "inline-block";
     }
 }
 
@@ -126,35 +154,54 @@ function findIDs(menuFromInit,menuToInit, menuFromDyna,menuToDyna){
     }
 }
 
+
 //checks menus are chosen
-function checkSecondMenu(menuFromInit,menuToInit, menuFromDyna,menuToDyna, nearbySecond){    
+function checkSecondMenu(menuFromInit,menuToInit, menuFromDyna,menuToDyna){    
     var fromID;
     var toID;
+    var fromList;
+    var toList;
     var optFirstFrom = document.getElementById(menuFromInit);
     var optFirstTo = document.getElementById(menuToInit);
     var optSecondFrom = document.getElementById(menuFromDyna);
     var optSecondTo = document.getElementById(menuToDyna);
-    var optNearTo = document.getElementById(nearbySecond);
+
     if(optFirstFrom.value == "My Location"){
         fromID = "0000000";
     } else {
         //collect data for second option to reference
-        var fromList = collectSecondData(optFirstFrom.value);
-
+        fromList = collectSecondData(optFirstFrom.value);
         for(i = 0; i < fromList.length; i++){
             if(optSecondFrom.value == fromList[i].name){
-                fromID = secondList[i].id;
+                fromID = fromList[i].id;
             }
         }
     }
-
-    var toList = collectSecondData(optFirstTo.value);
-    for(i = 0; i < toList.length; i++){
-        if(optSecondTo.value == toList[i].name){
-            toID = secondList[i].id;
+    
+    toList = collectSecondData(optFirstTo.value);
+    if(optFirstTo.value == "Nearby"){
+        //console.log("checkIDsCallingnearTO");
+        if(optFirstFrom.value == "My Location"){
+            toList = nearTo(optFirstFrom.value)
+        } else {
+            toList = nearTo(optSecondFrom.value);
         }
     }
+    
+    for(i = 0; i < toList.length; i++){
+        if(optSecondTo.value == toList[i].name){
+            toID = toList[i].id;
+        }
+    }
+    
+    if (optFirstTo.value == "Nearby" && toID  == undefined){
+        //console.log("thisworks?");
+        updateNearby(optFirstFrom,optSecondFrom,optFirstTo,optSecondTo);
+    }
     //only return when both IDs are found
+    
+    //console.log("from = " + fromID);
+    //console.log("to = " + toID);
     if (fromID != undefined && toID != undefined){
         return[fromID, toID];
     }

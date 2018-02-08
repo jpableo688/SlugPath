@@ -40,15 +40,12 @@ function findNearestNode(node){
             
         }
     }
-    
     return nearestNode;
 }
 
-var nearestBigNode;
 function findNearestBigNode(node){
-    
+    var nearestBigNode;
     var nearest = 1;
-    
     for(key in nodes){
         if (nodes[key].areas != undefined){
             var dist = nodeDistance(node, nodes[key]);
@@ -63,11 +60,11 @@ function findNearestBigNode(node){
     }
     return nearestBigNode;
 }
-
+var locationNode;
 function createNode(pos){
     var x = document.getElementById("testLocation");
     
-    var locationNode = {
+    locationNode = {
         "id":"0000000",
         "name":"My Location",
         "areas":null,
@@ -76,7 +73,7 @@ function createNode(pos){
         "type":null,
         "to":[]
     };
-    x.innerHTML = "Latitude: " + pos.coords.latitude.toFixed(6) + 
+    x.innerHTML = "Latitude: " + pos.coords.latitude.toFixed(6) +
 		"<br>Longitude: " + pos.coords.longitude.toFixed(6);
     locationNode.lat = pos.coords.latitude.toFixed(6);
     locationNode.lng = pos.coords.longitude.toFixed(6);
