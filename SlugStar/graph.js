@@ -1,92 +1,27 @@
-//Location node object (Node)
-function Node(id, name, area, lat, long, map_type){
-  this.id = id;
-  this.name = name;
-  this.area = area;
-  this.lat = lat;
-  this.long = long;
-  this.map_type = map_type;
-  this.successor = []; //used for search algorithm
-};
-
-  Node.prototype.getID = function(){
-    return this.id;
-  };
-
-  Node.prototype.getName = function(){
-    return this.name;
-  };
-
-  Node.prototype.getArea = function(){
-    return this.area;
-  };
-
-  Node.prototype.getLat = function(){
-    return this.lat;
-  };
-
-  Node.prototype.getLong = function(){
-    return this.long;
-  };
-
-  Node.prototype.getType = function(){
-    return this.map_type;
-  };
-
-  Node.prototype.print = function(){
-    var string = '(' + this.id + ', ' + this.name + ', ' + this.area + ', ' + this.lat + ', ' + this.long + ' ' + this.map_type + ')';
-    document.write(string);
-    console.log(string);
-  };
-
-  Node.prototype.printSucc = function(){
-    document.write("Parent Node: ");
-    this.print();
-    document.write("\nSuccessor Node(s): \n");
-    for(i = 0; i < this.successor.length; i++)
-    {
-      document.write(this.successor[i] + ' || ');
-    }
-  }
-
-
 //Edge object
-function Edge(location1, location2)
+function Edge(fromID, toID)
 {
-  this.orig = location1;
-  this.terminus = location2;
-  this.time = [];
-  this.difficulty = 1;
-  this.distance = 0;
+  this.from = fromID
+  this.to = toID;
+  this.eDist = 0;
+  this.eTime = 0;
+  this.eDiff = 1;
 };
 
-  Edge.prototype.getTime = function(){
-    var cont_speed = 3; //Average walk speed is 2.0 mph
-
-    var dist = this.getDistance();
-
-    //Calculates time in decimal then calculates individual minutes then secods
-    var origin_time = (dist/cont_speed) * this.getDifficulty() * 10; // 10 shifts decimal place
-    var minutes = Math.floor(Math.abs(origin_time));
-    var seconds = Math.floor((Math.abs(origin_time) * 60) % 60);
-
-    //put into tuple
-    this.time.push(minutes);
-    this.time.push(seconds);
-
-    return origin_time; // replaced this.time with origin_time
+  Edge.prototype.getFrom = function(){
+    return this.from;
   };
 
-  Edge.prototype.getDifficulty = function(){
-    return this.difficulty;
+  Edge.prototype.getTo = function(){
+    return this.to;
   };
 
   Edge.prototype.getDistance = function(){
     //Assign lat & long to variables for cleaner format
-    var x1 = this.orig.getLat();
-    var x2 = this.terminus.getLat();
-    var y1 = this.orig.getLong();
-    var y2 = this.terminus.getLong();
+    var x1 = (dict[this.from]).lat;
+    var x2 = (dict[this.to]).lat;
+    var y1 = (dict[this.from]).lng;
+    var y2 = (dict[this.to]).lng;
 
     //convert distance between axis into radians
     var dLat = (x2-x1) * Math.PI / 180;
@@ -101,11 +36,40 @@ function Edge(location1, location2)
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     var dist = 3958 * c / 10;
 
-    return dist;
+    this.eDist = dist;
+
+    return this.eDist;
+  };
+
+  Edge.prototype.getTime = function(){
+    var cont_speed = 3; //Average walk speed is 2.0 mph
+
+    var dist = this.getDistance();
+
+    //Calculates time in decimal then calculates individual minutes then secods
+    var origin_time = (dist/cont_speed) * this.getDifficulty() * 10; // 10 shifts decimal place
+    var minutes = Math.floor(Math.abs(origin_time));
+    var seconds = Math.floor((Math.abs(origin_time) * 60) % 60);
+
+    //put into tuple
+    //this.time.push(minutes);
+    //this.time.push(seconds);
+
+    this.eTime = origin_time;// replaced this.time with origin_time
+
+    return this.eTime;
+  };
+
+
+
+  Edge.prototype.getDifficulty = function(){
+    this.eDiff = 1.0;
+
+    return this.eDiff;
   };
 
   Edge.prototype.print = function(){
-    document.write('||' + this.orig.getID() + ' connected to ' + this.terminus.getID() + '|| ');
+    document.write('||' + this.getFrom() + ' connected to ' + this.getTo() + ' with weights: Dist:' + this.getDistance() + ' Time:' + this.getTime() + ' Diff:' + this.getDifficulty());
   };
 
 //Graph object
@@ -115,6 +79,7 @@ function Graph(){
   this.end = null;
 };
 
+/*
 Graph.prototype.addVertex = function(node){
   this.vertex.push(node);
   this.edge[node] = [];
@@ -127,6 +92,7 @@ Graph.prototype.addEdge = function(vertex1,vertex2){
 
   vertex1.successor.push([vertex2.getID(), toInsert.getDistance(), toInsert.getTime()]);
 };
+*/
 
 Graph.prototype.setState = function(node_startID, node_endID){
   this.start = node_startID;
@@ -142,6 +108,41 @@ Graph.prototype.isEnd = function(ID){
     return false;
 };
 
+Graph.prototype.getStart  = function(){
+  return this.start;
+};
+
+Graph.prototype.getEnd = function(){
+  return this.end;
+};
+
+Graph.prototype.getStartCoord = function(){
+  var sCoord = []
+
+  sCoord.push(dict[this.getStart()].lat);
+  sCoord.push(dict[this.getStart()].lng);
+
+  return sCoord;
+};
+
+Graph.prototype.getEndCoord = function(){
+  var eCoord = []
+
+  eCoord.push(dict[this.getEnd()].lat);
+  eCoord.push(dict[this.getEnd()].lng);
+
+  return eCoord;
+};
+
+Graph.prototype.getCurrCoord = function(ID){
+  var currCoord = []
+
+  currCoord.push(dict[ID].lat);
+  currCoord.push(dict[ID].lng);
+
+  return currCoord;
+};
+
 Graph.prototype.getLat =function(ID){
   return dict[ID].lat;
 };
@@ -150,32 +151,47 @@ Graph.prototype.getLong =function(ID){
   return dict[ID].lng;
 };
 
-Graph.prototype.getSuccessor = function(ID)
-{
-  var succ = []; // return array
-  var curr = dict[ID];
-  var toList = curr.to;
+Graph.prototype.getGraphHeur = function(ID){
+  //Assign lat & long to variables for cleaner format
+  var currPos = this.getCurrCoord(ID);
+  var endPos = this.getEndCoord();
 
-  var x1 = this.getLat(ID); var y1 = this.getLong(ID);
+  var x1 = currPos[0];
+  var y1 = currPos[1];
+  var x2 = currPos[0];
+  var y2 = currPos[1];
 
-  for(i = 0; i < toList.length; i++)
-  {
-    var x2 = this.getLat(dict[toList[i]].id); var y2 = this.getLong(dict[toList[i]].id);
+  //convert distance between axis into radians
+  var dLat = (x2-x1) * Math.PI / 180;
+  var dLon = (y2-y1) * Math.PI / 180;
 
-    var temp_distance = this.getGraphDistance(x1,y1,x2,y2);
-    var temp_time = this.getGraphTime(x1,y1,x2,y2);
-    //document.write(dict[toList[i]].id + " || ");
+  //conver lat into radians
+  var lat1 = x1 * Math.PI / 180;
+  var lat2 = x2 * Math.PI / 180;
 
-    succ.push([dict[toList[i]].id, temp_distance, temp_time]);
-  }
+  //Haversine forumla and convert into miles
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var g_dist = 3958 * c / 10;
 
-  return succ;
+  return gDist_heur;
 };
 
-Graph.prototype.print = function(){
-  for(i = 0; i < this.num_edges; i++){
-    this.edge[i].print();
-  }
+Graph.prototype.getTimeHeur = function(ID){
+  var cont_speed = 3; //Average walk speed is 2.0 mph
+
+  var dist = this.getGraphHeur(ID);
+
+  //Calculates time in decimal then calculates individual minutes then secods
+  var graph_origin_time = (dist/cont_speed) * this.getGraphDifficulty() * 10; // 10 shifts decimal place
+  var minutes = Math.floor(Math.abs(graph_origin_time));
+  var seconds = Math.floor((Math.abs(graph_origin_time) * 60) % 60);
+
+  //put into tuple
+ // this.time.push(minutes);
+  //this.time.push(seconds);
+
+  return graph_origin_time; // replaced this.time with origin_time
 };
 
 Graph.prototype.getGraphDistance = function(x1_lat, y1_long, x2_lat, y2_long){
@@ -220,7 +236,43 @@ Graph.prototype.getGraphTime = function(x1_lat, y1_long, x2_lat, y2_long){
 
 Graph.prototype.getGraphDifficulty = function(){
   return 1.0;
-}
+};
+
+Graph.prototype.getSuccessor = function(ID){
+  var succ = []; // return array
+  var curr = dict[ID];
+  var toList = curr.to;
+
+  var edges = [];
+  for(i = 0; i < toList.length; i++){
+    var toID = toList[i];
+
+    var tempEdge = new Edge(ID, toID);
+
+    edges.push(tempEdge);
+  }
+  
+
+  for(i = 0; i < toList.length; i++)
+  {
+    succ.push([dict[toList[i]].id, edges[i].getDistance()]);
+  }
+
+  return succ;
+  
+
+//  for(i = 0; i < edges.length; i++){
+  //  document.write((edges[i]).print());
+  //}
+};
+
+Graph.prototype.print = function(){
+  for(i = 0; i < this.num_edges; i++){
+    this.edge[i].print();
+  }
+};
+
+
 Graph.prototype.tester = function(){
 
   return dict["0900001"].type;
@@ -233,7 +285,6 @@ newGraph.setState("0900000", "0900001");
 
 newGraph.getSuccessor("0900001");
 
-document.write(newGraph.getSuccessor("0900001"));
 
 //document.write(newGraph.getGraphDistance(newGraph.getLat("0900000"),newGraph.getLong("0900000"),newGraph.getLat("0900001"),newGraph.getLong("0900001")));
 
