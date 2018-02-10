@@ -1,3 +1,4 @@
+
 //WORKING
 function getLocation(){
     //may not work when we put it up.
@@ -60,11 +61,12 @@ function findNearestBigNode(node){
     }
     return nearestBigNode;
 }
-var locationNode;
+
+
 function createNode(pos){
     var x = document.getElementById("testLocation");
     
-    locationNode = {
+    var locationNode = {
         "id":"0000000",
         "name":"My Location",
         "areas":null,
@@ -73,11 +75,14 @@ function createNode(pos){
         "type":null,
         "to":[]
     };
+    
     x.innerHTML = "Latitude: " + pos.coords.latitude.toFixed(6) +
 		"<br>Longitude: " + pos.coords.longitude.toFixed(6);
     locationNode.lat = pos.coords.latitude.toFixed(6);
     locationNode.lng = pos.coords.longitude.toFixed(6);
     
+    
+    //will change once we settle on one data;
     var nearestBigNode = findNearestBigNode(locationNode);
     locationNode.areas = nearestBigNode.areas;
     

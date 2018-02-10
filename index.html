@@ -12,45 +12,52 @@
     crossorigin=""></script>
 
 
-        <body onload="optStart('initTo'); optStart('initFrom'); getLocation()">
+        <body onload="getLocation(); gatherTypes('typeFrom'); gatherTypes('typeTo')">
+
+            <hr />
+                From:
+                <select id="typeFrom" name="typeFrom" onchange="updateFromAndFindIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">
+                    <option value="blank"></option>
+                    <option value="My Location">My Location</option>
+                </select>
+                
+                <select id="areaFrom" name="areaFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')";
+                        style="display: none">
+                    <option value="blank"></option>
+                </select>
+                
+                <select id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')" 
+                        style="display: none">
+                    <option value="blank"></option>
+                </select>
+                
+            <hr />
+                To:
+                 <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">
+                    <option value="blank"></option>
+                    <option value="Nearby">Nearby</option>
+                </select>
+                <select id="areaTo" name="areaTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')"
+                        style="display: none">
+                    <option value="blank"></option>
+                </select>
+                <select id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')" 
+                        style="display: none">
+                    <option value="blank"></option>
+                </select>
+         <hr />
+
+        <button onclick="drawgraph()">DrawTests</button>
             <script type="text/javascript" src="DrawMap/js/locations.js"></script>
             <script type="text/javascript" src="DrawMap/js/dropdown.js"></script>
             <script type="text/javascript" src="DrawMap/js/test.js"></script>
             <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
             <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
             <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
-            <script type="text/javascript" src="DrawMap/js/nearby.js"></script>
-            <hr />
-                From:
-                <select id="initFrom" name="initFrom" onchange="optQuery(this.id, 'dynaFrom', 'initTo', 'dynaTo');
-                                                                checkFirstMenu(this.id, 'dynaFrom');
-                                                                findIDs('initFrom', 'initTo', this.id, 'dynaTo')">
-                    <option value="empty"></option>
-                    <option value="My Location">My Location</option>
-                </select>
-                
-                <select id="dynaFrom" name="dynaFrom" onchange="findIDs('initFrom', 'initTo', this.id, 'dynaTo')" 
-                        style="display: none">
-                </select>
-            <hr />
-                To:
-                <select id="initTo" name="initTo" onchange="optQuery(this.id, 'dynaTo', 'initFrom', 'dynaFrom');
-                                                            checkFirstMenu(this.id, 'dynaTo')">
-                    <option value="empty"></option>
-                    <option value="Nearby">Nearby</option>
-                </select>
-                
-                <select id="dynaTo" name="dynaTo" onchange="findIDs('initFrom', 'initTo', 'dynaFrom', this.id,)"
-                style="display: none">
-                </select>
-         <hr />
-
-        <button onclick="drawgraph()">DrawTests</button>
-        
         <p id="DrawTests"></p>
         <p id="testLocation"></p>
         
-        <div id="mapid" style="width: 600px; height: 800px;"></div>
+        <div id="mapid" style="width: 600px; height: 600px;"></div>
         
         <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
         </body>
