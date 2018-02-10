@@ -12,54 +12,61 @@
     crossorigin=""></script>
 
 
-        <body onload="getLocation(); gatherTypes('typeFrom'); gatherTypes('typeTo')">
-
+        <body onload="getLocation();gatherTypes('typeFrom');gatherTypes('typeTo');">
             <hr />
                 From:
-                <select id="typeFrom" name="typeFrom" onchange="updateFromAndFindIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">
+                <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
                     <option value="blank"></option>
-                    <option value="My Location">My Location</option>
                 </select>
                 
-                <select id="areaFrom" name="areaFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')";
+                <select id="areaFrom" name="areaFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')";
                         style="display: none">
                     <option value="blank"></option>
                 </select>
                 
-                <select id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')" 
+                <select id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
                         style="display: none">
                     <option value="blank"></option>
                 </select>
                 
             <hr />
                 To:
-                 <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">
+                <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
                     <option value="blank"></option>
                     <option value="Nearby">Nearby</option>
                 </select>
-                <select id="areaTo" name="areaTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')"
+                <select id="areaTo" name="areaTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')"
                         style="display: none">
                     <option value="blank"></option>
                 </select>
-                <select id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')" 
+                <select id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
                         style="display: none">
                     <option value="blank"></option>
                 </select>
-         <hr />
+            <hr />
+                By:
+                <select id="weight" name="weight" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                    <option value="blank"></option>
+                    <option value="Distance">Distance</option>
+                    <option value="Time">Time</option>
+                    <option value="Difficulty">Difficulty</option>
+                </select>
+            <hr />
+            
 
-        <button onclick="drawgraph()">DrawTests</button>
+            <button onclick="drawgraph()">DrawTests</button>
             <script type="text/javascript" src="DrawMap/js/locations.js"></script>
             <script type="text/javascript" src="DrawMap/js/dropdown.js"></script>
             <script type="text/javascript" src="DrawMap/js/test.js"></script>
             <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
             <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
             <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
-        <p id="DrawTests"></p>
-        <p id="testLocation"></p>
+            <p id="DrawTests"></p>
+            <p id="testLocation"></p>
         
-        <div id="mapid" style="width: 600px; height: 600px;"></div>
+            <div id="mapid" style="width: 600px; height: 600px;"></div>
         
-        <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
+            <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
         </body>
     </head>
 </html>

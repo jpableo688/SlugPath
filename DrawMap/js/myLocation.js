@@ -2,7 +2,7 @@
 //WORKING
 function getLocation(){
     //may not work when we put it up.
-    navigator.geolocation.watchPosition(createNode);
+    navigator.geolocation.getCurrentPosition(createNode);
 }
 
 function nodeDistance(node1, node2){
@@ -23,14 +23,14 @@ function nodeDistance(node1, node2){
     //Haversine forumla and convert into miles
     var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-    var dist = 3958 * c / 10;
+    dist = 3958 * c / 10;
     
     return dist;
 }
 
 function findNearestNode(node){
     var nearestNode;
-    var nearest = 1;
+    var nearest = .1;
     for(key in tests){
         var dist = nodeDistance(node, tests[key]);
         //console.log(tests[key]);
@@ -46,7 +46,7 @@ function findNearestNode(node){
 
 function findNearestBigNode(node){
     var nearestBigNode;
-    var nearest = 1;
+    var nearest = .05;
     for(key in nodes){
         if (nodes[key].areas != undefined){
             var dist = nodeDistance(node, nodes[key]);
@@ -72,7 +72,7 @@ function createNode(pos){
         "areas":null,
         "lat":null,
         "lng":null,
-        "type":null,
+        "type":"My Location",
         "to":[]
     };
     
@@ -84,12 +84,21 @@ function createNode(pos){
     
     //will change once we settle on one data;
     var nearestBigNode = findNearestBigNode(locationNode);
-    locationNode.areas = nearestBigNode.areas;
-    
-    nodes[locationNode.id] = locationNode;
+    if(nearestBigNode != undefined){
+        nodes[locationNode.id] = locationNode;
+        locationNode.areas = nearestBigNode.areas;
+    } else {
+        alert("You are not within a half mile radius of UCSC");
+    }
     
     var nearestNode = findNearestNode(locationNode);
-    locationNode.to.push(nearestNode.id);
+    if(nearestNode != undefined){
+        locationNode.to.push(nearestNode.id);
+        tests[locationNode.id] = locationNode;
+        gatherTypes('typeFrom');
+    } else {
+        alert("You are not within a half mile radius of UCSC");
+        
+    }
     
-    tests[locationNode.id] = locationNode;
 }

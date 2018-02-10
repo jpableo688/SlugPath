@@ -1,5 +1,5 @@
 
-function aStar(optFrom, optTo){
+function aStar(optFrom, optTo, weight){
     var pathcheck = [];
     
     pathcheck.push(optFrom);

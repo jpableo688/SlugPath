@@ -2,10 +2,12 @@
 var mymap = new L.map('mapid').setView([36.995698, -122.059135], 15);
 L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ', {}).addTo(mymap);
 
-//cant figure out how to make this nonglobal
+//Can't figure out how to make these not global
 var startmarkers, endmarkers, polyline;
 function drawMap(searchArray){
     clearMap();
+   
+    
     latlng = [];
     paths = searchArray;
 
@@ -29,7 +31,6 @@ function drawMap(searchArray){
     polyline = L.polyline(latlng);
     mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
     mymap.addLayer(polyline);
-    
     
     //for gathering data
     drawInfoGather();
