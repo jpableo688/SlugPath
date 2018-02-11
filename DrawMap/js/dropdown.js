@@ -80,7 +80,7 @@ function gatherTypes(types){
 function updateReg(typeDD, areaDD, nameDD){
     var nameList = collectNameData(typeDD.value);
     populateByName(nameDD,nameList);
-    console.log(nameList);
+    //console.log(nameList);
 } 
 
 function checkIfType(optValue){
