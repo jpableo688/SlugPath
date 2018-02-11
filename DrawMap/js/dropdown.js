@@ -43,7 +43,7 @@ function collectTypeData(){
                 alreadyHere = true;
             }
         } 
-        if(alreadyHere == false){
+        if(alreadyHere == false && nodes[key].type != undefined){
             typeList.push(nodes[key]);
         }
     }
@@ -77,6 +77,7 @@ function gatherTypes(types){
     var list = collectTypeData();
     populateByType(typesDD, list);
 }
+
 function updateReg(typeDD, areaDD, nameDD){
     var nameList = collectNameData(typeDD.value);
     populateByName(nameDD,nameList);
@@ -178,7 +179,7 @@ function nearTo(value){
     for(key in nodes){
         var dist = nodeDistance(node, nodes[key]);
         //console.log(tests[key]);
-        if (dist < nearest){
+        if (dist < nearest && nodes[key].name != undefined){
             nearNodeList.push(nodes[key]);
         }
     }

@@ -4,589 +4,14 @@
 //var nodes = [{this is json}].
 //everything between the brackets is json.
 var nodes = {
-    "0100000":{
-        "id":"0100000",
-        "name":"Rachel Carson College",
-        "areas":"Rachel Carson College",
-        "lat":36.991519,
-        "lng":-122.064845,
-        "type":"Residential"
-    },
-    "0200000":{
-        "id":"0200000",
-        "name":"College 9",
-        "areas":"College 9 & 10",
-        "lat":37.001536,
-        "lng":-122.057328,
-        "type":"Residential"
-    },
-    "0300000":{
-        "id":"0300000",
-        "name":"College 10",
-        "areas":"College 9 & 10",
-        "lat":37.000545,
-        "lng":-122.057994,
-        "type":"Residential"
-    },
-    "0400000":{
-        "id":"0400000",
-        "name":"Cowell College",
-        "areas":"Cowell College",
-        "lat":36.997090,
-        "lng":-122.054324,
-        "type":"Residential"
-    },
-    "0500000":{
-        "id":"0500000",
-        "name":"Crown College",
-        "areas":"Crown College",
-        "lat":37.000000,
-        "lng":-122.054592,
-        "type":"Residential"
-    },
-    "0600000":{
-        "id":"0600000",
-        "name":"Kresge College",
-        "areas":"Kresge College",
-        "lat":36.997376,
-        "lng":-122.066755,
-        "type":"Residential"
-    },
-    "0700000":{
-        "id":"0700000",
-        "name":"Merrill College",
-        "areas":"Merrill College",
-        "lat":36.999826,
-        "lng":-122.053284,
-        "type":"Residential"
-    },
-    "0800000":{
-        "id":"0800000",
-        "name":"Oakes College",
-        "areas":"Oakes College",
-        "lat":36.989404,
-        "lng":-122.064069,
-        "type":"Residential"
-    },
-    "0900000":{
-        "id":"0900000",
-        "name":"Porter College",
-        "areas":"Porter College",
-        "lat":36.994903,
-        "lng":-122.065389,
-        "type":"Residential"
-    },
-    "1000000":{
-        "id":"1000000",
-        "name":"Stevenson College",
-        "areas":"Stevenson College",
-        "lat":36.997470,
-        "lng":-122.052090,
-        "type":"Residential"
-    },
-    "1100000":{
-        "id":"1100000",
-        "name":"Jack Baskin School of Engineering",
-        "areas":"Science Hill",
-        "lat":37.000720,
-        "lng":-122.063096,
-        "type":"Academic"
-    },
-    "1200000":{
-        "id":"1200000",
-        "name":"Physical Sciences Building",
-        "areas":"Science Hill",
-        "lat":36.999605,
-        "lng":-122.062029,
-        "type":"Academic"
-    },
-    "1300000":{
-        "id":"1300000",
-        "name":"Department of Chemistry & Biochemistry",
-        "areas":"Science Hill",
-        "lat":36.999541,
-        "lng":-122.062132,
-        "type":"Academic"
-    },
-    "1400000":{
-        "id":"1400000",
-        "name":"Science & Engineering Library",
-        "areas":"Science Hill",
-        "lat":36.999013,
-        "lng":-122.060636,
-        "type":"Academic"
-    },
-    "1500000":{
-        "id":"1500000",
-        "name":"Earth & Marine Sciences",
-        "areas":"Science Hill",
-        "lat":36.998060,
-        "lng":-122.059596,
-        "type":"Academic"
-    },
-    "1600000":{
-        "id":"1600000",
-        "name":"Media Theater",
-        "areas":"Media Theater",
-        "lat":36.994847,
-        "lng":-122.061960,
-        "type":"Academic"
-    },
-    "1700000":{
-        "id":"1700000",
-        "name":"Department of Music",
-        "areas":"Department of Music",
-        "lat":36.993059,
-        "lng":-122.060619,
-        "type":"Academic"
-    },
-    "1800000":{
-        "id":"1800000",
-        "name":"OPERS",
-        "areas":"OPERS",
-        "lat":36.994411,
-        "lng":-122.055063,
-        "type":"Activities"
-    },
-    "1900000":{
-        "id":"1900000",
-        "name":"Classroom Unit",
-        "areas":"Classroom Unit",
-        "lat":36.997865,
-        "lng":-122.057180,
-        "type":"Academic"
-    },
-    "2000000":{
-        "id":"2000000",
-        "name":"McHenry Library",
-        "areas":"McHenry Library",
-        "lat":36.995744,
-        "lng":-122.059150,
-        "type":"Academic"
-    },
-    "2100000":{
-        "id":"2100000",
-        "name":"Student Health Center",
-        "areas":"Student Health Center",
-        "lat":36.9995522,
-        "lng":-122.0577115,
-        "type":"Student Services"
-    },
-    "2200000":{
-        "id":"2200000",
-        "name":"Kerr Hall",
-        "areas":"Kerr Hall",
-        "lat":36.997000,
-        "lng":-122.062040,
-        "type":"Academic"
-    },
-    "2300000":{
-        "id":"2300000",
-        "name":"Quarry Amphitheater",
-        "areas":"Quarry Plaza",
-        "lat":36.998589,
-        "lng":-122.056024,
-        "type":"Activities"
-    },
-    "0101000":{
-        "id":"0101000",
-        "name":"Rachel Carson/Oakes Dining Hall",
-        "areas":"Rachel Carson College",
-        "lat":36.991493,
-        "lng":-122.065283,
-        "type":"Dining Hall"
-    },
-    "0102000":{
-        "id":"0102000",
-        "name":"ResNet",
-        "areas":"Rachel Carson College",
-        "lat":36.992149,
-        "lng":-122.065012,
-        "type":"Student Services"
-    },
-    "0103000":{
-        "id":"0103000",
-        "name":"College Eight Cafe",
-        "areas":"Rachel Carson College",
-        "lat":36.991527,
-        "lng":-122.064551,
-        "type":"Food To Go"
-    },
-    "0104000":{
-        "id":"0104000",
-        "name":"West Field House",
-        "areas":"Rachel Carson College",
-        "lat":36.991506,
-        "lng":-122.063883,
-        "type":"Activities"
-    },
-    "0105000":{
-        "id":"0105000",
-        "name":"Red Room",
-        "areas":"Rachel Carson College",
-        "lat":36.991306,
-        "lng":-122.064770,
-        "type":"Other"
-    },
-    "0106000":{
-        "id":"0106000",
-        "name":"Rachel Carson & Oakes Residential Life",
-        "areas":"Rachel Carson College",
-        "lat":36.990977,
-        "lng":-122.064736,
-        "type":"Student Services"
-    },
-    "0201000":{
-        "id":"0201000",
-        "name":"College 9 & 10 Dining Hall",
-        "areas":"College 9 & 10",
-        "lat":37.000731,
-        "lng":-122.057769,
-        "type":"Dining Hall"
-    },
-    "0202000":{
-        "id":"0202000",
-        "name":"Terry Fresca Restaurant & Coffee Bar",
-        "areas":"College 9 & 10",
-        "lat":37.000978,
-        "lng":-122.057736,
-        "type":"Dining Hall"
-    },
-    "0203000":{
-        "id":"0203000",
-        "name":"Terry Frietas Cafe",
-        "areas":"College 9 & 10",
-        "lat":37.0003468,
-        "lng":-122.057966,
-        "type":"Food To Go "
-    },
-    "0204000":{
-        "id":"0204000",
-        "name":"Recreational Lounge",
-        "areas":"College 9 & 10",
-        "lat":37.0006144,
-        "lng":-122.0577187,
-        "type":"Activities"
-    },
-    "0205000":{
-        "id":"0205000",
-        "name":"Namaste Lounge",
-        "areas":"College 9 & 10",
-        "lat":37.0007468,
-        "lng":-122.0571587,
-        "type":"Activities"
-    },
-    "0206000":{
-        "id":"0206000",
-        "name":"College 9 & 10 Residential Life",
-        "areas":"College 9 & 10",
-        "lat":37.001422,
-        "lng":-122.056990,
-        "type":"Student Services"
-    },
-    "0207000":{
-        "id":"0207000",
-        "name":"Social Science 1",
-        "areas":"College 9 & 10",
-        "lat":37.002115,
-        "lng":-122.058030,
-        "type":"Academic"
-    },
-    "0208000":{
-        "id":"0208000",
-        "name":"Social Science 2",
-        "areas":"College 9 & 10",
-        "lat":37.001527,
-        "lng":-122.058747,
-        "type":"Academic"
-    },
-    "0209000":{
-        "id":"0209000",
-        "name":"College 9 & 10 Multi-Purpose Room",
-        "areas":"College 9 & 10",
-        "lat":37.000767,
-        "lng":-122.057835,
-        "type":"Activities"
-    },
-    "0210000":{
-        "id":"0210000",
-        "name":"College 9 & 10 Lounge Room",
-        "areas":"College 9 & 10",
-        "lat":37.000618,
-        "lng":-122.057719,
-        "type":"Activities"
-    },
-    "0211000":{
-        "id":"0211000",
-        "name":"College 9 & 10 Community Room",
-        "areas":"College 9 & 10",
-        "lat":37.002229,
-        "lng":-122.059317,
-        "type":"Activities"
-    },
-    "0401000":{
-        "id":"0401000",
-        "name":"Page Smith Library",
-        "areas":"Cowell College",
-        "lat":36.996893,
-        "lng":-122.053601,
-        "type":"Academic"
-    },
-    "0402000":{
-        "id":"0402000",
-        "name":"Cowell/Stevenson Dining Hall",
-        "areas":"Cowell College",
-        "lat":36.996826,
-        "lng":-122.053062,
-        "type":"Dining Hall"
-    },
-    "0403000":{
-        "id":"0403000",
-        "name":"Cowell Coffee Shop",
-        "areas":"Cowell College",
-        "lat":36.997162,
-        "lng":-122.053062,
-        "type":"Food To Go"
-    },
-    "0404000":{
-        "id":"0404000",
-        "name":"Cowell College Administration",
-        "areas":"Cowell College",
-        "lat":36.997316,
-        "lng":-122.053515,
-        "type":"Student Services"
-    },
-    "0405000":{
-        "id":"0405000",
-        "name":"Mary Holmes Lounge",
-        "areas":"Cowell College",
-        "lat":36.997042,
-        "lng":-122.053071,
-        "type":"Other"
-    },
-    "0406000":{
-        "id":"0406000",
-        "name":"Cowell Computer Lab",
-        "areas":"Cowell College",
-        "lat":36.997008,
-        "lng":-122.055111,
-        "type":"Academic"
-    },
-    "0407000":{
-        "id":"0407000",
-        "name":"Eloise Pickard Smith Gallery",
-        "areas":"Cowell College",
-        "lat":36.997036,
-        "lng":-122.052881,
-        "type":"Other"
-    },
-    "0501000":{
-        "id":"0501000",
-        "name":"Crown/Merrill Dining Hall",
-        "areas":"Crown College",
-        "lat":37.000126,
-        "lng":-122.054424,
-        "type":"Dining Hall"
-    },
-    "0502000":{
-        "id":"0502000",
-        "name":"Banana Joe's",
-        "areas":"Crown College",
-        "lat":36.999989,
-        "lng":-122.054432,
-        "type":"Food To Go"
-    },
-    "0503000":{
-        "id":"0503000",
-        "name":"Crown Lounge",
-        "areas":"Crown College",
-        "lat":37.000116,
-        "lng":-122.054575,
-        "type":"Other"
-    },
-    "0504000":{
-        "id":"0504000",
-        "name":"Crown Library",
-        "areas":"Crown College",
-        "lat":36.999844,
-        "lng":-122.054801,
-        "type":"Academic"
-    },
-    "0505000":{
-        "id":"0505000",
-        "name":"Crown Computer Lab",
-        "areas":"Crown College",
-        "lat":36.999844,
-        "lng":-122.054801,
-        "type":"Academic"
-    },
-    "0601000":{
-        "id":"0601000",
-        "name":"Porter/Kresge Housing & Residential Office",
-        "areas":"Kresge College",
-        "lat":36.996563,
-        "lng":-122.065731,
-        "type":"Student Services"
-    },
-    "0602000":{
-        "id":"0602000",
-        "name":"Kresge Lounge",
-        "areas":"Kresge College",
-        "lat":36.997492,
-        "lng":-122.067002,
-        "type":"Other"
-    },
-    "0603000":{
-        "id":"0603000",
-        "name":"Kresge Food Co-Op",
-        "areas":"Kresge College",
-        "lat":36.997329,
-        "lng":-122.065780,
-        "type":"Market"
-    },
-    "0604000":{
-        "id":"0604000",
-        "name":"STARS",
-        "areas":"Kresge College",
-        "lat":36.997488,
-        "lng":-122.066416,
-        "type":"Student Services"
-    },
-    "0605000":{
-        "id":"0605000",
-        "name":"Housing & Student Life Office",
-        "areas":"Kresge College",
-        "lat":36.998526,
-        "lng":-122.066434,
-        "type":"Student Services"
-    },
-    "0606000":{
-        "id":"0606000",
-        "name":"Kresge Town Hall",
-        "areas":"Kresge College",
-        "lat":36.998712,
-        "lng":-122.066297,
-        "type":"Activities"
-    },
-    "0607000":{
-        "id":"0607000",
-        "name":"Owl's Nest Cafe",
-        "areas":"Kresge College",
-        "lat":36.998853,
-        "lng":-122.066139,
-        "type":"Food To Go"
-    },
-    "0608000":{
-        "id":"0608000",
-        "name":"College Programs Office",
-        "areas":"Kresge College",
-        "lat":36.998727,
-        "lng":-122.066067,
-        "type":"Student Services"
-    },
-    "0609000":{
-        "id":"0609000",
-        "name":"Kresge Computer Room",
-        "areas":"Kresge College",
-        "lat":36.997622,
-        "lng":-122.065783,
-        "type":"Academic"
-    },
-    "0701000":{
-        "id":"0701000",
-        "name":"Vivas",
-        "areas":"Merrill College",
-        "lat":37.000156,
-        "lng":-122.053374,
-        "type":"Dining Hall"
-    },
-    "0702000":{
-        "id":"0702000",
-        "name":"Baobab Lounge",
-        "areas":"Merrill College",
-        "lat":37.000081,
-        "lng":-122.053418,
-        "type":"Academic"
-    },
-    "0703000":{
-        "id":"0703000",
-        "name":"Ming Ong Computer Lab",
-        "areas":"Merrill College",
-        "lat":36.999728,
-        "lng":-122.052379,
-        "type":"Academic"
-    },
-    "0704000":{
-        "id":"0704000",
-        "name":"Merrill Library",
-        "areas":"Merrill College",
-        "lat":36.999401,
-        "lng":-122.053302,
-        "type":"Academic"
-    },
-    "0705000":{
-        "id":"0705000",
-        "name":"Cultural Center",
-        "areas":"Merrill College",
-        "lat":37.000064,
-        "lng":-122.053806,
-        "type":"Other"
-    },
-    "0706000":{
-        "id":"0706000",
-        "name":"KZSC 88.1FM",
-        "areas":"Merrill College",
-        "lat":37.000627,
-        "lng":-122.054123,
-        "type":"Other"
-    },
-    "0707000":{
-        "id":"0707000",
-        "name":"UCSC Cantú Queer Center",
-        "areas":"Merrill College",
-        "lat":37.000606,
-        "lng":-122.053890,
-        "type":"Student Services"
-    },
-    "0801000":{
-        "id":"0801000",
-        "name":"Oakes Cafe",
-        "areas":"Oakes",
-        "lat":36.989227,
-        "lng":-122.063303,
-        "type":"Food To Go"
-    },
-    "0802000":{
-        "id":"0802000",
-        "name":"Oakes Learning Center",
-        "areas":"Oakes",
-        "lat":36.989308,
-        "lng":-122.063325,
-        "type":"Student Services"
-    },
-    "0803000":{
-        "id":"0803000",
-        "name":"Oakes Library",
-        "areas":"Oakes",
-        "lat":36.989807,
-        "lng":-122.062882,
-        "type":"Academic"
-    },
-    "0804000":{
-        "id":"0804000",
-        "name":"Oakes Administration & Advising",
-        "areas":"Oakes",
-        "lat":36.990053,
-        "lng":-122.062855,
-        "type":"Student Services"
-    },
-    "0901000":{
+        "0901000":{
         "id":"0901000",
         "name":"Porter/Kresge Dining Hall",
         "areas":"Porter College",
         "lat":36.994276,
         "lng":-122.065903,
-        "type":"Dining Hall"
+        "type":"Dining Hall",
+        "to":["0900039"]
     },
     "0902000":{
         "id":"0902000",
@@ -594,15 +19,17 @@ var nodes = {
         "areas":"Porter College",
         "lat":36.996563,
         "lng":-122.065731,
-        "type":"Student Services"
-    },
+        "type":"Student Services",
+        "to": []
+     },
     "0903000":{
         "id":"0903000",
         "name":"Hitchcock Lounge",
         "areas":"Porter College",
         "lat":36.994501,
         "lng":-122.065820,
-        "type":"Other"
+        "type":"Other",
+        "to": ["0900039"]
     },
     "0904000":{
         "id":"0904000",
@@ -610,15 +37,17 @@ var nodes = {
         "areas":"Porter College",
         "lat":36.994197,
         "lng":-122.065755,
-        "type":"Food To Go"
+        "type":"Food To Go",
+        "to":["0900024","0900036"]
     },
-    "0905000":{
+    "0905000": {
         "id":"0905000",
         "name":"Sesnon Art Gallery",
         "areas":"Porter College",
         "lat":36.994006,
         "lng":-122.065178,
-        "type":"Other"
+        "type":"Other",
+        "to":["0900019","0900045"]
     },
     "0906000":{
         "id":"0906000",
@@ -626,7 +55,8 @@ var nodes = {
         "areas":"Porter College",
         "lat":36.994272,
         "lng":-122.065199,
-        "type":"Academic"
+        "type":"Academic",
+        "to": ["0900046"]
     },
     "0907000":{
         "id":"0907000",
@@ -634,198 +64,907 @@ var nodes = {
         "areas":"Porter College",
         "lat":36.994062,
         "lng":-122.065348,
-        "type":"Student Services"
+        "type":"Student Services",
+        "to":["0900038","0900046"]
+    }, 
+    "0900001":{
+        "id":"0900001",
+        "name":null,
+        "areas":null,
+        "lat":36.992921,
+        "lng":-122.065069,
+        "type":null,
+        "to":["0900002","0900005"]
     },
-    "1001000":{
-        "id":"1001000",
-        "name":"Stevenson Coffee House",
-        "areas":"Stevenson College",
-        "lat":36.997197,
-        "lng":-122.052280,
-        "type":"Food To Go"
+    "0900002":{
+        "id":"0900002",
+        "name":null,
+        "areas":null,
+        "lat":36.992996,
+        "lng":-122.065053,
+        "type":null,
+        "to":["0900001","0900003"]
     },
-    "1002000":{
-        "id":"1002000",
-        "name":"Stevenson Event Center",
-        "areas":"Stevenson College",
-        "lat":36.996954,
-        "lng":-122.052247,
-        "type":"Activities"
+    "0900003":{
+        "id":"0900003",
+        "name":null,
+        "areas":null,
+        "lat":36.993050,
+        "lng":-122.064959,
+        "type":null,
+        "to":["0900002","0900004"]
     },
-    "1003000":{
-        "id":"1003000",
-        "name":"Stevenson Library",
-        "areas":"Stevenson College",
-        "lat":36.997105,
-        "lng":-122.051450,
-        "type":"Academic"
+    "0900004":{
+        "id":"0900004",
+        "name":null,
+        "areas":null,
+        "lat":36.993146,
+        "lng":-122.064795,
+        "type":null,
+        "to":["0900003","0900007","0900008","0900031"]
     },
-    "1004000":{
-        "id":"1004000",
-        "name":"UCSC Catering",
-        "areas":"Stevenson College",
-        "lat":36.996975,
-        "lng":-122.052826,
-        "type":"Other"
+    "0900005":{
+        "id":"0900005",
+        "name":null,
+        "areas":null,
+        "lat":36.992940,
+        "lng":-122.064508,
+        "type":null,
+        "to":["0900001","0900006"]
     },
-    "1005000":{
-        "id":"1005000",
-        "name":"Wagstaff Lounge",
-        "areas":"Stevenson College",
-        "lat":36.996869,
-        "lng":-122.051667,
-        "type":"Other"
+    "0900006":{
+        "id":"0900006",
+        "name":null,
+        "areas":null,
+        "lat":36.992996,
+        "lng":-122.064556,
+        "type":null,
+        "to":["0900005","0900007"]
     },
-    "1006000":{
-        "id":"1006000",
-        "name":"Silverman Conference Room",
-        "areas":"Stevenson College",
-        "lat":36.997084,
-        "lng":-122.051851,
-        "type":"Activities"
+    "0900007":{
+        "id":"0900007",
+        "name":null,
+        "areas":null,
+        "lat":36.993045,
+        "lng":-122.064682,
+        "type":null,
+        "to":["0900004","0900006"]
     },
-    "1007000":{
-        "id":"1007000",
-        "name":"Cultural Arts & Diversity",
-        "areas":"Stevenson College",
-        "lat":36.997267,
-        "lng":-122.052123,
-        "type":"Student Services"
+    "0900008":{
+        "id":"0900008",
+        "name":null,
+        "areas":null,
+        "lat":36.993272,
+        "lng":-122.064843,
+        "type":null,
+        "to":["0900004","0900009","0900026","0900031"]
     },
-    "1008000":{
-        "id":"1008000",
-        "name":"Hahn Art Faciliy",
-        "areas":"Stevenson College",
-        "lat":36.997895,
-        "lng":-122.052708,
-        "type":"Other"
+    "0900009":{
+        "id":"0900009",
+        "name":null,
+        "areas":null,
+        "lat":36.993360,
+        "lng":-122.064897,
+        "type":null,
+        "to":["0900008","0900010","0900018","0900026"]
     },
-    "1101000":{
-        "id":"1101000",
-        "name":"Perk Coffee Bar at Baskin Engineering",
-        "areas":"Science Hill",
-        "lat":37.000551,
-        "lng":-122.063005,
-        "type":"Food To Go"
+    "0900010":{
+        "id":"0900010",
+        "name":null,
+        "areas":null,
+        "lat":36.993494,
+        "lng":-122.064927,
+        "type":null,
+        "to":["0900009","0900011","0900018"]
     },
-    "1102000":{
-        "id":"1102000",
-        "name":"Film & Digital Media Department",
-        "areas":"Science Hill",
-        "lat":37.000842,
-        "lng":-122.061441,
-        "type":"Student Services"
+    "0900011":{
+        "id":"0900011",
+        "name":null,
+        "areas":null,
+        "lat":36.993629,
+        "lng":-122.064977,
+        "type":null,
+        "to":["0900010","0900012","0900019"]
     },
-    "1201000":{
-        "id":"1201000",
-        "name":"Perk Coffee Bar at Physical Sciences",
-        "areas":"Science Hill",
-        "lat":36.999680,
-        "lng":-122.061970,
-        "type":"Food To Go"
+    "0900012":{
+        "id":"0900012",
+        "name":null,
+        "areas":null,
+        "lat":36.993878,
+        "lng":-122.064926,
+        "type":null,
+        "to":["0900011","0900013"]
     },
-    "1501000":{
-        "id":"1501000",
-        "name":"Perk Coffee Bar at Earth & Marine Sciences",
-        "areas":"Science Hill",
-        "lat":36.997944,
-        "lng":-122.059834,
-        "type":"Food To Go"
+    "0900013":{
+        "id":"0900013",
+        "name":null,
+        "areas":null,
+        "lat":36.994199,
+        "lng":-122.064857,
+        "type":null,
+        "to":["0900012","0900014"]
     },
-    "1601000":{
-        "id":"1601000",
-        "name":"Digital Arts & New Media",
-        "areas":"Media Theater",
-        "lat":36.993883,
-        "lng":-122.060756,
-        "type":"Academic"
+    "0900014":{
+        "id":"0900014",
+        "name":null,
+        "areas":null,
+        "lat":36.994378,
+        "lng":-122.064862,
+        "type":null,
+        "to":["0900013","0900015"]
     },
-    "1701000":{
-        "id":"1701000",
-        "name":"Recital Hall",
-        "areas":"Department of Music",
-        "lat":36.993151,
-        "lng":-122.060834,
-        "type":"Academic"
+    "0900015":{
+        "id":"0900015",
+        "name":null,
+        "areas":null,
+        "lat":36.994394,
+        "lng":-122.065085,
+        "type":null,
+        "to":["0900014","0900016"]
     },
-    "1801000":{
-        "id":"1801000",
-        "name":"OPERS Multi-Purpose Room",
-        "areas":"OPERS",
-        "lat":36.993820,
-        "lng":-122.054821,
-        "type":"Activities"
+    "0900016":{
+        "id":"0900016",
+        "name":null,
+        "areas":null,
+        "lat":36.994413,
+        "lng":-122.065348,
+        "type":null,
+        "to":["0900015","0900017","0900038"]
     },
-    "1802000":{
-        "id":"1802000",
-        "name":"OPERS Wellness Center",
-        "areas":"OPERS",
-        "lat":36.993625,
-        "lng":-122.054676,
-        "type":"Student Services"
+    "0900017":{
+        "id":"0900017",
+        "name":null,
+        "areas":null,
+        "lat":36.994471,
+        "lng":-122.065396,
+        "type":null,
+        "to":["0900016","0900037","0900040"]
     },
-    "1803000":{
-        "id":"1803000",
-        "name":"East Field",
-        "areas":"OPERS",
-        "lat":36.994028,
-        "lng":-122.052710,
-        "type":"Activities"
+    "0900018":{
+        "id":"0900018",
+        "name":null,
+        "areas":null,
+        "lat":36.993434,
+        "lng":-122.064991,
+        "type":null,
+        "to":["0900009","0900010","0900019"]
     },
-    "1901000":{
-        "id":"1901000",
-        "name":"International Education Office",
-        "areas":"International Education Office",
-        "lat":36.997873,
-        "lng":-122.056586,
-        "type":"Student Services"
+    "0900019":{
+        "id":"0900019",
+        "name":null,
+        "areas":null,
+        "lat":36.993643,
+        "lng":-122.065116,
+        "type":null,
+        "to":["0900018","0900011","0900020","0900045","0905000"]
     },
-    "2001000":{
-        "id":"2001000",
-        "name":"Global Village Cafe",
-        "areas":"McHenry Library",
-        "lat":36.996086,
-        "lng":-122.059356,
-        "type":"Food To Go"
+    "0900020":{
+        "id":"0900020",
+        "name":null,
+        "areas":null,
+        "lat":36.993808,
+        "lng":-122.065368,
+        "type":null,
+        "to":["0900019","0900021","0900045"]
     },
-    "2301000":{
-        "id":"2301000",
-        "name":"Cafe Iveta",
-        "areas":"Quarry Plaza",
-        "lat":36.998178,
-        "lng":-122.055801,
-        "type":"Food To Go"
+    "0900021":{
+        "id":"0900021",
+        "name":null,
+        "areas":null,
+        "lat":36.993842,
+        "lng":-122.065564,
+        "type":null,
+        "to":["0900020","0900022"]
     },
-    "2302000":{
-        "id":"2302000",
-        "name":"Bay Tree Bookstore",
-        "areas":"Quarry Plaza",
-        "lat":36.998007,
-        "lng":-122.055702,
-        "type":"Market"
+    "0900022":{
+        "id":"0900022",
+        "name":null,
+        "areas":null,
+        "lat":36.993838,
+        "lng":-122.065723,
+        "type":null,
+        "to":["0900021","0900023"]
     },
-    "2303000":{
-        "id":"2303000",
-        "name":"Student Union",
-        "areas":"Quarry Plaza",
-        "lat":36.997930,
-        "lng":-122.055915,
-        "type":"Student Services"
+    "0900023":{
+        "id":"0900023",
+        "name":null,
+        "areas":null,
+        "lat":36.993752,
+        "lng":-122.065881,
+        "type":null,
+        "to":["0900022","0900024","0900025","0900032"]
     },
-    "2304000":{
-        "id":"2304000",
-        "name":"Career Center",
-        "areas":"Quarry Plaza",
-        "lat":36.997666,
-        "lng":-122.055561,
-        "type":"Student Services"
+    "0900024":{
+        "id":"0900024",
+        "name":null,
+        "areas":null,
+        "lat":36.994033,
+        "lng":-122.065833,
+        "type":null,
+        "to":["0900023","0900032","0900036","0904000"]
     },
-    "2305000":{
-        "id":"2305000",
-        "name":"Express Story",
-        "areas":"Quarry Plaza",
-        "lat":36.997697,
-        "lng":-122.055603,
-        "type":"Market"
+    "0900025":{
+        "id":"0900025",
+        "name":null,
+        "areas":null,
+        "lat":36.993500,
+        "lng":-122.065962,
+        "type":null,
+        "to":["0900023","0900026","0900027"]
+    },
+    "0900026":{
+        "id":"0900026",
+        "name":null,
+        "areas":null,
+        "lat":36.993208,
+        "lng":-122.065165,
+        "type":null,
+        "to":["0900008","0900009","0900025","0900030","0900031"]
+    },
+    "0900027":{
+        "id":"0900027",
+        "name":null,
+        "areas":null,
+        "lat":36.993215,
+        "lng":-122.066177,
+        "type":null,
+        "to":["0900025","0900028","0900029"]
+    },
+    "0900028":{
+        "id":"0900028",
+        "name":null,
+        "areas":null,
+        "lat":36.993174,
+        "lng":-122.066257,
+        "type":null,
+        "to":["0900027","0900029"]
+    },
+    "0900029":{
+        "id":"0900029",
+        "name":null,
+        "areas":null,
+        "lat":36.993157,
+        "lng":-122.066059,
+        "type":null,
+        "to":["0900027","0900028","0900030"]
+    },
+    "0900030":{
+        "id":"0900030",
+        "name":null,
+        "areas":null,
+        "lat":36.993193,
+        "lng":-122.065828,
+        "type":null,
+        "to":["0900029","0900026","0900031"]
+    },
+    "0900031":{
+        "id":"0900031",
+        "name":null,
+        "areas":null,
+        "lat":36.993189,
+        "lng":-122.065321,
+        "type":null,
+        "to":["0900004","0900008","0900026","0900030"]
+    },
+    "0900032":{
+        "id":"0900032",
+        "name":null,
+        "areas":null,
+        "lat":36.993871,
+        "lng":-122.066067,
+        "type":null,
+        "to":["0900023","0900024","0900033"]
+    },
+    "0900033":{
+        "id":"0900033",
+        "name":null,
+        "areas":null,
+        "lat":36.993995,
+        "lng":-122.066290,
+        "type":null,
+        "to":["0900032","0900034"]
+    },
+    "0900034":{
+        "id":"0900034",
+        "name":null,
+        "areas":null,
+        "lat":36.994175,
+        "lng":-122.066432,
+        "type":null,
+        "to":["0900033","0900035"]
+    },
+    "0900035":{
+        "id":"0900035",
+        "name":null,
+        "areas":null,
+        "lat":36.994379,
+        "lng":-122.066982,
+        "type":null,
+        "to":["0900034"]
+    },
+    "0900036":{
+        "id":"0900036",
+        "name":null,
+        "areas":null,
+        "lat":36.994265,
+        "lng":-122.065587,
+        "type":null,
+        "to":["0900024","0900037","0900038","0900039","0904000"]
+    },
+    "0900037":{
+        "id":"0900037",
+        "name":null,
+        "areas":null,
+        "lat":36.994434,
+        "lng":-122.065568,
+        "type":null,
+        "to":["0900016","0900017","0900036","0900039"]
+    },
+    "0900038":{
+        "id":"0900038",
+        "name":null,
+        "areas":null,
+        "lat":36.994258,
+        "lng":-122.065396,
+        "type":null,
+        "to":["0900016","0900036","0900036","0907000"]
+    },
+    "0900039":{
+        "id":"0900039",
+        "name":null,
+        "areas":null,
+        "lat":36.994442,
+        "lng":-122.065742,
+        "type":null,
+        "to":["0900036","0900037","0901000","0903000"]
+    },
+    "0900040":{
+        "id":"0900040",
+        "name":null,
+        "areas":null,
+        "lat":36.994594,
+        "lng":-122.065358,
+        "type":null,
+        "to":["0900017","0900041"]
+    },
+    "0900041":{
+        "id":"0900041",
+        "name":null,
+        "areas":null,
+        "lat":36.994905,
+        "lng":-122.065353,
+        "type":null,
+        "to":["0900040","0900042"]
+    },
+    "0900042":{
+        "id":"0900042",
+        "name":null,
+        "areas":null,
+        "lat":36.995171,
+        "lng":-122.065299,
+        "type":null,
+        "to":["0900041","0900043"]
+    },
+    "0900043":{
+        "id":"0900043",
+        "name":null,
+        "areas":null,
+        "lat":36.995342,
+        "lng":-122.065245,
+        "type":null,
+        "to":["0900042","0900044"]
+    },
+    "0900044":{
+        "id":"0900044",
+        "name":null,
+        "areas":null,
+        "lat":36.995414,
+        "lng":-122.065278,
+        "type":null,
+        "to":["0900044"]
+    },
+    "0900045":{
+        "id":"0900045",
+        "name":null,
+        "areas":null,
+        "lat":36.993981,
+        "lng":-122.065312,
+        "type":null,
+        "to":["0900019","0900046","0905000"]
+    },
+    "0900046":{
+        "id":"0900046",
+        "name":null,
+        "areas":null,
+        "lat":36.994191,
+        "lng":-122.065264,
+        "type":null,
+        "to":["0900045","0900038","0906000","0907000"]
+    },
+    "0100001":{					//bus stop
+        "id":"0100001",
+        "name": "Rachel Carson Bus Stop",
+        "areas":"Rachel Carson",
+        "lat":36.992831,
+        "lng":-122.064784,
+        "type":"Bus Stop",
+        "to":["0100002","0100003"]
+    },
+        "0100002":{					//crosswalk
+        "id":"0100002",
+        "name":null,
+        "areas":null,
+        "lat":36.992843,
+        "lng":-122.064496,
+        "type":null,
+        "to":["0100001","0100003"]
+    },
+        "0100003":{
+        "id":"0100003",
+        "name":null,
+        "areas":null,
+        "lat":36.992631,
+        "lng":-122.064536,
+        "type":null,
+        "to":["0100001","0100002","0100004"]
+    },
+        "0100004":{
+        "id":"0100004",
+        "name":null,
+        "areas":null,
+        "lat":36.992547,
+        "lng":-122.064558,
+        "type":null,
+        "to":["0100003","0100005"]
+    },
+        "0100005":{
+        "id":"0100005",
+        "name":null,
+        "areas":null,
+        "lat":36.992448,
+        "lng":-122.064603,
+        "type":null,
+        "to":["0100004","0100006"]
+    },
+        "0100006":{					//west of lot 146, bend in the sidewalk
+        "id":"0100006",
+        "name":null,
+        "areas":null,
+        "lat":36.992301,
+        "lng":-122.064648,
+        "type":null,
+        "to":["0100005","0100007"]
+    },
+        "0100007":{					//head of the college
+        "id":"0100007",
+        "name":null,
+        "areas":null,
+        "lat":36.992077,
+        "lng":-122.064654,
+        "type":null,
+        "to":["0100006","0100008","0100009"]
+    },
+        "0100008":{					//down into the quad
+        "id":"0100008",
+        "name":null,
+        "areas":null,
+        "lat":36.991957,
+        "lng":-122.064694,
+        "type":null,
+        "to":[]
+    },
+        "0100009":{					//outside ResNet
+        "id":"0100009",
+        "name":null,
+        "areas":null,
+        "lat":36.992118,
+        "lng":-122.064848,
+        "type":null,
+        "to":["0100007","0102000"]
+    },
+        "0100010":{
+        "id":"0100010",
+        "name":null,
+        "areas":null,
+        "lat":36.991817,
+        "lng":-122.064741,
+        "type":null,
+        "to":["0100008","0100011"]
+    },
+        "0100011":{					//central quad, near comp lab
+        "id":"0100011",
+        "name":null,
+        "areas":null,
+        "lat":36.991579,
+        "lng":-122.064824,
+        "type":null,
+        "to":["0100010","0100012","0100040","0107000"]
+    },
+        "0100012":{					//outside dining hall
+        "id":"0100012",
+        "name":null,
+        "areas":null,
+        "lat":36.991714,
+        "lng":-122.065051,
+        "type":null,
+        "to":["0100011","0101000"]
+    },
+        "0100013":{					//center of plaza
+        "id":"0100013",
+        "name":null,
+        "areas":null,
+        "lat":36.991452,
+        "lng":-122.064880,
+        "type":null,
+        "to":["0100011","0100014","0105000"]
+    },
+        "0100014":{					//nw lower quad
+        "id":"0100014",
+        "name":null,
+        "areas":null,
+        "lat":36.991164,
+        "lng":-122.064963,
+        "type": null,
+        "to":["0100013","0100015","0100017"]
+    },
+        "0100015":{					//west lower quad
+        "id":"0100015",
+        "name":null,
+        "areas":null,
+        "lat":36.991040,
+        "lng":-122.065026,
+        "type":null,
+        "to":["0100014","0100016"]
+    },
+        "0100016":{					//sw lower quad
+        "id":"0100016",
+        "name":null,
+        "areas":null,
+        "lat":36.990942,
+        "lng":-122.065053,
+        "type":null,
+        "to":["0100015","0100019"]
+    },
+        "0100017":{					//north lower quad
+        "id":"0100017",
+        "name":null,
+        "areas":null,
+        "lat":36.991136,
+        "lng":-122.064846,
+        "type":null,
+        "to":["0100014","0100018","0100020"]
+    },
+        "0100018":{					//center lower quad
+        "id":"0100018",
+        "name":null,
+        "areas":null,
+        "lat":36.991009,
+        "lng":-122.064888,
+        "type":null,
+        "to":["0100015","0100017","0100019","0100021"]
+    },
+        "0100019":{					//south lower quad
+        "id":"0100019",
+        "name":null,
+        "areas":null,
+        "lat":36.990909,
+        "lng":-122.064922,
+        "type":null,
+        "to":["0100016","0100018","0100022","0100023"]
+    },
+        "0100020":{					//ne lower quad
+        "id":"0100020",
+        "name":null,
+        "areas":null,
+        "lat":36.991114,
+        "lng":-122.064657,
+        "type":null,
+        "to":["0100017","0100021",]
+    },
+        "0100021":{					//east lower quad
+        "id":"0100021",
+        "name":null,
+        "areas":null,
+        "lat":36.990973,
+        "lng":-122.064725,
+        "type":null,
+        "to":["0100018","0100020","0100022","0106000"]
+    },
+        "0100022":{					//se lower quad
+        "id":"0100022",
+        "name":null,
+        "areas":null,
+        "lat":36.990879,
+        "lng":-122.064761,
+        "type":null,
+        "to":["0100019","0100022"]
+    },
+        "0100023":{					//south 19 towards service road
+        "id":"0100023",
+        "name":null,
+        "areas":null,
+        "lat":36.990795,
+        "lng":-122.064962,
+        "type":null,
+        "to":["0100019","0100024","0100053"]
+    },
+        "0100024":{					//south 23 towards parking lot
+        "id":"0100024",
+        "name":null,
+        "areas":null,
+        "lat":36.990597,
+        "lng":-122.065022,
+        "type":null,
+        "to":["0100023","0100025"]
+    },
+        "0100025":{					//south 24 first bisection of parking lot
+        "id":"0100025",
+        "name":null,
+        "areas":null,
+        "lat":36.990204,
+        "lng":-122.065156,
+        "type":null,
+        "to":["0100024","0100026","0100029"]
+    },
+        "0100026":{					//south 25 second bisection of parking lot
+        "id":"0100026",
+        "name":null,
+        "areas":null,
+        "lat":36.990005,
+        "lng":-122.065233,
+        "type":null,
+        "to":["0100025","0100027"]
+    },
+        "0100027":{					//south 26 third bisection of parking lot
+        "id":"0100027",
+        "name":null,
+        "areas":null,
+        "lat":36.989791,
+        "lng":-122.065315,
+        "type":null,
+        "to":["0100026","0100028"]
+    },
+        "0100028":{					//south parking lot, north of Oakes Rd
+        "id":"0100028",
+        "name":null,
+        "areas":null,
+        "lat":36.989683,
+        "lng":-122.065340,
+        "type":null,
+        "to":["0100027"]
+    },
+        "0100029":{					//west of first bisection
+        "id":"0100029",
+        "name":null,
+        "areas":null,
+        "lat":36.990271,
+        "lng":-122.065345,
+        "type":null,
+        "to":["0100025","0100030"]
+    },
+        "0100030":{					//perpendicular 3-way to road west of 29
+        "id":"0100030",
+        "name":null,
+        "areas":null,
+        "lat":36.990373,
+        "lng":-122.065572,
+        "type":null,
+        "to":["0100029","0100031","0100033"]
+    },
+        "0100031":{					//west 30
+        "id":"0100031",
+        "name":null,
+        "areas":null,
+        "lat":36.990531,
+        "lng":-122.065775,
+        "type":null,
+        "to":["0100030","0100032","0100038"]
+    },
+        "0100032":{					//west of second bisection
+        "id":"0100032",
+        "name":null,
+        "areas":null,
+        "lat":36.990084,
+        "lng":-122.065505,
+        "type":null,
+        "to":["0100026","0100033"]
+    },
+        "0100033":{					//4-way sw 30
+        "id":"0100033",
+        "name":null,
+        "areas":null,
+        "lat":36.990193,
+        "lng":-122.065740,
+        "type":null,
+        "to":["0100030","0100032","0100034","0100036"]
+    },
+        "0100034":{					//west 33
+        "id":"0100034",
+        "name":null,
+        "areas":null,
+        "lat":36.990455,
+        "lng":-122.066042,
+        "type":null,
+        "to":["0100033","0100038"]
+    },
+        "0100035":{					//west of third bisection
+        "id":"0100035",
+        "name":null,
+        "areas":null,
+        "lat":36.989891,
+        "lng":-122.065651,
+        "type":null,
+        "to":["0100027","0100036"]
+    },
+        "0100036":{					//4-way sw 33
+        "id":"0100036",
+        "name":null,
+        "areas":null,
+        "lat":36.990023,
+        "lng":-122.065899,
+        "type":null,
+        "to":["0100033","0100035","0100037"]
+    },
+        "0100037":{					//west 36
+        "id":"0100037",
+        "name":null,
+        "areas":null,
+        "lat":36.990209,
+        "lng":-122.066178,
+        "type":null,
+        "to":["0100036","0100039"]
+    },
+        "0100038":{					//southwest bus stop
+        "id":"0100038",
+        "name":null,
+        "areas":null,
+        "lat":36.990612,
+        "lng":-122.066145,
+        "type":null,
+        "to":["0100031","0100034","0100039"]
+    },
+        "0100039":{					//sidewalk along bus stop, sw
+        "id":"0100039",
+        "name":null,
+        "areas":null,
+        "lat":36.990284,
+        "lng":-122.066264,
+        "type":null,
+        "to":["0100037","0100038"]
+    },
+        "0100040":{					//beside college 8 cafe
+        "id":"0100040",
+        "name":null,
+        "areas":null,
+        "lat":36.991579,
+        "lng":-122.064503,
+        "type":null,
+        "to":["0100011","0100041","0101000"]
+    },
+        "0100041":{					//north 40
+        "id":"0100041",
+        "name":null,
+        "areas":null,
+        "lat":36.991638,
+        "lng":-122.064422,
+        "type":null,
+        "to":["0100040","0100042"]
+    },
+        "0100042":{					//east 42 along trail
+        "id":"0100042",
+        "name":null,
+        "areas":null,
+        "lat":36.991642,
+        "lng":-122.064230,
+        "type":null,
+        "to":["0100041","0100043"]
+    },
+        "0100043":{					//east of 44, four-way in road
+        "id":"0100043",
+        "name":null,
+        "areas":null,
+        "lat":36.991875,
+        "lng":-122.063923,
+        "type":null,
+        "to":["0100042","0100044"]
+    },
+        "0100044":{					//east of lot 146
+        "id":"0100044",
+        "name":null,
+        "areas":null,
+        "lat":36.992056,
+        "lng":-122.064202,
+        "type":null,
+        "to":["0100006","0100043"]
+    },
+        "0100045":{					//west of lot 146 towards courts
+        "id":"0100045",
+        "name":null,
+        "areas":null,
+        "lat":36.992241,
+        "lng":-122.064993,
+        "type":null,
+        "to":["0100006","0100046"]
+    },
+        "0100046":{					//follow road along 45 southwest
+        "id":"0100046",
+        "name":null,
+        "areas":null,
+        "lat":36.992241,
+        "lng":-122.064993,
+        "type":null,
+        "to":["0100045","0100047"]
+    },
+        "0100047":{					//west 46
+        "id":"0100047",
+        "name":null,
+        "areas":null,
+        "lat":36.992136,
+        "lng":-122.065272,
+        "type":null,
+        "to":["0100046","0100048"]
+    },
+        "0100048":{					//south 47
+        "id":"0100048",
+        "name":null,
+        "areas":null,
+        "lat":36.991999,
+        "lng":-122.065244,
+        "type":null,
+        "to":["0100047","0100049"]
+    },
+        "0100049":{					//sw 48
+        "id":"0100049",
+        "name":null,
+        "areas":null,
+        "lat":36.991905,
+        "lng":-122.065511,
+        "type":null,
+        "to":["0100048","0100050"]
+    },
+        "0100050":{					//west 49
+        "id":"0100050",
+        "name":null,
+        "areas":null,
+        "lat":36.991726,
+        "lng":-122.065584,
+        "type":null,
+        "to":["0100049","0100051"]
+    },
+        "0100051":{					//west 50
+        "id":"0100051",
+        "name":null,
+        "areas":null,
+        "lat":36.991613,
+        "lng":-122.065839,
+        "type":null,
+        "to":["0100050","0100052"]
+    },
+        "0100052":{					//south 51
+        "id":"0100052",
+        "name":null,
+        "areas":null,
+        "lat":36.991129,
+        "lng":-122.065721,
+        "type":null,
+        "to":["0100051","0100053"]
+    },
+        "0100053":{					//se 52, west 23
+        "id":"0100053",
+        "name":null,
+        "areas":null,
+        "lat":36.990932,
+        "lng":-122.065599,
+        "type":null,
+        "to":["0100023","0100052","0100054"]
+    },
+        "0100054":{					//sw 53, ne 38
+        "id":"0100054",
+        "name":null,
+        "areas":null,
+        "lat":36.990774,
+        "lng":-122.065876,
+        "type":null,
+        "to":["0100038","0100053"]
     }
 };
