@@ -283,7 +283,7 @@ var newGraph = new Graph();
 newGraph.setState("0900000", "0900001");
 
 
-newGraph.getSuccessor("0900001");
+document.write(newGraph.getSuccessor("0900001"));
 
 
 //document.write(newGraph.getGraphDistance(newGraph.getLat("0900000"),newGraph.getLong("0900000"),newGraph.getLat("0900001"),newGraph.getLong("0900001")));
