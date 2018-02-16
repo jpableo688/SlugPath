@@ -3,6 +3,7 @@
 function getLocation(){
     //may not work when we put it up.
     navigator.geolocation.getCurrentPosition(createNode);
+    
 }
 
 function nodeDistance(node1, node2){
@@ -23,14 +24,14 @@ function nodeDistance(node1, node2){
     //Haversine forumla and convert into miles
     var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-    dist = 3958 * c / 10;
-    
+    dist = 3958 * c ;
+    //console.log(dist);
     return dist;
 }
 
 function findNearestNode(node){
     var nearestNode;
-    var nearest = .1;
+    var nearest = 2;
     for(key in nodes){
         var dist = nodeDistance(node, nodes[key]);
         //console.log(nodes[key]);
@@ -41,12 +42,14 @@ function findNearestNode(node){
             
         }
     }
+     console.log(dist);
+    //console.log("nearest");
     return nearestNode;
 }
 
 function findNearestBigNode(node){
     var nearestBigNode;
-    var nearest = .05;
+    var nearest = 2;
     for(key in nodes){
         if (nodes[key].areas != undefined){
             var dist = nodeDistance(node, nodes[key]);
@@ -76,29 +79,24 @@ function createNode(pos){
         "to":[]
     };
     
+    
     x.innerHTML = "Latitude: " + pos.coords.latitude.toFixed(6) +
-		"<br>Longitude: " + pos.coords.longitude.toFixed(6);
+    "<br>Longitude: " + pos.coords.longitude.toFixed(6);
     locationNode.lat = pos.coords.latitude.toFixed(6);
     locationNode.lng = pos.coords.longitude.toFixed(6);
     
     
     //will change once we settle on one data;
     var nearestBigNode = findNearestBigNode(locationNode);
+    var nearestNode = findNearestNode(locationNode);
     if(nearestBigNode != undefined){
         nodes[locationNode.id] = locationNode;
         locationNode.areas = nearestBigNode.areas;
-    } else {
-        alert("You are not within a half mile radius of UCSC");
-    }
-    
-    var nearestNode = findNearestNode(locationNode);
-    if(nearestNode != undefined){
+        
         locationNode.to.push(nearestNode.id);
         nodes[locationNode.id] = locationNode;
-        gatherTypes('typeFrom');
     } else {
         alert("You are not within a half mile radius of UCSC");
-        
-    }
-    
+    } 
+    gatherTypes('typeFrom');
 }

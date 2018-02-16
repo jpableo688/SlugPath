@@ -1,4 +1,3 @@
-
 function aStar(optFrom, optTo, weight){
     var pathcheck = [];
     

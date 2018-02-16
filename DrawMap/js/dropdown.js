@@ -20,6 +20,17 @@ function populateByName(menu, list){
     }
 }
 
+function populateByArea(menu, list){
+    clearMenu(menu);
+    addBlank(menu);
+    for(i = 0; i < list.length; i++){
+        var newOption = document.createElement("option");
+        newOption.value = list[i].areas;
+        newOption.innerHTML = list[i].areas;
+        menu.options.add(newOption);
+    }
+}
+
 function populateByType(menu, list){
     if(menu.id == "typeFrom"){
         clearMenu(menu);
@@ -42,32 +53,43 @@ function collectTypeData(){
             if(nodes[key].type == typeList[index].type){
                 alreadyHere = true;
             }
-        } 
+        }
         if(alreadyHere == false && nodes[key].type != undefined){
             typeList.push(nodes[key]);
         }
     }
-    //console.log(typeList);
     return typeList;
 }
 
 
 function collectNameData(value){
-   var nameList = [];
-   for(key in nodes){
-      if(nodes[key].type == value){
-         nameList.push(nodes[key]);
-      }
-   }
-   return nameList;
+    var nameList = [];
+    for(key in nodes){
+        if(nodes[key].type == value){
+            nameList.push(nodes[key]);
+        }
+    }
+    return nameList;
 }
 
-function collectNameByArea(value){
-   var areaList = [];
-   for(key in nodes){
-      if(nodes[key].areas == value){
-         areaList.push(nodes[key]);
-      }
+function collectAreasByName(value){
+    var areaList = [];
+    var alreadyHere = false;
+    for(key in nodes){
+        alreadyHere = false;
+        if(nodes[key].type == value){
+            for(var index in areaList){
+                if(nodes[key].areas == areaList[index].areas){
+                    alreadyHere = true;
+                    console.log(areaList[index].areas);
+                }
+            }
+            if(alreadyHere == false && nodes[key].areas != undefined){
+                areaList.push(nodes[key]);
+                console.log(nodes[key].areas);
+            }
+        }
+
    }
    return areaList;
 }
@@ -78,10 +100,28 @@ function gatherTypes(types){
     populateByType(typesDD, list);
 }
 
+function collectNameByArea(typeValue, areaValue){
+    var nameList = [];
+    for(key in nodes){
+        if(nodes[key].type == typeValue && nodes[key].areas == areaValue ){
+            nameList.push(nodes[key]);
+        }
+    }
+    return nameList;
+}
+function updateArea(type, areas, name){
+    var typeDD = document.getElementById(type);
+    var areaDD = document.getElementById(areas);
+    var nameDD = document.getElementById(name);
+    
+    var nameList = collectNameByArea(typeDD.value, areaDD.value);
+    populateByName(nameDD,nameList);
+}
 function updateReg(typeDD, areaDD, nameDD){
     var nameList = collectNameData(typeDD.value);
     populateByName(nameDD,nameList);
-    //console.log(nameList);
+    var areaList = collectAreasByName(typeDD.value);
+    populateByArea(areaDD,areaList);
 } 
 
 function checkIfType(optValue){
@@ -107,21 +147,17 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight)
         document.getElementById(areaFrom).style.display = "none";
     } else {
         document.getElementById(nameFrom).style.display = "inline-block";  
-        //for future sort nameDD by area
-        //document.getElementById(areaFrom).style.display = "inline-block";
+        document.getElementById(areaFrom).style.display = "inline-block";
     }
     
     updateReg(typeFromDD, areaFromDD, nameFromDD);
     if(typeToDD.value == "Nearby"){
-        //console.log(nameFromDD.value);
         updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
     }
     
     if(typeFromDD.value == "My Location"){
-        //console.log("checking IDs from update");
         clearMenu(nameFromDD);
         addBlank(nameFromDD);
-        //console.log(nameFromDD.value);
         findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
     }
 }
@@ -129,9 +165,7 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight)
 function updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD){
     clearMenu(nameToDD);
     addBlank(nameToDD);
-    //console.log("updating NearBy");
     if(typeFrom.value == "My Location"){
-        //console.log(typeFromDD.value);
         var list = nearTo(typeFromDD.value);
         populateByName(nameToDD, list);
     } else if(nameFromDD.value != "blank"){
@@ -154,8 +188,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
 
     } else {
         document.getElementById(nameTo).style.display = "inline-block";       
-        //for future sort nameDD by area
-        //document.getElementById(areaTo).style.display = "inline-block";
+        document.getElementById(areaTo).style.display = "inline-block";
         if(typeToDD.value == "Nearby"){
             document.getElementById(areaTo).style.display = "none";
         }
@@ -178,26 +211,12 @@ function nearTo(value){
     var nearest = .0125;
     for(key in nodes){
         var dist = nodeDistance(node, nodes[key]);
-        //console.log(tests[key]);
         if (dist < nearest && nodes[key].name != undefined){
             nearNodeList.push(nodes[key]);
         }
     }
     return nearNodeList;
     
-    //byArea
-    /*
-    var nearID;
-    for(key in nodes){
-        if(nodes[key].name == value){
-            nearID = nodes[key].id;
-        }
-    }
-    toList = collectAreaData(nodes[nearID].areas);
-    //console.log("nearToList" );
-    //console.log(toList);
-    return toList;
-    */
 }
 
 function getFromID(typeFromDD, areaFromDD, nameFromDD){
@@ -243,14 +262,11 @@ function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
     var nameToDD = document.getElementById(nameTo);
     var weightDD = document.getElementById(weight);
     
-    //console.log(typeFromDD.value == "My Location");
-    
     fromID = getFromID(typeFromDD, areaFromDD, nameFromDD);
     toID = getToID(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
 
 
     if (typeToDD.value == "Nearby" && toID == undefined){
-        //console.log("updating nearby from checkID");
         updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
     }
     
@@ -263,47 +279,8 @@ function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
 
 function findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
     var IDs = checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
-    //console.log("HI");
-    //console.log(IDs);
-    //only run the algorithm when both IDs are given
     if (IDs != undefined){
+        //Pranav Here
         aStar(IDs[0], IDs[1], IDs[2]);
     }
 }
-
-
-/*
-//for future sort nameDD by area
-function collectAreaData(list){
-    var areaList = [];
-    var alreadyHere = false;
-    console.log("HI");
-    for(var items in list){
-        console.log(list[items].areas);
-        alreadyHere = false;
-        for(var index in areaList){
-            if(list[items].areas == areaList[index].areas){
-                alreadyHere = true;
-                console.log(areaList[index].areas);
-            }
-        } 
-        if(alreadyHere == false){
-            console.log();
-            areaList.push(list[items]);
-        }
-    }
-    return areaList;
-}
-
-
-//for future sort nameDD by area
-function populateByArea(menu, list){
-    clearMenu(menu);
-    addBlank(menu);
-    for(i = 0; i < list.length; i++){
-        var newOption = document.createElement("option");
-        newOption.value = list[i].areas;
-        newOption.innerHTML = list[i].areas;
-        menu.options.add(newOption);
-    }
-}*/
