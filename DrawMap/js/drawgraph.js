@@ -6,7 +6,6 @@ function drawgraph() {
     for(key in graph){
         //keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
         //keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
-        console.log("");
         console.log("{");
         //console.log(graph[key]);
         for(var toArr in graph[key].to){
