@@ -1,156 +1,286 @@
-var residentiallist = ["",];
-var marketlist = ["",];
-var activitieslist = ["",];
-var academiclist = ["",];
-var studentservlist = ["",];
-var dininghalllist = ["",];
-var foodgolist = ["",];
-var otherlist = ["",];
-
-var collectedAlready = false;
-var checkTo = false;
-var checkFrom = false;
-var toID;
-var fromID;
-var optionFromArr;
-var optionToArr;
-
-function collectData(){
-   if (collectedAlready === false){
-      for(key in nodes){
-         if(nodes[key].type == "Residential"){
-            residentiallist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Market"){
-            marketlist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Activities"){
-            activitieslist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Academic"){
-            academiclist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Student Services"){
-            studentservlist.push(nodes[key]);
-         } 
-         if(nodes[key].type == "Dining Hall"){
-            dininghalllist.push(nodes[key]);
-         } 
-         if(nodes[key].type == "Food To Go"){
-            foodgolist.push(nodes[key]);
-         }
-         if(nodes[key].type == "Other"){
-            otherlist.push(nodes[key]);
-         }  
-      }
-      collectedAlready = true;
-   }
+function addBlank(menu){
+    var blank = document.createElement("option");
+    blank.value = "blank";
+    blank.innerHTML = "";
+    menu.options.add(blank);
 }
 
-function optfromquery(initfrom, dynafrom){
-   collectData();
+function clearMenu(menu){
+    menu.innerHTML ="";
+}
 
-   var initial = document.getElementById(initfrom);
-   var dynamic = document.getElementById(dynafrom);   
-   
-   dynamic.innerHTML ="";
-   
-   if(initial.value == "Residential"){
-      optionFromArr = residentiallist;
+function populateByName(menu, list){
+    clearMenu(menu);
+    addBlank(menu);
+    for(i = 0; i < list.length; i++){
+        var newOption = document.createElement("option");
+        newOption.value = list[i].name;
+        newOption.innerHTML = list[i].name;
+        menu.options.add(newOption);
+    }
+}
+
+function populateByArea(menu, list){
+    clearMenu(menu);
+    addBlank(menu);
+    for(i = 0; i < list.length; i++){
+        var newOption = document.createElement("option");
+        newOption.value = list[i].areas;
+        newOption.innerHTML = list[i].areas;
+        menu.options.add(newOption);
+    }
+}
+
+function populateByType(menu, list){
+    if(menu.id == "typeFrom"){
+        clearMenu(menu);
+        addBlank(menu);
+    }
+    for(i = 0; i < list.length; i++){
+        var newOption = document.createElement("option");
+        newOption.value = list[i].type;
+        newOption.innerHTML = list[i].type;
+        menu.options.add(newOption);
+    }
+}
+
+function collectTypeData(){
+    var typeList = [];
+    var alreadyHere = false;
+    for(key in nodes){
+        alreadyHere = false;
+        for(var index in typeList){
+            if(nodes[key].type == typeList[index].type){
+                alreadyHere = true;
+            }
+        }
+        if(alreadyHere == false && nodes[key].type != undefined){
+            typeList.push(nodes[key]);
+        }
+    }
+    return typeList;
+}
+
+
+function collectNameData(value){
+    var nameList = [];
+    for(key in nodes){
+        if(nodes[key].type == value){
+            nameList.push(nodes[key]);
+        }
+    }
+    return nameList;
+}
+
+function collectAreasByName(value){
+    var areaList = [];
+    var alreadyHere = false;
+    for(key in nodes){
+        alreadyHere = false;
+        if(nodes[key].type == value){
+            for(var index in areaList){
+                if(nodes[key].areas == areaList[index].areas){
+                    alreadyHere = true;
+                    console.log(areaList[index].areas);
+                }
+            }
+            if(alreadyHere == false && nodes[key].areas != undefined){
+                areaList.push(nodes[key]);
+                console.log(nodes[key].areas);
+            }
+        }
+
    }
-   if(initial.value == "Market"){
-      optionFromArr = marketlist;
-   }
-   if(initial.value == "Activities"){
-      optionFromArr = activitieslist;
-   }
-   if(initial.value == "Academic"){
-      optionFromArr = academiclist;
-   }
-   if(initial.value == "Student Services"){
-      optionFromArr = studentservlist;
-   }
-   if(initial.value == "Dining Hall"){
-      optionFromArr = dininghalllist;
-   }
-   if(initial.value == "Food To Go"){
-      optionFromArr = foodgolist;
-   }
-   if(initial.value == "Other"){
-      optionFromArr = otherlist;
-   }    
+   return areaList;
+}
+
+function gatherTypes(types){
+    var typesDD = document.getElementById(types);
+    var list = collectTypeData();
+    populateByType(typesDD, list);
+}
+
+function collectNameByArea(typeValue, areaValue){
+    var nameList = [];
+    for(key in nodes){
+        if(nodes[key].type == typeValue && nodes[key].areas == areaValue ){
+            nameList.push(nodes[key]);
+        }
+    }
+    return nameList;
+}
+function updateArea(type, areas, name){
+    var typeDD = document.getElementById(type);
+    var areaDD = document.getElementById(areas);
+    var nameDD = document.getElementById(name);
     
-   for(i = 0; i < optionFromArr.length; i++){
-      var newOption = document.createElement("option");
-      newOption.value = optionFromArr[i].name;
-      newOption.innerHTML = optionFromArr[i].name;
-      dynamic.options.add(newOption);
-   }
+    var nameList = collectNameByArea(typeDD.value, areaDD.value);
+    populateByName(nameDD,nameList);
+}
+function updateReg(typeDD, areaDD, nameDD){
+    var nameList = collectNameData(typeDD.value);
+    populateByName(nameDD,nameList);
+    var areaList = collectAreasByName(typeDD.value);
+    populateByArea(areaDD,areaList);
+} 
+
+function checkIfType(optValue){
+    if(optValue == "My Location"){
+        return true;
+    }
+    if(optValue == "blank"){
+        return true;
+    }
+    return false;
 }
 
-function opttoquery(initto, dynato){
-   
-   collectData();
-
-   var initial = document.getElementById(initto);
-   var dynamic = document.getElementById(dynato);
-   
-   dynamic.innerHTML ="";
-   
-   if(initial.value == "Residential"){
-      optionToArr = residentiallist;
-   }
-   if(initial.value == "Market"){
-      optionToArr = marketlist;
-   }
-   if(initial.value == "Activities"){
-      optionToArr = activitieslist;
-   }
-   if(initial.value == "Academic"){
-      optionToArr = academiclist;
-   }
-   if(initial.value == "Student Services"){
-      optionToArr = studentservlist;
-   }
-   if(initial.value == "Dining Hall"){
-      optionToArr = dininghalllist;
-   }
-   if(initial.value == "Food To Go"){
-      optionToArr = foodgolist;
-   }
-   if(initial.value == "Other"){
-      optionToArr = otherlist;
-   }    
+function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight){
+    var typeFromDD = document.getElementById(typeFrom);
+    var areaFromDD = document.getElementById(areaFrom);
+    var nameFromDD = document.getElementById(nameFrom);
+    var typeToDD = document.getElementById(typeTo);
+    var areaToDD = document.getElementById(areaTo);
+    var nameToDD = document.getElementById(nameTo);
     
-   for(i = 0; i < optionToArr.length; i++){
-      var newOption = document.createElement("option");
-      newOption.value = optionToArr[i].name;
-      newOption.innerHTML = optionToArr[i].name;
-      dynamic.options.add(newOption);
-   }
-
+    if(checkIfType(typeFromDD.value)){
+        document.getElementById(nameFrom).style.display = "none";
+        document.getElementById(areaFrom).style.display = "none";
+    } else {
+        document.getElementById(nameFrom).style.display = "inline-block";  
+        document.getElementById(areaFrom).style.display = "inline-block";
+    }
+    
+    updateReg(typeFromDD, areaFromDD, nameFromDD);
+    if(typeToDD.value == "Nearby"){
+        updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+    }
+    
+    if(typeFromDD.value == "My Location"){
+        clearMenu(nameFromDD);
+        addBlank(nameFromDD);
+        findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
+    }
 }
 
-function checkDropDownTo(dropdownopt){
-   optTo = document.getElementById(dropdownopt);
-   for(i = 0; i < optionToArr.length; i++){
-      if(optTo.value == optionToArr[i].name){
-         toID = optionToArr[i].id;
-      }
-   }
-   if (fromID != undefined && toID != undefined){
-      aStar(fromID, toID);
-   }
+function updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD){
+    clearMenu(nameToDD);
+    addBlank(nameToDD);
+    if(typeFrom.value == "My Location"){
+        var list = nearTo(typeFromDD.value);
+        populateByName(nameToDD, list);
+    } else if(nameFromDD.value != "blank"){
+        var list = nearTo(nameFromDD.value);
+        populateByName(nameToDD, list);
+    }
 }
 
-function checkDropDownFrom(dropdownopt){
-   optFrom = document.getElementById(dropdownopt);
-   for(i = 0; i < optionFromArr.length; i++){
-      if(optFrom.value == optionFromArr[i].name){
-         fromID = optionFromArr[i].id;
-      }
-   }
-   if (fromID != undefined && toID != undefined){
-      aStar(fromID, toID);
-   }
+function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
+    var typeFromDD = document.getElementById(typeFrom);
+    var areaFromDD = document.getElementById(areaFrom);
+    var nameFromDD = document.getElementById(nameFrom);
+    var typeToDD = document.getElementById(typeTo);
+    var areaToDD = document.getElementById(areaTo);
+    var nameToDD = document.getElementById(nameTo);
+    
+    if(checkIfType(typeToDD.value)){
+        document.getElementById(nameTo).style.display = "none";
+        document.getElementById(areaTo).style.display = "none";
+
+    } else {
+        document.getElementById(nameTo).style.display = "inline-block";       
+        document.getElementById(areaTo).style.display = "inline-block";
+        if(typeToDD.value == "Nearby"){
+            document.getElementById(areaTo).style.display = "none";
+        }
+    }
+    if(typeToDD.value != "Nearby"){
+        updateReg(typeToDD, areaToDD, nameToDD);
+    } else {
+        updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+    }
+}
+
+function nearTo(value){
+    var node;
+    for(key in nodes){
+        if(nodes[key].name == value){
+            node = nodes[key];
+        }
+    }
+    var nearNodeList = [];
+    var nearest = .0125;
+    for(key in nodes){
+        var dist = nodeDistance(node, nodes[key]);
+        if (dist < nearest && nodes[key].name != undefined){
+            nearNodeList.push(nodes[key]);
+        }
+    }
+    return nearNodeList;
+    
+}
+
+function getFromID(typeFromDD, areaFromDD, nameFromDD){
+    if(typeFromDD.value == "My Location"){
+        var fromID = "0000000";
+    } else {
+        var fromList = collectNameData(typeFromDD.value);
+        for(i = 0; i < fromList.length; i++){
+            if(nameFromDD.value == fromList[i].name){
+                var fromID = fromList[i].id;
+            }
+        }
+    }
+    
+    return fromID;
+}
+
+function getToID(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD){
+    var toList = collectNameData(typeToDD.value);
+    if(typeToDD.value == "Nearby"){
+        //console.log(typeFrom.value);
+        if(typeFromDD.value == "My Location"){
+            toList = nearTo(typeFromDD.value)
+        } else if(nameFromDD.value != "blank"){
+            toList = nearTo(nameFromDD.value);
+        }
+    }
+    
+    for(i = 0; i < toList.length; i++){
+        if(nameToDD.value == toList[i].name){
+            var toID = toList[i].id;
+        }
+    }
+    return toID;
+}
+
+function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
+    var typeFromDD = document.getElementById(typeFrom);
+    var areaFromDD = document.getElementById(areaFrom);
+    var nameFromDD = document.getElementById(nameFrom);
+    var typeToDD = document.getElementById(typeTo);
+    var areaToDD = document.getElementById(areaTo);
+    var nameToDD = document.getElementById(nameTo);
+    var weightDD = document.getElementById(weight);
+    
+    fromID = getFromID(typeFromDD, areaFromDD, nameFromDD);
+    toID = getToID(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+
+
+    if (typeToDD.value == "Nearby" && toID == undefined){
+        updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+    }
+    
+    if (fromID != undefined && toID != undefined && weightDD.value != "blank"){
+        return[fromID, toID, weightDD.value];
+    }
+    
+    return undefined;
+}
+
+function findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
+    var IDs = checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
+    if (IDs != undefined){
+        //Pranav Here
+        aStar(IDs[0], IDs[1], IDs[2]);
+    }
 }
