@@ -113,9 +113,13 @@ function updateArea(type, areas, name){
     var typeDD = document.getElementById(type);
     var areaDD = document.getElementById(areas);
     var nameDD = document.getElementById(name);
-    
-    var nameList = collectNameByArea(typeDD.value, areaDD.value);
-    populateByName(nameDD,nameList);
+    console.log(areaDD.value);
+    if(areaDD.value != "blank"){
+        var nameList = collectNameByArea(typeDD.value, areaDD.value);
+        populateByName(nameDD,nameList);
+    } else {
+        updateReg(typeDD, areaDD, nameDD);
+    }
 }
 function updateReg(typeDD, areaDD, nameDD){
     var nameList = collectNameData(typeDD.value);
@@ -208,7 +212,7 @@ function nearTo(value){
         }
     }
     var nearNodeList = [];
-    var nearest = .0125;
+    var nearest = .05;
     for(key in nodes){
         var dist = nodeDistance(node, nodes[key]);
         if (dist < nearest && nodes[key].name != undefined){
@@ -230,7 +234,6 @@ function getFromID(typeFromDD, areaFromDD, nameFromDD){
             }
         }
     }
-    
     return fromID;
 }
 

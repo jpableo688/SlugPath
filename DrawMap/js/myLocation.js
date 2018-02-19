@@ -31,7 +31,7 @@ function nodeDistance(node1, node2){
 
 function findNearestNode(node){
     var nearestNode;
-    var nearest = 2;
+    var nearest = .5;
     for(key in nodes){
         var dist = nodeDistance(node, nodes[key]);
         //console.log(nodes[key]);
@@ -42,14 +42,14 @@ function findNearestNode(node){
             
         }
     }
-     console.log(dist);
+    //console.log(dist);
     //console.log("nearest");
     return nearestNode;
 }
 
 function findNearestBigNode(node){
     var nearestBigNode;
-    var nearest = 2;
+    var nearest = .5;
     for(key in nodes){
         if (nodes[key].areas != undefined){
             var dist = nodeDistance(node, nodes[key]);

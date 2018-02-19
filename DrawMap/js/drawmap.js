@@ -19,7 +19,7 @@ function drawMap(searchArray){
         var lng = nodes[searchArray[path]].lng;
         var name = nodes[searchArray[path]].name;
         
-        //as you can see I can call node[#].attributes
+        //if it's the start and end nodes, have a pop up.
         if(path === 0 ){
             startmarkers = L.marker([lat,lng]).addTo(mymap);
             startmarkers.bindPopup(name).openPopup();

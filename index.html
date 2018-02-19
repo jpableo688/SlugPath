@@ -23,7 +23,7 @@
             }
         </style>
     </head>
-    <body onload="gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
+    <body onload="getLocation(); gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
         From:
             <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
                 <option value="blank"></option>
