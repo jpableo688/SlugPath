@@ -7,6 +7,7 @@ function drawgraph() {
         //keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
         //keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
         console.log("");
+        console.log("{");
         //console.log(graph[key]);
         for(var toArr in graph[key].to){
             var latlng2 = [];
@@ -31,11 +32,13 @@ function drawgraph() {
             }
             
             if(graph[newKey] == undefined){
+                console.log(key);
                 console.log("is not connected to");
                 console.log(newKey);
             } else {
                 latlng2.push([graph[newKey].lat, graph[newKey].lng]);
             }
+
             //used to find connected but missing keys
             //console.log(newKey);
             var polyline;
@@ -43,5 +46,6 @@ function drawgraph() {
             polyline = L.polyline(latlng2);
             mymap.addLayer(polyline);
         }
+        console.log("}");
     }
 }
