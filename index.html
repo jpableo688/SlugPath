@@ -18,12 +18,12 @@
                 margin: 10;
             }
             html, body, #mapid {
-                height: 92%;
-                width: 99%%;
+                height: 600px;
+                width: 600px;
             }
         </style>
     </head>
-    <body onload="getLocation();gatherTypes('typeFrom');gatherTypes('typeTo');">
+    <body onload="gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
         From:
             <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
                 <option value="blank"></option>

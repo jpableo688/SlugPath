@@ -1,16 +1,16 @@
 //mapbox, this has to be global or else the map would not get redrawn
 var mymap = new L.map('mapid').setView([36.995698, -122.059135], 15);
-mymap.options.maxZoom = 18;
-mymap.options.minZoom = 15;
-L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ', {}).addTo(mymap);
+L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
+    maxZoom: 18,
+    minZoom: 15,
+    accessToken: 'pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ'
+}).addTo(mymap);
 
 //Can't figure out how to make these not global
 var startmarkers, endmarkers, polyline;
 
 function drawMap(searchArray){
     clearMap();
-   
-    
     latlng = [];
     paths = searchArray;
 
@@ -36,7 +36,6 @@ function drawMap(searchArray){
     mymap.addLayer(polyline);
     
     //for gathering data
-    drawInfoGather();
 }
 
 

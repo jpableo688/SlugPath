@@ -4,20 +4,38 @@ function drawgraph() {
     var newKey;
     var graph = nodes;
     for(key in graph){
-        keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
-        keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
-        console.log(key);
+        //keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
+        //keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
+        console.log("");
+        //console.log(graph[key]);
         for(var toArr in graph[key].to){
             var latlng2 = [];
             latlng2.push([graph[key].lat, graph[key].lng]);
             newKey = graph[key].to[toArr];
-            if(graph[newKey] == undefined){
-                console.log("is not connected to");
-                console.log(newKey)
+            
+            idk = graph[newKey].to;
+            var strong = false;
+            for(var again in idk){
+                if(idk[again] == key){
+                    strong = true;
+                }
+            }
+            if(strong == false){
+                console.log(key);
+                console.log("weak");
+                console.log(newKey);
             } else {
-            latlng2.push([graph[newKey].lat, graph[newKey].lng]);
+                console.log(key);
+                console.log("strong");
+                console.log(newKey);
             }
             
+            if(graph[newKey] == undefined){
+                console.log("is not connected to");
+                console.log(newKey);
+            } else {
+                latlng2.push([graph[newKey].lat, graph[newKey].lng]);
+            }
             //used to find connected but missing keys
             //console.log(newKey);
             var polyline;
