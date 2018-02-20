@@ -1,13 +1,18 @@
 var graph = new Graph();
 
 //graph.setState("0900000", "0900045"); //breaks at node 0905000 since theres no id; probably fixed by putting all nodes together
+/*
 graph.setState("0900003", "0900008");
 var finalPath = slugStar(graph);
 console.log("1) Final found path: " + finalPath);
+*/
 
+/*
 graph.setState("0900000", "0900019");
 var finalPath = slugStar(graph);
 console.log("2) Final found path: " + finalPath);
+*/
+
 
 //breaks if this is used
 /*
