@@ -3,7 +3,7 @@
 
 class PriorityQueue {
     constructor() {
-        this.array = [null]; //smallest value at index 1, index 0 is not used
+        this.heap = [null]; //smallest value at index 1, index 0 is not used
         // whill hold pairs in the form of an array [data,priority]
     }
 
@@ -21,34 +21,31 @@ class PriorityQueue {
 
     push(data, priority) {
         var node = [data, priority];
-        this.array.push(node);
-        this.balanceUp(this.array.length - 1);
+        this.heap.push(node);
+        this.balanceUp(this.heap.length - 1);
     }
 
     pop() {
-        let node = this.array[1]
+        let node = this.heap[1]
         let data = node[0];
         let priority = node[1];
 
-        var endNode = this.array.pop(); //get the node at the end
+        var endNode = this.heap.pop(); //get the node at the end
 
         if (!this.isEmpty()) { // would be empty now if there was only one element to start with
-            this.array[1] = endNode;
+            this.heap[1] = endNode;
             this.balanceDown(1);
         }
         return data;
     }
 
     balanceUp(index) {
-        //var node = this.array[index];
-        //var nodePriority = node[1];
-
         while (index > 1) { //cant go over index 1
-            var node = this.array[index];
+            var node = this.heap[index];
             var nodePriority = node[1];
 
             var parentIndex = this.parentIndex(index);
-            var parentNode = this.array[parentIndex];
+            var parentNode = this.heap[parentIndex];
             var parentPriority = parentNode[1];
             if (nodePriority > parentPriority) {
                 break; // the node is in the right place
@@ -62,7 +59,7 @@ class PriorityQueue {
     balanceDown(index) {
 
         while (true) {
-            var node = this.array[index];
+            var node = this.heap[index];
             var nodePriority = node[1];
 
             var swapIndex = 0; //default; can't be 0 since [null]
@@ -70,8 +67,8 @@ class PriorityQueue {
             var rightIndex = this.rightChildIndex(index);
 
             //check if left child exists and if it is smaller than node
-            if (leftIndex < this.array.length) {
-                var leftChild = this.array[leftIndex];
+            if (leftIndex < this.heap.length) {
+                var leftChild = this.heap[leftIndex];
                 var leftPriority = leftChild[1];
 
                 if (leftPriority < nodePriority) {
@@ -80,8 +77,8 @@ class PriorityQueue {
             }
 
             //check if right child exists and is smaller than leftchild (if it exists) or node otherwise
-            if (rightIndex < this.array.length) {
-                var rightChild = this.array[rightIndex];
+            if (rightIndex < this.heap.length) {
+                var rightChild = this.heap[rightIndex];
                 var rightPriority = rightChild[1];
 
                 if (swapIndex != 0) { //left child exists
@@ -101,41 +98,23 @@ class PriorityQueue {
     }
 
     swapNodes(index1, index2) {
-        var tempNode = this.array[index1];
-        this.array[index1] = this.array[index2];
-        this.array[index2] = tempNode;
+        var tempNode = this.heap[index1];
+        this.heap[index1] = this.heap[index2];
+        this.heap[index2] = tempNode;
+    }
+
+    contains(nodeId){ // does not take priority into account; only data
+        for (let i = 1; i < this.heap.length; i++) { //index 0 will always have null
+            var node = this.heap[i];
+            if (node[0] == nodeId) {
+                return true;
+            }
+            
+        }
+        return false;
     }
 
     isEmpty() {
-        return this.array.length == 1; //not 0 beacuse [null]
+        return this.heap.length == 1; //not 0 beacuse [null]
     }
-}
-
-//testing
-
-var pq = new PriorityQueue();
-console.log(pq.array)
-/*
-pq.push("a", 2);
-console.log(pq.array);
-pq.push("b", 1);
-console.log(pq.array);
-pq.push("c", 4);
-console.log(pq.array);
-pq.push("d", 2);
-console.log(pq.array); // should be [null,['b',1],['d',2],['c',4],['a',2]]
-console.log(pq.pop());
-console.log(pq.array);
-*/
-
-for (var i = 1; i <= 6; i++) {
-    var num = Math.floor(Math.random() * 20);
-    console.log("pushing: " + i + " with priority: " + num);
-    pq.push("" + i, num);
-    console.log(pq.array);
-}
-console.log();
-while (!pq.isEmpty()) {
-    console.log("popped: " + pq.pop());
-    console.log(pq.array)
 }

@@ -158,22 +158,19 @@ Graph.prototype.getGraphHeur = function(ID){
 
   var x1 = currPos[0];
   var y1 = currPos[1];
-  var x2 = currPos[0];
-  var y2 = currPos[1];
+  var x2 = endPos[0];
+  var y2 = endPos[1];
 
   //convert distance between axis into radians
   var dLat = (x2-x1) * Math.PI / 180;
   var dLon = (y2-y1) * Math.PI / 180;
-
   //conver lat into radians
   var lat1 = x1 * Math.PI / 180;
   var lat2 = x2 * Math.PI / 180;
-
   //Haversine forumla and convert into miles
   var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  var g_dist = 3958 * c / 10;
-
+  var gDist_heur = 3958 * c / 10;
   return gDist_heur;
 };
 
@@ -255,7 +252,12 @@ Graph.prototype.getSuccessor = function(ID){
 
   for(i = 0; i < toList.length; i++)
   {
-    succ.push([dict[toList[i]].id, edges[i].getDistance()]);
+    //console.log(dict[toList[i]].id);
+    //console.log(toList[i]);
+    var nodeId = dict[toList[i]].id;
+    var weight = edges[i].getDistance();
+    //succ.push([dict[toList[i]].id, edges[i].getDistance()]);
+    succ.push([nodeId,weight]);
   }
 
   return succ;
@@ -283,7 +285,7 @@ var newGraph = new Graph();
 newGraph.setState("0900000", "0900001");
 
 
-document.write(newGraph.getSuccessor("0900001"));
+//document.write(newGraph.getSuccessor("0900001"));
 
 
 //document.write(newGraph.getGraphDistance(newGraph.getLat("0900000"),newGraph.getLong("0900000"),newGraph.getLat("0900001"),newGraph.getLong("0900001")));
