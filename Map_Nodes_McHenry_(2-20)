@@ -1,8 +1,17 @@
 //Rough draft of the map nodes of the McHenry area.
-//2/20/18: 60 total map nodes.
+//2/20/18: 60 total map nodes, 1 total big node.
 //Nodes 42-49 are recorded as they appear accurate on Leaflet. An offset to the longitude of value -0.000080 has been added to the current longitude (in comparison to Google Maps). Note that this results in a longitude of greater negative magnitude.
 //This is likely because Leaflet and Google share different maps and these nodes occur along different-appearing paths in Leaflet and Google Maps. Nodes 52-60 appear wrongly-placed on Leaflet, to be readjusted later if necessary.
 
+    "2001000":{
+		"id":"2001000",
+		"name":"Global Village Cafe",
+		"areas":"McHenry",
+		"lat":36.996086,
+		"lng":-122.059356,
+		"type":"Food To Go",
+		"to":["2000027","2000028"]
+	},
     "2000001":{
         "id":"2000001",
         "name":null,
