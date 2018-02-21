@@ -1,11 +1,6 @@
 function aStar(optFrom, optTo, weight){
-    var pathcheck = [];
-    
-    pathcheck.push(optFrom);
-   
-    for(i=0; i < 10; i++){
-        pathcheck.push(Object.keys(nodes)[Math.floor(Math.random()*Object.keys(nodes).length)]);
-    }
-    pathcheck.push(optTo);
-    drawMap(pathcheck);
+    var graph = new Graph();
+    graph.setState(optFrom, optTo);
+    var finalPath = slugStar(graph);
+    drawMap(finalPath);
 }
