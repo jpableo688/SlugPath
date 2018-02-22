@@ -1,0 +1,64 @@
+#logo
+{
+	position: relative;
+	height: 50px;
+	width: 50px;
+}
+
+#navText
+{
+	position: relative;
+	left: 30%;
+}
+
+#joe_picture
+{
+	top: 5%;
+	position: relative;
+	height: 245px;
+	width: 245px;
+}
+
+#ed_picture
+{
+	top: 5%;
+	position: relative;
+	height: 245px;
+	width: 245px;
+}
+
+#sri_picture
+{
+	top: 5%;
+	position: relative;
+	height: 245px;
+	width: 245px;
+}
+
+#cameron_dev
+{
+	position: relative;
+	float: left;
+	left: 5%;
+
+}
+
+#edward_dev
+{
+	position: absolute;
+	left: 45%;
+}
+
+#pranav_dev
+{
+	position: absolute;
+	left: 65%;
+}
+
+#sri_dev
+{
+	position: absolute;
+	left: 85%;
+}
+
+
