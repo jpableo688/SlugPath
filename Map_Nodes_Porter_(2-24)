@@ -1,6 +1,6 @@
-//Rough draft of the map nodes of Porter College.
-//2/20/18: 76 total map nodes, 7 total big nodes.
-//30 additional nodes added. Path to Porter-Kresge housing office is now possible. Path to Rachel Carson is now possible.
+//Rough draft of the nodes of Porter College.
+//2/24/18: 76 total map nodes, 7 total big nodes.
+//30 additional nodes added. Path to Porter-Kresge housing office is now possible. Path to Rachel Carson College now possible.
 
 	"0901000":{
 		"id":"0901000",
@@ -13,11 +13,11 @@
 	},
 	"0902000":{
 		"id":"0902000",
-		"name":"Porter/Kresge Dining Hall",
+		"name":"Porter/Kresge Housing & Residential Office",
 		"areas":"Porter",
 		"lat":36.996563,
 		"lng":-122.065731,
-		"type":"Dining Hall",
+		"type":"Student Services",
 		"to":["0900059"]
 	},
 	"0903000":{
@@ -45,7 +45,7 @@
 		"lat":36.994006,
 		"lng":-122.065178,
 		"type":"Other",
-		"to":["0900019","0900045]
+		"to":["0900019","0900045"]
 	},
 	"0906000":{
 		"id":"0906000",
@@ -207,7 +207,7 @@
 		"lat":36.994413,
 		"lng":-122.065348,
 		"type":null,
-		"to":["0900015","0900017","0900038"]
+		"to":["0900015","0900017","0900037","0900038"]
 		},
 	"0900017":{
 		"id":"0900017",
@@ -405,7 +405,7 @@
 		"lat":36.994258,
 		"lng":-122.065396,
 		"type":null,
-		"to":["0900016","0900036","0900036","0907000"]
+		"to":["0900016","0900036","0900046","0907000"]
 		},
 	"0900039":{
 		"id":"0900039",
@@ -468,7 +468,7 @@
 		"lat":36.993981,
 		"lng":-122.065312,
 		"type":null,
-		"to":["0900019","0900046","0905000"]
+		"to":["0900019","0900020","0900046","0905000"]
 		},
 	"0900046":{
 		"id":"0900046",
