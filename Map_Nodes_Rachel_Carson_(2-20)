@@ -1,6 +1,6 @@
-//Rough draft of the map nodes of Porter College.
-//2/20/18: 57 total map nodes, 7 total big nodes.
-//3 additional nodes added. Path to West Field House now possible. Path to Porter College now possible.
+//Rough draft of the nodes of Rachel Carson College.
+//2/24/18: 58 total map nodes, 7 total big nodes.
+//3 additional nodes added. Path to West Field House now possible. Path to Porter College now possible. Path to Oakes College now possible.
 
 	"0101000":{
 		"id":"0101000",
@@ -117,7 +117,7 @@
 		"lat":36.992301,
 		"lng":-122.064648,
 		"type":null,
-		"to":["0100005","0100007","0100058"]
+		"to":["0100005","0100007","0100045","0100058"]
 		},
 	"0100007":{					//head of the college
 		"id":"0100007",
@@ -135,7 +135,7 @@
 		"lat":36.991957,
 		"lng":-122.064694,
 		"type":null,
-		"to":[]
+		"to":["0100007","0100010"]
 		},
 	"0100009":{					//outside ResNet
 		"id":"0100009",
@@ -162,7 +162,7 @@
 		"lat":36.991579,
 		"lng":-122.064824,
 		"type":null,
-		"to":["0100010","0100012","0100040","0107000"]
+		"to":["0100010","0100012","0100013","0100040","0107000"]
 		},
 	"0100012":{					//outside dining hall
 		"id":"0100012",
@@ -180,7 +180,7 @@
 		"lat":36.991452,
 		"lng":-122.064880,
 		"type":null,
-		"to":["0100011","0100014","0100055","0105000"]
+		"to":["0100011","0100014","0100055","0100056","0105000"]
 		},
 	"0100014":{					//nw lower quad
 		"id":"0100014",
@@ -198,7 +198,7 @@
 		"lat":36.991040,
 		"lng":-122.065026,
 		"type":null,
-		"to":["0100014","0100016"]
+		"to":["0100014","0100016","0100018"]
 		},
 	"0100016":{					//sw lower quad
 		"id":"0100016",
@@ -261,7 +261,7 @@
 		"lat":36.990879,
 		"lng":-122.064761,
 		"type":null,
-		"to":["0100019","0100022"]
+		"to":["0100019","0100021"]
 		},
 	"0100023":{					//south 19 towards service road
 		"id":"0100023",
@@ -297,7 +297,7 @@
 		"lat":36.990005,
 		"lng":-122.065233,
 		"type":null,
-		"to":["0100025","0100027"]
+		"to":["0100025","0100027","0100032"]
 		},
 	"0100027":{					//south 26 third bisection of parking lot
 		"id":"0100027",
@@ -306,7 +306,7 @@
 		"lat":36.989791,
 		"lng":-122.065315,
 		"type":null,
-		"to":["0100026","0100028"]
+		"to":["0100026","0100028","0100035"]
 		},
 	"0100028":{					//south parking lot, north of Oakes Rd
 		"id":"0100028",
@@ -315,7 +315,7 @@
 		"lat":36.989683,
 		"lng":-122.065340,
 		"type":null,
-		"to":["0100027"]
+		"to":["0100027","0800001"]
 		},
 	"0100029":{					//west of first bisection
 		"id":"0100029",
@@ -405,7 +405,7 @@
 		"lat":36.990612,
 		"lng":-122.066145,
 		"type":null,
-		"to":["0100031","0100034","0100039"]
+		"to":["0100031","0100034","0100039","0100054"]
 		},
 	"0100039":{					//sidewalk along bus stop, sw
 		"id":"0100039",
