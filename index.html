@@ -29,57 +29,62 @@
             <style>
                 <!-- Testing -->
                 body {
-                    padding: 20;
-                    margin: 20;
+                    padding: 0;
+                    margin: 0;
                 }
                 html, body, #mapid {
-                    height: 600px;
-                    width: 1425px;
+                    height: 70vh;
+                    width: 100vw;
                 }
             </style>
 
             <br>
             <div class="row">
                 <div class="col-6">
-                     From:
-                    <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                     From:<br>
+                    <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                                                                    clearMap();">
                         <option value="blank"></option>
                     </select>
-                    <select id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom')";
+                    <select id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom');
+                                                                    clearMap()";
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
+                    <select id="nameFrom" name="nameFrom" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                                                                    clearMap();"
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <hr />
                 </div>
                 <div class="col-6">
-                    To:
-                    <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                    To:<br>
+                    <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                                                                clearMap();">
                         <option value="blank"></option>
                         <option value="Nearby">Nearby</option>
                     </select>
-                    <select id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo')"
+                    <select id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo');
+                                                                clearMap();"
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
+                    <select id="nameTo" name="nameTo" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                                                                clearMap();"
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <hr />  
                 </div>
 
                 <div class="col">
-                    By:
-                    <select id="weight" name="weight" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                    By:<br>
+                    <select id="weight" name="weight">
                         <option value="blank"></option>
                         <option value="Distance">Distance</option>
                         <option value="Time">Time</option>
                         <option value="Difficulty">Difficulty</option>
                     </select>
+                    <button onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">GO</button>
                     <button onclick="drawgraph()">DrawTests</button>
 
                 </div>
@@ -95,6 +100,7 @@
         <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
         <p id="DrawTests"></p>
         <p id="testLocation"></p>
+        <p id="Distance"></p>
         <div id="mapid"></div>
         <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
 

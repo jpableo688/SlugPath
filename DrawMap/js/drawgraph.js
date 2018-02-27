@@ -4,10 +4,12 @@ function drawgraph() {
     var newKey;
     var graph = nodes;
     for(key in graph){
-        //keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
-        //keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
+        keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
+        keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
         console.log("{");
-        
+        if(key != graph[key].id){
+            console.log("key != id");
+        }
         var count = 0;
         var tempkey = null;
         for(tempkey2 in graph[key].to){

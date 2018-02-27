@@ -5,7 +5,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/t
     minZoom: 15,
     accessToken: 'pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ'
 }).addTo(mymap);
-
+mymap.removeControl(mymap.zoomControl);
 //Can't figure out how to make these not global
 var startmarkers, endmarkers, polyline;
 
@@ -13,7 +13,7 @@ function drawMap(searchArray){
     clearMap();
     latlng = [];
     paths = searchArray;
-
+    calculateDist(paths);
     for(path = 0; path < searchArray.length; path++){
         var lat = nodes[searchArray[path]].lat;
         var lng = nodes[searchArray[path]].lng;
@@ -35,9 +35,22 @@ function drawMap(searchArray){
     mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
     mymap.addLayer(polyline);
     
-    //for gathering data
 }
 
+function calculateDist(paths){
+    totaldist = 0;
+    console.log(paths);
+    for(i = 1; i < paths.length; i++){
+        console.log("{ "+ paths[i-1] + " to " + paths[i]);
+        thisDist = nodeDistance(nodes[paths[i-1]], nodes[paths[i]]);
+        console.log("current 2 node dist " + thisDist);
+        totaldist = totaldist + thisDist;
+        console.log("current total dist " + totaldist + "}");
+    }
+    
+    var distanceItem = document.getElementById("Distance");
+    distanceItem.innerHTML = "Total Distance: " + totaldist;
+}
 
 function drawInfoGather(){
     //for gathering data

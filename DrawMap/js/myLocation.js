@@ -31,7 +31,7 @@ function nodeDistance(node1, node2){
 
 function findNearestNode(node){
     var nearestNode;
-    var nearest = .5;
+    var nearest = .05;
     for(key in nodes){
         var dist = nodeDistance(node, nodes[key]);
         //console.log(nodes[key]);
@@ -49,7 +49,7 @@ function findNearestNode(node){
 
 function findNearestBigNode(node){
     var nearestBigNode;
-    var nearest = .5;
+    var nearest = .05;
     for(key in nodes){
         if (nodes[key].areas != undefined){
             var dist = nodeDistance(node, nodes[key]);
@@ -95,8 +95,9 @@ function createNode(pos){
         
         locationNode.to.push(nearestNode.id);
         nodes[locationNode.id] = locationNode;
+        nearestNode.to.push(locationNode.id);
     } else {
-        alert("You are not within a half mile radius of UCSC");
+        alert("You are not within a 250 feet radius of UCSC");
     } 
     gatherTypes('typeFrom');
 }

@@ -22,7 +22,12 @@ function populateByName(menu, list){
 
 function populateByArea(menu, list){
     clearMenu(menu);
-    addBlank(menu);
+    
+    var blank = document.createElement("option");
+    blank.value = "blank";
+    blank.innerHTML = "All";
+    menu.options.add(blank);
+    
     for(i = 0; i < list.length; i++){
         var newOption = document.createElement("option");
         newOption.value = list[i].areas;
@@ -81,12 +86,12 @@ function collectAreasByName(value){
             for(var index in areaList){
                 if(nodes[key].areas == areaList[index].areas){
                     alreadyHere = true;
-                    console.log(areaList[index].areas);
+                    //console.log(areaList[index].areas);
                 }
             }
             if(alreadyHere == false && nodes[key].areas != undefined){
                 areaList.push(nodes[key]);
-                console.log(nodes[key].areas);
+                //console.log(nodes[key].areas);
             }
         }
 
@@ -113,7 +118,7 @@ function updateArea(type, areas, name){
     var typeDD = document.getElementById(type);
     var areaDD = document.getElementById(areas);
     var nameDD = document.getElementById(name);
-    console.log(areaDD.value);
+
     if(areaDD.value != "blank"){
         var nameList = collectNameByArea(typeDD.value, areaDD.value);
         populateByName(nameDD,nameList);
@@ -146,6 +151,7 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight)
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
     
+    //hides or unhides other dropdowns
     if(checkIfType(typeFromDD.value)){
         document.getElementById(nameFrom).style.display = "none";
         document.getElementById(areaFrom).style.display = "none";
@@ -186,6 +192,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
     
+    //hides or unhides other dropdowns
     if(checkIfType(typeToDD.value)){
         document.getElementById(nameTo).style.display = "none";
         document.getElementById(areaTo).style.display = "none";
@@ -197,6 +204,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
             document.getElementById(areaTo).style.display = "none";
         }
     }
+    
     if(typeToDD.value != "Nearby"){
         updateReg(typeToDD, areaToDD, nameToDD);
     } else {
@@ -204,6 +212,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     }
 }
 
+//finds nearest node from my location
 function nearTo(value){
     var node;
     for(key in nodes){
@@ -282,8 +291,9 @@ function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
 
 function findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
     var IDs = checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
+
     if (IDs != undefined){
-        //Pranav Here
         aStar(IDs[0], IDs[1], IDs[2]);
     }
 }
+
