@@ -1,42 +1,19 @@
-//graph.setState("0900000", "0900045"); //breaks at node 0905000 since theres no id; probably fixed by putting all nodes together
-/*
-graph.setState("0900003", "0900008");
-var finalPath = slugStar(graph);
-console.log("1) Final found path: " + finalPath);
+/*  Search algorithm for our pathing. It builds off the A* search
+    algorithm. slugStar returns the path of nodeIds to take from 
+    one location to the next. It returns an empty list "[]" if 
+    no path exists.
 */
 
-/*
-graph.setState("0900000", "0900019");
-var finalPath = slugStar(graph);
-console.log("2) Final found path: " + finalPath);
-*/
-
-
-//breaks if this is used
-/*
-graph.setState("0900019", "0900000");
-var finalPath = slugStar(graph);
-console.log("3) Final found path: " + finalPath);
-*/
-
-//slugStar(graph);
-
-//slugStar(graph, graph.getGraphHeur);
-//console.log(finalPath);
-
-//function slugStar(graph, heruisticFn=graph.getGraphHeur){ 
 //function slugStar(graph, heruisticFn){
 function slugStar(graph){
-    //NOTE: using graph.getGraphHeur() right now since passing function is not working
-
-    var counter = 0; //testing
-    
+    //NOTE: using graph.getGraphHeur() right now since passing function is not working    
     var path = [];
     
     startSateId = graph.getStart();
     
     if(graph.isEnd(startSateId)){
-        return path;
+        //since the start and end is the same, the path is only that node
+        return [startSateId];
     }
     
     //initialize data structures
@@ -55,10 +32,12 @@ function slugStar(graph){
     //find path if there is one
     while(true){
         if (fringe.isEmpty()){
-            //should not come here if there is a solution; failure
-            console.error("No solution to Search " + counter); //testing
-            //console.error("No solution to Search");
-            throw new Error("Exception: No solution to Search. End could not be found.");
+            //should not come here if there is a solution/path; failure
+            console.error("No solution path found. Some edges may be missing.");
+            //return an empty path if there is no solution. If there is any path. It will be minimum 1 node.
+            return [];
+            
+            //throw new Error("Exception: No solution to Search. End could not be found.");
         }
         
         node = fringe.pop();
