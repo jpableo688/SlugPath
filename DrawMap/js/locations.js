@@ -1,13 +1,4024 @@
-//this is an array of nodes objects in json.
-//I already loaded it into nodes and saved it as
-//js because we would have to do XMLHttpRequest.
-//var nodes = [{this is json}].
-//everything between the brackets is json.
 var nodes = {
+
+//RACHEL CARSON NODES -----------------------------------------------------------------------------------------------------
+"0101000":{
+        "id":"0101000",
+        "name":"Rachel Carson/Oakes Dining Hall",
+        "areas":"Rachel Carson",
+        "lat":36.991623,
+        "lng":-122.065389,
+        "type":"Dining Hall",
+        "to":["0100012"]
+    },
+    "0102000":{
+        "id":"0102000",
+        "name":"ResNet",
+        "areas":"Rachel Carson",
+        "lat":36.992149,
+        "lng":-122.065012,
+        "type":"Student Services",
+        "to":["0100009"]
+    },
+    "0103000":{
+        "id":"0103000",
+        "name":"College Eight Cafe",
+        "areas":"Rachel Carson",
+        "lat":36.991558,
+        "lng":-122.064384,
+        "type":"Food To Go",
+        "to":["0100040"]
+    },
+    "0104000":{
+        "id":"0104000",
+        "name":"West Field House",
+        "areas":"Rachel Carson",
+        "lat":36.991412,
+        "lng":-122.064094,
+        "type":"Activities",
+        "to":["0100057"]
+    },
+    "0105000":{
+        "id":"0105000",
+        "name":"Red Room",
+        "areas":"Rachel Carson",
+        "lat":36.991229,
+        "lng":-122.064799,
+        "type":"Other",
+        "to":["0100013"]
+    },
+    "0106000":{
+        "id":"0106000",
+        "name":"Rachel Carson & Oakes Residential Life",
+        "areas":"Rachel Carson",
+        "lat":36.991021,
+        "lng":-122.064598,
+        "type":"Student Services",
+        "to":["0100021"]
+    },
+    "0107000":{
+        "id":"0107000",
+        "name":"Rachel Carson Computer Lab",
+        "areas":"Rachel Carson",
+        "lat":36.991631,
+        "lng":-122.064620,
+        "type":"Academic",
+        "to":["0100011"]
+    },
+    "0100001":{                 //bus stop
+        "id":"0100001",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992831,
+        "lng":-122.064784,
+        "type":null,
+        "to":["0100002","0100003"]
+        },
+    "0100002":{                 //crosswalk
+        "id":"0100002",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992843,
+        "lng":-122.064496,
+        "type":null,
+        "to":["0100001","0100003","0900005"]
+        },
+    "0100003":{
+        "id":"0100003",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992631,
+        "lng":-122.064536,
+        "type":null,
+        "to":["0100001","0100002","0100004"]
+        },
+    "0100004":{
+        "id":"0100004",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992547,
+        "lng":-122.064558,
+        "type":null,
+        "to":["0100003","0100005"]
+        },
+    "0100005":{
+        "id":"0100005",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992448,
+        "lng":-122.064603,
+        "type":null,
+        "to":["0100004","0100006"]
+        },
+    "0100006":{                 //west of lot 146, bend in the sidewalk
+        "id":"0100006",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992301,
+        "lng":-122.064648,
+        "type":null,
+        "to":["0100005","0100007","0100045","0100058"]
+        },
+    "0100007":{                 //head of the college
+        "id":"0100007",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992077,
+        "lng":-122.064654,
+        "type":null,
+        "to":["0100006","0100008","0100009","0100058"]
+        },
+    "0100008":{                 //down into the quad
+        "id":"0100008",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991957,
+        "lng":-122.064694,
+        "type":null,
+        "to":["0100007","0100010"]
+        },
+    "0100009":{                 //outside ResNet
+        "id":"0100009",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992118,
+        "lng":-122.064848,
+        "type":null,
+        "to":["0100007","0102000"]
+        },
+    "0100010":{
+        "id":"0100010",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991817,
+        "lng":-122.064741,
+        "type":null,
+        "to":["0100008","0100011"]
+        },
+    "0100011":{                 //central quad, near comp lab
+        "id":"0100011",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991579,
+        "lng":-122.064824,
+        "type":null,
+        "to":["0100010","0100012","0100013","0100040","0107000"]
+        },
+    "0100012":{                 //outside dining hall
+        "id":"0100012",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991714,
+        "lng":-122.065051,
+        "type":null,
+        "to":["0100011","0101000"]
+        },
+    "0100013":{                 //center of plaza
+        "id":"0100013",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991452,
+        "lng":-122.064880,
+        "type":null,
+        "to":["0100011","0100014","0100055","0100056","0105000"]
+        },
+    "0100014":{                 //nw lower quad
+        "id":"0100014",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991164,
+        "lng":-122.064963,
+        "type":null,
+        "to":["0100013","0100015","0100017"]
+        },
+    "0100015":{                 //west lower quad
+        "id":"0100015",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991040,
+        "lng":-122.065026,
+        "type":null,
+        "to":["0100014","0100016","0100018"]
+        },
+    "0100016":{                 //sw lower quad
+        "id":"0100016",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990942,
+        "lng":-122.065053,
+        "type":null,
+        "to":["0100015","0100019"]
+        },
+    "0100017":{                 //north lower quad
+        "id":"0100017",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991136,
+        "lng":-122.064846,
+        "type":null,
+        "to":["0100014","0100018","0100020"]
+        },
+    "0100018":{                 //center lower quad
+        "id":"0100018",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991009,
+        "lng":-122.064888,
+        "type":null,
+        "to":["0100015","0100017","0100019","0100021"]
+        },
+    "0100019":{                 //south lower quad
+        "id":"0100019",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990909,
+        "lng":-122.064922,
+        "type":null,
+        "to":["0100016","0100018","0100022","0100023"]
+        },
+    "0100020":{                 //ne lower quad
+        "id":"0100020",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991114,
+        "lng":-122.064657,
+        "type":null,
+        "to":["0100017","0100021",]
+        },
+    "0100021":{                 //east lower quad
+        "id":"0100021",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990973,
+        "lng":-122.064725,
+        "type":null,
+        "to":["0100018","0100020","0100022","0106000"]
+        },
+    "0100022":{                 //se lower quad
+        "id":"0100022",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990879,
+        "lng":-122.064761,
+        "type":null,
+        "to":["0100019","0100021"]
+        },
+    "0100023":{                 //south 19 towards service road
+        "id":"0100023",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990795,
+        "lng":-122.064962,
+        "type":null,
+        "to":["0100019","0100024","0100053"]
+        },
+    "0100024":{                 //south 23 towards parking lot
+        "id":"0100024",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990597,
+        "lng":-122.065022,
+        "type":null,
+        "to":["0100023","0100025"]
+        },
+    "0100025":{                 //south 24 first bisection of parking lot
+        "id":"0100025",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990204,
+        "lng":-122.065156,
+        "type":null,
+        "to":["0100024","0100026","0100029"]
+        },
+    "0100026":{                 //south 25 second bisection of parking lot
+        "id":"0100026",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990005,
+        "lng":-122.065233,
+        "type":null,
+        "to":["0100025","0100027","0100032"]
+        },
+    "0100027":{                 //south 26 third bisection of parking lot
+        "id":"0100027",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.989791,
+        "lng":-122.065315,
+        "type":null,
+        "to":["0100026","0100028","0100035"]
+        },
+    "0100028":{                 //south parking lot, north of Oakes Rd
+        "id":"0100028",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.989683,
+        "lng":-122.065340,
+        "type":null,
+        "to":["0100027","0800001"]
+        },
+    "0100029":{                 //west of first bisection
+        "id":"0100029",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990271,
+        "lng":-122.065345,
+        "type":null,
+        "to":["0100025","0100030"]
+        },
+    "0100030":{                 //perpendicular 3-way to road west of 29
+        "id":"0100030",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990373,
+        "lng":-122.065572,
+        "type":null,
+        "to":["0100029","0100031","0100033"]
+        },
+    "0100031":{                 //west 30
+        "id":"0100031",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990531,
+        "lng":-122.065775,
+        "type":null,
+        "to":["0100030","0100038"]
+        },
+    "0100032":{                 //west of second bisection
+        "id":"0100032",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990084,
+        "lng":-122.065505,
+        "type":null,
+        "to":["0100026","0100033"]
+        },
+    "0100033":{                 //4-way sw 30
+        "id":"0100033",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990193,
+        "lng":-122.065740,
+        "type":null,
+        "to":["0100030","0100032","0100034","0100036"]
+        },
+    "0100034":{                 //west 33
+        "id":"0100034",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990455,
+        "lng":-122.066042,
+        "type":null,
+        "to":["0100033","0100038"]
+        },
+    "0100035":{                 //west of third bisection
+        "id":"0100035",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.989891,
+        "lng":-122.065651,
+        "type":null,
+        "to":["0100027","0100036"]
+        },
+    "0100036":{                 //4-way sw 33
+        "id":"0100036",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990023,
+        "lng":-122.065899,
+        "type":null,
+        "to":["0100033","0100035","0100037"]
+        },
+    "0100037":{                 //west 36
+        "id":"0100037",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990209,
+        "lng":-122.066178,
+        "type":null,
+        "to":["0100036","0100039"]
+        },
+    "0100038":{                 //southwest bus stop
+        "id":"0100038",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990612,
+        "lng":-122.066145,
+        "type":null,
+        "to":["0100031","0100034","0100039","0100054"]
+        },
+    "0100039":{                 //sidewalk along bus stop, sw
+        "id":"0100039",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990284,
+        "lng":-122.066264,
+        "type":null,
+        "to":["0100037","0100038"]
+        },
+    "0100040":{                 //beside college 8 cafe
+        "id":"0100040",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991579,
+        "lng":-122.064503,
+        "type":null,
+        "to":["0100011","0100041","0103000"]
+        },
+    "0100041":{                 //north 40
+        "id":"0100041",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991638,
+        "lng":-122.064422,
+        "type":null,
+        "to":["0100040","0100042"]
+        },
+    "0100042":{                 //east 42 along trail
+        "id":"0100042",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991642,
+        "lng":-122.064230,
+        "type":null,
+        "to":["0100041","0100043"]
+        },
+    "0100043":{                 //east of 44, four-way in road
+        "id":"0100043",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991875,
+        "lng":-122.063923,
+        "type":null,
+        "to":["0100042","0100044"]
+        },
+    "0100044":{                 //east of lot 146
+        "id":"0100044",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992056,
+        "lng":-122.064202,
+        "type":null,
+        "to":["0100043","0100058"]
+        },
+    "0100045":{                 //west of lot 146 towards courts
+        "id":"0100045",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992241,
+        "lng":-122.064993,
+        "type":null,
+        "to":["0100006","0100046"]
+        },
+    "0100046":{                 //follow road along 45 southwest
+        "id":"0100046",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992241,
+        "lng":-122.064993,
+        "type":null,
+        "to":["0100045","0100047"]
+        },
+    "0100047":{                 //west 46
+        "id":"0100047",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992136,
+        "lng":-122.065272,
+        "type":null,
+        "to":["0100046","0100048"]
+        },
+    "0100048":{                 //south 47
+        "id":"0100048",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991999,
+        "lng":-122.065244,
+        "type":null,
+        "to":["0100047","0100049"]
+        },
+    "0100049":{                 //sw 48
+        "id":"0100049",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991905,
+        "lng":-122.065511,
+        "type":null,
+        "to":["0100048","0100050"]
+        },
+    "0100050":{                 //west 49
+        "id":"0100050",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991726,
+        "lng":-122.065584,
+        "type":null,
+        "to":["0100049","0100051"]
+        },
+    "0100051":{                 //west 50
+        "id":"0100051",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991613,
+        "lng":-122.065839,
+        "type":null,
+        "to":["0100050","0100052"]
+        },
+    "0100052":{                 //south 51
+        "id":"0100052",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991129,
+        "lng":-122.065721,
+        "type":null,
+        "to":["0100051","0100053","0100055"]
+        },
+    "0100053":{                 //se 52, west 23
+        "id":"0100053",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990932,
+        "lng":-122.065599,
+        "type":null,
+        "to":["0100023","0100052","0100054"]
+        },
+    "0100054":{                 //sw 53, ne 38
+        "id":"0100054",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.990774,
+        "lng":-122.065876,
+        "type":null,
+        "to":["0100038","0100053"]
+        },
+    "0100055":{ 
+        "id":"0100055",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991400,
+        "lng":-122.065301,
+        "type":null,
+        "to":["0100013","0100052"]
+        },
+    "0100056":{ 
+        "id":"0100056",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991347,
+        "lng":-122.064665,
+        "type":null,
+        "to":["0100013","0100057"]
+        },
+    "0100057":{ 
+        "id":"0100057",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.991372,
+        "lng":-122.064474,
+        "type":null,
+        "to":["0100056","0104000"]
+        },
+    "0100058":{ 
+        "id":"0100058",
+        "name":null,
+        "areas":"Rachel Carson",
+        "lat":36.992164,
+        "lng":-122.064644,
+        "type":null,
+        "to":["0100006","0100007","0100044"]
+        },
+//College 9 & 10  NODES ---------------------------------------------------------------------------------------------------
+   "0201000":{                  
+        "id":"0201000",
+        "name":"College 9 & 10 Dining Hall",
+        "areas":"College 9 & 10",
+        "lat":37.000731,
+        "lng":-122.057769,
+        "type":"Dining Hall",
+        "to":["0200025"]
+    },
+        "0202000":{                 
+        "id":"0202000",
+        "name":"Terry Fresca Restaurant & Coffee Bar",
+        "areas":"College 9 & 10",
+        "lat":37.000978,
+        "lng":-122.057736,
+        "type":"Dining Hall",
+        "to":["0200027"]
+    },
+        "0203000":{
+        "id":"0203000",
+        "name":"Terry Frietas Cafe",
+        "areas":"College 9 & 10",
+        "lat":37.0003468,
+        "lng":-122.057966,
+        "type":"Food To Go",
+        "to":["0200010"]
+    },
+        "0204000":{                 
+        "id":"0204000",
+        "name":"Recreational Lounge",
+        "areas":"College 9 & 10",
+        "lat":37.0006144,
+        "lng":-122.0577187,
+        "type":"Activities",  //Cannot find this big node on Leaflet
+        "to":[]
+    },
+        "0205000":{                 
+        "id":"0205000",
+        "name":"Namaste Lounge",
+        "areas":"College 9 & 10",
+        "lat":37.0007468,
+        "lng":-122.0571587,
+        "type":"Activities",
+        "to":["0200029"]
+    },
+        "0206000":{                 
+        "id":"0206000",
+        "name":"College 9 & 10 Residential Life",
+        "areas":"College 9 & 10",
+        "lat":37.001422,
+        "lng":-122.056990,
+        "type":"Student Services",
+        "to":["0200032"]
+    },
+        "0207000":{
+        "id":"0207000",
+        "name":"Social Science 1",
+        "areas":"College 9 & 10",
+        "lat":37.002115,
+        "lng":-122.058030,
+        "type":"Academic",
+        "to":["0200065","0200101"]
+     },
+        "0208000":{                 
+        "id":"0208000",
+        "name":"Social Science 2",
+        "areas":"College 9 & 10",
+        "lat":37.001527,
+        "lng":-122.058747,
+        "type":"Academic",
+        "to":["0200053","0200105"]
+     },
+        "0209000":{                 
+        "id":"0209000",
+        "name":"College 9 & 10 Multi-Purpose Room",
+        "areas":"College 9 & 10",
+        "lat":37.000767,
+        "lng":-122.057835,
+        "type":"Activities",
+        "to":["0200025"]
+     },
+        "0210000":{
+        "id":"0210000",
+        "name":"College 9 & 10 Lounge Room",
+        "areas":"College 9 & 10",
+        "lat":37.000618,
+        "lng":-122.057719,
+        "type":"Activities",
+        "to":["0200018"]
+     },
+        "0211000":{                 
+        "id":"0211000",
+        "name":"College 9 & 10 Community Room",
+        "areas":"College 9 & 10",
+        "lat":37.002229,
+        "lng":-122.059317,
+        "type":"Activities",
+        "to":["0200094"] 
+     },
+        "0212000":{                 
+        "id":"0212000",
+        "name":"Hague House",
+        "areas":"College 9 & 10",
+        "lat":37.00161,
+        "lng":-122.057199,
+        "type":"Residential",
+        "to":["0200034"] 
+     },
+        "0213000":{                 
+        "id":"0213000",
+        "name":"Ghandi House",
+        "areas":"College 9 & 10",
+        "lat":37.001045,
+        "lng":-122.057151,
+        "type":"Residential",
+        "to":["0200099"] 
+     },
+        "0214000":{                 
+        "id":"0214000",
+        "name":"Geneva House",
+        "areas":"College 9 & 10",
+        "lat":37.001512,
+        "lng":-122.057574,
+        "type":"Residential",
+        "to":["0200034","0200100"] 
+     },
+       "0215000":{                  
+        "id":"0215000",
+        "name":"Amnesty House",
+        "areas":"College 9 & 10",
+        "lat":37.000251,
+        "lng":-122.058294,
+        "type":"Residential",
+        "to":["0200071"] 
+     },
+        "0216000":{                 
+        "id":"0216000",
+        "name":"Angela Davis House",
+        "areas":"College 9 & 10",
+        "lat":37.000568,
+        "lng": -122.05861,
+        "type":"Residential",
+        "to":["0200072"] 
+     },
+        "0217000":{                 
+        "id":"0217000",
+        "name":"Ohlone House",
+        "areas":"College 9 & 10",
+        "lat":37.000654,
+        "lng": -122.058331,
+        "type":"Residential",
+        "to":["0200074"] 
+     },
+       "0218000":{                  
+        "id":"0218000",
+        "name":"Nine & Ten Apts Building 1",
+        "areas":"College 9 & 10",
+        "lat":37.002092,
+        "lng": -122.059648,
+        "type":"Residential",
+        "to":["0200113","0200117"] 
+     },
+        "0219000":{                 
+        "id":"0219000",
+        "name":"Nine & Ten Apts Building 2",
+        "areas":"College 9 & 10",
+        "lat":37.002337,
+        "lng": -122.0589,
+        "type":"Residential",
+        "to":["0200121"] 
+     },
+       "0220000":{                  
+        "id":"0220000",
+        "name":"Nine & Ten Apts Building 3",
+        "areas":"College 9 & 10",
+        "lat":37.002774,
+        "lng": -122.058719,
+        "type":"Residential",
+        "to":["0200124"] 
+     },
+      "0221000":{                   
+        "id":"0221000",
+        "name":"Nine & Ten Apts Building 4",
+        "areas":"College 9 & 10",
+        "lat":37.003032,
+        "lng": -122.058345,
+        "type":"Residential",
+        "to":["0200137"] 
+     },
+     "0222000":{                    
+        "id":"0222000",
+        "name":"ILC/Nine & Ten Apts Building 5",
+        "areas":"College 9 & 10",
+        "lat":37.003255,
+        "lng": -122.058191,
+        "type":"Residential",
+        "to":["0200135"] 
+     },
+    "0200001":{
+        "id":"0200001",
+        "name":null,
+        "areas":null,
+        "lat":36.999861,
+        "lng": -122.058570,
+        "type":null,
+        "to":["0200002"]
+    },
+    "0200002":{
+        "id":"0200002",
+        "name":null,
+        "areas":null,
+        "lat":36.999952,
+        "lng":-122.058571,
+        "type":null,
+        "to":["0200001","0200003","0200078"]
+    },
+    "0200003":{
+        "id":"0200003",
+        "name":null,
+        "areas":null,
+        "lat":37.000011,
+        "lng": -122.058473,
+        "type":null,
+        "to":["0200002","0200004"]
+    },
+    "0200004":{
+        "id":"0200004",
+        "name":null,
+        "areas":null,
+        "lat":37.000052,
+        "lng": -122.058361,
+        "type":null,
+        "to":["0200003","0200005"]
+    },
+    "0200005":{
+        "id":"0200005",
+        "name":null,
+        "areas":null,
+        "lat":37.000083,
+        "lng": -122.058151,
+        "type":null,
+        "to":["0200004","0200006"]
+    },
+    "0200006":{
+        "id":"0200006",
+        "name":null,
+        "areas":null,
+        "lat":37.000093,
+        "lng":-122.057981,
+        "type":null,
+        "to":["0200005","0200007"]
+    },
+    "0200007":{
+        "id":"0200007",
+        "name":null,
+        "areas":null,
+        "lat":37.000111,
+        "lng":-122.057912,
+        "type":null,
+        "to":["0200006","0200008"]
+    },
+    "0200008":{
+        "id":"0200008",
+        "name":null,
+        "areas":null,
+        "lat":37.000171,
+        "lng":-122.057820,
+        "type":null,
+        "to":["0200007","0200009"]
+    },
+    "0200009":{
+        "id":"0200009",
+        "name":null,
+        "areas":null,
+        "lat":37.000370,
+        "lng": -122.057722,
+        "type":null,
+        "to":["0200008","0200010","0200014"]
+    },
+    "0200010":{
+        "id":"0200010",
+        "name":null,
+        "areas":null,
+        "lat":37.000413,
+        "lng": -122.057871,
+        "type":null,
+        "to":["0203000","0200009","0200011"]
+    },
+    "0200011":{
+        "id":"0200011",
+        "name":null,
+        "areas":null,
+        "lat":37.000422,
+        "lng":-122.057921,
+        "type":null,
+        "to":["0200010","0200012"]
+    },
+    "0200012":{
+        "id":"0200012",
+        "name":null,
+        "areas":null,
+        "lat":37.000461,
+        "lng":-122.057941,
+        "type":null,
+        "to":["0200011","0200013"]
+    },
+    "0200013":{
+        "id":"0200013",
+        "name":null,
+        "areas":null,
+        "lat":37.000521,
+        "lng":-122.057932,
+        "type":null,
+        "to":["0200012","0200017","0200024"]
+    },
+    "0200014":{
+        "id":"0200014",
+        "name":null,
+        "areas":null,
+        "lat":37.000443,
+        "lng":-122.057650,
+        "type":null,
+        "to":["0200009","0200015"]
+    },
+    "0200015":{
+        "id":"0200015",
+        "name":null,
+        "areas":null,
+        "lat":37.00050,
+        "lng":-122.057584,
+        "type":null,
+        "to":["0200014","0200016"]
+    },
+    "0200016":{
+        "id":"0200016",
+        "name":null,
+        "areas":null,
+        "lat":37.000553,
+        "lng":-122.057551,
+        "type":null,
+        "to":["0200015","0200020","0200021"]
+    },
+    "0200017":{
+        "id":"0200017",
+        "name":null,
+        "areas":null,
+        "lat":37.000511,
+        "lng":-122.057852,
+        "type":null,
+        "to":["0200013","0200018"]
+    },
+    "0200018":{
+        "id":"0200018",
+        "name":null,
+        "areas":null,
+        "lat":37.000511,
+        "lng": -122.057760,
+        "type":null,
+        "to":["0210000","0200017","0200019"]
+    },
+    "0200019":{
+        "id":"0200019",
+        "name":null,
+        "areas":null,
+        "lat":37.000513,
+        "lng": -122.057682,
+        "type":null,
+        "to":["0200018","0200020"]
+    },
+    "0200020":{
+        "id":"0200020",
+        "name":null,
+        "areas":null,
+        "lat":37.000533,
+        "lng":-122.057612,
+        "type":null,
+        "to":["0200019","0200016"]
+    },
+    "0200021":{
+        "id":"0200021",
+        "name":null,
+        "areas":null,
+        "lat":37.000593,
+        "lng":-122.057492,
+        "type":null,
+        "to":["0200016","0200022"]
+    },
+    "0200022":{
+        "id":"0200022",
+        "name":null,
+        "areas":null,
+        "lat":37.000753,
+        "lng": -122.05741,
+        "type":null,
+        "to":["0200021","0200023"]
+    },
+    "0200023":{
+        "id":"0200023",
+        "name":null,
+        "areas":null,
+        "lat":37.000761,
+        "lng":  -122.057340,
+        "type":null,
+        "to":["0200022","0200028","0200046"]
+    },
+    "0200024":{
+        "id":"0200024",
+        "name":null,
+        "areas":null,
+        "lat":37.000542,
+        "lng": -122.057982,
+        "type":null,
+        "to":["0200013","0200025","0200026"]   
+    },
+    "0200025":{
+        "id":"0200025",
+        "name":null,
+        "areas":null,
+        "lat":37.000573,
+        "lng": -122.058010,
+        "type":null,
+        "to":["0201000","0209000","0200024","0200027"]
+    },
+    "0200026":{
+        "id":"0200026",
+        "name":null,
+        "areas":null,
+        "lat":37.000451,
+        "lng": -122.058062,
+        "type":null,
+        "to":["0200024","0200071"]       //add the left side node when initialized
+    },
+    "0200027":{
+        "id":"0200027",
+        "name":null,
+        "areas":null,
+        "lat":37.000823,
+        "lng": -122.058050,
+        "type":null,
+        "to":["0202000","0200025","0200051"]
+    },
+    "0200028":{
+        "id":"0200028",
+        "name":null,
+        "areas":null,
+        "lat":37.000867,
+        "lng": -122.057323,
+        "type":null,
+        "to":["0200023","0200029","0200030"]
+    },
+    "0200029":{
+        "id":"0200029",
+        "name":null,
+        "areas":null,
+        "lat":37.000847,
+        "lng": -122.057157,
+        "type":null,
+        "to":["0200028","0205000"]
+    },
+    "0200030":{
+        "id":"0200030",
+        "name":null,
+        "areas":null,
+        "lat":37.00113,
+        "lng": -122.05734,
+        "type":null, //NODE NEAR GHANDI
+        "to":["0200028","0200031","0200047","0200099"]
+    },
+    "0200031":{
+        "id":"0200031",
+        "name":null,
+        "areas":null,
+        "lat":37.001262,
+        "lng": -122.057171,
+        "type":null,
+        "to":["0200030","0200032"]
+    },
+    "0200032":{
+        "id":"0200032",
+        "name":null,
+        "areas":null,
+        "lat":37.001381,
+        "lng":-122.057121,
+        "type":null,
+        "to":["0206000","0200031","0200033"]
+    },
+    "0200033":{
+        "id":"0200033",
+        "name":null,
+        "areas":null,
+        "lat":37.001510,
+        "lng":-122.057192,
+        "type":null,
+        "to":["0200032","0200034"]
+    },
+    "0200034":{
+        "id":"0200034",
+        "name":null,
+        "areas":null,
+        "lat":37.001553,
+        "lng":-122.057380,
+        "type":null, //INTERSECTION
+        "to":["0200033","0200035","0212000","0214000"]
+    },
+    "0200035":{
+        "id":"0200035",
+        "name":null,
+        "areas":null,
+        "lat":37.001692,
+        "lng":-122.057596,
+        "type":null,
+        "to":["0200034","0200044"]
+    },
+    "0200036":{
+        "id":"0200036",
+        "name":null,
+        "areas":null,
+        "lat":37.001833,
+        "lng":-122.057671,
+        "type":null,
+        "to":["0200037","0200044"]
+    },
+    "0200037":{
+        "id":"0200037",
+        "name":null,
+        "areas":null,
+        "lat":37.001871,
+        "lng":-122.057712,
+        "type":null,
+        "to":["0200036","0200038"]
+    },
+    "0200038":{
+        "id":"0200038",
+        "name":null,
+        "areas":null,
+        "lat":37.001891,
+        "lng": -122.057780,
+        "type":null,
+        "to":["0200037","0200039"]
+    },
+    "0200039":{
+        "id":"0200039",
+        "name":null,
+        "areas":null,
+        "lat":37.001883,
+        "lng": -122.057832,
+        "type":null,
+        "to":["0200038","0200040"]
+    },
+   "0200040":{
+        "id":"0200040",
+        "name":null,
+        "areas":null,
+        "lat":37.001863,
+        "lng":-122.057870,
+        "type":null,
+        "to":["0200039","0200041"]
+    },
+    "0200041":{
+        "id":"0200041",
+        "name":null,
+        "areas":null,
+        "lat":37.001792,
+        "lng": -122.057931,
+        "type":null,
+        "to":["0200040","0200042"]
+    },
+    "0200042":{
+        "id":"0200042",
+        "name":null,
+        "areas":null,
+        "lat":37.001741,
+        "lng":-122.057941,
+        "type":null,
+        "to":["0200041","0200043","0200059"]
+    },
+    "0200043":{
+        "id":"0200043",
+        "name":null,
+        "areas":null,
+        "lat":37.001610,
+        "lng":-122.057822,
+        "type":null,
+        "to":["0200042","0200044","0200050"]
+    },
+    "0200044":{
+        "id":"0200044",
+        "name":null,
+        "areas":null,
+        "lat":37.001704,
+        "lng":-122.057687,
+        "type":null,
+        "to":["0200036","0200035","0200043"]
+    },
+    "0200045":{
+        "id":"0200045",
+        "name":null,
+        "areas":null,
+        "lat":37.000110,
+        "lng": -122.057134,
+        "type":null,
+        "to":["0200046"]
+    },
+    "0200046":{
+        "id":"0200046",
+        "name":null,
+        "areas":null,
+        "lat":37.000583,
+        "lng":-122.057331,
+        "type":null,
+        "to":["0200023","0200045"]
+    },
+    "0200047":{
+        "id":"0200047",
+        "name":null,
+        "areas":null,
+        "lat":37.001401,
+        "lng":-122.057762,
+        "type":null,
+        "to":["0200030","0200048","0200050"]
+    },
+    "0200048":{
+        "id":"0200048",
+        "name":null,
+        "areas":null,
+        "lat":37.001291,
+        "lng": -122.058110,
+        "type":null,
+        "to":["0200047","0200049","0200051"]
+    },
+    "0200049":{
+        "id":"0200049",
+        "name":null,
+        "areas":null,
+        "lat":37.001453,
+        "lng": -122.058072,
+        "type":null,
+        "to":["0200048","0200050","0200051"]
+    },
+    "0200050":{
+        "id":"0200050",
+        "name":null,
+        "areas":null,
+        "lat":37.001489,
+        "lng": -122.057798,
+        "type":null, //backside geneva
+        "to":["0200043","0200047","0200049","0200100"]
+    },
+    "0200051":{
+        "id":"0200051",
+        "name":null,
+        "areas":null,
+        "lat":37.00117,
+        "lng": -122.05822,
+        "type":null,
+        "to":["0200048","0200049","0200027","0200052","0200056", "0200103"]
+    },
+    "0200052":{
+        "id":"0200052",
+        "name":null,
+        "areas":null,
+        "lat":37.001332,
+        "lng":-122.058535,
+        "type":null,
+        "to":["0200051","0200053","0200054"]
+    },
+    "0200053":{
+        "id":"0200053",
+        "name":null,
+        "areas":null,
+        "lat":37.00142,
+        "lng":-122.05856,
+        "type":null,
+        "to":["0208000","0200052","0200054","0200056"]
+    },
+    "0200054":{
+        "id":"0200054",
+        "name":null,
+        "areas":null,
+        "lat":37.00125,
+        "lng":-122.05895,
+        "type":null,
+        "to":["0200055","0200053","0200052","0200088"]
+    },
+    "0200055":{
+        "id":"0200055",
+        "name":null,
+        "areas":null,
+        "lat":37.00112,
+        "lng": -122.05901,
+        "type":null,
+        "to":["0200054","0200082","0200087"]
+    },
+    "0200056":{
+        "id":"0200056",
+        "name":null,
+        "areas":null,
+        "lat":37.00156,
+        "lng":-122.05834,
+        "type":null,
+        "to":["0200053","0200051","0200057","0200058"]
+    },
+    "0200057":{
+        "id":"0200057",
+        "name":null,
+        "areas":null,
+        "lat":37.00214,
+        "lng": -122.0587,
+        "type":null,
+        "to":["0200056","0200069","0200091","0200092"]
+    },
+    "0200058":{
+        "id":"0200058",
+        "name":null,
+        "areas":null,
+        "lat":37.00171,
+        "lng": -122.05831,
+        "type":null,
+        "to":["0200056","0200059","0200060"]
+    },
+    "0200059":{
+        "id":"0200059",
+        "name":null,
+        "areas":null,
+        "lat":37.00186,
+        "lng": -122.05803,
+        "type":null,
+        "to":["0200058","0200042","0200062","0200064"]
+    },
+    "0200060":{
+        "id":"0200060",
+        "name":null,
+        "areas":null,
+        "lat":37.001823,
+        "lng":-122.058270,
+        "type":null,
+        "to":[ "0200058","0200061"]
+    },
+    "0200061":{
+        "id":"0200061",
+        "name":null,
+        "areas":null,
+        "lat":37.001912,
+        "lng": -122.058211,
+        "type":null,
+        "to":["0200060","0200062"]
+    },
+    "0200062":{
+        "id":"0200062",
+        "name":null,
+        "areas":null,
+        "lat":37.002,
+        "lng":-122.05821,
+        "type":null,
+        "to":["0200061","0200059","0200063"]
+    },
+    "0200063":{
+        "id":"0200063",
+        "name":null,
+        "areas":null,
+        "lat":37.00211,
+        "lng":-122.0583,
+        "type":null,
+        "to":["0200062","0200066","0200091"]
+    },
+    "0200064":{
+        "id":"0200064",
+        "name":null,
+        "areas":null,
+        "lat":37.00194,
+        "lng":-122.05802,
+        "type":null,
+        "to":["0200059","0200065"]
+    },
+    "0200065":{
+        "id":"0200065",
+        "name":null,
+        "areas":null,
+        "lat":37.00212,
+        "lng":-122.0581,
+        "type":null,
+        "to":["0207000","0200064"]
+    },
+    "0200066":{
+        "id":"0200066",
+        "name":null,
+        "areas":null,
+        "lat":37.00218,
+        "lng":-122.05827,
+        "type":null,
+        "to":["0200063","0200067"]
+    },
+    "0200067":{
+        "id":"0200067",
+        "name":null,
+        "areas":null,
+        "lat":37.00224,
+        "lng":-122.05829,
+        "type":null,
+        "to":["0200066","0200068","0200070"]
+    },
+    "0200068":{
+        "id":"0200068",
+        "name":null,
+        "areas":null,
+        "lat":37.0023,
+        "lng": -122.05847,
+        "type":null,
+        "to":["0200067","0200069","0200130"]
+    },
+    "0200069":{
+        "id":"0200069",
+        "name":null,
+        "areas":null,
+        "lat":37.00221,
+        "lng": -122.05853,
+        "type":null,
+        "to":["0200057","0200068"]
+    },
+    "0200070":{
+        "id":"0200070",
+        "name":null,
+        "areas":null,
+        "lat":37.00249,
+        "lng":-122.05831,
+        "type":null,
+        "to":["0200067","0200101"]
+    },
+    "0200071":{
+        "id":"0200071",
+        "name":null,
+        "areas":null,
+        "lat":37.00033,
+        "lng":-122.05839,
+        "type":null,//amnesty
+        "to":["0200026","0200072","0200075","0215000"]
+    },
+    "0200072":{
+        "id":"0200072",
+        "name":null,
+        "areas":null,
+        "lat":37.00065,
+        "lng":-122.05856,
+        "type":null,//angela davis
+        "to":["0200071","0200073","0216000","0200102"]
+    },
+    "0200073":{
+        "id":"0200073",
+        "name":null,
+        "areas":null,
+        "lat":37.00042,
+        "lng":-122.05832,
+        "type":null,
+        "to":["0200072","0200074"]
+    },
+    "0200074":{
+        "id":"0200074",
+        "name":null,
+        "areas":null,
+        "lat":37.00063,
+        "lng":-122.0584,
+        "type":null,
+        "to":["0200073","0217000"]
+    },
+    "0200075":{
+        "id":"0200075",
+        "name":null,
+        "areas":null,
+        "lat":37.00024,
+        "lng":-122.05887,
+        "type":null,
+        "to":["0200071","0200076","0200078","0200079"]
+    },
+    "0200076":{
+        "id":"0200076",
+        "name":null,
+        "areas":null,
+        "lat":37.00012,
+        "lng":-122.05905,
+        "type":null,
+        "to":["0200075","0200077"]
+    },
+    "0200077":{
+        "id":"0200077",
+        "name":null,
+        "areas":null,
+        "lat":37.00005,
+        "lng":-122.05906,
+        "type":null,
+        "to":["0200076"]
+    },
+    "0200078":{
+        "id":"0200078",
+        "name":null,
+        "areas":null,
+        "lat":37.00009,
+        "lng":-122.05878,
+        "type":null,
+        "to":["0200075","0200002"]
+    },
+    "0200079":{
+        "id":"0200079",
+        "name":null,
+        "areas":null,
+        "lat":37.00039,
+        "lng":-122.05894,
+        "type":null,
+        "to":["0200075","0200080","0200083"]
+    },
+    "0200080":{
+        "id":"0200080",
+        "name":null,
+        "areas":null,
+        "lat":37.00059,
+        "lng":-122.05889,
+        "type":null,
+        "to":["0200079","0200081","0200089"]
+    },
+    "0200081":{
+        "id":"0200081",
+        "name":null,
+        "areas":null,
+        "lat":37.00082,
+        "lng":-122.0589,
+        "type":null,
+        "to":["0200080","0200082","0200103"]
+    },
+    "0200082":{
+        "id":"0200082",
+        "name":null,
+        "areas":null,
+        "lat":37.00102,
+        "lng":-122.05899,
+        "type":null,
+        "to":["0200081","0200055","0200090"]
+    },
+    "0200083":{
+        "id":"0200083",
+        "name":null,
+        "areas":null,
+        "lat":37.0004,
+        "lng":-122.05915,
+        "type":null,
+        "to":["0200079","0200084"]
+    },
+    "0200084":{
+        "id":"0200084",
+        "name":null,
+        "areas":null,
+        "lat":37.00074,
+        "lng":-122.05922,
+        "type":null,
+        "to":["0200083","0200085"]
+    },
+    "0200085":{
+        "id":"0200085",
+        "name":null,
+        "areas":null,
+        "lat":37.001,
+        "lng":-122.05939,
+        "type":null,
+        "to":["0200084","0200086"]
+    },
+    "0200086":{
+        "id":"0200086",
+        "name":null,
+        "areas":null,
+        "lat":37.00121,
+        "lng":-122.05929,
+        "type":null,
+        "to":["0200085","0200087"]
+    },
+    "0200087":{
+        "id":"0200087",
+        "name":null,
+        "areas":null,
+        "lat":37.00119,
+        "lng":-122.05916,
+        "type":null,
+        "to":["0200086","0200055","0200088"]
+    },
+    "0200088":{
+        "id":"0200088",
+        "name":null,
+        "areas":null,
+        "lat":37.00125,
+        "lng":-122.05913,
+        "type":null,
+        "to":["0200087","0200054","0200106"]
+    },
+    "0200089":{
+        "id":"0200089",
+        "name":null,
+        "areas":null,
+        "lat":37.00063,
+        "lng":-122.05897,
+        "type":null,
+        "to":["0200080","0200090"]
+    },
+    "0200090":{
+        "id":"0200090",
+        "name":null,
+        "areas":null,
+        "lat":37.00091,
+        "lng":-122.05907,
+        "type":null,
+        "to":["0200089","0200082"]
+    },
+    "0200091":{
+        "id":"0200091",
+        "name":null,
+        "areas":null,
+        "lat":37.00202,
+        "lng":-122.05852,
+        "type":null,
+        "to":["0200057","0200063"]
+    },
+    "0200092":{
+        "id":"0200092",
+        "name":null,
+        "areas":null,
+        "lat":37.00213,
+        "lng":-122.0588,
+        "type":null,
+        "to":["0200057","0200093","0200097"]
+    },
+    "0200093":{
+        "id":"0200093",
+        "name":null,
+        "areas":null,
+        "lat":37.0022,
+        "lng":-122.0587,
+        "type":null,
+        "to":["0200092","0200094"]
+    },
+    "0200094":{
+        "id":"0200094",
+        "name":null,
+        "areas":null,
+        "lat":37.0022,
+        "lng":-122.05926,
+        "type":null,
+        "to":["0211000","0200093","0200098","0200114","0200118"]
+    },
+    "0200095":{
+        "id":"0200095",
+        "name":null,
+        "areas":null,
+        "lat":37.00138,
+        "lng":-122.05936,
+        "type":null,
+        "to":["0200106","0200107"]
+    },
+    "0200096":{
+        "id":"0200096",
+        "name":null,
+        "areas":null,
+        "lat":37.00194,
+        "lng":-122.05924,
+        "type":null, //back of ss2
+        "to":["0200107","0200097","0200098","0200104","0200112"]
+    },
+    "0200097":{
+        "id":"0200097",
+        "name":null,
+        "areas":null,
+        "lat":37.00207,
+        "lng":-122.05905,
+        "type":null,
+        "to":["0200096","0200092"]
+    },
+    "0200098":{
+        "id":"0200098",
+        "name":null,
+        "areas":null,
+        "lat":37.00204,
+        "lng":-122.05932,
+        "type":null,
+        "to":["0200096","0200094","0200114"]
+    },
+    "0200099":{
+        "id":"0200090",
+        "name":null,
+        "areas":null,
+        "lat":37.001032,
+        "lng":-122.057295,
+        "type":null, //NODE CONNECTING GHANDI
+        "to":["0200030","0213000"]
+    },
+    "0200100":{
+        "id":"0200100",
+        "name":null,
+        "areas":null,
+        "lat":37.001425,
+        "lng":-122.057692,
+        "type":null,
+        "to":["0200050","0214000"]
+    },
+    "0200101":{
+        "id":"0200101",
+        "name":null,
+        "areas":null,
+        "lat":37.002503,
+        "lng":-122.058228,
+        "type":null, //back of ss1
+        "to":["0200070","0207000"]
+    },
+    "0200102":{
+        "id":"0200102",
+        "name":null,
+        "areas":null,
+        "lat":37.000687,
+        "lng":-122.058462,
+        "type":null, 
+        "to":["0200072","0200103"]
+    },
+    "0200103":{
+        "id":"0200103",
+        "name":null,
+        "areas":null,
+        "lat":37.000961,
+        "lng":-122.058542,
+        "type":null, 
+        "to":["0200102","0200081","0200051"]
+    },
+    "0200104":{
+        "id":"0200104",
+        "name":null,
+        "areas":null,
+        "lat":37.001811,
+        "lng":-122.059137,
+        "type":null, 
+        "to":["0200096","0200105"]
+    },
+    "0200105":{
+        "id":"0200105",
+        "name":null,
+        "areas":null,
+        "lat":37.001841,
+        "lng":-122.059013,
+        "type":null, 
+        "to":["0200104","0208000"]
+    },
+    "0200106":{
+        "id":"0200106",
+        "name":null,
+        "areas":null,
+        "lat":37.001273,
+        "lng":-122.059264,
+        "type":null, 
+        "to":["0200088","0200095"]
+    },
+    "0200107":{
+        "id":"0200107",
+        "name":null,
+        "areas":null,
+        "lat":37.001467,
+        "lng":-122.059351,
+        "type":null, 
+        "to":["0200095","0200096","0200108"]
+    },
+    "0200108":{
+        "id":"0200108",
+        "name":null,
+        "areas":null,
+        "lat":37.001436,
+        "lng":-122.059479,
+        "type":null, //big loop in front of community room
+        "to":["0200107","0200109"]
+    },
+    "0200109":{
+        "id":"0200109",
+        "name":null,
+        "areas":null,
+        "lat":37.001473,
+        "lng":-122.059554,
+        "type":null, //big loop in front of community room
+        "to":["0200108","0200110"]
+    },
+    "0200110":{
+        "id":"0200110",
+        "name":null,
+        "areas":null,
+        "lat":37.00164,
+        "lng":-122.059591,
+        "type":null, //big loop in front of community room
+        "to":["0200109","0200111"]
+    },
+    "0200111":{
+        "id":"0200111",
+        "name":null,
+        "areas":null,
+        "lat":37.001859,
+        "lng":-122.059468,
+        "type":null, //big loop in front of community room
+        "to":["0200110","0200112","0200113"]
+    },
+    "0200112":{
+        "id":"0200112",
+        "name":null,
+        "areas":null,
+        "lat":37.001931,
+        "lng":-122.059334,
+        "type":null, //big loop in front of community room
+        "to":["0200111","0200096"]
+    },
+    "0200113":{
+        "id":"0200113",
+        "name":null,
+        "areas":null,
+        "lat":37.001882,
+        "lng":-122.059568,
+        "type":null, 
+        "to":["0200111","0218000"]
+    },
+    "0200114":{
+        "id":"0200114",
+        "name":null,
+        "areas":null,
+        "lat":37.002115,
+        "lng":-122.05931,
+        "type":null, //98&94
+        "to":["0200094","0200098","0200115"]
+    },
+    "0200115":{
+        "id":"0200115",
+        "name":null,
+        "areas":null,
+        "lat":37.002091,
+        "lng":-122.059366,
+        "type":null, 
+        "to":["0200114","0200116"]
+    },
+    "0200116":{
+        "id":"0200116",
+        "name":null,
+        "areas":null,
+        "lat":37.002147,
+        "lng":-122.059489,
+        "type":null, 
+        "to":["0200115","0200117"]
+    },
+    "0200117":{
+        "id":"0200117",
+        "name":null,
+        "areas":null,
+        "lat":37.002147,
+        "lng":-122.059634,
+        "type":null, 
+        "to":["0200116","0218000"]
+    },
+    "0200118":{
+        "id":"0200118",
+        "name":null,
+        "areas":null,
+        "lat":37.002349,
+        "lng":-122.059157,
+        "type":null, 
+        "to":["0200094","0200119"]
+    },
+    "0200119":{
+        "id":"0200119",
+        "name":null,
+        "areas":null,
+        "lat":37.002439,
+        "lng":-122.059066,
+        "type":null, 
+        "to":["0200118","0200120"]
+    },
+    "0200120":{
+        "id":"0200120",
+        "name":null,
+        "areas":null,
+        "lat":37.00246,
+        "lng":-122.058969,
+        "type":null, //apt2
+        "to":["0200119","0200121","0200122"]
+    },
+    "0200121":{
+        "id":"0200121",
+        "name":null,
+        "areas":null,
+        "lat":37.00239,
+        "lng":-122.058949,
+        "type":null, //apt2
+        "to":["0200120","0219000"]
+    },
+     "0200122":{
+        "id":"0200122",
+        "name":null,
+        "areas":null,
+        "lat":37.002544,
+        "lng":-122.058714,
+        "type":null, //apt3
+        "to":["0200120","0200123","0200124"]
+    },
+    "0200123":{
+        "id":"0200123",
+        "name":null,
+        "areas":null,
+        "lat":37.002539,
+        "lng":-122.058564,
+        "type":null, //apt3
+        "to":["0200122","0200129"]
+    },
+    "0200124":{
+        "id":"0200124",
+        "name":null,
+        "areas":null,
+        "lat":37.002667,
+        "lng":-122.058622,
+        "type":null, //apt3
+        "to":["0200122","0220000","0200125"]
+    },
+    "0200125":{
+        "id":"0200125",
+        "name":null,
+        "areas":null,
+        "lat":37.002926,
+        "lng":-122.058617,
+        "type":null, //apt3
+        "to":["0200124","0200126"]
+    },
+    "0200126":{
+        "id":"0200126",
+        "name":null,
+        "areas":null,
+        "lat":37.003003,
+        "lng":-122.058692,
+        "type":null, //apt3
+        "to":["0200125","0200127"]
+    },
+    "0200127":{
+        "id":"0200127",
+        "name":null,
+        "areas":null,
+        "lat":37.003189,
+        "lng":-122.058764,
+        "type":null, //apt3
+        "to":["0200126","0200128"]
+    },
+    "0200128":{
+        "id":"0200128",
+        "name":null,
+        "areas":null,
+        "lat":37.003262,
+        "lng":-122.058774,
+        "type":null, //apt3
+        "to":["0200127","0200141"]
+    },
+    "0200129":{
+        "id":"0200129",
+        "name":null,
+        "areas":null,
+        "lat":37.002498,
+        "lng":-122.058454,
+        "type":null, //apt3
+        "to":["0200123","0200131","0200130"]
+    },
+    "0200130":{
+        "id":"0200130",
+        "name":null,
+        "areas":null,
+        "lat":37.00237,
+        "lng":-122.058443,
+        "type":null, 
+        "to":["0200129","0200068"]
+    },
+    "0200131":{
+        "id":"0200131",
+        "name":null,
+        "areas":null,
+        "lat":37.002621,
+        "lng":-122.05846,
+        "type":null, 
+        "to":["0200129","0200132"]
+    },
+    "0200132":{
+        "id":"0200132",
+        "name":null,
+        "areas":null,
+        "lat":37.002715,
+        "lng":-122.058502,
+        "type":null, 
+        "to":["0200131","0200133"]
+    },
+    "0200133":{
+        "id":"0200133",
+        "name":null,
+        "areas":null,
+        "lat":37.002878,
+        "lng":-122.05846,
+        "type":null, //starting apt4 and apt5
+        "to":["0200132","0200134","0200136"]
+    },
+    "0200134":{
+        "id":"0200134",
+        "name":null,
+        "areas":null,
+        "lat":37.003058,
+        "lng":-122.058481,
+        "type":null, 
+        "to":["0200133","0200135","0200141"]
+    },
+    "0200135":{
+        "id":"0200135",
+        "name":null,
+        "areas":null,
+        "lat":37.003204,
+        "lng":-122.05825,
+        "type":null, 
+        "to":["0200134","0222000","0200139","0200140"]
+    },
+    "0200136":{
+        "id":"0200136",
+        "name":null,
+        "areas":null,
+        "lat":37.002943,
+        "lng":-122.058282,
+        "type":null, //before circle
+        "to":["0200133","0200137","0200142"]
+    },
+    "0200137":{
+        "id":"0200137",
+        "name":null,
+        "areas":null,
+        "lat":37.002968,
+        "lng":-122.058266,
+        "type":null, 
+        "to":["0200136","0221000","0200138"]
+    },
+    "0200138":{
+        "id":"0200138",
+        "name":null,
+        "areas":null,
+        "lat":37.003045,
+        "lng":-122.058194,
+        "type":null, 
+        "to":["0200137","0200139"]
+    },
+    "0200139":{
+        "id":"0200139",
+        "name":null,
+        "areas":null,
+        "lat":37.003135,
+        "lng":-122.058194,
+        "type":null, 
+        "to":["0200138","0200135"]
+    },
+    "0200140":{
+        "id":"0200140",
+        "name":null,
+        "areas":null,
+        "lat":37.003251,
+        "lng":-122.058342,
+        "type":null, 
+        "to":["0200135","0200141"]
+    },
+    "0200141":{
+        "id":"0200141",
+        "name":null,
+        "areas":null,
+        "lat":37.00326,
+        "lng":-122.058615,
+        "type":null, 
+        "to":["0200140","0200134","0200128"]
+    },
+    "0200142":{
+        "id":"0200142",
+        "name":null,
+        "areas":null,
+        "lat":37.002914,
+        "lng":-122.058171,
+        "type":null, 
+        "to":["0200136","0200143"]
+    },
+    "0200143":{
+        "id":"0200143",
+        "name":null,
+        "areas":null,
+        "lat":37.002794,
+        "lng":-122.058069,
+        "type":null, 
+        "to":["0200142","0200144"]
+    },
+    "0200144":{
+        "id":"0200144",
+        "name":null,
+        "areas":null,
+        "lat":37.002643,
+        "lng":-122.058143,
+        "type":null, 
+        "to":["0200143"]
+    },
+
+  //MCHENREY NODES
+   "2000000":{
+        "id":"2000000",
+        "name":"McHenry Library",
+        "areas":"McHenry",
+        "lat":36.995736,
+        "lng":-122.059003,
+        "type":"Academic",
+        "to":["2000036"]
+    },
+    "2001000":{
+        "id":"2001000",
+        "name":"Global Village Cafe",
+        "areas":"McHenry",
+        "lat":36.996086,
+        "lng":-122.059356,
+        "type":"Food To Go",
+        "to":["2000027","2000028"]
+    },
+    "2000001":{
+        "id":"2000001",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.994511,
+        "lng":-122.059656,
+        "type":null,
+        "to":["2000002"]
+    },
+    "2000002":{
+        "id":"2000002",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.994600,
+        "lng":-122.059636,
+        "type":null,
+        "to":["2000001","2000003"]
+    },
+    "2000003":{
+        "id":"2000003",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.994707,
+        "lng":-122.059616,
+        "type":null,
+        "to":["2000002","2000004"]
+    },
+    "2000004":{
+        "id":"2000004",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.994829,
+        "lng":-122.059597,
+        "type":null,
+        "to":["2000003","2000005"]
+    },
+    "2000005":{
+        "id":"2000005",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.994977,
+        "lng":-122.059594,
+        "type":null,
+        "to":["2000004","2000006"]
+    },
+    "2000006":{
+        "id":"2000006",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995103,
+        "lng":-122.059597,
+        "type":null,
+        "to":["2000005","2000007"]
+    },
+    "2000007":{
+        "id":"2000007",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995253,
+        "lng":-122.059613,
+        "type":null,
+        "to":["2000006","2000008"]
+    },
+    "2000008":{
+        "id":"2000008",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995300,
+        "lng":-122.059629,
+        "type":null,
+        "to":["2000007","2000009","2000015"]
+    },
+    "2000009":{
+        "id":"2000009",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995279,
+        "lng":-122.059657,
+        "type":null,
+        "to":["2000008","2000010"]
+    },
+    "2000010":{
+        "id":"2000010",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995274,
+        "lng":-122.059668,
+        "type":null,
+        "to":["2000009","2000011"]
+    },
+    "2000011":{
+        "id":"2000011",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995211,
+        "lng":-122.059778,
+        "type":null,
+        "to":["2000010","2000012"]
+    },
+    "2000012":{
+        "id":"2000012",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995202,
+        "lng":-122.059902,
+        "type":null,
+        "to":["2000011","2000013"]
+    },
+    "2000013":{
+        "id":"2000013",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995204,
+        "lng":-122.059957,
+        "type":null,
+        "to":["2000012","2000014","2000018"]
+    },
+    "2000014":{
+        "id":"2000014",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995227,
+        "lng":-122.060073,
+        "type":null,
+        "to":["2000013","2000049"]
+    },
+    "2000015":{
+        "id":"2000015",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995326,
+        "lng":-122.059639,
+        "type":null,
+        "to":["2000008","2000016","2000019"]
+    },
+    "2000016":{
+        "id":"2000016",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995303,
+        "lng":-122.059705,
+        "type":null,
+        "to":["2000015","2000017"]
+    },
+    "2000017":{
+        "id":"2000017",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995255,
+        "lng":-122.059802,
+        "type":null,
+        "to":["2000016","2000018"]
+    },
+    "2000018":{
+        "id":"2000018",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995237,
+        "lng":-122.059890,
+        "type":null,
+        "to":["2000013","2000017"]
+    },
+    "2000019":{
+        "id":"2000019",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995396,
+        "lng":-122.059574,
+        "type":null,
+        "to":["2000015","2000020"]
+    },
+    "2000020":{
+        "id":"2000020",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995483,
+        "lng":-122.059539,
+        "type":null,
+        "to":["2000019","2000021"]
+    },
+    "2000021":{
+        "id":"2000021",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995605,
+        "lng":-122.059483,
+        "type":null,
+        "to":["2000020","2000022"]
+    },
+    "2000022":{
+        "id":"2000022",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995740,
+        "lng":-122.059418,
+        "type":null,
+        "to":["2000021","2000023"]
+    },
+    "2000023":{
+        "id":"2000023",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995718,
+        "lng":-122.059329,
+        "type":null,
+        "to":["2000022","2000024"]
+    },
+    "2000024":{
+        "id":"2000024",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995781,
+        "lng":-122.059301,
+        "type":null,
+        "to":["2000023","2000025"]
+    },
+    "2000025":{
+        "id":"2000025",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995814,
+        "lng":-122.059291,
+        "type":null,
+        "to":["2000024","2000026","2000029"]
+    },
+    "2000026":{
+        "id":"2000026",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995847,
+        "lng":-122.059393,
+        "type":null,
+        "to":["2000025","2000027"]
+    },
+    "2000027":{
+        "id":"2000027",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995986,
+        "lng":-122.059325,
+        "type":null,
+        "to":["2000026","2000028","2000030","2001000"]
+    },
+    "2000028":{
+        "id":"2000028",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996014,
+        "lng":-122.059308,
+        "type":null,
+        "to":["2000027","2000031","2000033","2001000"]
+    },
+    "2000029":{
+        "id":"2000029",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995781,
+        "lng":-122.059151,
+        "type":null,
+        "to":["2000025","2000030"]
+    },
+    "2000030":{
+        "id":"2000030",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995918,
+        "lng":-122.059089,
+        "type":null,
+        "to":["2000027","2000029","2000031"]
+    },
+    "2000031":{
+        "id":"2000031",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995955,
+        "lng":-122.059132,
+        "type":null,
+        "to":["2000028","2000030","2000032"]
+    },
+    "2000032":{
+        "id":"2000032",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996029,
+        "lng":-122.059101,
+        "type":null,
+        "to":["2000031","2000033","2000035","2000036"]
+    },
+    "2000033":{
+        "id":"2000033",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996080,
+        "lng":-122.059284,
+        "type":null,
+        "to":["2000028","2000032","2000034"]
+    },
+    "2000034":{
+        "id":"2000034",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996208,
+        "lng":-122.059236,
+        "type":null,
+        "to":["2000033","2000035","2000037"]
+    },
+    "2000035":{
+        "id":"2000035",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996151,
+        "lng":-122.059065,
+        "type":null,
+        "to":["2000032","2000034"]
+    },
+    "2000036":{
+        "id":"2000036",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996013,
+        "lng":-122.058963,
+        "type":null,
+        "to":["2000032","2000000"]
+    },
+    "2000037":{
+        "id":"2000037",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996339,
+        "lng":-122.059131,
+        "type":null,
+        "to":["2000034","2000038","2000050"]
+    },
+    "2000038":{
+        "id":"2000038",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996370,
+        "lng":-122.059260,
+        "type":null,
+        "to":["2000037","2000039"]
+    },
+    "2000039":{
+        "id":"2000039",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996375,
+        "lng":-122.059452,
+        "type":null,
+        "to":["2000038","2000040"]
+    },
+    "2000040":{
+        "id":"2000040",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996343,
+        "lng":-122.059537,
+        "type":null,
+        "to":["2000039","2000041"]
+    },
+    "2000041":{
+        "id":"2000041",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996266,
+        "lng":-122.059610,
+        "type":null,
+        "to":["2000040","2000042"]
+    },
+    "2000042":{
+        "id":"2000042",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996200,
+        "lng":-122.059639,
+        "type":null,
+        "to":["2000041","2000043"]
+    },
+    "2000043":{
+        "id":"2000043",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996055,
+        "lng":-122.059767,
+        "type":null,
+        "to":["2000042","2000044"]
+    },
+    "2000044":{
+        "id":"2000044",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995893,
+        "lng":-122.059848,
+        "type":null,
+        "to":["2000043","2000045"]
+    },
+    "2000045":{
+        "id":"2000045",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995737,
+        "lng":-122.059950,
+        "type":null,
+        "to":["2000044","2000046"]
+    },
+    "2000046":{
+        "id":"2000046",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995583,
+        "lng":-122.060068,
+        "type":null,
+        "to":["2000045","2000047"]
+    },
+    "2000047":{
+        "id":"2000047",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995448,
+        "lng":-122.060171,
+        "type":null,
+        "to":["2000046","2000048"]
+    },
+    "2000048":{
+        "id":"2000048",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995363,
+        "lng":-122.060224,
+        "type":null,
+        "to":["2000047","2000049"]
+    },
+    "2000049":{
+        "id":"2000049",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995252,
+        "lng":-122.060279,
+        "type":null,
+        "to":["2000014","2000048"]
+    },
+    "2000050":{
+        "id":"2000050",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996335,
+        "lng":-122.059000,
+        "type":null,
+        "to":["2000037","2000051"]
+    },
+    "2000051":{
+        "id":"2000051",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996333,
+        "lng":-122.058827,
+        "type":null,
+        "to":["2000050","2000052"]
+    },
+    "2000052":{
+        "id":"2000052",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996332,
+        "lng":-122.058676,
+        "type":null,
+        "to":["2000051","2000053"]
+    },
+    "2000053":{
+        "id":"2000053",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996300,
+        "lng":-122.058531,
+        "type":null,
+        "to":["2000052","2000054"]
+    },
+    "2000054":{
+        "id":"2000054",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996188,
+        "lng":-122.058242,
+        "type":null,
+        "to":["2000053","2000055"]
+    },
+    "2000055":{
+        "id":"2000055",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996140,
+        "lng":-122.058046,
+        "type":null,
+        "to":["2000054","2000056"]
+    },
+    "2000056":{
+        "id":"2000056",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996094,
+        "lng":-122.057832,
+        "type":null,
+        "to":["2000055","2000057"]
+    },
+    "2000057":{
+        "id":"2000057",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.996013,
+        "lng":-122.057615,
+        "type":null,
+        "to":["2000056","2000058"]
+    },
+    "2000058":{
+        "id":"2000058",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995926,
+        "lng":-122.057379,
+        "type":null,
+        "to":["2000057","2000059"]
+    },
+    "2000059":{
+        "id":"2000059",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995762,
+        "lng":-122.057106,
+        "type":null,
+        "to":["2000058","2000060"]
+    },
+    "2000060":{
+        "id":"2000060",
+        "name":null,
+        "areas":"McHenry",
+        "lat":36.995604,
+        "lng":-122.056852,
+        "type":null,
+        "to":["2000059"]
+    },
+
+//COWELL NODES ------------------------------------------------------------------------------------------------------------       
+  "0400000":{                
+    "id":"0400000",
+    "name":"Cowell College",
+    "areas":"Cowell",
+    "lat":36.997090,
+    "lng":-122.054324,
+    "type":"Residential",
+     "to":["0400001","0400022"]
+  },
+  "0400001":{                   
+    "id":"0400001",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997023,
+    "lng":-122.054163,
+    "type":null,
+    "to":["0400000","0400002","0400003","0400004"]
+  },
+  "0400002":{                
+    "id":"0400002",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997137,
+    "lng":-122.054163,
+    "type":null,
+    "to":["0400001","0400005"]
+  },
+  "0400003":{                
+    "id":"0400003",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997075,
+    "lng":-122.053902,
+    "type":null,
+    "to":["0400001","0400008","0400123"]
+  },
+  "0400004":{                
+    "id":"0400004",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996994,
+    "lng":-122.054176,
+    "type":null,
+    "to":["0400001","0400015","0400080"]
+  },
+  "0400005":{                
+    "id":"0400005",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997237,
+    "lng":-122.054202,
+    "type":null,
+    "to":["0400002","0400006","0400007"]
+  },
+  "0400006":{               //adams house 
+    "id":"0400006",
+    "name":"Adams House",
+    "areas":"Cowell",
+    "lat":36.997272,
+    "lng":-122.054088,
+    "type":"Residential",
+    "to":["0400005"]
+  },
+  "0400007":{                
+    "id":"0400007",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997306,
+    "lng":-122.05426,
+    "type":null,
+    "to":["0400005","0400023","0400102"]
+  },
+ "0400008":{                
+    "id":"0400008",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997143,
+    "lng":-122.053868,
+    "type":null,
+    "to":["0400003","0400009","0400010"]
+  },
+  "0400009":{                
+    "id":"0400009",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997148,
+    "lng":-122.053664,
+    "type":null,
+    "to":["0400008","0400011","0400101","0400123"]
+  },
+ "0400010":{                
+    "id":"0400010",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997259,
+    "lng":-122.053873,
+    "type":null,
+    "to":["0400008","0400012","0400011"]
+  },
+ "0400011":{                
+    "id":"0400011",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997263,
+    "lng":-122.053664,
+    "type":null,
+    "to":["0400009","0400010","0400014"]
+  },
+ "0400012":{                
+    "id":"0400012",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997275,
+    "lng":-122.053889,
+    "type":null,
+    "to":["0400010","0400013"]
+  },
+ "0400013":{                
+    "id":"0400013",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997416,
+    "lng":-122.053932,
+    "type":null,
+    "to":["0400012","0400081","0400143"]
+  },
+ "0400014":{                
+    "id":"0400014",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997266,
+    "lng":-122.053358,
+    "type":null,
+    "to":["0400011","0400093","0400097","0400141"]
+  },
+ "0400015":{                
+    "id":"0400015",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996925,
+    "lng":-122.054291,
+    "type":null,
+    "to":["0400004","0400016","0400017"]
+  },
+ "0400016":{                //Morsion house
+    "id":"0400016",
+    "name":"Morison House",
+    "areas":"Cowell",
+    "lat":36.99686,
+    "lng":-122.054269,
+    "type":"Residential",
+    "to":["0400015","0400065"]
+  },
+ "0400017":{                
+    "id":"0400017",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996925,
+    "lng":-122.054446,
+    "type":null,
+    "to":["0400015","0400018"]
+  },
+ "0400018":{                
+    "id":"0400018",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99701,
+    "lng":-122.054516,
+    "type":null,
+    "to":["0400017","0400019","0400034"]
+  },
+ "0400019":{                
+    "id":"0400019",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997096,
+    "lng":-122.054548,
+    "type":null,
+    "to":["0400018","0400020","0400021"]
+  },
+ "0400020":{                //Prescott House
+    "id":"0400020",
+    "name":"Prescott House",
+    "areas":"Cowell",
+    "lat":36.997079,
+    "lng":-122.054656,
+    "type":"Residential",
+    "to":["0400019"]
+  },
+ "0400021":{                
+    "id":"0400021",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99718,
+    "lng":-122.05457,
+    "type":null,
+    "to":["0400019","0400022"]
+  },
+ "0400022":{                
+    "id":"0400022",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997227,
+    "lng":-122.054554,
+    "type":null,
+    "to":["0400000","0400021","0400023","0400025"]
+  },
+ "0400023":{                
+    "id":"0400023",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997296,
+    "lng":-122.054425,
+    "type":null,
+    "to":["0400007","0400022","0400024"]
+  },
+ "0400024":{                //Parkman house
+    "id":"0400024",
+    "name":"Parkman House",
+    "areas":"Cowell",
+    "lat":36.997382,
+    "lng":-122.054474,
+    "type":"Residential",
+    "to":["0400023"]
+  },
+ "0400025":{                
+    "id":"0400025",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99727,
+    "lng":-122.054645,
+    "type":null,
+    "to":["0400022","0400026"]
+  },
+ "0400026":{                
+    "id":"0400026",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997283,
+    "lng":-122.054769,
+    "type":null,
+    "to":["0400025","0400027","0400028"]
+  },
+ "0400027":{                
+    "id":"0400027",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997412,
+    "lng":-122.054726,
+    "type":null,
+    "to":["0400026","0400089"]
+  },
+ "0400028":{                
+    "id":"0400028",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997266,
+    "lng":-122.054844,
+    "type":null,
+    "to":["0400026","0400029","0400115"]
+  },
+ "0400029":{                
+    "id":"0400029",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997463,
+    "lng":-122.054993,
+    "type":null,
+    "to":["0400028","0400030","0400033"]
+  },
+ "0400030":{                
+    "id":"0400030",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99745,
+    "lng":-122.05507,
+    "type":null,
+    "to":["0400029","0400031"]
+  },
+ "0400031":{                
+    "id":"0400031",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997413,
+    "lng":-122.055069,
+    "type":null,
+    "to":["0400030","0400032"]
+  },
+ "0400032":{                
+    "id":"0400032",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997327,
+    "lng":-122.05516,
+    "type":null,
+    "to":["0400031","0400047"]
+  },
+ "0400033":{                
+    "id":"0400033",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997623,
+    "lng":-122.055064,
+    "type":null,
+    "to":["0400029"]
+  },
+ "0400034":{                
+    "id":"0400034",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996893,
+    "lng":-122.054519,
+    "type":null,
+    "to":["0400018","0400035","0400043"]
+  },
+ "0400035":{                
+    "id":"0400035",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99688,
+    "lng":-122.0546,
+    "type":null,
+    "to":["0400034","0400036"]
+  },
+ "0400036":{                
+    "id":"0400036",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996813,
+    "lng":-122.054694,
+    "type":null,
+    "to":["0400035","0400037","0400040"]
+  },
+ "0400037":{                
+    "id":"0400037",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996792,
+    "lng":-122.054814,
+    "type":null,
+    "to":["0400036","0400038"]
+  },
+ "0400038":{                
+    "id":"0400038",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996744,
+    "lng":-122.054867,
+    "type":null,
+    "to":["0400037","0400039"]
+  },
+ "0400039":{                
+    "id":"0400039",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996676,
+    "lng":-122.054828,
+    "type":null,
+    "to":["0400038","0400043","0400044"]
+  },
+ "0400040":{                
+    "id":"0400040",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99677,
+    "lng":-122.054688,
+    "type":null,
+    "to":["0400036","0400041"]
+  },
+ "0400041":{                
+    "id":"0400041",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996757,
+    "lng":-122.054699,
+    "type":null,
+    "to":["0400040","0400042"]
+  },
+ "0400042":{                
+    "id":"0400042",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996719,
+    "lng":-122.054678,
+    "type":null,
+    "to":["0400041"]
+  },
+ "0400043":{                
+    "id":"0400043",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996659,
+    "lng":-122.054726,
+    "type":null,
+    "to":["0400034","0400039","0400051"]
+  },
+ "0400044":{                
+    "id":"0400044",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996622,
+    "lng":-122.054948,
+    "type":null,
+    "to":["0400039","0400045","0400048"]
+  },
+ "0400045":{                
+    "id":"0400045",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996839,
+    "lng":-122.055037,
+    "type":null,
+    "to":["0400044","0400046"]
+  },
+ "0400046":{                
+    "id":"0400046",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996967,
+    "lng":-122.055187,
+    "type":null,
+    "to":["0400045","0400047"]
+  },
+ "0400047":{                
+    "id":"0400047",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997104,
+    "lng":-122.055273,
+    "type":null,
+    "to":["0400032","0400046","2300036"]
+  },
+ "0400048":{                
+    "id":"0400048",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996346,
+    "lng":-122.054943,
+    "type":null,
+    "to":["0400044","0400049"]
+  },
+ "0400049":{                
+    "id":"0400049",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996355,
+    "lng":-122.0546,
+    "type":null,
+    "to":["0400048","0400050","0400052"]
+  },
+ "0400050":{                
+    "id":"0400050",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996389,
+    "lng":-122.054565,
+    "type":null,
+    "to":["0400049","0400051"]
+  },
+ "0400051":{                
+    "id":"0400051",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996595,
+    "lng":-122.054635,
+    "type":null,
+    "to":["0400043","0400050"]
+  },
+ "0400052":{                
+    "id":"0400052",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996243,
+    "lng":-122.054339,
+    "type":null,
+    "to":["0400049","0400053","0400054"]
+  },
+ "0400053":{                
+    "id":"0400053",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996107,
+    "lng":-122.05432,
+    "type":null,
+    "to":["0400052","1800031"]
+  },
+ "0400054":{                
+    "id":"0400054",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996332,
+    "lng":-122.05419,
+    "type":null,
+    "to":["0400052","0400056"]
+  },
+ "0400056":{                
+    "id":"0400056",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99641,
+    "lng":-122.053822,
+    "type":null,
+    "to":["0400054","0400057","0400058"]
+  },
+ "0400057":{                
+    "id":"0400057",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996363,
+    "lng":-122.053709,
+    "type":null,
+    "to":["0400056","0400135","1800033"]
+  },
+ "0400058":{                
+    "id":"0400058",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996643,
+    "lng":-122.053806,
+    "type":null,
+    "to":["0400056","0400059"]
+  },
+ "0400059":{              //Turner House  
+    "id":"0400059",
+    "name":"Turner House",
+    "areas":"Cowell",
+    "lat":36.996638,
+    "lng":-122.053876,
+    "type":"Residential",
+    "to":["0400058","0400060"]
+  },
+ "0400060":{                
+    "id":"0400060",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99666,
+    "lng":-122.054015,
+    "type":null,
+    "to":["0400059","0400061","0400076"]
+  },
+ "0400061":{                
+    "id":"0400061",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996735,
+    "lng":-122.054034,
+    "type":null,
+    "to":["0400060","0400062"]
+  },
+ "0400062":{                
+    "id":"0400062",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996774,
+    "lng":-122.054071,
+    "type":null,
+    "to":["0400061","0400063","0400077"]
+  },
+ "0400063":{                
+    "id":"0400063",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996777,
+    "lng":-122.054223,
+    "type":null,
+    "to":["0400062","0400064"]
+  },
+ "0400064":{                
+    "id":"0400064",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996764,
+    "lng":-122.054288,
+    "type":null,
+    "to":["0400063","0400065","0400066"]
+  },
+ "0400065":{               
+    "id":"0400065",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996846,
+    "lng":-122.054315,
+    "type":null,
+    "to":["0400016","0400064"]
+  },
+ "0400066":{                
+    "id":"0400066",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996731,
+    "lng":-122.054396,
+    "type":null,
+    "to":["0400064","0400067"]
+  },
+ "0400067":{                
+    "id":"0400067",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996705,
+    "lng":-122.054436,
+    "type":null,
+    "to":["0400066","0400068"]
+  },
+ "0400068":{                
+    "id":"0400068",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996667,
+    "lng":-122.054442,
+    "type":null,
+    "to":["0400067","0400069"]
+  },
+ "0400069":{                
+    "id":"0400069",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996595,
+    "lng":-122.054428,
+    "type":null,
+    "to":["0400068","0400070","0400071"]
+  },
+ "0400070":{         //Beard House       
+    "id":"0400070",
+    "name":"Beard House",
+    "areas":"Cowell",
+    "lat":36.996573,
+    "lng":-122.05453,
+    "type":"Residential",
+    "to":["0400069"]
+  },
+ "0400071":{                
+    "id":"0400071",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996505,
+    "lng":-122.054385,
+    "type":null,
+    "to":["0400069","0400072"]
+  },
+ "0400072":{                
+    "id":"0400072",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996492,
+    "lng":-122.054353,
+    "type":null,
+    "to":["0400071","0400073"]
+  },
+ "0400073":{                
+    "id":"0400073",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996492,
+    "lng":-122.05424,
+    "type":null,
+    "to":["0400072","0400074","0400075"]
+  },
+ "0400074":{             //Parrington House   
+    "id":"0400074",
+    "name":"Parrington House",
+    "areas":"Cowell",
+    "lat":36.996393,
+    "lng":-122.054202,
+    "type":"Residential",
+    "to":["0400073"]
+  },
+ "0400075":{                
+    "id":"0400075",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996535,
+    "lng":-122.054079,
+    "type":null,
+    "to":["0400073","0400076"]
+  },
+ "0400076":{                
+    "id":"0400076",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996595,
+    "lng":-122.054036,
+    "type":null,
+    "to":["0400060","0400075"]
+  },
+ "0400077":{                
+    "id":"0400077",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996873,
+    "lng":-122.05402,
+    "type":null,
+    "to":["0400062","0400078","0400090"]
+  },
+ "0400078":{                
+    "id":"0400078",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996886,
+    "lng":-122.054036,
+    "type":null,
+    "to":["0400077","0400079"]
+  },
+ "0400079":{                
+    "id":"0400079",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996903,
+    "lng":-122.054074,
+    "type":null,
+    "to":["0400078","0400080"]
+  },
+ "0400080":{                
+    "id":"0400080",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996955,
+    "lng":-122.054095,
+    "type":null,
+    "to":["0400004","0400079"]
+  },
+ "0400081":{                
+    "id":"0400081",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997467,
+    "lng":-122.05398,
+    "type":null,
+    "to":["0400013","0400082"]
+  },
+ "0400082":{                
+    "id":"0400082",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997554,
+    "lng":-122.054104,
+    "type":null,
+    "to":["0400081","0400083","0400107"]
+  },
+ "0400083":{                
+    "id":"0400083",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997648,
+    "lng":-122.054222,
+    "type":null,
+    "to":["0400082","0400084"]
+  },
+ "0400084":{                
+    "id":"0400084",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997633,
+    "lng":-122.054331,
+    "type":null,
+    "to":["0400083","0400085"]
+  },
+ "0400085":{                
+    "id":"0400085",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997573,
+    "lng":-122.054417,
+    "type":null,
+    "to":["0400084","0400086","0400089"]
+  },
+ "0400086":{                
+    "id":"0400086",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99762,
+    "lng":-122.054449,
+    "type":null,
+    "to":["0400085","0400087"]
+  },
+ "0400087":{                
+    "id":"0400087",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99762,
+    "lng":-122.054497,
+    "type":null,
+    "to":["0400086","0400088"]
+  },
+ "0400088":{             //Apt 4   
+    "id":"0400088",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997625,
+    "lng":-122.054599,
+    "type":null,
+    "to":["0400087"]
+  },
+ "0400089":{                
+    "id":"0400089",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997456,
+    "lng":-122.054534,
+    "type":null,
+    "to":["0400027","0400085"]
+  },
+ "0400090":{                
+    "id":"0400090",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99762,
+    "lng":-122.054497,
+    "type":null,
+    "to":["0400077"]
+  },
+ "0400090":{                
+    "id":"0400090",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996826,
+    "lng":-122.053779,
+    "type":null,
+    "to":["0400077","0400091","0400092"]
+  },
+ "0400091":{                
+    "id":"0400091",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996812,
+    "lng":-122.053766,
+    "type":null,
+    "to":["0400090","0400140"]
+  },
+ "0400092":{                
+    "id":"0400092",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996823,
+    "lng":-122.053574,
+    "type":null,
+    "to":["0400090","0401000"]
+  },
+ "0401000":{                
+    "id":"0401000",
+    "name":"Page Smith Library",
+    "areas":"Cowell",
+    "lat":36.996893,
+    "lng":-122.053601,
+    "type":"Academic",
+    "to":["0400092","0400123","0400130"]
+  },
+ "0400093":{                
+    "id":"0400093",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997264,
+    "lng":-122.05317,
+    "type":null,
+    "to":["0400014","0400094"]
+  },
+ "0400094":{                
+    "id":"0400094",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99714,
+    "lng":-122.053165,
+    "type":null,
+    "to":["0400093","0400095","0400099","0403000","0404000","0405000"]
+  },
+ "0404000":{                
+    "id":"0400094",
+    "name":"Cowell College Administration",
+    "areas":"Cowell",
+    "lat":36.997164,
+    "lng":-122.053072,
+    "type":"Student Services",
+    "to":["0400094","0400096"]
+  },
+ "0400095":{                
+    "id":"0400095",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996977,
+    "lng":-122.053165,
+    "type":null,
+    "to":["0400094","0400096","0400108"]
+  },
+ "0400096":{                
+    "id":"0400096",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996977,
+    "lng":-122.052993,
+    "type":null,
+    "to":["0400095","0402000","0403000","0404000","0405000","0407000","1004000"]
+  },
+ "0400097":{                
+    "id":"0400097",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997212,
+    "lng":-122.053358,
+    "type":null,
+    "to":["0400014","0400098","0400100"]
+  },
+ "0400098":{                
+    "id":"0400098",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997212,
+    "lng":-122.053213,
+    "type":null,
+    "to":["0400097","0400099"]
+  },
+ "0400099":{                
+    "id":"0400099",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997148,
+    "lng":-122.053208,
+    "type":null,
+    "to":["0400094","0400098"]
+  },
+ "0400100":{                
+    "id":"0400100",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997208,
+    "lng":-122.053524,
+    "type":null,
+    "to":["0400097","0400101"]
+  },
+ "0400101":{                
+    "id":"0400101",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997148,
+    "lng":-122.05354,
+    "type":null,
+    "to":["0400009","0400100","0400123"]
+  },
+ "0400102":{                
+    "id":"0400102",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997362,
+    "lng":-122.054273,
+    "type":null,
+    "to":["0400007","0400103"]
+  },
+ "0400103":{                
+    "id":"0400103",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997409,
+    "lng":-122.054254,
+    "type":null,
+    "to":["0400102","0400104"]
+  },
+ "0400104":{                
+    "id":"0400104",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997448,
+    "lng":-122.05427,
+    "type":null,
+    "to":["0400103","0400105"]
+  },
+ "0400105":{                
+    "id":"0400105",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997508,
+    "lng":-122.054232,
+    "type":null,
+    "to":["0400104","0400106"]
+  },
+ "0400106":{                
+    "id":"0400106",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997504,
+    "lng":-122.054195,
+    "type":null,
+    "to":["0400105","0400107"]
+  },
+ "0400107":{                
+    "id":"0400107",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997504,
+    "lng":-122.054141,
+    "type":null,
+    "to":["0400082","0400106"]
+  },
+ "0402000":{                
+    "id":"0402000",
+    "name":"Cowell/Stevenson Dining Hall",
+    "areas":"Cowell",
+    "lat":36.996826,
+    "lng":-122.053062,
+    "type":"Dining",
+    "to":["0400096"]
+  },
+ "0400108":{                
+    "id":"0400108",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996968,
+    "lng":-122.053245,
+    "type":null,
+    "to":["0400095","0400109","0400121"]
+  },
+ "0400109":{                
+    "id":"0400109",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996685,
+    "lng":-122.053234,
+    "type":null,
+    "to":["0400108","0400110","0400132"]
+  },
+ "0400110":{                
+    "id":"0400110",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99669,
+    "lng":-122.052886,
+    "type":null,
+    "to":["0400109","0400111"]
+  },
+ "0400111":{                
+    "id":"0400111",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99672,
+    "lng":-122.052875,
+    "type":null,
+    "to":["0400110","0400112","1000129"]
+  },
+ "0400112":{                
+    "id":"0400112",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99678,
+    "lng":-122.052886,
+    "type":null,
+    "to":["0400111","0400113"]
+  },
+ "0400113":{                
+    "id":"0400113",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996784,
+    "lng":-122.052805,
+    "type":null,
+    "to":["0400112","0400114"]
+  },
+ "0400114":{                
+    "id":"0400114",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996818,
+    "lng":-122.052805,
+    "type":null,
+    "to":["0400113"]
+  },
+ "0400115":{                
+    "id":"0400115",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997209,
+    "lng":-122.054848,
+    "type":null,
+    "to":["0400028","0400116"]
+  },
+"0400116":{                
+    "id":"0400116",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997162,
+    "lng":-122.054907,
+    "type":null,
+    "to":["0400115","0400117"]
+  },
+"0400117":{                
+    "id":"0400117",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997085,
+    "lng":-122.054896,
+    "type":null,
+    "to":["0400116","0400118"]
+  },
+"0400118":{                
+    "id":"0400118",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997012,
+    "lng":-122.055003,
+    "type":null,
+    "to":["0400117","0400119"]
+  },
+"0400119":{                
+    "id":"0400119",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997012,
+    "lng":-122.055003,
+    "type":null,
+    "to":["0400118","0400120"]
+  },
+"0400120":{                
+    "id":"0400120",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996926,
+    "lng":-122.054923,
+    "type":null,
+    "to":["0400119","0406000"]
+  },
+"0406000":{                
+    "id":"0406000",
+    "name":"Cowell Computer Lab",
+    "areas":"Cowell",
+    "lat":36.997008,
+    "lng":-122.055111,
+    "type":"Academic",
+    "to":["0400120"]
+  },
+"0405000":{                
+    "id":"0405000",
+    "name":"Mary Holmes Lounge",
+    "areas":"Cowell",
+    "lat":36.997042,
+    "lng":-122.053071,
+    "type":"Other",
+    "to":["0400094","0400096"]
+  },
+"0403000":{                
+    "id":"0403000",
+    "name":"Cowell Coffee Shop",
+    "areas":"Cowell",
+    "lat":36.997162,
+    "lng":-122.053062,
+    "type":"Food To-Go",
+    "to":["0400094","0400096"]
+  },
+"0407000":{                
+    "id":"0407000",
+    "name":"Eloise Pickard Smith Gallery",
+    "areas":"Cowell",
+    "lat":36.997036,
+    "lng":-122.052881,
+    "type":"Other",
+    "to":["0400096"]
+  },
+"0400121":{                
+    "id":"0400121",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996986,
+    "lng":-122.053266,
+    "type":null,
+    "to":["0400108","0400122"]
+  },
+"0400122":{                
+    "id":"0400122",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996982,
+    "lng":-122.053438,
+    "type":null,
+    "to":["0400121","0400123","0400124"]
+  },
+"0400123":{                
+    "id":"0400123",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996978,
+    "lng":-122.053583,
+    "type":null,
+    "to":["0401000","0400003","0400009","0400101","0400122"]
+  },
+"0400124":{                
+    "id":"0400124",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996892,
+    "lng":-122.053416,
+    "type":null,
+    "to":["0400122","0400125"]
+  },
+"0400125":{                
+    "id":"0400125",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996892,
+    "lng":-122.053277,
+    "type":null,
+    "to":["0400124","0400126"]
+  },
+"0400126":{                
+    "id":"0400126",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996849,
+    "lng":-122.053277,
+    "type":null,
+    "to":["0400125","0400127"]
+  },
+"0400127":{                
+    "id":"0400127",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996832,
+    "lng":-122.053304,
+    "type":null,
+    "to":["0400126","0400128"]
+  },
+"0400128":{                
+    "id":"0400128",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996768,
+    "lng":-122.053352,
+    "type":null,
+    "to":["0400127","0400129","0400131"]
+  },
+"0400129":{                
+    "id":"0400129",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996815,
+    "lng":-122.053374,
+    "type":null,
+    "to":["0400128","0400130"]
+  },
+"0400130":{                
+    "id":"0400130",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996825,
+    "lng":-122.053433,
+    "type":null,
+    "to":["0400129","0401000"]
+  },
+"0400131":{                
+    "id":"0400131",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996727,
+    "lng":-122.053333,
+    "type":null,
+    "to":["0400128","0400132","0400133","0400136"]
+  },
+"0400132":{                
+    "id":"0400132",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996708,
+    "lng":-122.053303,
+    "type":null,
+    "to":["0400131","0400109"]
+  },
+"0400133":{                
+    "id":"0400133",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996691,
+    "lng":-122.053367,
+    "type":null,
+    "to":["0400131","0400134"]
+  },
+"0400134":{                
+    "id":"0400134",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996618,
+    "lng":-122.053378,
+    "type":null,
+    "to":["0400133","0400135"]
+  },
+"0400135":{                
+    "id":"0400135",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996508,
+    "lng":-122.053433,
+    "type":null,
+    "to":["0400057","0400134","1000131"]
+  },
+"0400136":{                
+    "id":"0400136",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996739,
+    "lng":-122.053369,
+    "type":null,
+    "to":["0400131","0400137"]
+  },
+"0400137":{                
+    "id":"0400137",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996705,
+    "lng":-122.053433,
+    "type":null,
+    "to":["0400136","0400138"]
+  },
+"0400138":{                
+    "id":"0400138",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996705,
+    "lng":-122.053556,
+    "type":null,
+    "to":["0400137","0400139"]
+  },
+"0400139":{                
+    "id":"0400139",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996726,
+    "lng":-122.053653,
+    "type":null,
+    "to":["0400138","0400140"]
+  },
+"0400140":{                
+    "id":"0400140",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.996752,
+    "lng":-122.053701,
+    "type":null,
+    "to":["0400091","0400139"]
+  },
+"0400141":{                
+    "id":"0400141",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997324,
+    "lng":-122.053363,
+    "type":null,
+    "to":["0400014","0400142"]
+  },
+"0400142":{                
+    "id":"0400142",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.997397,
+    "lng":-122.053341,
+    "type":null,
+    "to":["0400141","0400143","1000119"]
+  },
+"0400143":{                
+    "id":"0400143",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99742,
+    "lng":-122.053358,
+    "type":null,
+    "to":["0400013","0400142","0400144"]
+  },
+"0400144":{                
+    "id":"0400144",
+    "name":null,
+    "areas":"Cowell",
+    "lat":36.99757,
+    "lng":-122.05339,
+    "type":null,
+    "to":["0400143","1000117","1000124"]
+  },
+//END OF COWELL NODES ---------------------------------------------------------------------------------------------------------   
+
+//Crown Merrill Nodes ---------------------------------------------------------------------------------------------------------
+
     "0501000":{ 
         "id":"0501000",
         "name":"Crown/Merrill Dining Hall",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000132,
         "lng":-122.054404,
         "type":"Dining Hall",
@@ -16,7 +4027,7 @@ var nodes = {
     "0502000":{
         "id":"0502000",
         "name":"Banana Joe's",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.999989,
         "lng":-122.054399,
         "type":"Food To Go",
@@ -25,7 +4036,7 @@ var nodes = {
     "0503000":{ 
         "id":"0503000",
         "name":"Descartes House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.999252,
         "lng":-122.054616,
         "type":"Residential",
@@ -34,7 +4045,7 @@ var nodes = {
     "0504000":{ 
         "id":"0504000",
         "name":"Rutherford House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.99944,
         "lng": -122.05424,
         "type":"Residential",
@@ -43,7 +4054,7 @@ var nodes = {
     "0505000":{ 
         "id":"0505000",
         "name":"Galileo House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.99965,
         "lng": -122.054401,
         "type":"Residential",
@@ -52,7 +4063,7 @@ var nodes = {
     "0506000":{ 
         "id":"0506000",
         "name":"Gauss House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.99947,
         "lng": -122.054737,
         "type":"Residential",
@@ -61,7 +4072,7 @@ var nodes = {
     "0507000":{ 
         "id":"0507000",
         "name":"Harvey House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.999976,
         "lng": -122.055273,
         "type":"Residential",
@@ -70,7 +4081,7 @@ var nodes = {
     "0508000":{ 
         "id":"0508000",
         "name":"Maxwell House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000134,
         "lng": -122.055477,
         "type":"Residential",
@@ -79,7 +4090,7 @@ var nodes = {
     "0509000":{ 
         "id":"0509000",
         "name":"Leonardo House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000387,
         "lng": -122.055305,
         "type":"Residential",
@@ -88,7 +4099,7 @@ var nodes = {
     "0510000":{ 
         "id":"0510000",
         "name":"Galen House",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000186,
         "lng":-122.055134,
         "type":"Residential",
@@ -97,7 +4108,7 @@ var nodes = {
     "0511000":{
         "id":"0511000",
         "name":"Crown Classrooms",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000044,
         "lng": -122.054839,
         "type":"Classroom",
@@ -106,7 +4117,7 @@ var nodes = {
     "0512000":{
         "id":"0512000",
         "name":"Crown Library",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.999774,
         "lng": -122.054892,
         "type":"Academic",
@@ -115,7 +4126,7 @@ var nodes = {
     "0513000":{
         "id":"0513000",
         "name":"Crown Computer Lab",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.999774,
         "lng": -122.054892,
         "type":"Academic",
@@ -124,7 +4135,7 @@ var nodes = {
     "0514000":{
         "id":"0514000",
         "name":"Vallier Hall",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":36.999856,
         "lng": -122.054501,
         "type":"Academic",
@@ -133,7 +4144,7 @@ var nodes = {
     "0515000":{
         "id":"0515000",
         "name":"Fireside Lounge",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000117,
         "lng": -122.05456,
         "type":"Other",
@@ -142,20 +4153,317 @@ var nodes = {
     "0516000":{
         "id":"0516000",
         "name":"Crown Mailroom",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000267,
         "lng": -122.054565,
         "type":"Other",
         "to":["0500075"]
     },
     "0517000":{
-        "id":"0516000",
+        "id":"0517000",
         "name":"Crown College Offices",
-        "areas":"Crown College",
+        "areas":"Crown/Merrill College",
         "lat":37.000267,
         "lng": -122.054763,
         "type":"Other",
         "to":["0500075"]
+    },
+    "0518000":{
+        "id":"0518000",
+        "name":"Crown/Merrill Bus Stop",
+        "areas":"Crown/Merrill College",
+        "lat":36.99899,
+        "lng": -122.055262,
+        "type":"Bus Stop",
+        "to":["0500085","0500086","0500087"]
+    },
+    "0519000":{
+        "id":"0519000",
+        "name":"Crown/Merrill Apartment 1",
+        "areas":"Crown/Merrill College",
+        "lat":37.00192,
+        "lng": -122.054731,
+        "type":"Residential",
+        "to":["0500188"]
+    },
+    "0520000":{
+        "id":"0520000",
+        "name":"Crown/Merrill Apartment 2",
+        "areas":"Crown/Merrill College",
+        "lat":37.001873,
+        "lng": -122.054302,
+        "type":"Residential",
+        "to":["0500186"]
+    },
+    "0521000":{
+        "id":"0521000",
+        "name":"Crown/Merrill Apartment 3",
+        "areas":"Crown/Merrill College",
+        "lat":37.001715,
+        "lng": -122.05412,
+        "type":"Residential",
+        "to":["0500185"]
+    },    
+    "0522000":{
+        "id":"0522000",
+        "name":"Crown/Merrill Apartment 4",
+        "areas":"Crown/Merrill College",
+        "lat":37.001912,
+        "lng": -122.053868,
+        "type":"Residential",
+        "to":["0500183"]
+    },
+    "0523000":{
+        "id":"0523000",
+        "name":"Crown/Merrill Apartment 5",
+        "areas":"Crown/Merrill College",
+        "lat":37.001916,
+        "lng": -122.053519,
+        "type":"Residential",
+        "to":["0500171"]
+    },
+    "0524000":{
+        "id":"0524000",
+        "name":"Crown/Merrill Apartment 6",
+        "areas":"Crown/Merrill College",
+        "lat":37.001548,
+        "lng":-122.054238,
+        "type":"Residential",
+        "to":["0500123"]
+    },
+    "0525000":{
+        "id":"0525000",
+        "name":"Crown/Merrill Apartment 7",
+        "areas":"Crown/Merrill College",
+        "lat":37.001368,
+        "lng":-122.053889,
+        "type":"Residential",
+        "to":["0500129"]
+    },
+    "0526000":{
+        "id":"0526000",
+        "name":"Crown/Merrill Apartment 8",
+        "areas":"Crown/Merrill College",
+        "lat":37.001689,
+        "lng":-122.053455,
+        "type":"Residential",
+        "to":["0500195"]
+    },
+    "0527000":{
+        "id":"0527000",
+        "name":"Crown/Merrill Apartment 9",
+        "areas":"Crown/Merrill College",
+        "lat":37.001586,
+        "lng":-122.052661,
+        "type":"Residential",
+        "to":["0500157"]
+    },
+    "0528000":{
+        "id":"0528000",
+        "name":"Crown/Merrill Apartment 10",
+        "areas":"Crown/Merrill College",
+        "lat":37.001466,
+        "lng":-122.05302,
+        "type":"Residential",
+        "to":["0500158"]
+    },
+    "0529000":{
+        "id":"0529000",
+        "name":"Crown/Merrill Apartment 11",
+        "areas":"Crown/Merrill College",
+        "lat":37.001333,
+        "lng":-122.052623,
+        "type":"Residential",
+        "to":["0500160"]
+    },
+    "0530000":{
+        "id":"0530000",
+        "name":"Crown/Merrill Apartment 12",
+        "areas":"Crown/Merrill College",
+        "lat":37.001766,
+        "lng":-122.05243,
+        "type":"Residential",
+        "to":["0500162"]
+    },
+    "0531000":{
+        "id":"0531000",
+        "name":"Crown/Merrill Apartment 13",
+        "areas":"Crown/Merrill College",
+        "lat":37.001783,
+        "lng":-122.052859,
+        "type":"Residential",
+        "to":["0500164"]
+    },
+    "0532000":{
+        "id":"0532000",
+        "name":"Crown/Merrill Apartment 14",
+        "areas":"Crown/Merrill College",
+        "lat":37.00201,
+        "lng":-122.052779,
+        "type":"Residential",
+        "to":["0500179"]
+    },
+    "0533000":{
+        "id":"0533000",
+        "name":"Crown/Merrill Community Room",
+        "areas":"Crown/Merrill College",
+        "lat":37.001629,
+        "lng":-122.053943,
+        "type":"Residential",
+        "to":["0500170"]
+    },
+    "0534000":{
+        "id":"0534000",
+        "name":"Crown/Merrill Apartment Laundry Room",
+        "areas":"Crown/Merrill College",
+        "lat":37.001608,
+        "lng":-122.05376,
+        "type":"Other",
+        "to":["0500170"]
+    },
+    "0535000":{
+        "id":"0535000",
+        "name":"Crown/Merrill Apartment Laundry Room",
+        "areas":"Crown/Merrill College",
+        "lat":37.001608,
+        "lng":-122.05376,
+        "type":"Residential",
+        "to":["0500170"]
+    },
+    "0536000":{
+        "id":"0536000",
+        "name":"Merrill Classrooms",
+        "areas":"Crown/Merrill College",
+        "lat":36.999693,
+        "lng":-122.053632,
+        "type":"Academic",
+        "to":["0500013","0500201","0500200","0500196"]
+    },
+    "0537000":{
+        "id":"0537000",
+        "name":"Merrill Cultural Center",
+        "areas":"Crown/Merrill College",
+        "lat":37.000035,
+        "lng":-122.053868,
+        "type":"Other",
+        "to":["0500209"]
+    },
+    "0538000":{
+        "id":"0538000",
+        "name":"Baobab Lounge",
+        "areas":"Crown/Merrill College",
+        "lat":37.000157,
+        "lng":-122.053632,
+        "type":"Academic",
+        "to":["0500216"]
+    },
+    "0539000":{
+        "id":"0539000",
+        "name":"Vivas",
+        "areas":"Crown/Merrill College",
+        "lat":37.000172,
+        "lng":-122.053396,
+        "type":"Dine",
+        "to":["0500218"]
+    },
+    "0540000":{
+        "id":"0540000",
+        "name":"Merrill College Offices",
+        "areas":"Crown/Merrill College",
+        "lat":36.999622,
+        "lng":-122.053117,
+        "type":"Academic",
+        "to":["0500227"]
+    },
+    "0541000":{
+        "id":"0541000",
+        "name":"Merrill Mailroom",
+        "areas":"Crown/Merrill College",
+        "lat":36.999785,
+        "lng":-122.053042,
+        "type":"Residential",
+        "to":["0500227"]
+    },
+    "0542000":{
+        "id":"0542000",
+        "name":"A-Building (Lorde-Studds)",
+        "areas":"Crown/Merrill College",
+        "lat":37.00042,
+        "lng":-122.0536,
+        "type":"Residential",
+        "to":["0500221","0542000"]
+    },
+    "0543000":{
+        "id":"0543000",
+        "name":"A-Building (Kochiyama)",
+        "areas":"Crown/Merrill College",
+        "lat":37.000368,
+        "lng":-122.05331,
+        "type":"Residential",
+        "to":["0500221", "0500220"]
+    },
+    "0544000":{
+        "id":"0544000",
+        "name":"A-Building (Buloson)",
+        "areas":"Crown/Merrill College",
+        "lat":37.000287,
+        "lng": -122.05301,
+        "type":"Residential",
+        "to":["0500220"]
+    },
+    "0545000":{
+        "id":"0545000",
+        "name":"B-Building (Ghandi-Kahlo)",
+        "areas":"Crown/Merrill College",
+        "lat":37.000012,
+        "lng":-122.052763,
+        "type":"Residential",
+        "to":["0500236"]
+    },
+    "0546000":{
+        "id":"0546000",
+        "name":"C-Building (Chavez-Mencho)",
+        "areas":"Crown/Merrill College",
+        "lat":37.00003,
+        "lng":-122.052329,
+        "type":"Residential",
+        "to":["0500262"]
+    },
+    "0547000":{
+        "id":"0547000",
+        "name":"D-Building (Dubois)",
+        "areas":"Crown/Merrill College",
+        "lat":36.99994,
+        "lng":-122.052072,
+        "type":"Residential",
+        "to":["0500262"]
+    },
+    "0548000":{
+        "id":"0548000",
+        "name":"Ming Ong Computer Lab",
+        "areas":"Crown/Merrill College",
+        "lat":36.999708,
+        "lng":-122.052291,
+        "type":"Academic",
+        "to":["0500261"]
+    },
+    "0549000":{
+        "id":"0549000",
+        "name":"Charles Merrill Lounge",
+        "areas":"Crown/Merrill College",
+        "lat":36.99942,
+        "lng":-122.053723,
+        "type":"Academic",
+        "to":["0500207"]
+    },
+    "0550000":{
+        "id":"0550000",
+        "name":"Merill Library",
+        "areas":"Crown/Merrill College",
+        "lat":36.999365,
+        "lng":-122.053326,
+        "type":"Academic",
+        "to":["0500246"]
     },
     "0500001":{             //DH entrance
         "id":"0500001",
@@ -245,7 +4553,7 @@ var nodes = {
         "lat":36.999779,
         "lng": -122.053841,
         "type":null,
-        "to":["0500008", "0500012", "0500013"]
+        "to":["0500008", "0500012", "0500013","0500199"]
     },
     "0500011":{
         "id":"0500011",
@@ -254,7 +4562,7 @@ var nodes = {
         "lat":36.999892,
         "lng": -122.053831,
         "type":null,
-        "to":["0500009"]
+        "to":["0500009","0500197"]
     },
     "0500012":{
         "id":"0500012",
@@ -272,7 +4580,7 @@ var nodes = {
         "lat":36.999714,
         "lng": -122.053755,
         "type":null,
-        "to":["0500010", "0500012", "0500014"]
+        "to":["0500010", "0500012", "0500014","0536000"]
     },
     "0500014":{
         "id":"0500014",
@@ -290,7 +4598,7 @@ var nodes = {
         "lat":36.999577,
         "lng": -122.053825,
         "type":null,
-        "to":["0500014", "0500016"]
+        "to":["0500014", "0500016","0500208"]
     },
     "0500016":{
         "id":"0500016",
@@ -326,7 +4634,7 @@ var nodes = {
         "lat":36.999275,
         "lng": -122.05424,
         "type":null,
-        "to":["0500018", "0500020","0500019","0500040"]
+        "to":["0500018", "0500020","0500040"]
     },
     "0500020":{
         "id":"0500020",
@@ -488,7 +4796,7 @@ var nodes = {
         "lat":36.998999,
         "lng": -122.054603,
         "type":null,
-        "to":["0500036","0500042", "0500041","0500040"]
+        "to":["0500036","0500042","0500041","0500082","0500092"]
     },
     "0500038":{
         "id":"0500038",
@@ -512,28 +4820,19 @@ var nodes = {
         "id":"0500040",
         "name":null,
         "areas":null,
-        "lat":36.999757,
-        "lng": -122.054302,
-        "type":null,
-        "to":["0500027"]
-    },
-    "0500040":{
-        "id":"0500040",
-        "name":null,
-        "areas":null,
         "lat":36.999063,
         "lng": -122.054232,
         "type":null,
-        "to":["0500017", "0500037","0500018","0500019","0500041"]
+        "to":["0500017","0500018","0500019","0500041"]
     },
     "0500041":{
         "id":"0500041",
         "name":null,
         "areas":null,
-        "lat":36.999063,
-        "lng": -122.054232,
+        "lat":36.999037,
+        "lng": -122.054297,
         "type":null,
-        "to":["0500037","0500040"]
+        "to":["0500037","0500040", "0500096"]
     },
     "0500042":{
         "id":"0500042",
@@ -596,7 +4895,7 @@ var nodes = {
         "lat":36.99953,
         "lng": -122.055321,
         "type":null,
-        "to":["0500047", "0500043", "0500049"]
+        "to":["0500047", "0500043", "0500049","0500088","0500097"]
     },
     "0500049":{
         "id":"0500049",
@@ -605,7 +4904,7 @@ var nodes = {
         "lat":36.999796,
         "lng": -122.055337,
         "type":null,
-        "to":["0500047", "0500048","0500054","0500055"]
+        "to":["0500047", "0500048","0500054","0500055","0500099"]
     },
     "0500050":{
         "id":"0500050",
@@ -722,7 +5021,7 @@ var nodes = {
         "lat":37.000417,
         "lng": -122.055016,
         "type":null,
-        "to":["0500061","0500080"]
+        "to":["0500061","0500080","0500081"]
     },
     "0500063":{         //classroom entrance
         "id":"0500063",
@@ -875,24 +5174,5694 @@ var nodes = {
         "lat":37.000301,
         "lng":-122.054662,
         "type":null,
-        "to":["0500075", "0500078"]
+        "to":["0500075", "0500078","0500120"]
     },
     "0500080":{
         "id":"0500080",
         "name":null,
         "areas":null,
-        "lat":37.000387,
-        "lng":-122.055193,
+        "lat":37.000369,
+        "lng":-122.055075,
         "type":null,
-        "to":["0500058", "0500062","0500081"]
+        "to":["0500058", "0500062"]
     },
     "0500081":{
         "id":"0500081",
         "name":null,
         "areas":null,
-        "lat":37.000601,
-        "lng":-122.054881,
+        "lat":37.000567,
+        "lng":-122.054908,
         "type":null,
-        "to":["0500080"]
-    }
+        "to":["0500062","0500103","0500118"]
+    },
+    "0500082":{
+        "id":"0500082",
+        "name":null,
+        "areas":null,
+        "lat":36.99893,
+        "lng": -122.054812,
+        "type":null,
+        "to":["0500037","0500083"]
+    },
+    "0500083":{
+        "id":"0500083",
+        "name":null,
+        "areas":null,
+        "lat":36.998994,
+        "lng": -122.054989,
+        "type":null,
+        "to":["0500082","0500084"]
+    },
+    "0500084":{
+        "id":"0500084",
+        "name":null,
+        "areas":null,
+        "lat":36.998956,
+        "lng": -122.055123,
+        "type":null,
+        "to":["0500083","0500085"]
+    },
+    "0500085":{
+        "id":"0500085",
+        "name":null,
+        "areas":null,
+        "lat":36.998986,
+        "lng": -122.055182,
+        "type":null,
+        "to":["0500084","0518000","0500087","0500091","0500086"]
+    },
+    "0500086":{
+        "id":"0500086",
+        "name":null,
+        "areas":null,
+        "lat":36.998947,
+        "lng": -122.055193,
+        "type":null,
+        "to":["0500085","0518000"]
+    },
+    "0500087":{
+        "id":"0500087",
+        "name":null,
+        "areas":null,
+        "lat":36.999024,
+        "lng": -122.05538,
+        "type":null,
+        "to":["0500085","0518000"]
+    },
+    "0500088":{
+        "id":"0500088",
+        "name":null,
+        "areas":null,
+        "lat":36.999341,
+        "lng": -122.055246,
+        "type":null,
+        "to":["0500048","0500089"]
+    },
+    "0500089":{
+        "id":"0500089",
+        "name":null,
+        "areas":null,
+        "lat":36.999247,
+        "lng": -122.05515,
+        "type":null,
+        "to":["0500088","0500090"]
+    },
+    "0500090":{
+        "id":"0500090",
+        "name":null,
+        "areas":null,
+        "lat":36.999136,
+        "lng": -122.055096,
+        "type":null,
+        "to":["0500089","0500091"]
+    },
+    "0500091":{
+        "id":"0500091",
+        "name":null,
+        "areas":null,
+        "lat":36.999024,
+        "lng": -122.055101,
+        "type":null,
+        "to":["0500090", "0500085"]
+    },
+    "0500092":{
+        "id":"0500092",
+        "name":null,
+        "areas":null,
+        "lat":36.998904,
+        "lng": -122.05456,
+        "type":null,
+        "to":["0500037","0500093"]
+    },
+    "0500093":{
+        "id":"0500093",
+        "name":null,
+        "areas":null,
+        "lat":36.998806,
+        "lng": -122.054356,
+        "type":null,
+        "to":["0500092","0500094"]
+    },
+    "0500094":{
+        "id":"0500094",
+        "name":null,
+        "areas":null,
+        "lat":36.99875,
+        "lng": -122.05413,
+        "type":null,
+        "to":["0500093","0500095","0500096"]
+    },
+    "0500095":{
+        "id":"0500095",
+        "name":null,
+        "areas":null,
+        "lat":36.998626,
+        "lng": -122.054055,
+        "type":null,
+        "to":["0500094","0500251"]
+    },
+    "0500096":{
+        "id":"0500096",
+        "name":null,
+        "areas":null,
+        "lat":36.998917,
+        "lng": -122.054248,
+        "type":null,
+        "to":["0500094","0500041"]
+    },
+    "0500097":{
+        "id":"0500097",
+        "name":null,
+        "areas":null,
+        "lat":36.999774,
+        "lng": -122.055654,
+        "type":null,
+        "to":["0500048","0500098"]
+    },
+    "0500098":{
+        "id":"0500098",
+        "name":null,
+        "areas":null,
+        "lat":36.999963,
+        "lng": -122.056121,
+        "type":null,
+        "to":["0500097"]
+    },
+    "0500099":{
+        "id":"0500099",
+        "name":null,
+        "areas":null,
+        "lat":36.999988,
+        "lng": -122.055616,
+        "type":null,
+        "to":["0500049","0500100"]
+    },
+    "0500100":{
+        "id":"0500100",
+        "name":null,
+        "areas":null,
+        "lat":37.000143,
+        "lng": -122.055729,
+        "type":null,
+        "to":["0500099","0500100"]
+    },
+    "0500100":{
+        "id":"0500100",
+        "name":null,
+        "areas":null,
+        "lat":37.000143,
+        "lng": -122.055729,
+        "type":null,
+        "to":["0500099","0500101"]
+    },
+    "0500101":{
+        "id":"0500101",
+        "name":null,
+        "areas":null,
+        "lat":37.000459,
+        "lng": -122.055595,
+        "type":null,
+        "to":["0500100","0500102"]
+    },
+    "0500102":{
+        "id":"0500102",
+        "name":null,
+        "areas":null,
+        "lat":37.000669,
+        "lng": -122.055354,
+        "type":null,
+        "to":["0500101","0500103"]
+    },
+    "0500103":{
+        "id":"0500103",
+        "name":null,
+        "areas":null,
+        "lat":37.000751,
+        "lng":  -122.055166,
+        "type":null,
+        "to":["0500102","0500081","0500104"]
+    },
+    "0500104":{
+        "id":"0500104",
+        "name":null,
+        "areas":null,
+        "lat":37.001239,
+        "lng":  -122.055354,
+        "type":null,
+        "to":["0500103","0500105","0500106"]
+    },
+    "0500105":{
+        "id":"0500105",
+        "name":null,
+        "areas":null,
+        "lat":37.001214,
+        "lng": -122.055509,
+        "type":null,
+        "to":["0500104"]
+    },
+    "0500106":{
+        "id":"0500106",
+        "name":null,
+        "areas":null,
+        "lat":37.001488,
+        "lng": -122.055112,
+        "type":null,
+        "to":["0500104","0500107"]
+    },
+    "0500107":{
+        "id":"0500107",
+        "name":null,
+        "areas":null,
+        "lat":37.001531,
+        "lng": -122.054806,
+        "type":null,
+        "to":["0500106","0500108"]
+    },
+    "0500108":{
+        "id":"0500108",
+        "name":null,
+        "areas":null,
+        "lat":37.001406,
+        "lng": -122.054436,
+        "type":null,
+        "to":["0500107","0500127","0500126","0500109"]
+    },
+    "0500109":{
+        "id":"0500109",
+        "name":null,
+        "areas":null,
+        "lat":37.001218,
+        "lng": -122.054447,
+        "type":null,
+        "to":["0500108","0500112","0500110"]
+    },
+    "0500110":{
+        "id":"0500110",
+        "name":null,
+        "areas":null,
+        "lat":37.001098,
+        "lng": -122.054554,
+        "type":null,
+        "to":["0500109","0500111"]
+    },
+    "0500111":{
+        "id":"0500111",
+        "name":null,
+        "areas":null,
+        "lat":37.001008,
+        "lng": -122.054307,
+        "type":null,
+        "to":["0500110","0500125","0500112"]
+    },
+    "0500112":{
+        "id":"0500112",
+        "name":null,
+        "areas":null,
+        "lat":37.001128,
+        "lng": -122.054248,
+        "type":null,
+        "to":["0500111", "0500109"]
+    },
+    "0500113":{
+        "id":"0500113",
+        "name":null,
+        "areas":null,
+        "lat":37.000819,
+        "lng": -122.054613,
+        "type":null,
+        "to":["0500125","0500114"]
+    },
+    "0500114":{
+        "id":"0500114",
+        "name":null,
+        "areas":null,
+        "lat":37.000704,
+        "lng": -122.054474,
+        "type":null,
+        "to":["0500113","0500115"]
+    },
+    "0500115":{
+        "id":"0500115",
+        "name":null,
+        "areas":null,
+        "lat":37.000652,
+        "lng": -122.054506,
+        "type":null,
+        "to":["0500114","0500145","0500116"]
+    },
+    "0500116":{
+        "id":"0500116",
+        "name":null,
+        "areas":null,
+        "lat":37.000519,
+        "lng": -122.05464,
+        "type":null,
+        "to":["0500115","0500121","0500117"]
+    },
+    "0500117":{
+        "id":"0500117",
+        "name":null,
+        "areas":null,
+        "lat":37.000545,
+        "lng": -122.054731,
+        "type":null,
+        "to":["0500116","0500118"]
+    },
+    "0500118":{
+        "id":"0500118",
+        "name":null,
+        "areas":null,
+        "lat":37.000524,
+        "lng": -122.054833,
+        "type":null,
+        "to":["0500117","0500081","0500119"]
+    },
+    "0500119":{
+        "id":"0500119",
+        "name":null,
+        "areas":null,
+        "lat":37.000404,
+        "lng":-122.054812,
+        "type":null,
+        "to":["0500118","0500120"]
+    },
+    "0500120":{
+        "id":"0500120",
+        "name":null,
+        "areas":null,
+        "lat":37.000361,
+        "lng":-122.054656,
+        "type":null,
+        "to":["0500119","0500121","0500079"]
+    },
+    "0500121":{
+        "id":"0500121",
+        "name":null,
+        "areas":null,
+        "lat":37.000408,
+        "lng":-122.054597,
+        "type":null,
+        "to":["0500120", "0500116","0500144"]
+    },
+    "0500122":{
+        "id":"0500122",
+        "name":null,
+        "areas":null,
+        "lat":37.001509,
+        "lng":-122.054007,
+        "type":null,
+        "to":["0500126","0500128","0500127","0500123"]
+    },
+    "0500123":{
+        "id":"0500123",
+        "name":null,
+        "areas":null,
+        "lat":37.001565,
+        "lng":-122.054055,
+        "type":null,
+        "to":["0500122", "0524000","0500177","0500124"]
+    },
+    "0500124":{
+        "id":"0500124",
+        "name":null,
+        "areas":null,
+        "lat":37.001603,
+        "lng":-122.05413,
+        "type":null,
+        "to":["0500123"]
+    },
+    "0500125":{
+        "id":"0500125",
+        "name":null,
+        "areas":null,
+        "lat":37.000896,
+        "lng":-122.054356,
+        "type":null,
+        "to":["0500111","0500113","0500148"]
+    },
+    "0500126":{
+        "id":"0500126",
+        "name":null,
+        "areas":null,
+        "lat":37.001423,
+        "lng":-122.054168,
+        "type":null,
+        "to":["0500108","0500122"]
+    },
+    "0500127":{
+        "id":"0500127",
+        "name":null,
+        "areas":null,
+        "lat":37.001423,
+        "lng":-122.054168,
+        "type":null,
+        "to":["0500108","0500122"]
+    },
+    "0500128":{
+        "id":"0500128",
+        "name":null,
+        "areas":null,
+        "lat":37.00153,
+        "lng": -122.053932,
+        "type":null,
+        "to":["0500122","0500170","0500129"]
+    },
+    "0500129":{
+        "id":"0500129",
+        "name":null,
+        "areas":null,
+        "lat":37.001492,
+        "lng":  -122.053819,
+        "type":null,
+        "to":["0500128","0525000","0500172"]
+    },
+    "0500130":{
+        "id":"0500130",
+        "name":null,
+        "areas":null,
+        "lat":37.001505,
+        "lng":-122.053551,
+        "type":null,
+        "to":["0500172","0500152","0500131"]
+    },
+    "0500131":{
+        "id":"0500131",
+        "name":null,
+        "areas":null,
+        "lat":37.001385,
+        "lng":-122.053648,
+        "type":null,
+        "to":["0500130","0500132"]
+    },
+    "0500132":{
+        "id":"0500132",
+        "name":null,
+        "areas":null,
+        "lat":37.001308,
+        "lng":-122.053594,
+        "type":null,
+        "to":["0500131","0500133"]
+    },
+    "0500133":{
+        "id":"0500133",
+        "name":null,
+        "areas":null,
+        "lat":37.001308,
+        "lng":-122.053594,
+        "type":null,
+        "to":["0500132","0500134"]
+    },
+    "0500134":{
+        "id":"0500134",
+        "name":null,
+        "areas":null,
+        "lat":37.001205,
+        "lng":-122.053599,
+        "type":null,
+        "to":["0500133","0500135"]
+    },
+    "0500135":{
+        "id":"0500135",
+        "name":null,
+        "areas":null,
+        "lat":37.001145,
+        "lng":-122.053664,
+        "type":null,
+        "to":["0500134","0500136"]
+    },
+    "0500136":{
+        "id":"0500136",
+        "name":null,
+        "areas":null,
+        "lat":37.001029,
+        "lng": -122.053653,
+        "type":null,
+        "to":["0500135","0500137"]
+    },
+    "0500137":{
+        "id":"0500137",
+        "name":null,
+        "areas":null,
+        "lat":37.000948,
+        "lng": -122.053685,
+        "type":null,
+        "to":["0500136","0500151","0500150","0500138"]
+    },
+    "0500138":{
+        "id":"0500138",
+        "name":null,
+        "areas":null,
+        "lat":37.000708,
+        "lng":-122.053658,
+        "type":null,
+        "to":["0500137","0500139"]
+    },
+    "0500139":{
+        "id":"0500139",
+        "name":null,
+        "areas":null,
+        "lat":37.000609,
+        "lng":-122.053583,
+        "type":null,
+        "to":["0500138","0500140"]
+    },
+    "0500140":{
+        "id":"0500140",
+        "name":null,
+        "areas":null,
+        "lat":37.000537,
+        "lng":-122.053798,
+        "type":null,
+        "to":["0500139","0500141"]
+    },
+    "0500141":{
+        "id":"0500141",
+        "name":null,
+        "areas":null,
+        "lat":37.000455,
+        "lng":-122.053841,
+        "type":null,
+        "to":["0500140","0500147","0500142"]
+    },
+    "0500142":{
+        "id":"0500142",
+        "name":null,
+        "areas":null,
+        "lat":37.000357,
+        "lng":-122.0539,
+        "type":null,
+        "to":["0500141","0500143"]
+    },
+    "0500143":{
+        "id":"0500143",
+        "name":null,
+        "areas":null,
+        "lat":37.000305,
+        "lng":-122.054029,
+        "type":null,
+        "to":["0500142","0500144","0500243","0500213"]
+    },
+    "0500144":{
+        "id":"0500144",
+        "name":null,
+        "areas":null,
+        "lat":37.000382,
+        "lng":-122.054366,
+        "type":null,
+        "to":["0500143", "0500121"]
+    },
+    "0500145":{
+        "id":"0500145",
+        "name":null,
+        "areas":null,
+        "lat":37.000631,
+        "lng":-122.054324,
+        "type":null,
+        "to":["0500115","0500148","0500146"]
+    },
+    "0500146":{
+        "id":"0500146",
+        "name":null,
+        "areas":null,
+        "lat":37.000571,
+        "lng":-122.054109,
+        "type":null,
+        "to":["0500145","0500147"]
+    },
+    "0500147":{
+        "id":"0500147",
+        "name":null,
+        "areas":null,
+        "lat":37.000485,
+        "lng":-122.05398,
+        "type":null,
+        "to":["0500146","0500147","0500141"]
+    },
+    "0500148":{
+        "id":"0500148",
+        "name":null,
+        "areas":null,
+        "lat":37.000828,
+        "lng":-122.054195,
+        "type":null,
+        "to":["0500145", "0500125","0500149"]
+    },
+    "0500149":{
+        "id":"0500149",
+        "name":null,
+        "areas":null,
+        "lat":37.000806,
+        "lng":-122.053964,
+        "type":null,
+        "to":["0500148","0500151","0500150"]
+    },
+    "0500150":{
+        "id":"0500150",
+        "name":null,
+        "areas":null,
+        "lat":37.000776,
+        "lng":-122.05375,
+        "type":null,
+        "to":["0500149", "0500137"]
+    },
+    "0500151":{
+        "id":"0500151",
+        "name":null,
+        "areas":null,
+        "lat":37.000965,
+        "lng":-122.053927,
+        "type":null,
+        "to":["0500149", "0500137"]
+    },
+    "0500152":{
+        "id":"0500152",
+        "name":null,
+        "areas":null,
+        "lat":37.001616,
+        "lng":-122.053342,
+        "type":null,
+        "to":["0500130","0500168","0500153"]
+    },
+    "0500153":{
+        "id":"0500153",
+        "name":null,
+        "areas":null,
+        "lat":37.001689,
+        "lng":-122.053192,
+        "type":null,
+        "to":["0500152","0500155","0500154"]
+    },
+    "0500154":{
+        "id":"0500154",
+        "name":null,
+        "areas":null,
+        "lat":37.001659,
+        "lng":-122.053025,
+        "type":null,
+        "to":["0500153","0500156","0500157"]
+    },
+    "0500155":{
+        "id":"0500155",
+        "name":null,
+        "areas":null,
+        "lat":37.001835,
+        "lng":-122.053261,
+        "type":null,
+        "to":["0500153","0500163"]
+    },
+    "0500156":{
+        "id":"0500156",
+        "name":null,
+        "areas":null,
+        "lat":37.001595,
+        "lng":-122.052982,
+        "type":null,
+        "to":["0500154","0500158"]
+    },
+    "0500157":{
+        "id":"0500157",
+        "name":null,
+        "areas":null,
+        "lat":37.001698,
+        "lng":-122.052768,
+        "type":null,
+        "to":["0500154","0527000","0500161","0500263"]
+    },
+    "0500158":{
+        "id":"0500158",
+        "name":null,
+        "areas":null,
+        "lat":37.001526,
+        "lng":-122.052843,
+        "type":null,
+        "to":["0500156","0528000","0500160","0500159","0500263"]
+    },
+    "0500159":{
+        "id":"0500159",
+        "name":null,
+        "areas":null,
+        "lat":37.001372,
+        "lng":-122.052816,
+        "type":null,
+        "to":["0500158"]
+    },
+    "0500160":{
+        "id":"0500160",
+        "name":null,
+        "areas":null,
+        "lat":37.001372,
+        "lng":-122.052816,
+        "type":null,
+        "to":["0500158","0529000"]
+    },
+    "0500161":{
+        "id":"0500161",
+        "name":null,
+        "areas":null,
+        "lat":37.001817,
+        "lng":-122.052602,
+        "type":null,
+        "to":["0500157","0500162"]
+    },
+    "0500162":{
+        "id":"0500162",
+        "name":null,
+        "areas":null,
+        "lat":37.001817,
+        "lng":-122.052548,
+        "type":null,
+        "to":["0500161","0530000"]
+    },
+    "0500163":{
+        "id":"0500163",
+        "name":null,
+        "areas":null,
+        "lat":37.001946,
+        "lng":-122.053138,
+        "type":null,
+        "to":["0500155","0500167","0500178","0500164"]
+    },
+    "0500164":{
+        "id":"0500164",
+        "name":null,
+        "areas":null,
+        "lat":37.001873,
+        "lng":-122.052929,
+        "type":null,
+        "to":["0500163","0531000"]
+    },
+    "0500165":{
+        "id":"0500165",
+        "name":null,
+        "areas":null,
+        "lat":37.001792,
+        "lng":-122.053353,
+        "type":null,
+        "to":["0500168","0500167"]
+    },
+    "0500166":{
+        "id":"0500166",
+        "name":null,
+        "areas":null,
+        "lat":37.002053,
+        "lng":-122.053041,
+        "type":null,
+        "to":["0500178","0500179"]
+    },
+    "0500167":{
+        "id":"0500167",
+        "name":null,
+        "areas":null,
+        "lat":37.001886,
+        "lng":-122.053288,
+        "type":null,
+        "to":["0500165","0500195","0500163"]
+    },
+    "0500168":{
+        "id":"0500168",
+        "name":null,
+        "areas":null,
+        "lat":37.001702,
+        "lng":-122.053288,
+        "type":null,
+        "to":["0500165","0500152"]
+    },
+    "0500169":{
+        "id":"0500169",
+        "name":null,
+        "areas":null,
+        "lat":37.001749,
+        "lng":-122.053685,
+        "type":null,
+        "to":["0500195","0500173"]
+    },
+    "0500170":{
+        "id":"0500170",
+        "name":null,
+        "areas":null,
+        "lat":37.001672,
+        "lng":-122.053835,
+        "type":null,
+        "to":["0500174","0500128","0534000", "0535000","0533000"]
+    },
+    "0500171":{
+        "id":"0500171",
+        "name":null,
+        "areas":null,
+        "lat":37.002023,
+        "lng":-122.05354,
+        "type":null,
+        "to":["0500180", "0500178", "0523000"]
+    },
+    "0500172":{
+        "id":"0500172",
+        "name":null,
+        "areas":null,
+        "lat":37.001488,
+        "lng":-122.053723,
+        "type":null,
+        "to":["0500129","0500130"]
+    },
+    "0500173":{
+        "id":"0500173",
+        "name":null,
+        "areas":null,
+        "lat":37.001732,
+        "lng":-122.05375,
+        "type":null,
+        "to":["0500169","0500182","0500174"]
+    },
+    "0500174":{
+        "id":"0500174",
+        "name":null,
+        "areas":null,
+        "lat":37.00171,
+        "lng":-122.053792,
+        "type":null,
+        "to":["0500173","0500175","0500170"]
+    },
+    "0500175":{
+        "id":"0500175",
+        "name":null,
+        "areas":null,
+        "lat":37.001728,
+        "lng":-122.053894,
+        "type":null,
+        "to":["0500174","0500176"]
+    },
+    "0500176":{
+        "id":"0500176",
+        "name":null,
+        "areas":null,
+        "lat":37.001792,
+        "lng":-122.053986,
+        "type":null,
+        "to":["0500175","0500185","0500177"]
+    },
+    "0500177":{
+        "id":"0500177",
+        "name":null,
+        "areas":null,
+        "lat":37.001715,
+        "lng":-122.053986,
+        "type":null,
+        "to":["0500176","0500123"]
+    },
+    "0500178":{
+        "id":"0500178",
+        "name":null,
+        "areas":null,
+        "lat":37.002036,
+        "lng":-122.053133,
+        "type":null,
+        "to":["0500163","0500180","0500171","0500166"]
+    },
+    "0500179":{
+        "id":"0500179",
+        "name":null,
+        "areas":null,
+        "lat":37.002083,
+        "lng":-122.052945,
+        "type":null,
+        "to":["0500166","0532000"]
+    },
+    "0500180":{
+        "id":"0500180",
+        "name":null,
+        "areas":null,
+        "lat":37.002019,
+        "lng":-122.053642,
+        "type":null,
+        "to":["0500178","0500181","0500171"]
+    },
+    "0500181":{
+        "id":"0500181",
+        "name":null,
+        "areas":null,
+        "lat":37.001976,
+        "lng":-122.053674,
+        "type":null,
+        "to":["0500180","0500182","0500183"]
+    },
+    "0500182":{
+        "id":"0500182",
+        "name":null,
+        "areas":null,
+        "lat":37.001929,
+        "lng":-122.053658,
+        "type":null,
+        "to":["0500181","0500173"]
+    },
+    "0500183":{
+        "id":"0500183",
+        "name":null,
+        "areas":null,
+        "lat":37.00202,
+        "lng":-122.053916,
+        "type":null,
+        "to":["0500181", "0522000","0500184"]
+    },
+    "0500184":{
+        "id":"0500184",
+        "name":null,
+        "areas":null,
+        "lat":37.00201,
+        "lng":-122.054157,
+        "type":null,
+        "to":["0500183","0500186","0500185"]
+    },
+    "0500185":{
+        "id":"0500185",
+        "name":null,
+        "areas":null,
+        "lat":37.00186,
+        "lng":-122.054077,
+        "type":null,
+        "to":["0500184","0500176", "0521000"]
+    },
+    "0500186":{
+        "id":"0500186",
+        "name":null,
+        "areas":null,
+        "lat":37.00200,
+        "lng":-122.054324,
+        "type":null,
+        "to":["0500184", "0520000","0500187"]
+    },
+    "0500187":{
+        "id":"0500187",
+        "name":null,
+        "areas":null,
+        "lat":37.001942,
+        "lng":-122.054549,
+        "type":null,
+        "to":["0500186","0500188"]
+    },
+    "0500188":{
+        "id":"0500188",
+        "name":null,
+        "areas":null,
+        "lat":37.002028,
+        "lng":-122.054656,
+        "type":null,
+        "to":["0500187","0519000","0500189"]
+    },
+    "0500189":{
+        "id":"0500189",
+        "name":null,
+        "areas":null,
+        "lat":37.002053,
+        "lng":-122.054839,
+        "type":null,
+        "to":["0500188","0500190"]
+    },
+    "0500190":{
+        "id":"0500190",
+        "name":null,
+        "areas":null,
+        "lat":37.002062,
+        "lng":-122.055203,
+        "type":null,
+        "to":["0500189","0500191"]
+    },
+    "0500191":{
+        "id":"0500191",
+        "name":null,
+        "areas":null,
+        "lat":37.002158,
+        "lng":-122.055182,
+        "type":null,
+        "to":["0500190","0500192"]
+    },
+    "0500192":{
+        "id":"0500192",
+        "name":null,
+        "areas":null,
+        "lat":37.002169,
+        "lng": -122.055262,
+        "type":null,
+        "to":["0500191","0500193"]
+    },
+    "0500193":{
+        "id":"0500193",
+        "name":null,
+        "areas":null,
+        "lat":37.002135,
+        "lng":-122.055713,
+        "type":null,
+        "to":["0500192","0500194"]
+    },
+    "0500194":{
+        "id":"0500194",
+        "name":null,
+        "areas":null,
+        "lat":37.002306,
+        "lng":-122.055869,
+        "type":null,
+        "to":["0500193"]
+    },
+    "0500195":{
+        "id":"0500195",
+        "name":null,
+        "areas":null,
+        "lat":37.0018,
+        "lng":-122.053535,
+        "type":null,
+        "to":["0500167", "0500169", "0526000"]
+    },
+    "0500196":{
+        "id":"0500196",
+        "name":null,
+        "areas":null,
+        "lat":36.99992,
+        "lng":-122.053637,
+        "type":null,
+        "to":["0536000","0500209","0500197"]
+    },
+    "0500197":{
+        "id":"0500197",
+        "name":null,
+        "areas":null,
+        "lat":36.999907,
+        "lng":-122.053755,
+        "type":null,
+        "to":["0500196", "0500011","0500198"]
+    },
+    "0500198":{
+        "id":"0500198",
+        "name":null,
+        "areas":null,
+        "lat":36.999873,
+        "lng":-122.053755,
+        "type":null,
+        "to":["0500197","0500199"]
+    },
+    "0500199":{
+        "id":"0500199",
+        "name":null,
+        "areas":null,
+        "lat":36.999864,
+        "lng":-122.053841,
+        "type":null,
+        "to":["0500198", "0500010"]
+    },
+    "0500200":{
+        "id":"0500200",
+        "name":null,
+        "areas":null,
+        "lat":36.999675,
+        "lng":-122.053503,
+        "type":null,
+        "to":["0536000","0500232"]
+    },    
+    "0500201":{
+        "id":"0500201",
+        "name":null,
+        "areas":null,
+        "lat":36.999581,
+        "lng":-122.053626,
+        "type":null,
+        "to":["0536000","0500231","0500202"]
+    },
+    "0500202":{
+        "id":"0500202",
+        "name":null,
+        "areas":null,
+        "lat":36.999508,
+        "lng":-122.053648,
+        "type":null,
+        "to":["0500201","0500208","0500203"]
+    },
+    "0500203":{
+        "id":"0500203",
+        "name":null,
+        "areas":null,
+        "lat":36.999453,
+        "lng": -122.053487,
+        "type":null,
+        "to":["0500202","0500246","0500204"]
+    },
+    "0500204":{
+        "id":"0500204",
+        "name":null,
+        "areas":null,
+        "lat":36.999444,
+        "lng": -122.053567,
+        "type":null,
+        "to":["0500203","0500205"]
+    },
+    "0500205":{
+        "id":"0500205",
+        "name":null,
+        "areas":null,
+        "lat":36.99938,
+        "lng": -122.053583,
+        "type":null,
+        "to":["0500204","0500206"]
+    },
+    "0500206":{
+        "id":"0500206",
+        "name":null,
+        "areas":null,
+        "lat":36.999384,
+        "lng": -122.053664,
+        "type":null,
+        "to":["0500205","0500207"]
+    },
+    "0500207":{
+        "id":"0500207",
+        "name":null,
+        "areas":null,
+        "lat":36.999436,
+        "lng": -122.053653,
+        "type":null,
+        "to":["0500206","0549000"]
+    },
+    "0500208":{
+        "id":"0500208",
+        "name":null,
+        "areas":null,
+        "lat":36.999517,
+        "lng": -122.053755,
+        "type":null,
+        "to":["0500202", "0500015"]
+    },
+    "0500209":{
+        "id":"0500209",
+        "name":null,
+        "areas":null,
+        "lat":37.000027,
+        "lng": -122.053685,
+        "type":null,
+        "to":["0537000","0500196","0500210"]
+    },
+    "0500210":{
+        "id":"0500210",
+        "name":null,
+        "areas":null,
+        "lat":37.000112,
+        "lng": -122.053701,
+        "type":null,
+        "to":["0500209","0500216","0500214","0500211"]
+    },
+    "0500211":{
+        "id":"0500211",
+        "name":null,
+        "areas":null,
+        "lat":37.00022,
+        "lng": -122.053696,
+        "type":null,
+        "to":["0500210","0500212"]
+    },
+    "0500212":{
+        "id":"0500212",
+        "name":null,
+        "areas":null,
+        "lat":37.000228,
+        "lng": -122.053809,
+        "type":null,
+        "to":["0500211","0500213"]
+    },
+    "0500213":{
+        "id":"0500213",
+        "name":null,
+        "areas":null,
+        "lat":37.000258,
+        "lng": -122.054002,
+        "type":null,
+        "to":["0500212","0500143"]
+    },
+    "0500214":{
+        "id":"0500214",
+        "name":null,
+        "areas":null,
+        "lat":37.000245,
+        "lng":  -122.053696,
+        "type":null,
+        "to":["0500210","0500215"]
+    },
+    "0500215":{
+        "id":"0500215",
+        "name":null,
+        "areas":null,
+        "lat":37.000215,
+        "lng":-122.053514,
+        "type":null,
+        "to":["0500214"]
+    },
+    "0500216":{
+        "id":"0500216",
+        "name":null,
+        "areas":null,
+        "lat":37.000117,
+        "lng":-122.053626,
+        "type":null,
+        "to":["0500210","0538000","0500217"]
+    },
+    "0500217":{
+        "id":"0500217",
+        "name":null,
+        "areas":null,
+        "lat":37.000108,
+        "lng":-122.05353,
+        "type":null,
+        "to":["0500216","0500221","0500218"]
+    },
+    "0500218":{
+        "id":"0500218",
+        "name":null,
+        "areas":null,
+        "lat":37.000108,
+        "lng":-122.053412,
+        "type":null,
+        "to":["0500217","0500219","0539000"]
+    },
+    "0500219":{
+        "id":"0500219",
+        "name":null,
+        "areas":null,
+        "lat":37.000087,
+        "lng":-122.053256,
+        "type":null,
+        "to":["0500218","0500222","0500219","0500220"]
+    },
+    "0500220":{
+        "id":"0500220",
+        "name":null,
+        "areas":null,
+        "lat":37.000262,
+        "lng":-122.053197,
+        "type":null,
+        "to":["0500219","0543000","0544000"]
+    },
+    "0500221":{
+        "id":"0500221",
+        "name":null,
+        "areas":null,
+        "lat":37.000318,
+        "lng":-122.053492,
+        "type":null,
+        "to":["0500217","0543000","0542000"]
+    },
+    "0500222":{
+        "id":"0500222",
+        "name":null,
+        "areas":null,
+        "lat":37.000023,
+        "lng":-122.05324,
+        "type":null,
+        "to":["0500219","0500234","0500223"]
+    },
+    "0500223":{
+        "id":"0500223",
+        "name":null,
+        "areas":null,
+        "lat":36.999958,
+        "lng":-122.053127,
+        "type":null,
+        "to":["0500222","0500235", "0500224"]
+    },
+    "0500224":{
+        "id":"0500224",
+        "name":null,
+        "areas":null,
+        "lat":36.999885,
+        "lng":-122.053074,
+        "type":null,
+        "to":["0500223","0500225"]
+    },
+    "0500225":{
+        "id":"0500225",
+        "name":null,
+        "areas":null,
+        "lat":36.999825,
+        "lng":-122.052961,
+        "type":null,
+        "to":["0500224","0500226"]
+    },
+    "0500226":{
+        "id":"0500226",
+        "name":null,
+        "areas":null,
+        "lat":36.999714,
+        "lng":-122.052902,
+        "type":null,
+        "to":["0500225","0500255","0500244","0500237","0500227"]
+    },
+    "0500227":{                 //merrill mail and office entrance
+        "id":"0500227",
+        "name":null,
+        "areas":null,
+        "lat":36.999697,
+        "lng":-122.053047,
+        "type":null,
+        "to":["0500226","0540000","0541000","0500228"]
+    },
+    "0500228":{
+        "id":"0500228",
+        "name":null,
+        "areas":null,
+        "lat":36.999684,
+        "lng":-122.053251,
+        "type":null,
+        "to":["0500227","0500252","0500232","0500229"]
+    },
+    "0500229":{
+        "id":"0500229",
+        "name":null,
+        "areas":null,
+        "lat":36.999641,
+        "lng":-122.053428,
+        "type":null,
+        "to":["0500228","0500230"]
+    },
+    "0500230":{
+        "id":"0500230",
+        "name":null,
+        "areas":null,
+        "lat":36.999615,
+        "lng":-122.053337,
+        "type":null,
+        "to":["0500229","0500231"]
+    },
+    "0500231":{
+        "id":"0500231",
+        "name":null,
+        "areas":null,
+        "lat":36.999547,
+        "lng":-122.053358,
+        "type":null,
+        "to":["0500230","0500201"]
+    },
+    "0500232":{
+        "id":"0500232",
+        "name":null,
+        "areas":null,
+        "lat":36.999727,
+        "lng":-122.053444,
+        "type":null,
+        "to":["0500228", "0500233","0500200"]
+    },
+    "0500233":{
+        "id":"0500233",
+        "name":null,
+        "areas":null,
+        "lat":36.999825,
+        "lng":-122.053481,
+        "type":null,
+        "to":["0500232","0500234"]
+    },
+    "0500234":{
+        "id":"0500234",
+        "name":null,
+        "areas":null,
+        "lat":37.000014,
+        "lng":-122.05339,
+        "type":null,
+        "to":["0500233","0500222"]
+    },
+    "0500235":{
+        "id":"0500235",
+        "name":null,
+        "areas":null,
+        "lat":37.000014,
+        "lng":-122.052999,
+        "type":null,
+        "to":["0500223","0500236"]
+    },
+    "0500236":{
+        "id":"0500236",
+        "name":null,
+        "areas":null,
+        "lat":37.000014,
+        "lng":-122.052848,
+        "type":null,
+        "to":["0500235","0545000"]
+    },
+    "0500237":{
+        "id":"0500237",
+        "name":null,
+        "areas":null,
+        "lat":36.99983,
+        "lng": -122.052881,
+        "type":null,
+        "to":["0500226","0500238"]
+    },
+    "0500238":{
+        "id":"0500238",
+        "name":null,
+        "areas":null,
+        "lat":37.000125,
+        "lng": -122.052881,
+        "type":null,
+        "to":["0500237","0500239"]
+    },
+    "0500239":{
+        "id":"0500239",
+        "name":null,
+        "areas":null,
+        "lat":37.00019,
+        "lng": -122.052993,
+        "type":null,
+        "to":["0500238","0500240"]
+    },
+    "0500240":{
+        "id":"0500240",
+        "name":null,
+        "areas":null,
+        "lat":37.000224,
+        "lng": -122.053159,
+        "type":null,
+        "to":["0500239","0500241"]
+    },
+    "0500241":{
+        "id":"0500241",
+        "name":null,
+        "areas":null,
+        "lat":37.000292,
+        "lng": -122.053358,
+        "type":null,
+        "to":["0500240","0500242"]
+    },
+    "0500242":{
+        "id":"0500242",
+        "name":null,
+        "areas":null,
+        "lat":37.000284,
+        "lng": -122.053519,
+        "type":null,
+        "to":["0500241","0500243"]
+    },
+    "0500243":{
+        "id":"0500243",
+        "name":null,
+        "areas":null,
+        "lat":37.000331,
+        "lng": -122.053626,
+        "type":null,
+        "to":["0500242","0500143"]
+    },
+    "0500244":{
+        "id":"0500244",
+        "name":null,
+        "areas":null,
+        "lat":36.999624,
+        "lng": -122.052859,
+        "type":null,
+        "to":["0500226","0500245"]
+    },
+    "0500245":{
+        "id":"0500245",
+        "name":null,
+        "areas":null,
+        "lat":36.999568,
+        "lng": -122.052918,
+        "type":null,
+        "to":["0500244","0500253"]
+    },
+    "0500246":{
+        "id":"0500246",
+        "name":null,
+        "areas":null,
+        "lat":36.999447,
+        "lng":-122.053348,
+        "type":null,
+        "to":["0500203","0500247","0550000"]
+    },
+    "0500247":{
+        "id":"0500247",
+        "name":null,
+        "areas":null,
+        "lat":36.999438,
+        "lng":-122.053187,
+        "type":null,
+        "to":["0500246","0500252","0500248"]
+    },
+    "0500248":{
+        "id":"0500248",
+        "name":null,
+        "areas":null,
+        "lat":36.999233,
+        "lng":-122.053219,
+        "type":null,
+        "to":["0500247","0500249"]
+    },
+    "0500249":{
+        "id":"0500249",
+        "name":null,
+        "areas":null,
+        "lat":36.999006,
+        "lng":-122.053589,
+        "type":null,
+        "to":["0500248","0500250"]
+    },
+    "0500250":{
+        "id":"0500250",
+        "name":null,
+        "areas":null,
+        "lat":36.998937,
+        "lng":-122.053595,
+        "type":null,
+        "to":["0500249","0500251"]
+    },
+    "0500251":{
+        "id":"0500251",
+        "name":null,
+        "areas":null,
+        "lat":36.998701,
+        "lng":-122.053439,
+        "type":null,
+        "to":["0500250", "0500095"]
+    },
+    "0500252":{
+        "id":"0500252",
+        "name":null,
+        "areas":null,
+        "lat":36.999494,
+        "lng":-122.053117,
+        "type":null,
+        "to":["0500247", "0500228","0500253"]
+    },
+    "0500253":{
+        "id":"0500253",
+        "name":null,
+        "areas":null,
+        "lat":36.999498,
+        "lng":-122.052908,
+        "type":null,
+        "to":["0500252", "0500245","0500254"]
+    },
+    "0500254":{
+        "id":"0500254",
+        "name":null,
+        "areas":null,
+        "lat":36.999485,
+        "lng":-122.052769,
+        "type":null,
+        "to":["0500253"]
+    },
+    "0500255":{
+        "id":"0500255",
+        "name":null,
+        "areas":null,
+        "lat":36.999738,
+        "lng":-122.052833,
+        "type":null,
+        "to":["0500226","0500256"]
+    },
+    "0500256":{
+        "id":"0500256",
+        "name":null,
+        "areas":null,
+        "lat":36.999777,
+        "lng":-122.052822,
+        "type":null,
+        "to":["0500255","0500257"]
+    },
+    "0500257":{
+        "id":"0500257",
+        "name":null,
+        "areas":null,
+        "lat":36.999775,
+        "lng":-122.052758,
+        "type":null,
+        "to":["0500256","0500258"]
+    },
+    "0500258":{
+        "id":"0500258",
+        "name":null,
+        "areas":null,
+        "lat":36.999785,
+        "lng":-122.052565,
+        "type":null,
+        "to":["0500257","0500259"]
+    },
+    "0500259":{
+        "id":"0500259",
+        "name":null,
+        "areas":null,
+        "lat":36.999768,
+        "lng":-122.052474,
+        "type":null,
+        "to":["0500258","0500260"]
+    },
+    "0500260":{
+        "id":"0500260",
+        "name":null,
+        "areas":null,
+        "lat":36.999815,
+        "lng":-122.052329,
+        "type":null,
+        "to":["0500259","0500261"]
+    },
+    "0500261":{             //ming ong computer lab
+        "id":"0500261",
+        "name":null,
+        "areas":null,
+        "lat":36.999803,
+        "lng":-122.052254,
+        "type":null,
+        "to":["0500260","0500262","0548000"]
+    },
+    "0500262":{             //D C entrance
+        "id":"0500262",
+        "name":null,
+        "areas":null,
+        "lat":36.999982,
+        "lng":-122.052179,
+        "type":null,
+        "to":["0500261","0546000","0547000"]
+    },
+    "0500263":{
+        "id":"0500263",
+        "name":null,
+        "areas":null,
+        "lat":37.001599,
+        "lng":-122.052852,
+        "type":null,
+        "to":["0500158","0500157"]
+    },
+
+// OAKES NODES  ----------------------------------------------------------------------------------
+
+"0801000":{
+        "id":"0801000",
+        "name":"Oakes Cafe",
+        "areas":"Oakes",
+        "lat":36.989227,
+        "lng":-122.063303,
+        "type":"Food To Go",
+        "to":["0800071"]
+    },
+    "0802000":{
+        "id":"0802000",
+        "name":"Oakes Learning Center",
+        "areas":"Oakes",
+        "lat":36.989227,
+        "lng":-122.063325,
+        "type":"Academic",
+        "to":["0800071"]
+    },
+    "0803000":{
+        "id":"0803000",
+        "name":"Oakes Library",
+        "areas":"Oakes",
+        "lat":36.989811,
+        "lng":-122.062812,
+        "type":"Academic",
+        "to":["0800074"]
+    },
+    "0804000":{
+        "id":"0804000",
+        "name":"Oakes Administration & Advising",
+        "areas":"Oakes",
+        "lat":36.990053,
+        "lng":-122.062855,
+        "type":"Student Services",
+        "to":["0800077"]
+    },
+    "0800001":{
+        "id":"0800001",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989597,
+        "lng":-122.065331,
+        "type":null,
+        "to":["0100028","0800002","0800018"]
+    },
+    "0800002":{
+        "id":"0800002",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989523,
+        "lng":-122.065335,
+        "type":null,
+        "to":["0800001","0800003"]
+    },
+    "0800003":{
+        "id":"0800003",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989447,
+        "lng":-122.065340,
+        "type":null,
+        "to":["0800002","0800004"]
+    },
+    "0800004":{
+        "id":"0800004",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989388,
+        "lng":-122.065325,
+        "type":null,
+        "to":["0800003","0800005"]
+    },
+    "0800005":{
+        "id":"0800005",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989296,
+        "lng":-122.065282,
+        "type":null,
+        "to":["0800004","0800006"]
+    },
+    "0800006":{
+        "id":"0800006",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989186,
+        "lng":-122.065238,
+        "type":null,
+        "to":["0800005","0800007"]
+    },
+    "0800007":{
+        "id":"0800007",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989124,
+        "lng":-122.065195,
+        "type":null,
+        "to":["0800006","0800008"]
+    },
+    "0800008":{
+        "id":"0800008",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989090,
+        "lng":-122.065128,
+        "type":null,
+        "to":["0800007","0800009","0800013"]
+    },
+    "0800009":{
+        "id":"0800009",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989048,
+        "lng":-122.065004,
+        "type":null,
+        "to":["0800008","0800010"]
+    },
+    "0800010":{
+        "id":"0800010",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989064,
+        "lng":-122.064888,
+        "type":null,
+        "to":["0800009","0800011"]
+    },
+    "0800011":{
+        "id":"0800011",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989136,
+        "lng":-122.064659,
+        "type":null,
+        "to":["0800010","0800012"]
+    },
+    "0800012":{
+        "id":"0800012",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989206,
+        "lng":-122.064662,
+        "type":null,
+        "to":["0800011","0800014"]
+    },
+    "0800013":{
+        "id":"0800013",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989174,
+        "lng":-122.064919,
+        "type":null,
+        "to":["0800008","0800014"]
+    },
+    "0800014":{
+        "id":"0800014",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989256,
+        "lng":-122.064722,
+        "type":null,
+        "to":["0800012","0800013","0800015"]
+    },
+    "0800015":{
+        "id":"0800015",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989388,
+        "lng":-122.064715,
+        "type":null,
+        "to":["0800014","0800016","0800019"]
+    },
+    "0800016":{
+        "id":"0800016",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989495,
+        "lng":-122.064791,
+        "type":null,
+        "to":["0800015","0800017"]
+    },
+    "0800017":{
+        "id":"0800017",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989607,
+        "lng":-122.064877,
+        "type":null,
+        "to":["0800016","0800018"]
+    },
+    "0800018":{
+        "id":"0800018",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989714,
+        "lng":-122.064956,
+        "type":null,
+        "to":["0800017","0800001","0800083"]
+    },
+    "0800019":{
+        "id":"0800019",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989437,
+        "lng":-122.064567,
+        "type":null,
+        "to":["0800015","0800020"]
+    },
+    "0800020":{
+        "id":"0800020",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989477,
+        "lng":-122.064430,
+        "type":null,
+        "to":["0800019","0800021","0800023"]
+    },
+    "0800021":{
+        "id":"0800021",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989529,
+        "lng":-122.064302,
+        "type":null,
+        "to":["0800020","0800022","0800023"]
+    },
+    "0800022":{
+        "id":"0800022",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989569,
+        "lng":-122.064165,
+        "type":null,
+        "to":["0800021","0800024","0800025"]
+    },
+    "0800023":{
+        "id":"0800023",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989434,
+        "lng":-122.064211,
+        "type":null,
+        "to":["0800020","0800021","0800024"]
+    },
+    "0800024":{
+        "id":"0800024",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989400,
+        "lng":-122.064063,
+        "type":null,
+        "to":["0800022","0800023","0800045","0800046"]
+    },
+    "0800025":{
+        "id":"0800025",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989670,
+        "lng":-122.064174,
+        "type":null,
+        "to":["0800022","0800026"]
+    },
+    "0800026":{
+        "id":"0800026",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989761,
+        "lng":-122.064210,
+        "type":null,
+        "to":["0800025","0800027"]
+    },
+    "0800027":{
+        "id":"0800027",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989805,
+        "lng":-122.064201,
+        "type":null,
+        "to":["0800026","0800028"]
+    },
+    "0800028":{
+        "id":"0800028",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989861,
+        "lng":-122.064135,
+        "type":null,
+        "to":["0800027","0800029"]
+    },
+    "0800029":{
+        "id":"0800029",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989949,
+        "lng":-122.064106,
+        "type":null,
+        "to":["0800028","0800030"]
+    },
+    "0800030":{
+        "id":"0800030",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989993,
+        "lng":-122.064072,
+        "type":null,
+        "to":["0800029","0800031"]
+    },
+    "0800031":{
+        "id":"0800031",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989974,
+        "lng":-122.063992,
+        "type":null,
+        "to":["0800030","0800032"]
+    },
+    "0800032":{
+        "id":"0800032",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989980,
+        "lng":-122.063930,
+        "type":null,
+        "to":["0800031","0800033"]
+    },
+    "0800033":{
+        "id":"0800033",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990017,
+        "lng":-122.063865,
+        "type":null,
+        "to":["0800032","0800034"]
+    },
+    "0800034":{
+        "id":"0800034",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990027,
+        "lng":-122.063775,
+        "type":null,
+        "to":["0800033","0800035"]
+    },
+    "0800035":{
+        "id":"0800035",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989997,
+        "lng":-122.063688,
+        "type":null,
+        "to":["0800034","0800036","0800059"]
+    },
+    "0800036":{
+        "id":"0800036",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989950,
+        "lng":-122.063643,
+        "type":null,
+        "to":["0800035","0800037"]
+    },
+    "0800037":{
+        "id":"0800037",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989899,
+        "lng":-122.063620,
+        "type":null,
+        "to":["0800036","0800038"]
+    },
+    "0800038":{
+        "id":"0800038",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989833,
+        "lng":-122.063608,
+        "type":null,
+        "to":["0800037","0800039"]
+    },
+    "0800039":{
+        "id":"0800039",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989758,
+        "lng":-122.063607,
+        "type":null,
+        "to":["0800038","0800040"]
+    },
+    "0800040":{
+        "id":"0800040",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989673,
+        "lng":-122.063607,
+        "type":null,
+        "to":["0800039","0800041"]
+    },
+    "0800041":{
+        "id":"0800041",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989596,
+        "lng":-122.063610,
+        "type":null,
+        "to":["0800040","0800042"]
+    },
+    "0800042":{
+        "id":"0800042",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989500,
+        "lng":-122.063617,
+        "type":null,
+        "to":["0800041","0800043"]
+    },
+    "0800043":{
+        "id":"0800043",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989411,
+        "lng":-122.063611,
+        "type":null,
+        "to":["0800042","0800044","0800072"]
+    },
+    "0800044":{
+        "id":"0800044",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989403,
+        "lng":-122.063658,
+        "type":null,
+        "to":["0800043","0800045"]
+    },
+    "0800045":{
+        "id":"0800045",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989403,
+        "lng":-122.063833,
+        "type":null,
+        "to":["0800024","0800044"]
+    },
+    "0800046":{
+        "id":"0800046",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989274,
+        "lng":-122.064000,
+        "type":null,
+        "to":["0800024","0800047"]
+    },
+    "0800047":{
+        "id":"0800047",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989170,
+        "lng":-122.063999,
+        "type":null,
+        "to":["0800046","0800048"]
+    },
+    "0800048":{
+        "id":"0800048",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989075,
+        "lng":-122.064046,
+        "type":null,
+        "to":["0800047","0800049"]
+    },
+    "0800049":{
+        "id":"0800049",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988944,
+        "lng":-122.064209,
+        "type":null,
+        "to":["0800048","0800050"]
+    },
+    "0800050":{
+        "id":"0800050",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988901,
+        "lng":-122.064424,
+        "type":null,
+        "to":["0800049","0800051"]
+    },
+    "0800051":{
+        "id":"0800051",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988870,
+        "lng":-122.064568,
+        "type":null,
+        "to":["0800050","0800052"]
+    },
+    "0800052":{
+        "id":"0800052",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988784,
+        "lng":-122.064700,
+        "type":null,
+        "to":["0800051","0800053"]
+    },
+    "0800053":{
+        "id":"0800053",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988733,
+        "lng":-122.064805,
+        "type":null,
+        "to":["0800052","0800054"]
+    },
+    "0800054":{
+        "id":"0800054",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988686,
+        "lng":-122.064884,
+        "type":null,
+        "to":["0800053","0800055"]
+    },
+    "0800055":{
+        "id":"0800055",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988648,
+        "lng":-122.064921,
+        "type":null,
+        "to":["0800054","0800056"]
+    },
+    "0800056":{
+        "id":"0800056",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988603,
+        "lng":-122.064936,
+        "type":null,
+        "to":["0800055","0800057"]
+    },
+    "0800057":{
+        "id":"0800057",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988591,
+        "lng":-122.064810,
+        "type":null,
+        "to":["0800056","0800058"]
+    },
+    "0800058":{                     //West remote bus stop
+        "id":"0800058",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.988540,
+        "lng":-122.064772,
+        "type":null,
+        "to":["0800057"]
+    },
+    "0800059":{
+        "id":"0800059",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990098,
+        "lng":-122.063548,
+        "type":null,
+        "to":["0800035","0800060"]
+    },
+    "0800060":{
+        "id":"0800060",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990201,
+        "lng":-122.063494,
+        "type":null,
+        "to":["0800059","0800061"]
+    },
+    "0800061":{
+        "id":"0800061",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990226,
+        "lng":-122.063426,
+        "type":null,
+        "to":["0800060","0800062","0800078"]
+    },
+    "0800062":{
+        "id":"0800062",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990155,
+        "lng":-122.063386,
+        "type":null,
+        "to":["0800061","0800063"]
+    },
+    "0800063":{
+        "id":"0800063",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990114,
+        "lng":-122.063239,
+        "type":null,
+        "to":["0800062","0800064"]
+    },
+    "0800064":{
+        "id":"0800064",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989943,
+        "lng":-122.063153,
+        "type":null,
+        "to":["0800063","0800065"]
+    },
+    "0800065":{
+        "id":"0800065",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989801,
+        "lng":-122.063123,
+        "type":null,
+        "to":["0800064","0800066","0800073"]
+    },
+    "0800066":{
+        "id":"0800066",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989611,
+        "lng":-122.063081,
+        "type":null,
+        "to":["0800065","0800067"]
+    },
+    "0800067":{
+        "id":"0800067",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989455,
+        "lng":-122.063048,
+        "type":null,
+        "to":["0800066","0800068"]
+    },
+    "0800068":{
+        "id":"0800068",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989407,
+        "lng":-122.063126,
+        "type":null,
+        "to":["0800067","0800069"]
+    },
+    "0800069":{
+        "id":"0800069",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989409,
+        "lng":-122.063229,
+        "type":null,
+        "to":["0800068","0800070"]
+    },
+    "0800070":{
+        "id":"0800070",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989414,
+        "lng":-122.063323,
+        "type":null,
+        "to":["0800069","0800071"]
+    },
+    "0800071":{
+        "id":"0800071",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989363,
+        "lng":-122.063422,
+        "type":null,
+        "to":["0800070","0800072","0801000","0802000"]
+    },
+    "0800072":{
+        "id":"0800072",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989324,
+        "lng":-122.063505,
+        "type":null,
+        "to":["0800043","0800071"]
+    },
+    "0800073":{
+        "id":"0800073",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989763,
+        "lng":-122.063025,
+        "type":null,
+        "to":["0800065","0800074","0800075"]
+    },
+    "0800074":{
+        "id":"0800074",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989775,
+        "lng":-122.062908,
+        "type":null,
+        "to":["0800073","0803000"]
+    },
+    "0800075":{
+        "id":"0800075",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989848,
+        "lng":-122.063017,
+        "type":null,
+        "to":["0800073","0800076"]
+    },
+    "0800076":{
+        "id":"0800076",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989926,
+        "lng":-122.063006,
+        "type":null,
+        "to":["0800075","0800077"]
+    },
+    "0800077":{
+        "id":"0800077",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989945,
+        "lng":-122.062928,
+        "type":null,
+        "to":["0800076","0804000"]
+    },
+    "0800078":{
+        "id":"0800078",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990288,
+        "lng":-122.063580,
+        "type":null,
+        "to":["0800061","0800079"]
+    },
+    "0800079":{
+        "id":"0800079",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990284,
+        "lng":-122.063816,
+        "type":null,
+        "to":["0800078","0800080"]
+    },
+    "0800080":{
+        "id":"0800080",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990235,
+        "lng":-122.064018,
+        "type":null,
+        "to":["0800079","0800081"]
+    },
+    "0800081":{
+        "id":"0800081",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990148,
+        "lng":-122.064250,
+        "type":null,
+        "to":["0800080","0800082"]
+    },
+    "0800082":{
+        "id":"0800082",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.990040,
+        "lng":-122.064486,
+        "type":null,
+        "to":["0800081","0800083"]
+    },
+    "0800083":{
+        "id":"0800083",
+        "name":null,
+        "areas":"Oakes",
+        "lat":36.989827,
+        "lng":-122.064809,
+        "type":null,
+        "to":["0800018","0800082"]
+    },
+//PORTER NODES ----------------------------------------------------------------------------------------------------------------  
+"0901000":{
+        "id":"0901000",
+        "name":"Porter/Kresge Dining Hall",
+        "areas":"Porter",
+        "lat":36.994276,
+        "lng":-122.065903,
+        "type":"Dining Hall",
+        "to":["0900039"]
+    },
+    "0902000":{
+        "id":"0902000",
+        "name":"Porter/Kresge Housing & Residential Office",
+        "areas":"Porter",
+        "lat":36.996563,
+        "lng":-122.065731,
+        "type":"Student Services",
+        "to":["0900059"]
+    },
+    "0903000":{
+        "id":"0903000",
+        "name":"Hitchcock Lounge",
+        "areas":"Porter",
+        "lat":36.994521,
+        "lng":-122.065742,
+        "type":"Other",
+        "to":["0900039"]
+    },
+    "0904000":{
+        "id":"0901000",
+        "name":"Bowls by Cafe Brazil",
+        "areas":"Porter",
+        "lat":36.994276,
+        "lng":-122.065903,
+        "type":"Dining Hall",
+        "to":["0900024","0900036"]
+    },
+    "0905000":{
+        "id":"0905000",
+        "name":"Sesnon Art Gallery",
+        "areas":"Porter",
+        "lat":36.994006,
+        "lng":-122.065178,
+        "type":"Other",
+        "to":["0900019","0900045"]
+    },
+    "0906000":{
+        "id":"0906000",
+        "name":"Porter Computer Lab",
+        "areas":"Porter",
+        "lat":36.994272,
+        "lng":-122.065199,
+        "type":"Academic",
+        "to":["0900046"]
+    },
+    "0907000":{
+        "id":"0907000",
+        "name":"Student Activities Office",
+        "areas":"Porter",
+        "lat":36.994062,
+        "lng":-122.065348,
+        "type":"Student Services",
+        "to":["0900038","0900046"]
+    },
+    "0900001":{
+        "id":"0900001",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.992921,
+        "lng":-122.065069,
+        "type":null,
+        "to":["0900002","0900005"]
+        },
+    "0900002":{
+        "id":"0900002",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.992996,
+        "lng":-122.065053,
+        "type":null,
+        "to":["0900001","0900003"]
+        },
+    "0900003":{
+        "id":"0900003",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993050,
+        "lng":-122.064959,
+        "type":null,
+        "to":["0900002","0900004"]
+        },
+    "0900004":{
+        "id":"0900004",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993146,
+        "lng":-122.064795,
+        "type":null,
+        "to":["0900003","0900007","0900008","0900031"]
+        },
+    "0900005":{
+        "id":"0900005",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.992940,
+        "lng":-122.064508,
+        "type":null,
+        "to":["0100002","0900001","0900006"]
+        },
+    "0900006":{
+        "id":"0900006",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.992996,
+        "lng":-122.064556,
+        "type":null,
+        "to":["0900005","0900007"]
+        },
+    "0900007":{
+        "id":"0900007",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993045,
+        "lng":-122.064682,
+        "type":null,
+        "to":["0900004","0900006"]
+        },
+    "0900008":{
+        "id":"0900008",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993272,
+        "lng":-122.064843,
+        "type":null,
+        "to":["0900004","0900009","0900026","0900031"]
+        },
+    "0900009":{
+        "id":"0900009",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993360,
+        "lng":-122.064897,
+        "type":null,
+        "to":["0900008","0900010","0900018","0900026"]
+        },
+    "0900010":{
+        "id":"0900010",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993494,
+        "lng":-122.064927,
+        "type":null,
+        "to":["0900009","0900011","0900018"]
+        },
+    "0900011":{
+        "id":"0900011",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993629,
+        "lng":-122.064977,
+        "type":null,
+        "to":["0900010","0900012","0900019"]
+        },
+    "0900012":{
+        "id":"0900012",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993878,
+        "lng":-122.064926,
+        "type":null,
+        "to":["0900011","0900013"]
+        },
+    "0900013":{
+        "id":"0900013",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994199,
+        "lng":-122.064857,
+        "type":null,
+        "to":["0900012","0900014"]
+        },
+    "0900014":{
+        "id":"0900014",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994378,
+        "lng":-122.064862,
+        "type":null,
+        "to":["0900013","0900015"]
+        },
+    "0900015":{
+        "id":"0900015",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994394,
+        "lng":-122.065085,
+        "type":null,
+        "to":["0900014","0900016"]
+        },
+    "0900016":{
+        "id":"0900016",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994413,
+        "lng":-122.065348,
+        "type":null,
+        "to":["0900015","0900017","0900037","0900038"]
+        },
+    "0900017":{
+        "id":"0900017",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994471,
+        "lng":-122.065396,
+        "type":null,
+        "to":["0900016","0900037","0900040"]
+        },
+    "0900018":{
+        "id":"0900018",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993434,
+        "lng":-122.064991,
+        "type":null,
+        "to":["0900009","0900010","0900019"]
+        },
+    "0900019":{
+        "id":"0900019",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993643,
+        "lng":-122.065116,
+        "type":null,
+        "to":["0900018","0900011","0900020","0900045","0905000"]
+        },
+    "0900020":{
+        "id":"0900020",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993808,
+        "lng":-122.065368,
+        "type":null,
+        "to":["0900019","0900021","0900045"]
+        },
+    "0900021":{
+        "id":"0900021",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993842,
+        "lng":-122.065564,
+        "type":null,
+        "to":["0900020","0900022"]
+        },
+    "0900022":{
+        "id":"0900022",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993838,
+        "lng":-122.065723,
+        "type":null,
+        "to":["0900021","0900023"]
+        },
+    "0900023":{
+        "id":"0900023",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993752,
+        "lng":-122.065881,
+        "type":null,
+        "to":["0900022","0900024","0900025","0900032"]
+        },
+    "0900024":{
+        "id":"0900024",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994033,
+        "lng":-122.065833,
+        "type":null,
+        "to":["0900023","0900032","0900036","0904000"]
+        },
+    "0900025":{
+        "id":"0900025",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993500,
+        "lng":-122.065962,
+        "type":null,
+        "to":["0900023","0900026","0900027"]
+        },
+    "0900026":{
+        "id":"0900026",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993208,
+        "lng":-122.065165,
+        "type":null,
+        "to":["0900008","0900009","0900025","0900030","0900031"]
+        },
+    "0900027":{
+        "id":"0900027",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993215,
+        "lng":-122.066177,
+        "type":null,
+        "to":["0900025","0900028","0900029"]
+        },
+    "0900028":{
+        "id":"0900028",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993174,
+        "lng":-122.066257,
+        "type":null,
+        "to":["0900027","0900029"]
+        },
+    "0900029":{
+        "id":"0900029",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993157,
+        "lng":-122.066059,
+        "type":null,
+        "to":["0900027","0900028","0900030"]
+        },
+    "0900030":{
+        "id":"0900030",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993193,
+        "lng":-122.065828,
+        "type":null,
+        "to":["0900029","0900026","0900031"]
+        },
+    "0900031":{
+        "id":"0900031",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993189,
+        "lng":-122.065321,
+        "type":null,
+        "to":["0900004","0900008","0900026","0900030"]
+        },
+    "0900032":{
+        "id":"0900032",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993871,
+        "lng":-122.066067,
+        "type":null,
+        "to":["0900023","0900024","0900033"]
+        },
+    "0900033":{
+        "id":"0900033",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993995,
+        "lng":-122.066290,
+        "type":null,
+        "to":["0900032","0900034"]
+        },
+    "0900034":{
+        "id":"0900034",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994175,
+        "lng":-122.066432,
+        "type":null,
+        "to":["0900033","0900035"]
+        },
+    "0900035":{
+        "id":"0900035",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994379,
+        "lng":-122.066982,
+        "type":null,
+        "to":["0900034"]
+        },
+    "0900036":{
+        "id":"0900036",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994265,
+        "lng":-122.065587,
+        "type":null,
+        "to":["0900024","0900037","0900038","0900039","0904000"]
+        },
+    "0900037":{
+        "id":"0900037",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994434,
+        "lng":-122.065568,
+        "type":null,
+        "to":["0900016","0900017","0900036","0900039"]
+        },
+    "0900038":{
+        "id":"0900038",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994258,
+        "lng":-122.065396,
+        "type":null,
+        "to":["0900016","0900036","0900046","0907000"]
+        },
+    "0900039":{
+        "id":"0900039",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994442,
+        "lng":-122.065742,
+        "type":null,
+        "to":["0900036","0900037","0901000","0903000"]
+        },
+    "0900040":{
+        "id":"0900040",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994594,
+        "lng":-122.065358,
+        "type":null,
+        "to":["0900017","0900041"]
+        },
+    "0900041":{
+        "id":"0900041",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994905,
+        "lng":-122.065353,
+        "type":null,
+        "to":["0900040","0900042"]
+        },
+    "0900042":{
+        "id":"0900042",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995171,
+        "lng":-122.065299,
+        "type":null,
+        "to":["0900041","0900043"]
+        },
+    "0900043":{
+        "id":"0900043",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995342,
+        "lng":-122.065245,
+        "type":null,
+        "to":["0900042","0900044","0900069"]
+        },
+    "0900044":{
+        "id":"0900044",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995450,
+        "lng":-122.065306,
+        "type":null,
+        "to":["0900043","0900047"]
+        },
+    "0900045":{
+        "id":"0900045",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.993981,
+        "lng":-122.065312,
+        "type":null,
+        "to":["0900019","0900020","0900046","0905000"]
+        },
+    "0900046":{
+        "id":"0900046",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.994191,
+        "lng":-122.065264,
+        "type":null,
+        "to":["0900045","0900038","0906000","0907000"]
+        },
+    "0900047":{
+        "id":"0900047",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995520,
+        "lng":-122.065216,
+        "type":null,
+        "to":["0900044","0900048"]
+        },
+    "0900048":{
+        "id":"0900048",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995707,
+        "lng":-122.065146,
+        "type":null,
+        "to":["0900047","0900049"]
+        },
+    "0900049":{
+        "id":"0900049",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995926,
+        "lng":-122.065143,
+        "type":null,
+        "to":["0900048","0900050"]
+        },
+    "0900050":{
+        "id":"0900050",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996148,
+        "lng":-122.065138,
+        "type":null,
+        "to":["0900049","0900051"]
+        },
+    "0900051":{
+        "id":"0900051",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996336,
+        "lng":-122.065147,
+        "type":null,
+        "to":["0900050","0900052"]
+        },
+    "0900052":{
+        "id":"0900052",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996358,
+        "lng":-122.065303,
+        "type":null,
+        "to":["0900051","0900053"]
+        },
+    "0900053":{                 //Crosswalk northwest of apartments on apartment side
+        "id":"0900053",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996372,
+        "lng":-122.065425,
+        "type":null,
+        "to":["0900052","0900054","0900061"]
+        },
+    "0900054":{
+        "id":"0900054",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996381,
+        "lng":-122.065507,
+        "type":null,
+        "to":["0900053","0900055","0900076"]
+        },
+    "0900055":{
+        "id":"0900055",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996492,
+        "lng":-122.065492,
+        "type":null,
+        "to":["0900054","0900056"]
+        },
+    "0900056":{
+        "id":"0900056",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996591,
+        "lng":-122.065507,
+        "type":null,
+        "to":["0900055","0900057"]
+        },
+    "0900057":{
+        "id":"0900057",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996662,
+        "lng":-122.065518,
+        "type":null,
+        "to":["0900056","0900058"]
+        },
+    "0900058":{
+        "id":"0900058",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996644,
+        "lng":-122.065681,
+        "type":null,
+        "to":["0900057","0900059"]
+        },
+    "0900059":{
+        "id":"0900059",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996617,
+        "lng":-122.065783,
+        "type":null,
+        "to":["0902000","0900058","0900060"]
+        },
+    "0900060":{
+        "id":"0900060",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996566,
+        "lng":-122.065891,
+        "type":null,
+        "to":["0900059"]
+        },
+    "0900061":{
+        "id":"0900061",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996327,
+        "lng":-122.065437,
+        "type":null,
+        "to":["0900053","0900062"]
+        },
+    "0900062":{
+        "id":"0900062",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996269,
+        "lng":-122.065445,
+        "type":null,
+        "to":["0900061","0900063"]
+        },
+    "0900063":{
+        "id":"0900063",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996200,
+        "lng":-122.065452,
+        "type":null,
+        "to":["0900062","0900064"]
+        },
+    "0900064":{
+        "id":"0900064",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996083,
+        "lng":-122.065465,
+        "type":null,
+        "to":["0900063","0900065"]
+        },
+    "0900065":{
+        "id":"0900065",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995975,
+        "lng":-122.065475,
+        "type":null,
+        "to":["0900064","0900066"]
+        },
+    "0900066":{
+        "id":"0900066",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995902,
+        "lng":-122.065467,
+        "type":null,
+        "to":["0900065","0900067"]
+        },
+    "0900067":{
+        "id":"0900067",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995793,
+        "lng":-122.065453,
+        "type":null,
+        "to":["0900066","0900068"]
+        },
+    "0900068":{
+        "id":"0900068",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995677,
+        "lng":-122.065443,
+        "type":null,
+        "to":["0900067","0900069","0900070"]
+        },
+    "0900069":{
+        "id":"0900069",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995561,
+        "lng":-122.065415,
+        "type":null,
+        "to":["0900043","0900068"]
+        },
+    "0900070":{
+        "id":"0900070",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995727,
+        "lng":-122.065526,
+        "type":null,
+        "to":["0900068","0900071"]
+        },
+    "0900071":{
+        "id":"0900071",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995840,
+        "lng":-122.065550,
+        "type":null,
+        "to":["0900070","0900072"]
+        },
+    "0900072":{
+        "id":"0900072",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.995952,
+        "lng":-122.065563,
+        "type":null,
+        "to":["0900071","0900073"]
+        },
+    "0900073":{
+        "id":"0900073",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996051,
+        "lng":-122.065556,
+        "type":null,
+        "to":["0900072","0900074"]
+        },
+    "0900074":{
+        "id":"0900074",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996167,
+        "lng":-122.065540,
+        "type":null,
+        "to":["0900073","0900075"]
+        },
+    "0900075":{
+        "id":"0900075",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996265,
+        "lng":-122.065525,
+        "type":null,
+        "to":["0900074","0900076"]
+        },
+    "0900076":{
+        "id":"0900076",
+        "name":null,
+        "areas":"Porter",
+        "lat":36.996321,
+        "lng":-122.065517,
+        "type":null,
+        "to":["0900054","0900075"]
+        },
+//STEVENSON NODES -------------------------------------------------------------------------------------------------------------  
+"1000000":{                
+    "id":"1000000",
+    "name":"Stevenson College",
+    "areas":"Stevenson",
+    "lat":36.997448,
+    "lng":-122.052007,
+    "type":"Residential",
+    "to":["1000001","1000061"]
+  },
+"1000001":{                
+    "id":"1000001",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997448,
+    "lng":-122.052156,
+    "type":null,
+    "to":["1000000","1000002","1000009","1000084"]
+  },
+"1000002":{                
+    "id":"1000002",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997375,
+    "lng":-122.052151,
+    "type":null,
+    "to":["1000001","1000003","1000068"]
+  },
+"1000003":{                
+    "id":"1000003",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99726,
+    "lng":-122.052145,
+    "type":null,
+    "to":["1007000","1000002","1000004","1000008"]
+  },
+"1000004":{                
+    "id":"1000004",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997297,
+    "lng":-122.052247,
+    "type":null,
+    "to":["1001000","1000003","1000005"]
+  },
+"1000005":{                
+    "id":"1000005",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997292,
+    "lng":-122.052483,
+    "type":null,
+    "to":["1000004","1000006"]
+  },
+"1000006":{                
+    "id":"1000006",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997125,
+    "lng":-122.052478,
+    "type":null,
+    "to":["1000005","1000007"]
+  },
+"1000007":{                
+    "id":"1000007",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997129,
+    "lng":-122.052204,
+    "type":null,
+    "to":["1000006","1000008"]
+  },
+"1000008":{                
+    "id":"1000008",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997112,
+    "lng":-122.052145,
+    "type":null,
+    "to":["1000003","1000007","1000026"]
+  },
+"1000009":{                
+    "id":"1000009",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997442,
+    "lng":-122.052282,
+    "type":null,
+    "to":["1000001","1000010","1000017"]
+  },
+"1000010":{                
+    "id":"1000010",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997476,
+    "lng":-122.052336,
+    "type":null,
+    "to":["1000009","1000011"]
+  },
+"1000011":{                
+    "id":"1000011",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997523,
+    "lng":-122.052355,
+    "type":null,
+    "to":["1000010","1000012"]
+  },
+"1000012":{                
+    "id":"1000012",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997622,
+    "lng":-122.052371,
+    "type":null,
+    "to":["1000011","1000013"]
+  },
+"1000013":{                
+    "id":"1000013",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997673,
+    "lng":-122.052392,
+    "type":null,
+    "to":["1000012","1000014","1000105","1000114","1000115"]
+  },
+"1000014":{                
+    "id":"1000014",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997703,
+    "lng":-122.052425,
+    "type":null,
+    "to":["1000013","1000015"]
+  },
+"1000015":{                
+    "id":"1000015",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997712,
+    "lng":-122.052489,
+    "type":null,
+    "to":["1000014","1000016"]
+  },
+"1000016":{                
+    "id":"1000016",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997879,
+    "lng":-122.052537,
+    "type":null,
+    "to":["1000015","1008000"]
+  },
+"1008000":{                
+    "id":"1008000",
+    "name":"Hahn Art Faciliy",
+    "areas":"Stevenson",
+    "lat":36.997895,
+    "lng":-122.052708,
+    "type":"Other",
+    "to":["1000016"]
+  },
+"1000017":{                
+    "id":"1000017",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997436,
+    "lng":-122.052367,
+    "type":null,
+    "to":["1000009","1000018","1000102"]
+  },
+"1000018":{                
+    "id":"1000018",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997423,
+    "lng":-122.052502,
+    "type":null,
+    "to":["1000017","1000019","1000102"]
+  },
+"1000019":{                
+    "id":"1000019",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99741,
+    "lng":-122.052625,
+    "type":null,
+    "to":["1000018","1000020","1000115"]
+  },
+"1000020":{                
+    "id":"1000020",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997406,
+    "lng":-122.052786,
+    "type":null,
+    "to":["1000019","1000021"]
+  },
+"1000021":{                
+    "id":"1000021",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997449,
+    "lng":-122.052904,
+    "type":null,
+    "to":["1000020","1000022"]
+  },
+"1000022":{                
+    "id":"1000022",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997461,
+    "lng":-122.052947,
+    "type":null,
+    "to":["1000021","1000023","1000118"]
+  },
+"1000023":{                
+    "id":"1000023",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997364,
+    "lng":-122.052875,
+    "type":null,
+    "to":["1000022","1000024"]
+  },
+"1000024":{                
+    "id":"1000024",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997206,
+    "lng":-122.052907,
+    "type":null,
+    "to":["1000023","1000025"]
+  },
+"1000025":{                
+    "id":"1000025",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997093,
+    "lng":-122.052889,
+    "type":null,
+    "to":["1004000","1000024"]
+  },
+"1004000":{                
+    "id":"1004000",
+    "name":"UCSC Catering",
+    "areas":"Stevenson",
+    "lat":36.996975,
+    "lng":-122.052826,
+    "type":"Other",
+    "to":["0400096","1000025"]
+  },
+"1007000":{                
+    "id":"1007000",
+    "name":"Cultural Arts & Diversity",
+    "areas":"Stevenson",
+    "lat":36.997267,
+    "lng":-122.052123,
+    "type":"Student Services",
+    "to":["1000003"]
+  },
+"1000026":{                
+    "id":"1000026",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997107,
+    "lng":-122.052038,
+    "type":null,
+    "to":["1000008","1000027"]
+  },
+"1000027":{                
+    "id":"1000027",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997112,
+    "lng":-122.051904,
+    "type":null,
+    "to":["1000026","1000028"]
+  },
+"1000028":{                
+    "id":"1000028",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997104,
+    "lng":-122.051851,
+    "type":null,
+    "to":["1006000","1000027","1000029"]
+  },
+"1006000":{                
+    "id":"1006000",
+    "name":"Silverman Conference Room",
+    "areas":"Stevenson",
+    "lat":36.997084,
+    "lng":-122.051851,
+    "type":"Activities",
+    "to":["1000028","1000132"]
+  },
+"1000029":{                
+    "id":"1000029",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997107,
+    "lng":-122.051824,
+    "type":null,
+    "to":["1000028","1000030","1000068"]
+  },
+"1000030":{                
+    "id":"1000030",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997112,
+    "lng":-122.051754,
+    "type":null,
+    "to":["1000029","1000031"]
+  },
+"1000031":{                
+    "id":"1000031",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997159,
+    "lng":-122.051657,
+    "type":null,
+    "to":["1000030","1000032","1000037"]
+  },
+"1000032":{                
+    "id":"1000032",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997065,
+    "lng":-122.051615,
+    "type":null,
+    "to":["1000031","1000033"]
+  },
+"1000033":{                
+    "id":"1000033",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996935,
+    "lng":-122.0516,
+    "type":null,
+    "to":["1000032","1000034"]
+  },
+"1000034":{                
+    "id":"1000034",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996935,
+    "lng":-122.0516,
+    "type":null,
+    "to":["1000033","1000035"]
+  },
+"1000035":{                
+    "id":"1000035",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996935,
+    "lng":-122.051622,
+    "type":null,
+    "to":["1005000","1000034","1000036"]
+  },
+"1005000":{                
+    "id":"1005000",
+    "name":"Wagstaff Lounge",
+    "areas":"Stevenson",
+    "lat":36.996869,
+    "lng":-122.051667,
+    "type":"Other",
+    "to":["1000035","1000036"]
+  },
+"1000036":{                
+    "id":"1000036",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996798,
+    "lng":-122.051606,
+    "type":null,
+    "to":["1000035","1000125","1000126","1005000"]
+  },
+"1000037":{                
+    "id":"1000037",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997194,
+    "lng":-122.051602,
+    "type":null,
+    "to":["1000031","1000038","1000064"]
+  },
+"1000038":{                
+    "id":"1000038",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997176,
+    "lng":-122.051588,
+    "type":null,
+    "to":["1000037","1000039"]
+  },
+"1000039":{                
+    "id":"1000039",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997197,
+    "lng":-122.051561,
+    "type":null,
+    "to":["1003000","1000038"]
+  },
+"1003000":{                
+    "id":"1003000",
+    "name":"Stevenson Library",
+    "areas":"Stevenson",
+    "lat":36.997105,
+    "lng":-122.051450,
+    "type":"Academic",
+    "to":["1000039","1000040"]
+  },
+"1000040":{                
+    "id":"1000040",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997047,
+    "lng":-122.051405,
+    "type":null,
+    "to":["1003000","1000041"]
+  },
+"1000041":{                
+    "id":"1000041",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996987,
+    "lng":-122.051327,
+    "type":null,
+    "to":["1000040","1000042"]
+  },
+"1000042":{                
+    "id":"1000042",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997048,
+    "lng":-122.051266,
+    "type":null,
+    "to":["1000041","1000043"]
+  },
+"1000043":{                
+    "id":"1000043",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997112,
+    "lng":-122.051326,
+    "type":null,
+    "to":["1000042","1000044"]
+  },
+"1000044":{                
+    "id":"1000044",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997211,
+    "lng":-122.051336,
+    "type":null,
+    "to":["1000043","1000045","1000064"]
+  },
+"1000045":{                
+    "id":"1000045",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99722,
+    "lng":-122.051256,
+    "type":null,
+    "to":["1000044","1000046","1000050","1000101"]
+  },
+"1000046":{                
+    "id":"1000046",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997241,
+    "lng":-122.051347,
+    "type":null,
+    "to":["1000045","1000047"]
+  },
+"1000047":{                //Casa Cuarta
+    "id":"1000047",
+    "name":"Casa Cuarta",
+    "areas":"Stevenson",
+    "lat":36.997301,
+    "lng":-122.051347,
+    "type":"Residential",
+    "to":["1000046","1000048","1000054"]
+  },
+"1000048":{                
+    "id":"1000048",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997302,
+    "lng":-122.051266,
+    "type":null,
+    "to":["1000047","1000049"]
+  },
+"1000049":{                
+    "id":"1000049",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997319,
+    "lng":-122.05126,
+    "type":null,
+    "to":["1000048","1000050"]
+  },
+"1000050":{                
+    "id":"1000050",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99733,
+    "lng":-122.051219,
+    "type":null,
+    "to":["1000045","1000049","1000051"]
+  },
+"1000051":{                
+    "id":"1000051",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997364,
+    "lng":-122.051209,
+    "type":null,
+    "to":["1000050","1000052","1000096"]
+  },
+"1000052":{                
+    "id":"1000052",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997428,
+    "lng":-122.051225,
+    "type":null,
+    "to":["1000051","1000053"]
+  },
+"1000053":{                
+    "id":"1000053",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997508,
+    "lng":-122.051295,
+    "type":null,
+    "to":["1000052","1000054"]
+  },
+"1000054":{           //Center quad     
+    "id":"1000054",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997585,
+    "lng":-122.051407,
+    "type":null,
+    "to":["1000047","1000053","1000055","1000056","1000057","1000058","1000072"]
+  },
+"1000055":{        //Casa Segunda 
+    "id":"1000055",
+    "name":"Casa Segunda",
+    "areas":"Stevenson",
+    "lat":36.997801,
+    "lng":-122.051255,
+    "type":"Residential",
+    "to":["1000054","1000086","1000090"]
+  },
+"1000056":{      //Casa Tercera    
+    "id":"1000056",
+    "name":"Casa Tercera",
+    "areas":"Stevenson",
+    "lat":36.997557,
+    "lng":-122.051051,
+    "type":"Residential",
+    "to":["1000054","1000091","1000097"]
+  },
+"1000057":{     //Casa Primera           
+    "id":"1000057",
+    "name":"Casa Primera",
+    "areas":"Stevenson",
+    "lat":36.997609,
+    "lng":-122.051647,
+    "type":"Residential",
+    "to":["1000054","1000076","1000080"]
+  },
+"1000058":{                
+    "id":"1000058",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997491,
+    "lng":-122.051497,
+    "type":null,
+    "to":["1000054","1000059","1000062"]
+  },
+"1000059":{                
+    "id":"1000059",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997469,
+    "lng":-122.051599,
+    "type":null,
+    "to":["1000058","1000060"]
+  },
+"1000060":{                
+    "id":"1000060",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99745,
+    "lng":-122.0517,
+    "type":null,
+    "to":["1000059","1000061","1000063","1000069"]
+  },
+"1000061":{                
+    "id":"1000061",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997447,
+    "lng":-122.051802,
+    "type":null,
+    "to":["1000000","1000060","1000067","1000071"]
+  },
+"1000062":{                
+    "id":"1000062",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997451,
+    "lng":-122.051534,
+    "type":null,
+    "to":["1000058","1000063"]
+  },
+"1000063":{                
+    "id":"1000063",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997301,
+    "lng":-122.051577,
+    "type":null,
+    "to":["1000060","1000062","1000064","1000065"]
+  },
+"1000064":{                
+    "id":"1000064",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997237,
+    "lng":-122.051577,
+    "type":null,
+    "to":["1000037","1000044","1000063"]
+  },
+"1000065":{                
+    "id":"1000065",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997301,
+    "lng":-122.051679,
+    "type":null,
+    "to":["1000063","1000066"]
+  },
+"1000066":{                
+    "id":"1000066",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997391,
+    "lng":-122.051694,
+    "type":null,
+    "to":["1000065","1000067"]
+  },
+"1000067":{                
+    "id":"1000067",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997391,
+    "lng":-122.051795,
+    "type":null,
+    "to":["1000061","1000066","1000068"]
+  },
+"1000068":{                
+    "id":"1000068",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997382,
+    "lng":-122.051851,
+    "type":null,
+    "to":["1000002","1000029","1000067"]
+  },
+"1000069":{                
+    "id":"1000069",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997504,
+    "lng":-122.051811,
+    "type":null,
+    "to":["1000060","1000070"]
+  },
+"1000070":{                
+    "id":"1000070",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997539,
+    "lng":-122.051853,
+    "type":null,
+    "to":["1000069","1000071","1000081","1000082"]
+  },
+"1000071":{                
+    "id":"1000071",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997462,
+    "lng":-122.051832,
+    "type":null,
+    "to":["1000061","1000070"]
+  },
+"1000072":{                
+    "id":"1000072",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997767,
+    "lng":-122.0515,
+    "type":null,
+    "to":["1000054","1000073"]
+  },
+"1000073":{                
+    "id":"1000073",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997818,
+    "lng":-122.051559,
+    "type":null,
+    "to":["1000072","1000074"]
+  },
+"1000074":{                
+    "id":"1000074",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997859,
+    "lng":-122.051695,
+    "type":null,
+    "to":["1000073","1000075","1000107"]
+  },
+"1000075":{                
+    "id":"1000075",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997829,
+    "lng":-122.051738,
+    "type":null,
+    "to":["1000074","1000076","1000077"]
+  },
+"1000076":{                
+    "id":"1000076",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997786,
+    "lng":-122.051668,
+    "type":null,
+    "to":["1000057","1000075"]
+  },
+"1000077":{                
+    "id":"1000077",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997804,
+    "lng":-122.051792,
+    "type":null,
+    "to":["1000075","1000078"]
+  },
+"1000078":{                
+    "id":"1000078",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997705,
+    "lng":-122.051829,
+    "type":null,
+    "to":["1000077","1000079","1000081"]
+  },
+"1000079":{                
+    "id":"1000079",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997667,
+    "lng":-122.051802,
+    "type":null,
+    "to":["1000078","1000080"]
+  },
+"1000080":{                
+    "id":"1000080",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997607,
+    "lng":-122.051802,
+    "type":null,
+    "to":["1000057","1000079"]
+  },
+"1000081":{                
+    "id":"1000081",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997653,
+    "lng":-122.051851,
+    "type":null,
+    "to":["1000070","1000078"]
+  },
+"1000082":{                
+    "id":"1000082",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997632,
+    "lng":-122.051943,
+    "type":null,
+    "to":["1000070","1000083","1000085","1000112"]
+  },
+"1000083":{                
+    "id":"1000083",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997602,
+    "lng":-122.052028,
+    "type":null,
+    "to":["1000082","1000084"]
+  },
+"1000084":{                
+    "id":"1000084",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997495,
+    "lng":-122.052152,
+    "type":null,
+    "to":["1000001","1000083"]
+  },
+"1000085":{                
+    "id":"1000085",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997602,
+    "lng":-122.052028,
+    "type":null,
+    "to":["1000082","1000113"]
+  },
+"1000086":{                
+    "id":"1000086",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997889,
+    "lng":-122.05112,
+    "type":null,
+    "to":["1000055","1000087"]
+  },
+"1000087":{                
+    "id":"1000087",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997953,
+    "lng":-122.051061,
+    "type":null,
+    "to":["1000086","1000088","1000106"]
+  },
+"1000088":{                
+    "id":"1000088",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.998005,
+    "lng":-122.051297,
+    "type":null,
+    "to":["1000087","1000089","1000107"]
+  },
+"1000089":{                
+    "id":"1000089",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997928,
+    "lng":-122.051318,
+    "type":null,
+    "to":["1000088","1000090"]
+  },
+"1000090":{                
+    "id":"1000090",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997911,
+    "lng":-122.051286,
+    "type":null,
+    "to":["1000055","1000089"]
+  },
+"1000091":{                
+    "id":"1000091",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997615,
+    "lng":-122.050995,
+    "type":null,
+    "to":["1000056","1000092"]
+  },
+"1000092":{                
+    "id":"1000092",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99769,
+    "lng":-122.050767,
+    "type":null,
+    "to":["1000091","1000093"]
+  },
+"1000093":{                
+    "id":"1000093",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99763,
+    "lng":-122.050745,
+    "type":null,
+    "to":["1000092","1000094","1000106"]
+  },
+"1000094":{                
+    "id":"1000094",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997454,
+    "lng":-122.050756,
+    "type":null,
+    "to":["1000093","1000095"]
+  },
+"1000095":{                
+    "id":"1000095",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997377,
+    "lng":-122.050788,
+    "type":null,
+    "to":["1000094","1000096","1000098"]
+  },
+"1000096":{                
+    "id":"1000096",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997411,
+    "lng":-122.051031,
+    "type":null,
+    "to":["1000051","1000095","1000097"]
+  },
+"1000097":{                
+    "id":"1000097",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997472,
+    "lng":-122.051024,
+    "type":null,
+    "to":["1000056","1000096"]
+  },
+"1000098":{                
+    "id":"1000098",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997149,
+    "lng":-122.050917,
+    "type":null,
+    "to":["1000095","1000099"]
+  },
+"1000099":{                
+    "id":"1000099",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997149,
+    "lng":-122.050917,
+    "type":null,
+    "to":["1000098","1000100"]
+  },
+"1000100":{                
+    "id":"1000100",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997043,
+    "lng":-122.051046,
+    "type":null,
+    "to":["1000099","1000101","1000125"]
+  },
+"1000101":{                
+    "id":"1000101",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997133,
+    "lng":-122.051137,
+    "type":null,
+    "to":["1000045","1000100"]
+  },
+"1000102":{                
+    "id":"1000102",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997473,
+    "lng":-122.052416,
+    "type":null,
+    "to":["1000017","1000018","1000103"]
+  },
+"1000103":{                
+    "id":"1000103",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997528,
+    "lng":-122.052459,
+    "type":null,
+    "to":["1000102","1000104"]
+  },
+"1000104":{                
+    "id":"1000104",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99755,
+    "lng":-122.052539,
+    "type":null,
+    "to":["1000103","1000105"]
+  },
+"1000105":{                
+    "id":"1000105",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997648,
+    "lng":-122.052545,
+    "type":null,
+    "to":["1000013","1000104"]
+  },
+"1000106":{                
+    "id":"1000106",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997835,
+    "lng":-122.050831,
+    "type":null,
+    "to":["1000087","1000093"]
+  },
+"1000107":{                
+    "id":"1000107",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.998002,
+    "lng":-122.0517,
+    "type":null,
+    "to":["1000074","1000088","1000108"]
+  },
+"1000108":{                
+    "id":"1000108",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.998001,
+    "lng":-122.05179,
+    "type":null,
+    "to":["1000107","1000109"]
+  },
+"1000109":{                
+    "id":"1000108",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99795,
+    "lng":-122.051946,
+    "type":null,
+    "to":["1000108","1000110"]
+  },
+"1000110":{                
+    "id":"1000110",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997821,
+    "lng":-122.052037,
+    "type":null,
+    "to":["1000109","1000111","1000114"]
+  },
+"1000111":{                
+    "id":"1000111",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997783,
+    "lng":-122.051967,
+    "type":null,
+    "to":["1000110","1000112"]
+  },
+"1000112":{                
+    "id":"1000112",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997714,
+    "lng":-122.051925,
+    "type":null,
+    "to":["1000082","1000111"]
+  },
+"1000113":{                
+    "id":"1000113",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99765,
+    "lng":-122.052157,
+    "type":null,
+    "to":["1000085","1000114"]
+  },
+"1000114":{                
+    "id":"1000114",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997761,
+    "lng":-122.052157,
+    "type":null,
+    "to":["1000013","1000110","1000113"]
+  },
+"1000115":{                
+    "id":"1000115",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997641,
+    "lng":-122.052699,
+    "type":null,
+    "to":["1000013","1000019","1000116"]
+  },
+"1000116":{                
+    "id":"1000116",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997662,
+    "lng":-122.053022,
+    "type":null,
+    "to":["1000115","1000117"]
+  },
+"1000117":{                
+    "id":"1000117",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997764,
+    "lng":-122.053278,
+    "type":null,
+    "to":["0400144","1000116","1000120"]
+  },
+"1000118":{                
+    "id":"1000118",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997465,
+    "lng":-122.053026,
+    "type":null,
+    "to":["1000022","1000119"]
+  },
+"1000119":{                
+    "id":"1000119",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997432,
+    "lng":-122.053057,
+    "type":null,
+    "to":["0400142","1000118"]
+  },
+"1000120":{                
+    "id":"1000120",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99784,
+    "lng":-122.053282,
+    "type":null,
+    "to":["1000117","1000121"]
+  },
+"1000121":{                
+    "id":"1000121",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.9979,
+    "lng":-122.053443,
+    "type":null,
+    "to":["1000120","1000122"]
+  },
+"1000122":{                
+    "id":"1000122",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997878,
+    "lng":-122.053588,
+    "type":null,
+    "to":["1000121","1000123"]
+  },
+"1000123":{                
+    "id":"1000123",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997823,
+    "lng":-122.05361,
+    "type":null,
+    "to":["1000122","1000124"]
+  },
+"1000124":{                
+    "id":"1000124",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.997703,
+    "lng":-122.05359,
+    "type":null,
+    "to":["0400144","1000123"]
+  },
+"1000125":{                
+    "id":"1000125",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996812,
+    "lng":-122.051483,
+    "type":null,
+    "to":["1000036","1000100"]
+  },
+"1000126":{                
+    "id":"1000126",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996769,
+    "lng":-122.0518,
+    "type":null,
+    "to":["1000036","1000127","1000132","1000142"]
+  },
+"1000127":{                
+    "id":"1000127",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996743,
+    "lng":-122.052248,
+    "type":null,
+    "to":["1000126","1000128","1000132"]
+  },
+"1000128":{                
+    "id":"1000128",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996722,
+    "lng":-122.052483,
+    "type":null,
+    "to":["1000127","1000129"]
+  },
+"1000129":{                
+    "id":"1000129",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996726,
+    "lng":-122.052742,
+    "type":null,
+    "to":["0400111","1000128","1000130"]
+  },
+"1000130":{                
+    "id":"1000130",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996623,
+    "lng":-122.052864,
+    "type":null,
+    "to":["1000129","1000131"]
+  },
+"1000131":{                
+    "id":"1000131",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996548,
+    "lng":-122.052957,
+    "type":null,
+    "to":["0400135","1000130"]
+  },
+"1000132":{                
+    "id":"1000132",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996962,
+    "lng":-122.051851,
+    "type":null,
+    "to":["1002000","1006000","1000126","1000127"]
+  },
+"1002000":{                
+    "id":"1002000",
+    "name":"Stevenson Event Center",
+    "areas":"Stevenson",
+    "lat":36.996954,
+    "lng":-122.052247,
+    "type":"Activities",
+    "to":["1000132"]
+  },
+"1001000":{                
+    "id":"1001000",
+    "name":"Stevenson Coffee House",
+    "areas":"Stevenson",
+    "lat":36.997197,
+    "lng":-122.052280,
+    "type":"Food To-Go",
+    "to":["1000004"]
+  },
+"1000133":{                
+    "id":"1000133",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996112,
+    "lng":-122.051905,
+    "type":null,
+    "to":["1800038","1000134"]
+  },
+"1000134":{                
+    "id":"1000134",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996168,
+    "lng":-122.051916,
+    "type":null,
+    "to":["1000133","1000134"]
+  },
+"1000135":{                
+    "id":"1000135",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.99621,
+    "lng":-122.051833,
+    "type":null,
+    "to":["1000134","1000136"]
+  },
+"1000136":{                //Center Quad
+    "id":"1000136",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996368,
+    "lng":-122.051779,
+    "type":null,
+    "to":["1000135","1000137","1000138","1000140","1000142"]
+  },
+"1000137":{                //Casa Septima
+    "id":"1000137",
+    "name":"Casa Septima",
+    "areas":"Stevenson",
+    "lat":36.99633,
+    "lng":-122.052026,
+    "type":"Residential",
+    "to":["1000136"]
+  },
+"1000138":{                
+    "id":"1000138",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996211,
+    "lng":-122.05172,
+    "type":null,
+    "to":["1000136","1000139"]
+  },
+"1000139":{                //Casa Sexta
+    "id":"1000139",
+    "name":"Casa Sexta",
+    "areas":"Stevenson",
+    "lat":36.996216,
+    "lng":-122.051553,
+    "type":"Residential",
+    "to":["1000138"]
+  },
+"1000140":{                
+    "id":"1000140",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996546,
+    "lng":-122.05172,
+    "type":null,
+    "to":["1000136","1000141","1000142"]
+  },
+"1000141":{                //Casa Quinta
+    "id":"1000141",
+    "name":"Casa Quinta",
+    "areas":"Stevenson",
+    "lat":36.996507,
+    "lng":-122.0515,
+    "type":"Residential",
+    "to":["1000140"]
+  },
+"1000142":{                
+    "id":"1000142",
+    "name":null,
+    "areas":"Stevenson",
+    "lat":36.996588,
+    "lng":-122.051741,
+    "type":null,
+    "to":["1000126","1000136","1000140","1000143"]
+  },
+"1000143":{                //Casa Octava
+    "id":"1000143",
+    "name":"Casa Octava",
+    "areas":"Stevenson",
+    "lat":36.996567,
+    "lng":-122.05194,
+    "type":"Residential",
+    "to":["1000142"]
+  },
+
+
+  //OPERS NODES --------------------------------------------------------------------------------------------
+
+"1800000":{                
+    "id":"1800000",
+    "name":"OPERS Facility Center",
+    "areas":"OPERS",
+    "lat":36.995181,
+    "lng":-122.054093,
+    "type":"Activities",
+    "to":["1800001","1800002"]
+  },
+"1800001":{                
+    "id":"1800001",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995188,
+    "lng":-122.053364,
+    "type":null,
+    "to":["1800000","1800026","1800027"]
+  },
+"1800002":{                
+    "id":"1800002",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995176,
+    "lng":-122.054784,
+    "type":null,
+    "to":["1800000","1800003"]
+  },
+"1800003":{                
+    "id":"1800003",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995315,
+    "lng":-122.054966,
+    "type":null,
+    "to":["1800002","1800004","1800042"]
+  },
+"1800004":{                
+    "id":"1800004",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995397,
+    "lng":-122.055076,
+    "type":null,
+    "to":["1800003","1800005"]
+  },
+"1800005":{                
+    "id":"1800005",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995422,
+    "lng":-122.055167,
+    "type":null,
+    "to":["1800004","1800006"]
+  },
+"1800006":{                
+    "id":"1800006",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995405,
+    "lng":-122.055253,
+    "type":null,
+    "to":["1800005","1800007"]
+  },
+"1800007":{                
+    "id":"1800007",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995322,
+    "lng":-122.055441,
+    "type":null,
+    "to":["1800006","1800008"]
+  },
+"1800008":{                
+    "id":"1800008",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994696,
+    "lng":-122.055622,
+    "type":null,
+    "to":["1800007","1800009","1800013"]
+  },
+"1800009":{                
+    "id":"1800009",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994538,
+    "lng":-122.055593,
+    "type":null,
+    "to":["1800008","1800010"]
+  },
+"1800010":{                
+    "id":"1800010",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994491,
+    "lng":-122.055566,
+    "type":null,
+    "to":["1800009","1800011"]
+  },
+"1800011":{                
+    "id":"1800011",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.99449,
+    "lng":-122.055485,
+    "type":null,
+    "to":["1800010","1800012"]
+  },
+"1800012":{                
+    "id":"1800012",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994417,
+    "lng":-122.055485,
+    "type":null,
+    "to":["1800011","1800013","1800014"]
+  },
+"1800013":{                
+    "id":"1800013",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.99443,
+    "lng":-122.055635,
+    "type":null,
+    "to":["1800012","1800008"]
+  },
+"1800014":{                
+    "id":"1800014",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994404,
+    "lng":-122.055364,
+    "type":null,
+    "to":["1800012","1800015"]
+  },
+"1800015":{                
+    "id":"1800015",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994278,
+    "lng":-122.055354,
+    "type":null,
+    "to":["1800014","1800016"]
+  },
+"1800016":{                
+    "id":"1800016",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.99412,
+    "lng":-122.055375,
+    "type":null,
+    "to":["1800015","1800017"]
+  },
+"1800017":{                
+    "id":"1800017",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993846,
+    "lng":-122.055424,
+    "type":null,
+    "to":["1800016","1800018"]
+  },
+"1800018":{                
+    "id":"1800018",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.99362,
+    "lng":-122.055287,
+    "type":null,
+    "to":["1800017","1800019"]
+  },
+"1800019":{                
+    "id":"1800019",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993585,
+    "lng":-122.055225,
+    "type":null,
+    "to":["1800018","1800020"]
+  },
+"1800020":{                
+    "id":"1800020",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993542,
+    "lng":-122.055209,
+    "type":null,
+    "to":["1800019","1800021"]
+  },
+"1800021":{                
+    "id":"1800021",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993504,
+    "lng":-122.054892,
+    "type":null,
+    "to":["1800020","1800022"]
+  },
+"1800022":{                
+    "id":"1800022",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993374,
+    "lng":-122.054205,
+    "type":null,
+    "to":["1800021","1800023"]
+  },
+"1800023":{                
+    "id":"1800023",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993391,
+    "lng":-122.054044,
+    "type":null,
+    "to":["1800022","1800024"]
+  },
+"1800024":{                
+    "id":"1800024",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993677,
+    "lng":-122.054069,
+    "type":null,
+    "to":["1800023","1800025","1800041"]
+  },
+"1800025":{                
+    "id":"1800025",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993784,
+    "lng":-122.054053,
+    "type":null,
+    "to":["1800024","1800026"]
+  },
+"1800026":{                
+    "id":"1800026",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995027,
+    "lng":-122.053353,
+    "type":null,
+    "to":["1800025","1800001","1800034"]
+  },
+"1800027":{                
+    "id":"1800027",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995301,
+    "lng":-122.053394,
+    "type":null,
+    "to":["1800001","1800028"]
+  },
+"1800028":{                
+    "id":"1800028",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995454,
+    "lng":-122.053632,
+    "type":null,
+    "to":["1800027","1800029","1800046"]
+  },
+"1800029":{                
+    "id":"1800029",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995702,
+    "lng":-122.05376,
+    "type":null,
+    "to":["1800028","1800030","1800046"]
+  },
+"1800030":{                
+    "id":"1800030",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995955,
+    "lng":-122.053841,
+    "type":null,
+    "to":["1800029","1800031","1800033","1800048"]
+  },
+"1800031":{                
+    "id":"1800031",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.996065,
+    "lng":-122.054115,
+    "type":null,
+    "to":["0400053","1800030","1800032"]
+  },
+"1800032":{                
+    "id":"1800032",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.996095,
+    "lng":-122.053974,
+    "type":null,
+    "to":["1800031","1800033"]
+  },
+"1800033":{                
+    "id":"1800033",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.996197,
+    "lng":-122.05384,
+    "type":null,
+    "to":["0400057","1800030","1800032"]
+  },
+"1800034":{                
+    "id":"1800034",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995004,
+    "lng":-122.053303,
+    "type":null,
+    "to":["1800026","1800035"]
+  },
+"1800035":{                
+    "id":"1800035",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995213,
+    "lng":-122.05318,
+    "type":null,
+    "to":["1800034","1800036"]
+  },
+"1800036":{                
+    "id":"1800036",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995558,
+    "lng":-122.052535,
+    "type":null,
+    "to":["1800035","1800037"]
+  },
+"1800037":{                
+    "id":"1800037",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.99529,
+    "lng":-122.053033,
+    "type":null,
+    "to":["1800036","1800038","1800039"]
+  },
+"1800038":{                
+    "id":"1800038",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995791,
+    "lng":-122.052032,
+    "type":null,
+    "to":["1000133","1800037","1800040"]
+  },
+"1800039":{                
+    "id":"1800039",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995268,
+    "lng":-122.052839,
+    "type":null,
+    "to":["1800037","1800040"]
+  },
+"1800040":{                
+    "id":"1800040",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.994981,
+    "lng":-122.052368,
+    "type":null,
+    "to":["1800039","1800038"]
+  },
+"1800041":{                
+    "id":"1800041",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.993653,
+    "lng":-122.054271,
+    "type":null,
+    "to":["1800024","1801000"]
+  },
+"1801000":{                
+    "id":"1801000",
+    "name":"OPERS Wellness Center",
+    "areas":"OPERS",
+    "lat":36.993684,
+    "lng":-122.054588,
+    "type":"Activities",
+    "to":["1800041"]
+  },
+"1800042":{                
+    "id":"1800042",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995411,
+    "lng":-122.054775,
+    "type":null,
+    "to":["1800003","1800043"]
+  },
+"1800043":{                
+    "id":"1800043",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995479,
+    "lng":-122.054341,
+    "type":null,
+    "to":["1800042","1800044"]
+  },
+"1800044":{                
+    "id":"1800044",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.99558,
+    "lng":-122.054205,
+    "type":null,
+    "to":["1800043","1800045","1800047"]
+  },
+"1800045":{                
+    "id":"1800045",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995769,
+    "lng":-122.054083,
+    "type":null,
+    "to":["1800044","1800048"]
+  },
+"1800046":{                
+    "id":"1800046",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995702,
+    "lng":-122.053755,
+    "type":null,
+    "to":["1800028","1800029","1800047"]
+  },
+"1800047":{                
+    "id":"1800047",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.9956,
+    "lng":-122.054023,
+    "type":null,
+    "to":["1800044","1800046"]
+  },
+"1800048":{                
+    "id":"1800048",
+    "name":null,
+    "areas":"OPERS",
+    "lat":36.995932,
+    "lng":-122.053913,
+    "type":null,
+    "to":["1800045","1800030"]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//QUARRY NODES --------------------------------------------------------------------------------------------
+ "2300000":{                    
+        "id":"2300000",
+        "name":"Quarry Amphitheater",
+        "areas":"Quarry Plaza",
+        "lat":36.998612,
+        "lng":-122.056413,
+        "type":"Activities",
+        "to":["2300022"]
+    },
+        "2301000":{                 
+        "id":"2301000",
+        "name":"Cafe Iveta",
+        "areas":"Quarry Plaza",
+        "lat":36.998101,
+        "lng":-122.055885,
+        "type":"Food To Go",
+        "to":["2300007"]
+    },
+        "2302000":{                 
+        "id":"2302000",
+        "name":"Bay Tree Bookstore",
+        "areas":"Quarry Plaza",
+        "lat":36.997977,
+        "lng":-122.055598,
+        "type":"Market",
+        "to":["2300014"]
+    },
+        "2303000":{
+        "id":"2303000",
+        "name":"Student Union",
+        "areas":"Quarry Plaza",
+        "lat":36.997847,
+        "lng":-122.055959,
+        "type":"Student Services",
+        "to":["2300006","2300055"]
+    },
+        "2304000":{                 
+        "id":"2304000",
+        "name":"Career Center",
+        "areas":"Quarry Plaza",
+        "lat":36.997666,
+        "lng":-122.055561,
+        "type":"Student Services",  
+        "to":["2300004"]
+    },
+        "2305000":{                 
+        "id":"2305000",
+        "name":"Express Store",
+        "areas":"Quarry Plaza",
+        "lat":36.997697,
+        "lng":-122.055603,
+        "type":"Market",
+        "to":["2300005"]
+    },
+    "2306000":{                 
+        "id":"2306000",
+        "name":"Bike Co-op",
+        "areas":"Quarry Plaza",
+        "lat":36.997507,
+        "lng":-122.05604,
+        "type":"Student Services",
+        "to":["2300042","2300047"]
+    },
+    "2307000":{                 
+        "id":"2307000",
+        "name":"Quarry Amphitheater Dressing Rooms",
+        "areas":"Quarry Plaza",
+        "lat":36.99906,
+        "lng":-122.056195,
+        "type":"Other",
+        "to":["2300027"]
+    },
+    "2300001":{
+        "id":"2300001",
+        "name":null,
+        "areas":null,
+        "lat":36.997321,
+        "lng": -122.055310,
+        "type":null,
+        "to":["2300002","2300036"]
+    },
+    "2300002":{
+        "id":"2300002",
+        "name":null,
+        "areas":null,
+        "lat":36.997403,
+        "lng":-122.055471,
+        "type":null,
+        "to":["2300001","2300003","2300037"]
+    },
+    "2300003":{
+        "id":"2300003",
+        "name":null,
+        "areas":null,
+        "lat":36.997625,
+        "lng": -122.055578,
+        "type":null,
+        "to":["2300002","2300004"]
+    },
+    "2300004":{
+        "id":"2300004",
+        "name":null,
+        "areas":null,
+        "lat":36.997677,
+        "lng": -122.055659,
+        "type":null,
+        "to":["2300003","2300005","2304000"]
+    },
+    "2300005":{
+        "id":"2300005",
+        "name":null,
+        "areas":null,
+        "lat":36.997664,
+        "lng": -122.055750,
+        "type":null,
+        "to":["2300004","2300006","2305000"]
+    },
+    "2300006":{
+        "id":"2300006",
+        "name":null,
+        "areas":null,
+        "lat":36.997857,
+        "lng":-122.055782,
+        "type":null,
+        "to":["2300005","2300007","2303000","2300014"]
+    },
+    "2300007":{
+        "id":"2300007",
+        "name":null,
+        "areas":null,
+        "lat":36.998028,
+        "lng":-122.055771,
+        "type":null,
+        "to":["2300006","2300008","2301000","2300014"]
+    },
+    "2300008":{
+        "id":"2300008",
+        "name":null,
+        "areas":null,
+        "lat":36.998212,
+        "lng":-122.055653,
+        "type":null,
+        "to":["2300007","2300009","2300048"]
+    },
+    "2300009":{
+        "id":"2300009",
+        "name":null,
+        "areas":null,
+        "lat":36.99836,
+        "lng": -122.055562,
+        "type":null,
+        "to":["2300008","2300010","2300019","2300048"]
+    },
+    "2300010":{
+        "id":"2300010",
+        "name":null,
+        "areas":null,
+        "lat":36.99838,
+        "lng": -122.055481,
+        "type":null,
+        "to":["2300009","2300011"]
+    },
+    "2300011":{
+        "id":"2300011",
+        "name":null,
+        "areas":null,
+        "lat":36.998521,
+        "lng":-122.055417,
+        "type":null,
+        "to":["2300010","2300012"]
+    },
+    "2300012":{
+        "id":"2300012",
+        "name":null,
+        "areas":null,
+        "lat":36.998645,
+        "lng":-122.055416,
+        "type":null,
+        "to":["2300011","2300013"]
+    },
+    "2300013":{
+        "id":"2300013",
+        "name":null,
+        "areas":null,
+        "lat":36.998744,
+        "lng":-122.055364,
+        "type":null,
+        "to":["2300012","2300015"]
+    },
+    "2300014":{
+        "id":"2300014",
+        "name":null,
+        "areas":null,
+        "lat":36.997975,
+        "lng":-122.055779,
+        "type":null,
+        "to":["2300006","2300007","2302000"]
+    },
+    "2300015":{
+        "id":"2300015",
+        "name":null,
+        "areas":null,
+        "lat":36.998781,
+        "lng":-122.055303,
+        "type":null,
+        "to":["2300013","2300016"]
+    },
+    "2300016":{
+        "id":"2300016",
+        "name":null,
+        "areas":null,
+        "lat":36.998858,
+        "lng":-122.055238,
+        "type":null,
+        "to":["2300015","2300017"]
+    },
+    "2300017":{
+        "id":"2300017",
+        "name":null,
+        "areas":null,
+        "lat":36.998793,
+        "lng":-122.055119,
+        "type":null,
+        "to":["2300016","2300018"]
+    },
+    "2300018":{
+        "id":"2300018",
+        "name":null,
+        "areas":null,
+        "lat":36.998755,
+        "lng": -122.055087,
+        "type":null,
+        "to":["2300017"]
+    },
+    "2300019":{
+        "id":"2300019",
+        "name":null,
+        "areas":null,
+        "lat":36.998684,
+        "lng": -122.055661,
+        "type":null,
+        "to":["2300009","2300020","2300023"]
+    },
+    "2300020":{
+        "id":"2300020",
+        "name":null,
+        "areas":null,
+        "lat":36.99862,
+        "lng":-122.055816,
+        "type":null,
+        "to":["2300019","2300021"]
+    },
+    "2300021":{
+        "id":"2300021",
+        "name":null,
+        "areas":null,
+        "lat":36.998536,
+        "lng":-122.056169,
+        "type":null,
+        "to":["2300020","2300022"]
+    },
+    "2300022":{
+        "id":"2300022",
+        "name":null,
+        "areas":null,
+        "lat":36.998519,
+        "lng": -122.056431,
+        "type":null,
+        "to":["2300021","2300000"]
+    },
+    "2300023":{
+        "id":"2300023",
+        "name":null,
+        "areas":null,
+        "lat":36.999005,
+        "lng": -122.05587,
+        "type":null,
+        "to":["2300019","2300024"]
+    },
+    "2300024":{
+        "id":"2300024",
+        "name":null,
+        "areas":null,
+        "lat":36.998995,
+        "lng":  -122.055915,
+        "type":null,
+        "to":["2300023","2300025","2300027"]   
+    },
+    "2300025":{
+        "id":"2300025",
+        "name":null,
+        "areas":null,
+        "lat":36.998858,
+        "lng":  -122.056172,
+        "type":null,
+        "to":["2300024","2300026"]
+    },
+    "2300026":{
+        "id":"2300026",
+        "name":null,
+        "areas":null,
+        "lat":36.998919,
+        "lng":-122.056736,
+        "type":null,
+        "to":["2300025","2300033"]       //add the left side node when initialized
+    },
+    "2300027":{
+        "id":"2300027",
+        "name":null,
+        "areas":null,
+        "lat":36.999171,
+        "lng": -122.056195,
+        "type":null,
+        "to":["2300024","2300028","2307000"]
+    },
+    "2300028":{
+        "id":"2300028",
+        "name":null,
+        "areas":null,
+        "lat":36.999202,
+        "lng": -122.056291,
+        "type":null,
+        "to":["2300027","2300029"]
+    },
+    "2300029":{
+        "id":"2300029",
+        "name":null,
+        "areas":null,
+        "lat":36.999232,
+        "lng": -122.05635,
+        "type":null,
+        "to":["2300028","2300030"]
+    },
+    "2300030":{
+        "id":"2300030",
+        "name":null,
+        "areas":null,
+        "lat":36.999266,
+        "lng":  -122.056479,
+        "type":null,
+        "to":["2300029","2300031"]
+    },
+    "2300031":{
+        "id":"2300031",
+        "name":null,
+        "areas":null,
+        "lat":36.999168,
+        "lng": -122.056705,
+        "type":null,
+        "to":["2300030","2300032"]
+    },
+    "2300032":{
+        "id":"2300032",
+        "name":null,
+        "areas":null,
+        "lat":36.999082,
+        "lng":-122.056689,
+        "type":null,
+        "to":["2300031","2300033"]
+    },
+    "2300033":{
+        "id":"2300033",
+        "name":null,
+        "areas":null,
+        "lat":36.999009,
+        "lng":-122.056785,
+        "type":null,
+        "to":["2300032","2300034","2300035","2300026"]
+    },
+    "2300034":{
+        "id":"2300034",
+        "name":null,
+        "areas":null,
+        "lat":36.999036,
+        "lng":-122.057042,
+        "type":null,
+        "to":["2300033","2300035"]
+    },
+    "2300035":{
+        "id":"2300035",
+        "name":null,
+        "areas":null,
+        "lat":36.998972,
+        "lng":-122.056962,
+        "type":null,
+        "to":["2300034","2300033"]
+    },
+    "2300036":{
+        "id":"2300036",
+        "name":null,
+        "areas":null,
+        "lat":36.997248,
+        "lng":-122.055367,
+        "type":null,
+        "to":["2300001","2300037","2300038","0400047"]
+    },
+    "2300037":{
+        "id":"2300037",
+        "name":null,
+        "areas":null,
+        "lat":36.99729,
+        "lng":-122.055447,
+        "type":null,
+        "to":["2300036","2300002"]
+    },
+    "2300038":{
+        "id":"2300038",
+        "name":null,
+        "areas":null,
+        "lat":36.997281,
+        "lng": -122.055681,
+        "type":null,
+        "to":["2300036","2300039","2300046","2300045"] //road intersection
+    },
+    "2300039":{
+        "id":"2300039",
+        "name":null,
+        "areas":null,
+        "lat":36.997281,
+        "lng": -122.055906,
+        "type":null,
+        "to":["2300038","2300040"]
+    },
+   "2300040":{
+        "id":"2300040",
+        "name":null,
+        "areas":null,
+        "lat":36.997273,
+        "lng":-122.056024,
+        "type":null,
+        "to":["2300039","2300041"]
+    },
+    "2300041":{
+        "id":"2300041",
+        "name":null,
+        "areas":null,
+        "lat":36.997341,
+        "lng": -122.056078,
+        "type":null,
+        "to":["2300040","2300042"]
+    },
+    "2300042":{
+        "id":"2300042",
+        "name":null,
+        "areas":null,
+        "lat":36.997449,
+        "lng":-122.056078,
+        "type":null,
+        "to":["2300041","2306000","2300056"] //bike coop
+    },
+    "2300043":{
+        "id":"2300043",
+        "name":null,
+        "areas":null,
+        "lat":36.997503,
+        "lng":-122.055763,
+        "type":null,
+        "to":["2300046","2300044"]
+    },
+    "2300044":{
+        "id":"2300044",
+        "name":null,
+        "areas":null,
+        "lat":36.997546,
+        "lng":-122.055603,
+        "type":null,
+        "to":["2300043","2300045"]
+    },
+    "2300045":{
+        "id":"2300045",
+        "name":null,
+        "areas":null,
+        "lat":36.997307,
+        "lng": -122.055501,
+        "type":null,
+        "to":["2300044","2300038"]
+    },
+    "2300046":{
+        "id":"2300046",
+        "name":null,
+        "areas":null,
+        "lat":36.997394,
+        "lng":-122.055724,
+        "type":null,
+        "to":["2300038","2300043","2300047"]
+    },
+    "2300047":{
+        "id":"2300047",
+        "name":null,
+        "areas":null,
+        "lat":36.997446,
+        "lng":-122.056029,
+        "type":null,
+        "to":["2300046","2306000"]
+    },
+    "2300048":{
+        "id":"2300048",
+        "name":null,
+        "areas":null,
+        "lat":36.998331,
+        "lng": -122.055609,
+        "type":null,
+        "to":["2300009","2300008","2300049"]
+    },
+    "2300049":{
+        "id":"2300049",
+        "name":null,
+        "areas":null,
+        "lat":36.99834,
+        "lng": -122.055727,
+        "type":null,
+        "to":["2300048","2300050"]
+    },
+    "2300050":{
+        "id":"2300050",
+        "name":null,
+        "areas":null,
+        "lat":36.998246,
+        "lng": -122.055877,
+        "type":null,
+        "to":["2300049","2300051"]
+    },
+    "2300051":{
+        "id":"2300051",
+        "name":null,
+        "areas":null,
+        "lat":36.998241,
+        "lng": -122.055926,
+        "type":null,
+        "to":["2300050","2300052"]
+    },
+    "2300052":{
+        "id":"2300052",
+        "name":null,
+        "areas":null,
+        "lat":36.998072,
+        "lng":-122.056036,
+        "type":null,
+        "to":["2300051","2300053"]
+    },
+    "2300053":{
+        "id":"2300053",
+        "name":null,
+        "areas":null,
+        "lat":36.997922,
+        "lng":-122.056197,
+        "type":null,
+        "to":["2300052","2300054"]
+    },
+    "2300054":{
+        "id":"2300054",
+        "name":null,
+        "areas":null,
+        "lat":36.997866,
+        "lng":-122.056224,
+        "type":null,
+        "to":["2300053","2300055","2300056"]
+    },
+    "2300055":{
+        "id":"2300055",
+        "name":null,
+        "areas":null,
+        "lat":36.997789,
+        "lng": -122.056046,
+        "type":null,
+        "to":["2300054","2303000"]
+    },
+    "2300056":{
+        "id":"2300056",
+        "name":null,
+        "areas":null,
+        "lat":36.997626,
+        "lng":-122.056308,
+        "type":null,
+        "to":["2300054","2300042","2300057"]
+    },
+    "2300057":{
+        "id":"2300057",
+        "name":null,
+        "areas":null,
+        "lat":36.997446,
+        "lng":-122.056314,
+        "type":null,
+        "to":["2300056","2300058"]
+    },
+    "2300058":{
+        "id":"2300058",
+        "name":null,
+        "areas":null,
+        "lat":36.997262,
+        "lng": -122.056282,
+        "type":null,
+        "to":["2300057"]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
