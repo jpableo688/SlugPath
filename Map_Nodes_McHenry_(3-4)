@@ -1,7 +1,8 @@
 //Rough draft of the nodes of the McHenry area.
-//2/24/18: 60 total map nodes, 1 total big node.
+//3/4/18: 60 total map nodes, 1 total big node.
 //Nodes 42-49 are recorded as they appear accurate on Leaflet. An offset to the longitude of value -0.000080 has been added to the current longitude (in comparison to Google Maps). Note that this results in a longitude of greater negative magnitude.
 //This is likely because Leaflet and Google share different maps and these nodes occur along different-appearing paths in Leaflet and Google Maps. Nodes 52-60 appear wrongly-placed on Leaflet, to be readjusted later if necessary.
+//Connected to Performing Arts area.
 
 	"2000000":{
 		"id":"2000000",
@@ -28,7 +29,7 @@
         "lat":36.994511,
         "lng":-122.059656,
         "type":null,
-        "to":["2000002"]
+        "to":["1600079","2000002"]
     },
 	"2000002":{
         "id":"2000002",
@@ -460,7 +461,7 @@
         "lat":36.995252,
         "lng":-122.060279,
         "type":null,
-        "to":["2000014","2000048"]
+        "to":["1600038","2000014","2000048"]
     },
 	"2000050":{
         "id":"2000050",
