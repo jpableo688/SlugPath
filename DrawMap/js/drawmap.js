@@ -37,20 +37,6 @@ function drawMap(searchArray){
     
 }
 
-function calculateDist(paths){
-    totaldist = 0;
-    console.log(paths);
-    for(i = 1; i < paths.length; i++){
-        console.log("{ "+ paths[i-1] + " to " + paths[i]);
-        thisDist = nodeDistance(nodes[paths[i-1]], nodes[paths[i]]);
-        console.log("current 2 node dist " + thisDist);
-        totaldist = totaldist + thisDist;
-        console.log("current total dist " + totaldist + "}");
-    }
-    
-    var distanceItem = document.getElementById("Distance");
-    distanceItem.innerHTML = "Total Distance: " + totaldist;
-}
 
 function drawInfoGather(){
     //for gathering data
