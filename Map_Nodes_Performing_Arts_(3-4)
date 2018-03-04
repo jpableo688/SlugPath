@@ -1,0 +1,834 @@
+//Rough draft of the nodes of the Performing Arts area.
+//3/4/18: 86 total map nodes, 6 total big nodes (5 excluding Kerr Hall).
+//Area previously known as "Media Theater" renamed to "Performing Arts".
+//Connected to McHenry, Porter, and Rachel Carson.
+//1600054 connects to Kerr Hall, but should Kerr Hall fall under Performing Arts node area? 
+
+	"1601000":{
+		"id":"1601000",
+		"name":"Media Theater",
+		"areas":"Performing Arts",
+		"lat":36.994838,
+		"lng":-122.062039,
+		"type":"Academic",
+		"to":["1600016","1600017"]
+	},
+	"1602000":{
+		"id":"1602000",
+		"name":"Digital Arts & New Media",
+		"areas":"Performing Arts",
+		"lat":36.993883,
+		"lng":-122.060756,
+		"type":"Academic",
+		"to":["1600048"]
+	},
+	"1603000":{
+		"id":"1603000",
+		"name":"Recital Hall",
+		"areas":"Performing Arts",
+		"lat":36.99314,
+		"lng":-122.060849,
+		"type":"Academic",
+		"to":["1600074"]
+	},
+	"1604000":{
+		"id":"1604000",
+		"name":"Music Center",
+		"areas":"Performing Arts",
+		"lat":36.993153,
+		"lng":-122.059911,
+		"type":"Academic",
+		"to":["1600074"]
+	},
+	"1605000":{
+		"id":"1605000",
+		"name":"Academic Resources Center",
+		"areas":"Performing Arts",
+		"lat":36.994198,
+		"lng":-122.058956,
+		"type":"Student Services",
+		"to":["1600080"]
+	},
+	"2200000":{
+        "id":"2200000",
+        "name":"Kerr Hall",
+        "areas":"Kerr Hall",
+        "lat":36.997000,
+        "lng":-122.062040,
+        "type":"Academic",
+		"to":["1600082"]
+    },
+	"1600001":{
+		"id":"1600001",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994584,
+		"lng":-122.064161,
+		"type":null,
+		"to":["1600002","1600083","1600085"]
+	},
+	"1600002":{
+		"id":"1600002",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994550,
+		"lng":-122.063886,
+		"type":null,
+		"to":["1600001","1600003"]
+	},
+	"1600003":{
+		"id":"1600003",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994571,
+		"lng":-122.063739,
+		"type":null,
+		"to":["1600002","1600004"]
+	},
+	"1600004":{
+		"id":"1600004",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994502,
+		"lng":-122.063601,
+		"type":null,
+		"to":["1600003","1600005"]
+	},
+	"1600005":{
+		"id":"1600005",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994421,
+		"lng":-122.063492,
+		"type":null,
+		"to":["1600004","1600006"]
+	},
+	"1600006":{
+		"id":"1600006",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994374,
+		"lng":-122.063421,
+		"type":null,
+		"to":["1600005","1600007"]
+	},
+	"1600007":{
+		"id":"1600007",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994258,
+		"lng":-122.063260,
+		"type":null,
+		"to":["1600006","1600008"]
+	},
+	"1600008":{
+		"id":"1600008",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994235,
+		"lng":-122.063047,
+		"type":null,
+		"to":["1600007","1600009"]
+	},
+	"1600009":{
+		"id":"1600009",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994172,
+		"lng":-122.062821,
+		"type":null,
+		"to":["1600008","1600010"]
+	},
+	"1600010":{
+		"id":"1600010",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994068,
+		"lng":-122.062654,
+		"type":null,
+		"to":["1600009","1600011","1600012"]
+	},
+	"1600011":{
+		"id":"1600011",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993843,
+		"lng":-122.062513,
+		"type":null,
+		"to":["1600010","1600012","1600052"]
+	},
+	"1600012":{
+		"id":"1600012",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994094,
+		"lng":-122.062402,
+		"type":null,
+		"to":["1600010","1600011","1600013"]
+	},
+	"1600013":{
+		"id":"1600013",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994242,
+		"lng":-122.062278,
+		"type":null,
+		"to":["1600012","1600014","1600018","1600020"]
+	},
+	"1600014":{
+		"id":"1600014",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994441,
+		"lng":-122.062235,
+		"type":null,
+		"to":["1600013","1600015"]
+	},
+	"1600015":{
+		"id":"1600015",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994494,
+		"lng":-122.062001,
+		"type":null,
+		"to":["1600014","1600016"]
+	},
+	"1600016":{
+		"id":"1600016",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994845,
+		"lng":-122.062087,
+		"type":null,
+		"to":["1600015","1600017","1601000"]
+	},
+	"1600017":{
+		"id":"1600017",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994900,
+		"lng":-122.061821,
+		"type":null,
+		"to":["1600016","1600026","1600044","1601000"]
+	},
+	"1600018":{
+		"id":"1600018",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994276,
+		"lng":-122.062131,
+		"type":null,
+		"to":["1600013","1600019"]
+	},
+	"1600019":{
+		"id":"1600019",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994292,
+		"lng":-122.061904,
+		"type":null,
+		"to":["1600018","1600022","1600024"]
+	},
+	"1600020":{
+		"id":"1600020",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994101,
+		"lng":-122.062187,
+		"type":null,
+		"to":["1600013","1600021"]
+	},
+	"1600021":{
+		"id":"1600021",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993922,
+		"lng":-122.062088,
+		"type":null,
+		"to":["1600020","1600022","1600050"]
+	},
+	"1600022":{
+		"id":"1600022",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994105,
+		"lng":-122.061932,
+		"type":null,
+		"to":["1600019","1600021","1600023"]
+	},
+	"1600023":{
+		"id":"1600023",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994256,
+		"lng":-122.061775,
+		"type":null,
+		"to":["1600022","1600024","1600049"]
+	},
+	"1600024":{
+		"id":"1600024",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994404,
+		"lng":-122.061680,
+		"type":null,
+		"to":["1600019","1600023","1600025"]
+	},
+	"1600025":{
+		"id":"1600025",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994516,
+		"lng":-122.061491,
+		"type":null,
+		"to":["1600024","1600026","1600027","1600028"]
+	},
+	"1600026":{
+		"id":"1600026",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994798,
+		"lng":-122.061526,
+		"type":null,
+		"to":["1600017","1600025","1600027","1600044"]
+	},
+	"1600027":{
+		"id":"1600027",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994744,
+		"lng":-122.061439,
+		"type":null,
+		"to":["1600025","1600026","1600028","1600033","1600044"]
+	},
+	"1600028":{
+		"id":"1600028",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994523,
+		"lng":-122.061421,
+		"type":null,
+		"to":["1600025","1600027","1600029"]
+	},
+	"1600029":{
+		"id":"1600029",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994189,
+		"lng":-122.061379,
+		"type":null,
+		"to":["1600028","1600030","1600031"]
+	},
+	"1600030":{
+		"id":"1600030",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994003,
+		"lng":-122.061380,
+		"type":null,
+		"to":["1600029","1600031","1600048"]
+	},
+	"1600031":{
+		"id":"1600031",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994111,
+		"lng":-122.061252,
+		"type":null,
+		"to":["1600029","1600030","1600032"]
+	},
+	"1600032":{
+		"id":"1600032",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994260,
+		"lng":-122.061057,
+		"type":null,
+		"to":["1600031","1600033"]
+	},
+	"1600033":{
+		"id":"1600033",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994757,
+		"lng":-122.061179,
+		"type":null,
+		"to":["1600027","1600032","1600034"]
+	},
+	"1600034":{
+		"id":"1600034",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994768,
+		"lng":-122.060966,
+		"type":null,
+		"to":["1600033","1600035","1600039"]
+	},
+	"1600035":{
+		"id":"1600035",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994912,
+		"lng":-122.060901,
+		"type":null,
+		"to":["1600034","1600036"]
+	},
+	"1600036":{
+		"id":"1600036",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.995093,
+		"lng":-122.060773,
+		"type":null,
+		"to":["1600035","1600037"]
+	},
+	"1600037":{
+		"id":"1600037",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.995156,
+		"lng":-122.060525,
+		"type":null,
+		"to":["1600036","1600038",]
+	},
+	"1600038":{
+		"id":"1600038",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.995157,
+		"lng":-122.060308,
+		"type":null,
+		"to":["1600037","2000049"]
+	},
+	"1600039":{
+		"id":"1600039",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994651,
+		"lng":-122.060823,
+		"type":null,
+		"to":["1600034","1600040"]
+	},
+	"1600040":{
+		"id":"1600040",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994651,
+		"lng":-122.060543,
+		"type":null,
+		"to":["1600039","1600041"]
+	},
+	"1600041":{
+		"id":"1600041",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994485,
+		"lng":-122.060299,
+		"type":null,
+		"to":["1600040","1600042"]
+	},
+	"1600042":{
+		"id":"1600042",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994394,
+		"lng":-122.060012,
+		"type":null,
+		"to":["1600041","1600043"]
+	},
+	"1600043":{
+		"id":"1600043",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994279,
+		"lng":-122.059794,
+		"type":null,
+		"to":["1600042","1600078"]
+	},
+	"1600044":{
+		"id":"1600044",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.995027,
+		"lng":-122.061436,
+		"type":null,
+		"to":["1600017","1600026","1600027","1600045"]
+	},
+	"1600045":{
+		"id":"1600045",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.995869,
+		"lng":-122.061294,
+		"type":null,
+		"to":["1600044","1600046"]
+	},
+	"1600046":{
+		"id":"1600046",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.996189,
+		"lng":-122.061507,
+		"type":null,
+		"to":["1600045","1600047"]
+	},
+	"1600047":{
+		"id":"1600047",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.996436,
+		"lng":-122.061973,
+		"type":null,
+		"to":["1600046","1600081"]
+	},
+	"1600048":{
+		"id":"1600048",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993934,
+		"lng":-122.061438,
+		"type":null,
+		"to":["1600030","1600049","1602000"]
+	},
+	"1600049":{
+		"id":"1600049",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993826,
+		"lng":-122.061720,
+		"type":null,
+		"to":["1600023","1600048","1600050","1600069"]
+	},
+	"1600050":{
+		"id":"1600050",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993800,
+		"lng":-122.062068,
+		"type":null,
+		"to":["1600021","1600049","1600051","1600065"]
+	},
+	"1600051":{
+		"id":"1600051",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993767,
+		"lng":-122.062270,
+		"type":null,
+		"to":["1600050","1600052","1600062"]
+	},
+	"1600052":{
+		"id":"1600052",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993713,
+		"lng":-122.062463,
+		"type":null,
+		"to":["1600011","1600051","1600053"]
+	},
+	"1600053":{
+		"id":"1600053",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993618,
+		"lng":-122.062549,
+		"type":null,
+		"to":["1600052","1600054"]
+	},
+	"1600054":{
+		"id":"1600054",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993399,
+		"lng":-122.062684,
+		"type":null,
+		"to":["1600053","1600055"]
+	},
+	"1600055":{
+		"id":"1600055",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993121,
+		"lng":-122.062777,
+		"type":null,
+		"to":["1600054","1600056","1600058"]
+	},
+	"1600056":{
+		"id":"1600056",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993048,
+		"lng":-122.063341,
+		"type":null,
+		"to":["1600055","1600057"]
+	},
+	"1600057":{
+		"id":"1600057",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.992873,
+		"lng":-122.063816,
+		"type":null,
+		"to":["0100002","1600056"]
+	},
+	"1600058":{
+		"id":"1600058",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993182,
+		"lng":-122.062384,
+		"type":null,
+		"to":["1600055","1600059"]
+	},
+	"1600059":{
+		"id":"1600059",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993259,
+		"lng":-122.061815,
+		"type":null,
+		"to":["1600058","1600060"]
+	},
+	"1600060":{
+		"id":"1600060",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993055,
+		"lng":-122.061299,
+		"type":null,
+		"to":["1600059","1600061"]
+	},
+	"1600061":{
+		"id":"1600061",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993006,
+		"lng":-122.061192,
+		"type":null,
+		"to":["1600060","1600072"]
+	},
+	"1600062":{
+		"id":"1600062",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993570,
+		"lng":-122.062151,
+		"type":null,
+		"to":["1600051","1600063"]
+	},
+	"1600063":{
+		"id":"1600063",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993433,
+		"lng":-122.061894,
+		"type":null,
+		"to":["1600062","1600064","1600066"]
+	},
+	"1600064":{
+		"id":"1600064",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993221,
+		"lng":-122.061127,
+		"type":null,
+		"to":["1600063","1600068"]
+	},
+	"1600065":{
+		"id":"1600065",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993661,
+		"lng":-122.061994,
+		"type":null,
+		"to":["1600050","1600066"]
+	},
+	"1600066":{
+		"id":"1600066",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993570,
+		"lng":-122.061820,
+		"type":null,
+		"to":["1600063","1600065","1600067","1600069"]
+	},
+	"1600067":{
+		"id":"1600067",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993399,
+		"lng":-122.061059,
+		"type":null,
+		"to":["1600066","1600068","1600070"]
+	},
+	"1600068":{
+		"id":"1600068",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993359,
+		"lng":-122.060979,
+		"type":null,
+		"to":["1600064","1600067","1600071","1600072"]
+	},
+	"1600069":{
+		"id":"1600069",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993694,
+		"lng":-122.061694,
+		"type":null,
+		"to":["1600049","1600066","1600070"]
+	},
+	"1600070":{
+		"id":"1600070",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993545,
+		"lng":-122.060991,
+		"type":null,
+		"to":["1600067","1600069","1600071"]
+	},
+	"1600071":{
+		"id":"1600071",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993460,
+		"lng":-122.060767,
+		"type":null,
+		"to":["1600068","1600070"]
+	},
+	"1600072":{
+		"id":"1600072",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993308,
+		"lng":-122.060939,
+		"type":null,
+		"to":["1600061","1600068","1600073"]
+	},
+	"1600073":{
+		"id":"1600073",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993386,
+		"lng":-122.060780,
+		"type":null,
+		"to":["1600072","1600074","1600075"]
+	},
+	"1600074":{
+		"id":"1600074",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993286,
+		"lng":-122.060602,
+		"type":null,
+		"to":["1600073","1603000","1604000"]
+	},
+	"1600075":{
+		"id":"1600075",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993483,
+		"lng":-122.060425,
+		"type":null,
+		"to":["1600073","1600076"]
+	},
+	"1600076":{
+		"id":"1600076",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993664,
+		"lng":-122.060088,
+		"type":null,
+		"to":["1600075","1600077"]
+	},
+	"1600077":{
+		"id":"1600077",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993955,
+		"lng":-122.059867,
+		"type":null,
+		"to":["1600076","1600078"]
+	},
+	"1600078":{
+		"id":"1600078",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994250,
+		"lng":-122.059740,
+		"type":null,
+		"to":["1600043","1600077","1600079"]
+	},
+	"1600079":{
+		"id":"1600079",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994420,
+		"lng":-122.059660,
+		"type":null,
+		"to":["1600078","1600080","2000001"]
+	},
+	"1600080":{
+		"id":"1600080",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994455,
+		"lng":-122.059384,
+		"type":null,
+		"to":["1600079","1605000"]
+	},
+	"1600081":{
+		"id":"1600081",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.996622,
+		"lng":-122.062171,
+		"type":null,
+		"to":["1600047","1600082"]
+	},
+	"1600082":{
+		"id":"1600082",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.996981,
+		"lng":-122.062407,
+		"type":null,
+		"to":["1600081","2200000"]
+	},
+	"1600083":{
+		"id":"1600083",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994695,
+		"lng":-122.064426,
+		"type":null,
+		"to":["1600001","1600084"]
+	},
+	"1600084":{
+		"id":"1600084",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994750,
+		"lng":-122.064864,
+		"type":null,
+		"to":["0900041","1600083"]
+	},
+	"1600085":{
+		"id":"1600085",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994487,
+		"lng":-122.064476,
+		"type":null,
+		"to":["1600001","1600086"]
+	},
+	"1600086":{
+		"id":"1600086",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.994476,
+		"lng":-122.064756,
+		"type":null,
+		"to":["0900014","1600085"]
+	},
