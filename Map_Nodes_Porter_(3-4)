@@ -1,6 +1,6 @@
 //Rough draft of the nodes of Porter College.
-//2/24/18: 76 total map nodes, 7 total big nodes.
-//30 additional nodes added. Path to Porter-Kresge housing office is now possible. Path to Rachel Carson College now possible.
+//3/4/18: 76 total map nodes, 7 total big nodes.
+//Connected to Rachel Carson and Performing Arts.
 
 	"0901000":{
 		"id":"0901000",
@@ -189,7 +189,7 @@
 		"lat":36.994378,
 		"lng":-122.064862,
 		"type":null,
-		"to":["0900013","0900015"]
+		"to":["0900013","0900015","1600086"]
 		},
 	"0900015":{
 		"id":"0900015",
@@ -432,7 +432,7 @@
 		"lat":36.994905,
 		"lng":-122.065353,
 		"type":null,
-		"to":["0900040","0900042"]
+		"to":["0900040","0900042","1600084"]
 		},
 	"0900042":{
 		"id":"0900042",
