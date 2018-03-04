@@ -1,6 +1,6 @@
 //Rough draft of the nodes of Rachel Carson College.
-//2/24/18: 58 total map nodes, 7 total big nodes.
-//3 additional nodes added. Path to West Field House now possible. Path to Porter College now possible. Path to Oakes College now possible.
+//3/4/18: 58 total map nodes, 7 total big nodes.
+//Connected to Porter, Oakes, and Performing Arts areas.
 
 	"0101000":{
 		"id":"0101000",
@@ -81,7 +81,7 @@
 		"lat":36.992843,
 		"lng":-122.064496,
 		"type":null,
-		"to":["0100001","0100003","0900005"]
+		"to":["0100001","0100003","0900005","1600057"]
 		},
 	"0100003":{
 		"id":"0100003",
