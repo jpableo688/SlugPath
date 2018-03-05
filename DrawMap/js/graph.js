@@ -252,8 +252,8 @@ Graph.prototype.getSuccessor = function(ID){
 
   for(i = 0; i < toList.length; i++)
   {
-    //console.log(nodes[toList[i]].id);
-    //console.log(toList[i]);
+    console.log(nodes[toList[i]].id);
+    console.log(toList[i]);
     var nodeId = nodes[toList[i]].id;
     var weight = edges[i].getDistance();
     //succ.push([nodes[toList[i]].id, edges[i].getDistance()]);

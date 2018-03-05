@@ -6,8 +6,9 @@ function drawgraph() {
     for(key in graph){
         keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
         keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
-        console.log("{");
+        //console.log("{");
         if(key != graph[key].id){
+            console.log(key);
             console.log("key != id");
         }
         var count = 0;
@@ -52,7 +53,7 @@ function drawgraph() {
                 if(strong == false){
                     console.log(key + " weak " + newKey);
                 } else {
-                    console.log(key + " strong " + newKey);
+                    //console.log(key + " strong " + newKey);
                 }
             }
 
@@ -63,6 +64,6 @@ function drawgraph() {
             polyline = L.polyline(latlng2);
             mymap.addLayer(polyline);
         }
-        console.log("}");
+        //console.log("}");
     }
 }
