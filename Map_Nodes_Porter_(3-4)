@@ -1,6 +1,6 @@
 //Rough draft of the nodes of Porter College.
 //3/4/18: 76 total map nodes, 7 total big nodes.
-//Connected to Rachel Carson and Performing Arts.
+//Connected to Kresge, Rachel Carson, and Performing Arts.
 
 	"0901000":{
 		"id":"0901000",
@@ -576,7 +576,7 @@
 		"lat":36.996662,
 		"lng":-122.065518,
 		"type":null,
-		"to":["0900056","0900058"]
+		"to":["0900056","0900058","0600001"]
 		},
 	"0900058":{
 		"id":"0900058",
