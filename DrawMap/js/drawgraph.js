@@ -67,3 +67,26 @@ function drawgraph() {
         //console.log("}");
     }
 }
+
+function testLocations(){
+    for(key in nodes){
+        if(nodes[key].name != null){
+            for (key2 in nodes){
+                if(nodes[key2].name != null){
+                    console.log(key + "to" + key2);
+                    var graph = new Graph();
+                    graph.setState(key, key2);
+                    var path1 = slugStar(graph);
+                    drawMap(path1);
+                }
+            }
+        }
+    }
+}
+
+function sleep(miliseconds) {
+   var currentTime = new Date().getTime();
+
+   while (currentTime + miliseconds >= new Date().getTime()) {
+   }
+}

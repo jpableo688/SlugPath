@@ -51,7 +51,7 @@
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select id="nameFrom" name="nameFrom" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                    <select id="nameFrom" name="nameFrom" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
                                                                     clearMap();"
                             style="display: none">
                         <option value="blank"></option>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-6">
                     To:<br>
-                    <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                    <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
                                                                 clearMap();">
                         <option value="blank"></option>
                         <option value="Nearby">Nearby</option>
@@ -69,7 +69,7 @@
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select id="nameTo" name="nameTo" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                    <select id="nameTo" name="nameTo" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
                                                                 clearMap();"
                             style="display: none">
                         <option value="blank"></option>
@@ -77,14 +77,7 @@
                 </div>
 
                 <div class="col">
-                    By:<br>
-                    <select id="weight" name="weight">
-                        <option value="blank"></option>
-                        <option value="Distance">Distance</option>
-                        <option value="Time">Time</option>
-                        <option value="Difficulty">Difficulty</option>
-                    </select>
-                    <button onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">GO</button>
+                    <button onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
                     <button onclick="drawgraph()">DrawTests</button>
 
                 </div>

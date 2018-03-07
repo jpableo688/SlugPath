@@ -10,7 +10,6 @@ mymap.removeControl(mymap.zoomControl);
 var startmarkers, endmarkers, polyline;
 
 function drawMap(searchArray){
-    clearMap();
     latlng = [];
     paths = searchArray;
     calculateDist(paths);
@@ -31,6 +30,7 @@ function drawMap(searchArray){
         latlng.push([lat,lng]);
     }
     
+    console.log("drawing path: " + paths);
     polyline = L.polyline(latlng);
     mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
     mymap.addLayer(polyline);
