@@ -1,11 +1,11 @@
 //draws whole graph
-function drawgraph() {
+function drawGraph() {
     var keymarkers;
     var newKey;
     var graph = nodes;
     for(key in graph){
-        keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
-        keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
+        //keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
+        //keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
         //console.log("{");
         if(key != graph[key].id){
             console.log(key);
@@ -68,22 +68,33 @@ function drawgraph() {
     }
 }
 
-function testLocations(){
+function testBigNodes(){
+    var graph = new Graph();
     for(key in nodes){
         if(nodes[key].name != null){
+            console.log(key);
             for (key2 in nodes){
                 if(nodes[key2].name != null){
-                    console.log(key + "to" + key2);
-                    var graph = new Graph();
+                    
                     graph.setState(key, key2);
                     var path1 = slugStar(graph);
-                    drawMap(path1);
+                    console.log(path1);
                 }
             }
         }
     }
 }
 
+function testNodes(){
+    var graph = new Graph();
+    for(key in nodes){
+        for (key2 in nodes){
+            graph.setState(key, key2);
+            var path1 = slugStar(graph);
+            console.log(path1);
+        }
+    }
+}
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
 

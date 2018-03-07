@@ -302,11 +302,11 @@ function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var typeToDD = document.getElementById(typeTo);
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
-    
+
     fromID = getFromID(typeFromDD, areaFromDD, nameFromDD);
     toID = getToID(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
 
-    console.log(fromID + toID);
+    //console.log(fromID + toID);
     if (typeToDD.value == "Nearby" && toID == undefined){
         updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
     }
@@ -318,7 +318,7 @@ function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
 
 function findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var IDs = checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo);
-    console.log(IDs);
+    //console.log(IDs);
     if (IDs != undefined){
         aStar(IDs[0], IDs[1]);
     }

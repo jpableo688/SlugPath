@@ -5,12 +5,13 @@ L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/t
     minZoom: 15,
     accessToken: 'pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ'
 }).addTo(mymap);
+
 mymap.removeControl(mymap.zoomControl);
 //Can't figure out how to make these not global
 var startmarkers, endmarkers, polyline;
 
 function drawMap(searchArray){
-    latlng = [];
+    var latlng = [];
     paths = searchArray;
     calculateDist(paths);
     for(path = 0; path < searchArray.length; path++){
@@ -30,8 +31,9 @@ function drawMap(searchArray){
         latlng.push([lat,lng]);
     }
     
-    console.log("drawing path: " + paths);
+    //console.log("drawing path: " + paths);
     polyline = L.polyline(latlng);
+    
     mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
     mymap.addLayer(polyline);
     

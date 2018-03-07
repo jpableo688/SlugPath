@@ -1,5 +1,6 @@
+var graph = new Graph();
 function aStar(optFrom, optTo){
-    var graph = new Graph();
+    
     graph.setState(optFrom, optTo);
     var path1 = slugStar(graph);
     graph.setState(optTo, optFrom);
@@ -26,7 +27,8 @@ function calculateDist(paths){
         totaldist = totaldist + thisDist;
         //console.log("current total dist " + totaldist + "}");
     }
-    return totaldist;
     var distanceItem = document.getElementById("Distance");
     distanceItem.innerHTML = "Total Distance: " + totaldist;
+    return totaldist;
+
 }
