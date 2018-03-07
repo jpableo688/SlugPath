@@ -12,6 +12,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
         <link rel="shortcut icon" href="./assets/images/flavicon/logo_icon.ico">
@@ -19,89 +20,11 @@
 
         <title>SlugPath</title>
 
-    </head>
-    <body onload="getLocation(); gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
-        <br><br><br>
-        <div class="container">
-            <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-            integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-            crossorigin=""></script>
-            <style>
-                <!-- Testing -->
-                body {
-                    padding: 20;
-                    margin: 20;
-                }
-                html, body, #mapid {
-                    height: 600px;
-                    width: 1425px;
-                }
-            </style>
-
-            <br>
-            <div class="row">
-                <div class="col-6">
-                     From:
-                    <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
-                        <option value="blank"></option>
-                    </select>
-                    <select id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom')";
-                            style="display: none">
-                        <option value="blank"></option>
-                    </select>
-                    <select id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
-                            style="display: none">
-                        <option value="blank"></option>
-                    </select>
-                    <hr />
-                </div>
-                <div class="col-6">
-                    To:
-                    <select id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
-                        <option value="blank"></option>
-                        <option value="Nearby">Nearby</option>
-                    </select>
-                    <select id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo')"
-                            style="display: none">
-                        <option value="blank"></option>
-                    </select>
-                    <select id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
-                            style="display: none">
-                        <option value="blank"></option>
-                    </select>
-                    <hr />  
-                </div>
-
-                <div class="col">
-                    By:
-                    <select id="weight" name="weight" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
-                        <option value="blank"></option>
-                        <option value="Distance">Distance</option>
-                        <option value="Time">Time</option>
-                        <option value="Difficulty">Difficulty</option>
-                    </select>
-                    <button onclick="drawgraph()">DrawTests</button>
-
-                </div>
-                <br><br>
-
-        <script type="text/javascript" src="DrawMap/js/SlugStar.js"></script>
-        <script type="text/javascript" src="DrawMap/js/PriorityQueue.js"></script>
-        <script type="text/javascript" src="DrawMap/js/graph.js"></script>
-        <script type="text/javascript" src="DrawMap/js/locations.js"></script>
         <script type="text/javascript" src="DrawMap/js/dropdown.js"></script>
-        <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
-        <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
-        <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
-        <p id="DrawTests"></p>
-        <p id="testLocation"></p>
-        <div id="mapid"></div>
-        <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
 
-        </div>
-            
-        
+    </head>
 
+    <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #9ebbc6;>
           <a class="navbar-brand" href="#"><img id="logo" src="./assets/images/flavicon/logo_icon.ico"><h2><b> &nbsp; SlugPath</b></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,8 +45,89 @@
             </ul>
           </div>
         </nav>
+    </header>
 
+    <body onload="getLocation(); gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
+        <br><br><br>
+        <div class="container">
+            <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+            integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+            crossorigin=""></script>
+            <style>
+                <!-- Testing -->
+                body {
+                    padding: 20;
+                    margin: 20;
+                }
+                html, body, #mapid {
+                    height: 65vh;
+                    width: 175vh;
+                }
+            </style>
 
+            <br>
+            <div class="row">
+                <div class="col-5">
+                     From:
+                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                        <option value="blank"></option>
+                    </select>
+                    <select class="custom-select custom-select-sm" id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom')";
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <select class="custom-select custom-select-sm" id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <hr />
+                     <button onclick="drawgraph()">DrawTests</button>
+                </div>
+                <div class="col-5">
+                    To:
+                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                        <option value="blank"></option>
+                        <option value="Nearby">Nearby</option>
+                    </select>
+                    <select  id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo')"
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <select class="custom-select custom-select-sm" id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <hr />  
+                </div>
 
+                <div class="col-2">
+                    By:
+                    <select class="custom-select custom-select-sm" id="weight" name="weight" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                        <option value="blank"></option>
+                        <option value="Distance">Distance</option>
+                        <option value="Time">Time</option>
+                        <option value="Difficulty">Difficulty</option>
+                    </select>
+                    <hr />
+                   
+                </div>
+                <br><br>
+
+        <script type="text/javascript" src="DrawMap/js/SlugStar.js"></script>
+        <script type="text/javascript" src="DrawMap/js/PriorityQueue.js"></script>
+        <script type="text/javascript" src="DrawMap/js/graph.js"></script>
+        <script type="text/javascript" src="DrawMap/js/locations.js"></script>
+
+        <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
+        <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
+        <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
+        <p id="DrawTests"></p>
+        <p id="testLocation"></p>
+        <div id="mapid"></div>
+        <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
+
+        </div>
+            
+        
     </body>
 </html>

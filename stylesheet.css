@@ -15,24 +15,32 @@
 {
 	top: 5%;
 	position: relative;
-	height: 245px;
-	width: 245px;
+	height: 180px;
+	width: 180px;
 }
 
 #ed_picture
 {
 	top: 5%;
 	position: relative;
-	height: 245px;
-	width: 245px;
+	height: 180px;
+	width: 180px;
 }
 
 #sri_picture
 {
 	top: 5%;
 	position: relative;
-	height: 245px;
-	width: 245px;
+	height: 180px;
+	width: 180px;
+}
+
+#cam_picture
+{
+	top: 5%;
+	position: relative;
+	height: 180px;
+	width: 180px;
 }
 
 #cameron_dev
