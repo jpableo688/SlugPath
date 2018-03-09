@@ -1,12 +1,12 @@
 //draws whole graph
 function drawGraph() {
-    var keymarkers;
     var newKey;
     var graph = nodes;
     for(key in graph){
-        //keymarkers = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
-        //keymarkers.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
+        //startmarker = L.marker([graph[key].lat, graph[key].lng]).addTo(mymap);
+        //startmarker.bindPopup(graph[key].id +" " + graph[key].type + "  " + graph[key].name ).openPopup();
         //console.log("{");
+        //startmarkers.push(startmarker);
         if(key != graph[key].id){
             console.log(key);
             console.log("key != id");
@@ -59,9 +59,9 @@ function drawGraph() {
 
             //used to find connected but missing keys
             //console.log(newKey);
-            var polyline;
             //console.log(latlng2);
             polyline = L.polyline(latlng2);
+            polylines.push(polyline);
             mymap.addLayer(polyline);
         }
         //console.log("}");
@@ -69,21 +69,45 @@ function drawGraph() {
 }
 
 function testBigNodes(){
+    var paths = [];
     var graph = new Graph();
+    var counter = 0;
     for(key in nodes){
+        
         if(nodes[key].name != null){
-            console.log(key);
+            //console.log(key);
             for (key2 in nodes){
+                //counter = counter +1;
+                /*if(counter > 20){
+                    //console.log("I broke");
+                    counter = 0;
+                    break;
+                }*/
                 if(nodes[key2].name != null){
                     
                     graph.setState(key, key2);
                     var path1 = slugStar(graph);
-                    console.log(path1);
+                    paths.push(path1);
+                    /*graph.setState(key, key2);
+                    var path1 = slugStar(graph);
+                    if(path1.length == 0){
+                    console.log("NO SOL:  " +  key + "  " + key2 );
+                    }
+                    drawMap(path1);
+                    sleep(500);
+                    //console.log(path1);
+                    */
                 }
             }
         }
     }
+    console.log("full, " + paths.length);
+    for (var path in paths){
+        drawMap(paths[path]);
+        //sleep(100);
+    }
 }
+
 
 function testNodes(){
     var graph = new Graph();
@@ -91,13 +115,21 @@ function testNodes(){
         for (key2 in nodes){
             graph.setState(key, key2);
             var path1 = slugStar(graph);
-            console.log(path1);
+            //console.log(path1);
         }
+    }
+}
+
+function testButtons(){
+    var test = document.getElementById('testing');
+    if (test.style.display === 'none') {
+        test.style.display = 'block';
+    } else {
+        test.style.display= 'none';
     }
 }
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
-
    while (currentTime + miliseconds >= new Date().getTime()) {
    }
 }

@@ -259,7 +259,6 @@ function nearTo(value){
         }
     }
     return nearNodeList;
-    
 }
 
 function getFromID(typeFromDD, areaFromDD, nameFromDD){
