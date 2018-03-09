@@ -10,9 +10,12 @@ function aStar(optFrom, optTo){
     var path2dist = calculateDist(path2);
     if(path1dist > path2dist){
         path2.reverse();
+        displayDist(path2dist);
         drawMap(path2);
+        
     } else {
         drawMap(path1);
+        displayDist(path1dist);
     }
     //sleep(10);
 }
@@ -27,8 +30,11 @@ function calculateDist(paths){
         totaldist = totaldist + thisDist;
         //console.log("current total dist " + totaldist + "}");
     }
-    var distanceItem = document.getElementById("Distance");
-    distanceItem.innerHTML = "Total Distance: " + totaldist;
     return totaldist;
 
+}
+
+function displayDist(dist){
+    var distanceItem = document.getElementById("Distance");
+    distanceItem.innerHTML = "Total Distance: " + dist;
 }
