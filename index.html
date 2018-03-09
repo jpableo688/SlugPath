@@ -12,6 +12,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
         <link rel="shortcut icon" href="./assets/images/flavicon/logo_icon.ico">
@@ -19,7 +20,33 @@
 
         <title>SlugPath</title>
 
+        <script type="text/javascript" src="DrawMap/js/dropdown.js"></script>
+
     </head>
+
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #9ebbc6;>
+          <a class="navbar-brand" href="#"><img id="logo" src="./assets/images/flavicon/logo_icon.ico"><h2><b> &nbsp; SlugPath</b></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <span class="navbar-text" id="navText">
+                Never get lost at UC Santa Cruz ever again!
+            </span>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
     <body onload="getLocation(); gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
         <br><br><br>
         <div class="container">
@@ -33,13 +60,19 @@
                     margin: 0;
                 }
                 html, body, #mapid {
+<<<<<<< HEAD
                     height: 70vh;
                     width: 100vw;
+=======
+                    height: 65vh;
+                    width: 175vh;
+>>>>>>> f7fe3308315213f39a997e4123b49a5a33cf10f5
                 }
             </style>
 
             <br>
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-6">
                      From:<br>
                     <select id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
@@ -71,11 +104,40 @@
                     </select>
                     <select id="nameTo" name="nameTo" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
                                                                 clearMap();"
+                <div class="col-5">
+                     From:
+                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                        <option value="blank"></option>
+                    </select>
+                    <select class="custom-select custom-select-sm" id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom')";
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <select class="custom-select custom-select-sm" id="nameFrom" name="nameFrom" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <hr />
+                     <button onclick="drawgraph()">DrawTests</button>
+                </div>
+                <div class="col-5">
+                    To:
+                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                        <option value="blank"></option>
+                        <option value="Nearby">Nearby</option>
+                    </select>
+                    <select  id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo')"
+                            style="display: none">
+                        <option value="blank"></option>
+                    </select>
+                    <select class="custom-select custom-select-sm" id="nameTo" name="nameTo" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')" 
+>>>>>>> f7fe3308315213f39a997e4123b49a5a33cf10f5
                             style="display: none">
                         <option value="blank"></option>
                     </select>
                 </div>
 
+<<<<<<< HEAD
                 <div class="col">
                     <button onclick="
                                     findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
@@ -85,6 +147,18 @@
                     <button onclick="testBigNodes()">Test Big Nodes</button>
                     <button onclick="testNodes()">Test All Nodes</button>
                     <button onclick="clearMap()"> Clear Graph</button>
+=======
+                <div class="col-2">
+                    By:
+                    <select class="custom-select custom-select-sm" id="weight" name="weight" onchange="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                        <option value="blank"></option>
+                        <option value="Distance">Distance</option>
+                        <option value="Time">Time</option>
+                        <option value="Difficulty">Difficulty</option>
+                    </select>
+                    <hr />
+                   
+>>>>>>> f7fe3308315213f39a997e4123b49a5a33cf10f5
                 </div>
                 
                 <br><br>
@@ -93,7 +167,7 @@
         <script type="text/javascript" src="DrawMap/js/PriorityQueue.js"></script>
         <script type="text/javascript" src="DrawMap/js/graph.js"></script>
         <script type="text/javascript" src="DrawMap/js/locations.js"></script>
-        <script type="text/javascript" src="DrawMap/js/dropdown.js"></script>
+
         <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
         <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
         <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
@@ -108,29 +182,5 @@
         </div>
             
         
-
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #9ebbc6;>
-          <a class="navbar-brand" href="#"><img id="logo" src="./assets/images/flavicon/logo_icon.ico"><h2><b> &nbsp; SlugPath</b></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarToggler">
-            <span class="navbar-text" id="navText">
-                Never get lost at UC Santa Cruz ever again!
-            </span>
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-
-
     </body>
 </html>

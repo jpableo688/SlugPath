@@ -2,11 +2,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin=""/>
+
+
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 
 		<link rel="shortcut icon" href="./assets/images/flavicon/logo_icon.ico">
@@ -15,7 +21,7 @@
 	    <title>About Us</title>
 
 	</head>
-	<body>
+	<header>
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #9ebbc6;>
 		  <a class="navbar-brand" href="#"><img id="logo" src="./assets/images/flavicon/logo_icon.ico"><h2><b> &nbsp; SlugPath</b></h2></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +42,14 @@
 		    </ul>
 		  </div>
 		</nav>
+	</header>
 
+	<body>
 		<div class="container">
 			<div class="row">
-	    <div class="col">
+		<div class="col-md-1">
+	    </div>
+	    <div class="col-md-2">
 	    	<br><br><br>
 	    	<img id="joe_picture" src="./assets/images/about/jopic.jpg">
 	    	<br><br>
@@ -56,7 +66,7 @@
 	    	</a>
 	    </div>  
 
-	    <div class="col">
+	    <div class="col-md-2">
 	    	<br><br><br>
 	    	<img id="ed_picture" src="./assets/images/about/edpic.png">
 	    	<br><br>
@@ -73,7 +83,7 @@
 	    	</a>
 	    </div>  
 
-	    <div class="col">
+	    <div class="col-md-2">
 			<br><br><br>
 	    	<img id="sri_picture" src="./assets/images/about/sripic.png">
 	    	<br><br>
@@ -91,14 +101,36 @@
 
 	    </div>  
 
-	    <div class="col">
-	    	    	<h2>Edward John Tagaca</h2>
-
+	    <div class="col-md-2">
+	    	<br><br><br>
+	    	<img id="joe_picture" src="">
+	    	<br><br>
+	    	<h2>Pranav Salunke</h2>
+	    	<br>
+	    	<p><b>Role: </b> SlugStar Developer and Data Collector</p>
+	    	<p><b>Bio: </b>I’m a third year computer science student at UCSC. As frustrating it can be, I really enjoy CS and try to spread the appreciation with my work as this year’s president of ACM, a student run organization at UCSC. When I’m not swamped with work, I like to forget my responsibilities by getting tangled up in the internets.</p>
+	    	<p><b>Links: </b></p>
+	    	<a href="https://github.com/PranavSalunke/" target="_blank">
+	    		<img src="./assets/images/about/github.png" style="height: 75px; width: 75px;">
+	    	</a>
 	    </div>  
-	    <div class="col">
-	    	    	<h2>Edward John Tagaca</h2>
-
+	    <div class="col-md-2">
+	    	<br><br><br>
+	    	<img id="cam_picture" src="./assets/images/about/campic.png">
+	    	<br><br>
+	    	<h2>Cameron Skaggs</h2>
+	    	<br>
+	    	<p><b>Role: </b> Data Manager and Developer</p>
+	    	<p><b>Bio: </b>I was born July 3rd, 1997 in Sonoma County where I continued to grow up. Since discovering software engineering in STEM classes during high school, I’ve pursued the field to find a career that blends programming and mathematics. I’m a music junkie with an interest in hiking and math.</p>
+	    	<p><b>Links: </b></p>
+	    	<a href="https://github.com/cjskaggs" target="_blank">
+	    		<img src="./assets/images/about/github.png" style="height: 75px; width: 75px;">
+	    	</a>
 	    </div>  
+
+	    <div class="col-md-1">
+	    </div>
+
 	 
 			</div>  
 		</div> 
