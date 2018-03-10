@@ -1,6 +1,6 @@
 //Rough draft of the nodes of Porter College.
-//3/4/18: 76 total map nodes, 7 total big nodes.
-//Connected to Kresge, Rachel Carson, and Performing Arts.
+//3/9/18: 75 total map nodes, 8 total big nodes.
+//Bus stop added along with its corresponding type and new ID.
 
 	"0901000":{
 		"id":"0901000",
@@ -65,13 +65,13 @@
 		"type":"Student Services",
 		"to":["0900038","0900046"]
 	},
-	"0900001":{
-		"id":"0900001",
-		"name":null,
+	"0901001":{
+		"id":"0901001",
+		"name":"Rachel Carson/Porter Bus Stop Outer Loop",
 		"areas":"Porter",
 		"lat":36.992921,
 		"lng":-122.065069,
-		"type":null,
+		"type":"Bus Stop",
 		"to":["0900002","0900005"]
 		},
 	"0900002":{
@@ -81,7 +81,7 @@
 		"lat":36.992996,
 		"lng":-122.065053,
 		"type":null,
-		"to":["0900001","0900003"]
+		"to":["0901001","0900003"]
 		},
 	"0900003":{
 		"id":"0900003",
@@ -108,7 +108,7 @@
 		"lat":36.992940,
 		"lng":-122.064508,
 		"type":null,
-		"to":["0100002","0900001","0900006"]
+		"to":["0100002","0901001","0900006"]
 		},
 	"0900006":{
 		"id":"0900006",
