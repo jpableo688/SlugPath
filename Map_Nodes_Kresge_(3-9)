@@ -1,6 +1,6 @@
 //Rough draft of the map nodes of Kresge College.
-//3/4/18: 53 total map nodes, 8 total big nodes.
-//
+//3/9/18: 51 total map nodes, 10 total big nodes.
+//Bus stops added along with their corresponding type and new ID.
 
 	"0602000":{
         "id":"0602000",
@@ -551,21 +551,21 @@
         "type":null,
         "to":["0600050","0600052","0600053"]
     },
-	"0600052":{
-        "id":"0600052",
-        "name":null,
+	"0601052":{
+        "id":"0601052",
+        "name":"Kresge College Bus Stop Outer Loop",
         "areas":"Kresge",
         "lat":36.99926,
         "lng":-122.064315,
-        "type":null,
+        "type":"Bus Stop",
         "to":["0600051"]
     },
-	"0600053":{
-        "id":"0600053",
-        "name":null,
+	"0601053":{
+        "id":"0601053",
+        "name":"Kresge College Bus Stop Inner Loop",
         "areas":"Kresge",
         "lat":36.999281,
         "lng":-122.064513,
-        "type":null,
+        "type":"Bus Stop",
         "to":["0600051"]
     },
