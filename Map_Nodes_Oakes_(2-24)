@@ -1,4 +1,8 @@
-"0801000":{
+//Final draft of the nodes of the Oakes area.
+//3/9/18: 82 total map nodes, 5 total big nodes.
+//Bus stop added along with its corresponding type and new ID.
+
+	"0801000":{
 		"id":"0801000",
 		"name":"Oakes Cafe",
 		"areas":"Oakes",
@@ -547,13 +551,13 @@
 		"type":null,
 		"to":["0800056","0800058"]
 	},
-	"0800058":{						//West remote bus stop
-		"id":"0800058",
-		"name":null,
+	"0801058":{						//West remote bus stop
+		"id":"0801058",
+		"name":"West Remote Bus Stop",
 		"areas":"Oakes",
 		"lat":36.988540,
 		"lng":-122.064772,
-		"type":null,
+		"type":"Bus Stop",
 		"to":["0800057"]
 	},
 	"0800059":{
