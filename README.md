@@ -1,4 +1,2 @@
-<p align="right">
-  <img src="assets/images/flavicon/logo_icon.ico" />
-</p>
+<img align="right" src="assets/images/flavicon/logo_icon.ico">
 # SlugPath
