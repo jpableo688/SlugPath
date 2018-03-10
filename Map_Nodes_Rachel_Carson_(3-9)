@@ -1,6 +1,6 @@
 //Rough draft of the nodes of Rachel Carson College.
-//3/4/18: 58 total map nodes, 7 total big nodes.
-//Connected to Porter, Oakes, and Performing Arts areas.
+//3/9/18: 56 total map nodes, 9 total big nodes.
+//Bus stops added along with their corresponding type and new IDs.
 
 	"0101000":{
 		"id":"0101000",
@@ -65,13 +65,13 @@
 		"type":"Academic",
 		"to":["0100011"]
 	},
-	"0100001":{					//bus stop
-		"id":"0100001",
-		"name":null,
+	"0101001":{					//bus stop
+		"id":"0101001",
+		"name":"Rachel Carson/Porter Bus Stop Inner Loop",
 		"areas":"Rachel Carson",
 		"lat":36.992831,
 		"lng":-122.064784,
-		"type":null,
+		"type":"Bus Stop",
 		"to":["0100002","0100003"]
 		},
 	"0100002":{					//crosswalk
@@ -81,7 +81,7 @@
 		"lat":36.992843,
 		"lng":-122.064496,
 		"type":null,
-		"to":["0100001","0100003","0900005","1600057"]
+		"to":["0101001","0100003","0900005","1600057"]
 		},
 	"0100003":{
 		"id":"0100003",
@@ -90,7 +90,7 @@
 		"lat":36.992631,
 		"lng":-122.064536,
 		"type":null,
-		"to":["0100001","0100002","0100004"]
+		"to":["0101001","0100002","0100004"]
 		},
 	"0100004":{
 		"id":"0100004",
@@ -342,7 +342,7 @@
 		"lat":36.990531,
 		"lng":-122.065775,
 		"type":null,
-		"to":["0100030","0100038"]
+		"to":["0100030","0101038"]
 		},
 	"0100032":{					//west of second bisection
 		"id":"0100032",
@@ -369,7 +369,7 @@
 		"lat":36.990455,
 		"lng":-122.066042,
 		"type":null,
-		"to":["0100033","0100038"]
+		"to":["0100033","0101038"]
 		},
 	"0100035":{					//west of third bisection
 		"id":"0100035",
@@ -398,13 +398,13 @@
 		"type":null,
 		"to":["0100036","0100039"]
 		},
-	"0100038":{					//southwest bus stop
-		"id":"0100038",
-		"name":null,
+	"0101038":{					//southwest bus stop
+		"id":"0101038",
+		"name":"Oakes College Bus Stop",
 		"areas":"Rachel Carson",
 		"lat":36.990612,
 		"lng":-122.066145,
-		"type":null,
+		"type":"Bus Stop",
 		"to":["0100031","0100034","0100039","0100054"]
 		},
 	"0100039":{					//sidewalk along bus stop, sw
@@ -414,7 +414,7 @@
 		"lat":36.990284,
 		"lng":-122.066264,
 		"type":null,
-		"to":["0100037","0100038"]
+		"to":["0100037","0101038"]
 		},
 	"0100040":{					//beside college 8 cafe
 		"id":"0100040",
@@ -549,7 +549,7 @@
 		"lat":36.990774,
 		"lng":-122.065876,
 		"type":null,
-		"to":["0100038","0100053"]
+		"to":["0101038","0100053"]
 		},
 	"0100055":{	
 		"id":"0100055",
