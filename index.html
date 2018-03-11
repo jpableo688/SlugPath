@@ -69,10 +69,12 @@
             <div class="row">
                 <div class="col-5">
                      From:
-                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                                                                                                           clearMap()">
                         <option value="blank"></option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom')";
+                    <select class="custom-select custom-select-sm" id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom');
+                                                                                                           clearMap()";
                             style="display: none">
                         <option value="blank"></option>
                     </select>
@@ -84,11 +86,13 @@
                 </div>
                 <div class="col-5">
                     To:
-                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight')">
+                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                                                                                                        clearMap()">
                         <option value="blank"></option>
                         <option value="Nearby">Nearby</option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo')"
+                    <select class="custom-select custom-select-sm" id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo');
+                                                                                                        clearMap()"
                             style="display: none">
                         <option value="blank"></option>
                     </select>
@@ -102,7 +106,8 @@
                 
                 <div class="col">
                     <br>
-                    <button onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
+                    <button onclick="clearMap();
+                                    findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
                 </div>
                 <p id="Distance">
                 

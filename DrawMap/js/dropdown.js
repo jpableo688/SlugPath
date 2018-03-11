@@ -144,6 +144,7 @@ function collectNameByArea(typeValue, areaValue){
     }
     return nameList;
 }
+
 function updateArea(type, areas, name){
     var typeDD = document.getElementById(type);
     var areaDD = document.getElementById(areas);
@@ -198,7 +199,7 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight)
     if(typeFromDD.value == "My Location"){
         clearMenu(nameFromDD);
         addBlank(nameFromDD);
-        findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
+        //findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
     }
 }
 
