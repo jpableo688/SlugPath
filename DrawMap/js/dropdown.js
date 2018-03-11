@@ -144,6 +144,7 @@ function collectNameByArea(typeValue, areaValue){
     }
     return nameList;
 }
+
 function updateArea(type, areas, name){
     var typeDD = document.getElementById(type);
     var areaDD = document.getElementById(areas);
@@ -173,7 +174,7 @@ function checkIfType(optValue){
     return false;
 }
 
-function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight){
+function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var typeFromDD = document.getElementById(typeFrom);
     var areaFromDD = document.getElementById(areaFrom);
     var nameFromDD = document.getElementById(nameFrom);
@@ -191,27 +192,40 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight)
     }
     
     updateReg(typeFromDD, areaFromDD, nameFromDD);
+    
     if(typeToDD.value == "Nearby"){
-        updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+        clearMenu(nameToDD);
+        addBlank(nameToDD);
+        //updateNearby(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo);
     }
     
     if(typeFromDD.value == "My Location"){
         clearMenu(nameFromDD);
         addBlank(nameFromDD);
-        findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
     }
 }
 
-function updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD){
-    clearMenu(nameToDD);
-    addBlank(nameToDD);
-    if(typeFrom.value == "My Location"){
-        var list = nearTo(typeFromDD.value);
-        populateByName(nameToDD, list);
-    } else if(nameFromDD.value != "blank"){
-        var list = nearTo(nameFromDD.value);
-        populateByName(nameToDD, list);
-    }
+function updateNearby(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
+    var typeFromDD = document.getElementById(typeFrom);
+    var areaFromDD = document.getElementById(areaFrom);
+    var nameFromDD = document.getElementById(nameFrom);
+    var typeToDD = document.getElementById(typeTo);
+    var areaToDD = document.getElementById(areaTo);
+    var nameToDD = document.getElementById(nameTo);
+    
+    if(typeToDD.value == "Nearby"){
+        clearMenu(nameToDD);
+        addBlank(nameToDD);
+        if(typeFromDD.value == "My Location"){
+            var list = nearTo(typeFromDD.value);
+            //console.log(list);
+            populateByName(nameToDD, list);
+        } else if(nameFromDD.value != "blank"){
+            var list = nearTo(nameFromDD.value);
+            //console.log(list);
+            populateByName(nameToDD, list);
+        }
+    }   
 }
 
 function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
@@ -238,7 +252,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     if(typeToDD.value != "Nearby"){
         updateReg(typeToDD, areaToDD, nameToDD);
     } else {
-        updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+        updateNearby(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo);
     }
 }
 
@@ -307,7 +321,8 @@ function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
 
     //console.log(fromID + toID);
     if (typeToDD.value == "Nearby" && toID == undefined){
-        updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
+        console.log("updating nearby under checkIDs");
+        updateNearby(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo);
     }
     if (fromID != undefined && toID != undefined){
         return[fromID, toID];
