@@ -1,6 +1,6 @@
 //Final draft of the nodes of the Oakes area.
-//3/9/18: 82 total map nodes, 5 total big nodes.
-//Bus stop added along with its corresponding type and new ID.
+//3/10/18: 82 total map nodes, 5 total big nodes.
+//Bus stop added along with its corresponding type and new ID. Oakes Path added.
 
 	"0801000":{
 		"id":"0801000",
@@ -549,7 +549,7 @@
 		"lat":36.988591,
 		"lng":-122.064810,
 		"type":null,
-		"to":["0800056","0800058"]
+		"to":["0800056","0801058"]
 	},
 	"0801058":{						//West remote bus stop
 		"id":"0801058",
@@ -585,7 +585,7 @@
 		"lat":36.990226,
 		"lng":-122.063426,
 		"type":null,
-		"to":["0800060","0800062","0800078"]
+		"to":["0800060","0800062","0800078","0800084"]
 	},
 	"0800062":{
 		"id":"0800062",
@@ -784,4 +784,49 @@
 		"lng":-122.064809,
 		"type":null,
 		"to":["0800018","0800082"]
+	},
+	"0800084":{
+		"id":"0800084",
+		"name":null,
+		"areas":"Oakes",
+		"lat":36.990334,
+		"lng":-122.063301,
+		"type":null,
+		"to":["0800061","080008401"]
+	},
+	"080008401":{
+		"id":"080008401",
+		"name":null,
+		"areas":"Oakes",
+		"lat":36.990651,
+		"lng":-122.063027,
+		"type":null,
+		"to":["0800084","0800085"]
+	},
+	"0800085":{
+		"id":"0800085",
+		"name":null,
+		"areas":"Oakes",
+		"lat":36.991255,
+		"lng":-122.062979,
+		"type":null,
+		"to":["080008401","0800086"]
+	},
+	"0800086":{
+		"id":"0800086",
+		"name":null,
+		"areas":"Oakes",
+		"lat":36.991615,
+		"lng":-122.063194,
+		"type":null,
+		"to":["0800085","0800087"]
+	},
+	"0800087":{
+		"id":"0800087",
+		"name":null,
+		"areas":"Oakes",
+		"lat":36.992557,
+		"lng":-122.063156,
+		"type":null,
+		"to":["0800086","160005501"]
 	},
