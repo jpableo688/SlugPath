@@ -19,9 +19,9 @@ For those who do not know, the UC Santa Cruz campus is the largest campus in the
 ## Authors
 - **Joven Pableo**: Product Owner, Stack Developer, and Data Collector
 - **Edward J. Tagaca**: Stack Developer and Data Collector
-- **Srijitha Somangili**: Front-End Developer and Data Collector
 - **Pranav Salunke**: Back-End Developer and Data Collector
 - **Cameron Skaggs**: Data Manager and Back-End Developer
+- **Srijitha Somangili**: Front-End Developer and Data Collector
 
 ## Contributions
 Feel free to submit a pull request to add further paths or map nodes in the locations.js file under the DrawMap/js folder. It contains all the data represented on the map itself. To further get a detailed look of the data within the map, the testing function _showTests()_ which would be used in the console would further help in collection of data.
