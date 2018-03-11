@@ -1,5 +1,5 @@
 <html>
-  <img align="right" src="https://raw.github.com/jpableo688/SlugPath/master/assets/images/flavicon/logo_icon.ico" width="60">   <h1>SlugPath</h1></img>
+  <img align="right" src="https://raw.githubusercontent.com/jpableo688/SlugPath/master/assets/images/Slugpath%20logo%20final.gif" width="60">   <h1>SlugPath</h1></img>
 </html>
 
 ## Welcome to SlugPath! A navigational tool to get around the UC Santa Cruz Campus
@@ -10,7 +10,7 @@ For those who do not know, the UC Santa Cruz campus is the largest campus in the
 
 
 ## Built With
-- [Boostrap v4.0](https://getbootstrap.com/): Front-End Framework
+- [Bootstrap v4.0](https://getbootstrap.com/): Front-End Framework
 - [Leaflet](http://leafletjs.com/): Mapping API
 - [HTML](https://en.wikipedia.org/wiki/HTML): Structure Site
 - [CSS](https://developers.google.com/web/tools/chrome-devtools/css/): Further Styling of Site
