@@ -1,5 +1,5 @@
 //Rough draft of the nodes of Porter College.
-//3/9/18: 75 total map nodes, 8 total big nodes.
+//3/10/18: 75 total map nodes, 8 total big nodes.
 //Bus stop added along with its corresponding type and new ID.
 
 	"0901000":{
@@ -8,7 +8,7 @@
 		"areas":"Porter",
 		"lat":36.994276,
 		"lng":-122.065903,
-		"type":"Dining Hall",
+		"type":"Dining",
 		"to":["0900039"]
 	},
 	"0902000":{
@@ -26,7 +26,7 @@
 		"areas":"Porter",
 		"lat":36.994521,
         "lng":-122.065742,
-		"type":"Other",
+		"type":"Lounge",
 		"to":["0900039"]
 	},
 	"0904000":{
@@ -35,7 +35,7 @@
 		"areas":"Porter",
 		"lat":36.994276,
 		"lng":-122.065903,
-		"type":"Dining Hall",
+		"type":"Food To Go",
 		"to":["0900024","0900036"]
 	},
 	"0905000":{
@@ -64,6 +64,51 @@
 		"lng":-122.065348,
 		"type":"Student Services",
 		"to":["0900038","0900046"]
+	},
+	"0908000":{
+		"id":"0908000",
+		"name":"Porter Apartment G",
+		"areas":"Porter",
+		"lat":36.995691,
+		"lng":-122.065296,
+		"type":"Residential",
+		"to":["0900048"]
+	},
+	"0909000":{
+		"id":"0909000",
+		"name":"Porter Apartment E",
+		"areas":"Porter",
+		"lat":36.995575,
+		"lng":-122.064953,
+		"type":"Residential",
+		"to":["0900047","0900048"]
+	},
+	"0910000":{
+		"id":"0910000",
+		"name":"Porter Apartment F",
+		"areas":"Porter",
+		"lat":36.996153,
+		"lng":-122.064905,
+		"type":"Residential",
+		"to":["0900050"]
+	},
+	"0911000":{
+		"id":"0911000",
+		"name":"Porter Apartment H",
+		"areas":"Porter",
+		"lat":36.996179,
+		"lng":-122.06527,
+		"type":"Residential",
+		"to":["0900050"]
+	},
+	"0912000":{
+		"id":"0912000",
+		"name":"Porter I Lounge",
+		"areas":"Porter",
+		"lat":36.996462,
+		"lng":-122.065275,
+		"type":"Lounge",
+		"to":["0900051"]
 	},
 	"0901001":{
 		"id":"0901001",
@@ -486,7 +531,7 @@
 		"lat":36.995520,
 		"lng":-122.065216,
 		"type":null,
-		"to":["0900044","0900048"]
+		"to":["0900044","0900048","0909000"]
 		},
 	"0900048":{
 		"id":"0900048",
@@ -495,7 +540,7 @@
 		"lat":36.995707,
 		"lng":-122.065146,
 		"type":null,
-		"to":["0900047","0900049"]
+		"to":["0900047","0900049","0908000","0909000"]
 		},
 	"0900049":{
 		"id":"0900049",
@@ -513,7 +558,7 @@
 		"lat":36.996148,
 		"lng":-122.065138,
 		"type":null,
-		"to":["0900049","0900051"]
+		"to":["0900049","0900051","0910000","0911000"]
 		},
 	"0900051":{
 		"id":"0900051",
@@ -522,7 +567,7 @@
 		"lat":36.996336,
 		"lng":-122.065147,
 		"type":null,
-		"to":["0900050","0900052"]
+		"to":["0900050","0900052","0912000"]
 		},
 	"0900052":{
 		"id":"0900052",
