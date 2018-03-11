@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-5">
                      From:
-                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
                                                                                                            clearMap()">
                         <option value="blank"></option>
                     </select>
@@ -78,7 +78,8 @@
                             style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="nameFrom" name="nameFrom" onchange="clearMap()"
+                    <select class="custom-select custom-select-sm" id="nameFrom" name="nameFrom" onchange="updateNearby('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')
+                                                                                                            clearMap()"
                             style="display: none">
                         <option value="blank"></option>
                     </select>
@@ -86,7 +87,7 @@
                 </div>
                 <div class="col-5">
                     To:
-                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo', 'weight');
+                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
                                                                                                         clearMap()">
                         <option value="blank"></option>
                         <option value="Nearby">Nearby</option>
