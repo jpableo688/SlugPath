@@ -22,7 +22,12 @@ function populateByName(menu, list){
 
 function populateByArea(menu, list){
     clearMenu(menu);
-    addBlank(menu);
+    
+    var blank = document.createElement("option");
+    blank.value = "blank";
+    blank.innerHTML = "All";
+    menu.options.add(blank);
+    
     for(i = 0; i < list.length; i++){
         var newOption = document.createElement("option");
         newOption.value = list[i].areas;
@@ -58,6 +63,16 @@ function collectTypeData(){
             typeList.push(nodes[key]);
         }
     }
+    typeList.sort(function(a, b){
+        var typeA=a.type.toLowerCase(), typeB=b.type.toLowerCase()
+        if (typeA < typeB){
+            return -1;
+        }
+        if (typeA > typeB){
+            return 1;
+        }
+        return 0;
+    })
     return typeList;
 }
 
@@ -69,10 +84,21 @@ function collectNameData(value){
             nameList.push(nodes[key]);
         }
     }
+    nameList.sort(function(a, b){
+        var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+        if (nameA < nameB){
+            return -1;
+        }
+        if (nameA > nameB){
+            return 1;
+        }
+        return 0;
+    })
     return nameList;
+    
 }
 
-function collectAreasByName(value){
+function collectAreasByType(value){
     var areaList = [];
     var alreadyHere = false;
     for(key in nodes){
@@ -81,16 +107,25 @@ function collectAreasByName(value){
             for(var index in areaList){
                 if(nodes[key].areas == areaList[index].areas){
                     alreadyHere = true;
-                    console.log(areaList[index].areas);
+                    //console.log(areaList[index].areas);
                 }
             }
             if(alreadyHere == false && nodes[key].areas != undefined){
                 areaList.push(nodes[key]);
-                console.log(nodes[key].areas);
+                //console.log(nodes[key].areas);
             }
         }
-
    }
+    areaList.sort(function(a, b){
+        var areaA=a.areas.toLowerCase(), areaB=b.areas.toLowerCase()
+        if (areaA < areaB){
+            return -1;
+        }
+        if (areaA > areaB){
+            return 1;
+        }
+        return 0;
+    })
    return areaList;
 }
 
@@ -113,7 +148,7 @@ function updateArea(type, areas, name){
     var typeDD = document.getElementById(type);
     var areaDD = document.getElementById(areas);
     var nameDD = document.getElementById(name);
-    console.log(areaDD.value);
+
     if(areaDD.value != "blank"){
         var nameList = collectNameByArea(typeDD.value, areaDD.value);
         populateByName(nameDD,nameList);
@@ -124,7 +159,7 @@ function updateArea(type, areas, name){
 function updateReg(typeDD, areaDD, nameDD){
     var nameList = collectNameData(typeDD.value);
     populateByName(nameDD,nameList);
-    var areaList = collectAreasByName(typeDD.value);
+    var areaList = collectAreasByType(typeDD.value);
     populateByArea(areaDD,areaList);
 } 
 
@@ -146,6 +181,7 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo,weight)
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
     
+    //hides or unhides other dropdowns
     if(checkIfType(typeFromDD.value)){
         document.getElementById(nameFrom).style.display = "none";
         document.getElementById(areaFrom).style.display = "none";
@@ -186,6 +222,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
     
+    //hides or unhides other dropdowns
     if(checkIfType(typeToDD.value)){
         document.getElementById(nameTo).style.display = "none";
         document.getElementById(areaTo).style.display = "none";
@@ -197,6 +234,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
             document.getElementById(areaTo).style.display = "none";
         }
     }
+    
     if(typeToDD.value != "Nearby"){
         updateReg(typeToDD, areaToDD, nameToDD);
     } else {
@@ -204,6 +242,7 @@ function updateTo(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     }
 }
 
+//finds nearest node from my location
 function nearTo(value){
     var node;
     for(key in nodes){
@@ -220,7 +259,6 @@ function nearTo(value){
         }
     }
     return nearNodeList;
-    
 }
 
 function getFromID(typeFromDD, areaFromDD, nameFromDD){
@@ -256,34 +294,32 @@ function getToID(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD){
     return toID;
 }
 
-function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
+function checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var typeFromDD = document.getElementById(typeFrom);
     var areaFromDD = document.getElementById(areaFrom);
     var nameFromDD = document.getElementById(nameFrom);
     var typeToDD = document.getElementById(typeTo);
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
-    var weightDD = document.getElementById(weight);
-    
+
     fromID = getFromID(typeFromDD, areaFromDD, nameFromDD);
     toID = getToID(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
 
-
+    //console.log(fromID + toID);
     if (typeToDD.value == "Nearby" && toID == undefined){
         updateNearby(typeFromDD,areaFromDD,nameFromDD,typeToDD, areaToDD,nameToDD);
     }
-    
-    if (fromID != undefined && toID != undefined && weightDD.value != "blank"){
-        return[fromID, toID, weightDD.value];
+    if (fromID != undefined && toID != undefined){
+        return[fromID, toID];
     }
-    
     return undefined;
 }
 
-function findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight){
-    var IDs = checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo, weight);
+function findIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
+    var IDs = checkIDs(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo);
+    //console.log(IDs);
     if (IDs != undefined){
-        //Pranav Here
-        aStar(IDs[0], IDs[1], IDs[2]);
+        aStar(IDs[0], IDs[1]);
     }
 }
+

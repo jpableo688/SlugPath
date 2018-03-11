@@ -6,14 +6,16 @@ L.tileLayer('https://api.mapbox.com/styles/v1/deward/cjctqjzpn1bns2so0l1liwkpq/t
     accessToken: 'pk.eyJ1IjoiZGV3YXJkIiwiYSI6ImNqY3NoanlzaDBlcnAycXFxYTFhdGl2dm4ifQ.I-o2qW918K0PzZ6W1nqWxQ'
 }).addTo(mymap);
 
+mymap.removeControl(mymap.zoomControl);
 //Can't figure out how to make these not global
-var startmarkers, endmarkers, polyline;
+var startmarkers = [];
+var endmarkers = [];
+var polylines = [];
 
 function drawMap(searchArray){
-    clearMap();
-    latlng = [];
+    var latlng = [];
     paths = searchArray;
-
+    //calculateDist(paths);
     for(path = 0; path < searchArray.length; path++){
         var lat = nodes[searchArray[path]].lat;
         var lng = nodes[searchArray[path]].lng;
@@ -21,21 +23,27 @@ function drawMap(searchArray){
         
         //if it's the start and end nodes, have a pop up.
         if(path === 0 ){
-            startmarkers = L.marker([lat,lng]).addTo(mymap);
-            startmarkers.bindPopup(name).openPopup();
+            startmarker = L.marker([lat,lng]).addTo(mymap);
+            startmarker.bindPopup(name).openPopup();
+            startmarkers.push(startmarker);
         }
         if(path === searchArray.length-1){
-            endmarkers = L.marker([lat, lng]).addTo(mymap);
-            endmarkers.bindPopup(name).openPopup();
+            endmarker = L.marker([lat, lng]).addTo(mymap);
+            endmarker.bindPopup(name).openPopup();
+            endmarkers.push(endmarker);
         }
+        
         latlng.push([lat,lng]);
     }
     
+    //console.log("drawing path: " + paths);
     polyline = L.polyline(latlng);
-    mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
+    polylines.push(polyline);
+    if(paths.length > 0){
+        mymap.fitBounds(polyline.getBounds(), {padding: [50,50]});
+    }
     mymap.addLayer(polyline);
-    
-    //for gathering data
+    //console.log("I'm done");
 }
 
 
@@ -55,14 +63,21 @@ function drawInfoGather(){
 }
 
 function clearMap(){
-    if (startmarkers != undefined){
-        mymap.removeLayer(startmarkers);
+    for(var s in startmarkers){
+        if (startmarkers[s] != undefined){
+            mymap.removeLayer(startmarkers[s]);
+        }
     }
-    if (endmarkers != undefined){
-        mymap.removeLayer(endmarkers);
+    
+    for(var e in endmarkers)    {
+        if (endmarkers[e] != undefined){
+            mymap.removeLayer(endmarkers[e]);
+        }
     }
-    if(polyline != undefined){
-        mymap.removeLayer(polyline);
+    for(var p in polylines){
+        if(polylines[p] != undefined){
+            mymap.removeLayer(polylines[p]);
+        }
     }
 }
 

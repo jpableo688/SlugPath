@@ -41,6 +41,7 @@ function slugStar(graph){
         }
         
         node = fringe.pop();
+        // console.log(node);
         visited.push(node);
         
         successorStates = graph.getSuccessor(node);
@@ -69,6 +70,7 @@ function slugStar(graph){
                         currNodeId =  parentDictionary[currNodeId];
                     }
                     path.reverse(); // reverse so it's in the right order
+                   // console.log(path);
                     return path;
                 }
 
