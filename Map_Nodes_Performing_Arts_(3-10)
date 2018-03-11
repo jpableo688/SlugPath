@@ -1,8 +1,7 @@
 //Rough draft of the nodes of the Performing Arts area.
-//3/4/18: 86 total map nodes, 6 total big nodes (5 excluding Kerr Hall).
+//3/10/18: 86 total map nodes, 6 total big nodes (5 excluding Kerr Hall).
 //Area previously known as "Media Theater" renamed to "Performing Arts".
-//Connected to McHenry, Porter, and Rachel Carson.
-//1600054 connects to Kerr Hall, but should Kerr Hall fall under Performing Arts node area? 
+//Connected to McHenry, Porter, Rachel Carson, and Oakes.
 
 	"1601000":{
 		"id":"1601000",
@@ -143,8 +142,8 @@
 		"id":"1600010",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.994068,
-		"lng":-122.062654,
+		"lat":36.99407,
+		"lng":-122.062593,
 		"type":null,
 		"to":["1600009","1600011","1600012"]
 	},
@@ -152,8 +151,8 @@
 		"id":"1600011",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.993843,
-		"lng":-122.062513,
+		"lat":36.993877,
+		"lng":-122.062443,
 		"type":null,
 		"to":["1600010","1600012","1600052"]
 	},
@@ -170,8 +169,8 @@
 		"id":"1600013",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.994242,
-		"lng":-122.062278,
+		"lat":36.994211,
+		"lng":-122.062239,
 		"type":null,
 		"to":["1600012","1600014","1600018","1600020"]
 	},
@@ -458,26 +457,35 @@
 		"id":"1600045",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.995869,
-		"lng":-122.061294,
+		"lat":36.995706,
+		"lng":-122.061198,
 		"type":null,
-		"to":["1600044","1600046"]
+		"to":["1600044","160004501"]
+	},
+	"160004501":{
+		"id":"160004501",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.996062,
+		"lng":-122.061295,
+		"type":null,
+		"to":["1600045","1600046"]
 	},
 	"1600046":{
 		"id":"1600046",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.996189,
-		"lng":-122.061507,
+		"lat":36.996319,
+		"lng":-122.061751,
 		"type":null,
-		"to":["1600045","1600047"]
+		"to":["160004501","1600047"]
 	},
 	"1600047":{
 		"id":"1600047",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.996436,
-		"lng":-122.061973,
+		"lat":36.996529,
+		"lng":-122.061847,
 		"type":null,
 		"to":["1600046","1600081"]
 	},
@@ -551,7 +559,16 @@
 		"lat":36.993121,
 		"lng":-122.062777,
 		"type":null,
-		"to":["1600054","1600056","1600058"]
+		"to":["1600054","160005501","1600058"]
+	},
+	"160005501":{
+		"id":"160005501",
+		"name":null,
+		"areas":"Performing Arts",
+		"lat":36.993101,
+		"lng":-122.063017,
+		"type":null,
+		"to":["1600055","1600056","0800087"]
 	},
 	"1600056":{
 		"id":"1600056",
@@ -560,7 +577,7 @@
 		"lat":36.993048,
 		"lng":-122.063341,
 		"type":null,
-		"to":["1600055","1600057"]
+		"to":["160005501","1600057"]
 	},
 	"1600057":{
 		"id":"1600057",
@@ -791,8 +808,8 @@
 		"id":"1600082",
 		"name":null,
 		"areas":"Performing Arts",
-		"lat":36.996981,
-		"lng":-122.062407,
+		"lat":36.996919,
+		"lng":-122.062303,
 		"type":null,
 		"to":["1600081","2200000"]
 	},
