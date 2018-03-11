@@ -1,5 +1,5 @@
 //Rough draft of the nodes of Rachel Carson College.
-//3/9/18: 56 total map nodes, 9 total big nodes.
+//3/10/18: 64 total map nodes, 14 total big nodes.
 //Bus stops added along with their corresponding type and new IDs.
 
 	"0101000":{
@@ -8,7 +8,7 @@
 		"areas":"Rachel Carson",
 		"lat":36.991623,
 		"lng":-122.065389,
-		"type":"Dining Hall",
+		"type":"Dining",
 		"to":["0100012"]
 	},
 	"0102000":{
@@ -64,6 +64,60 @@
 		"lng":-122.064620,
 		"type":"Academic",
 		"to":["0100011"]
+	},
+	"0108000":{
+		"id":"0108000",
+		"name":"Rachel Carson Apartment 1",
+		"areas":"Rachel Carson",
+		"lat":36.992274,
+		"lng":-122.06424,
+		"type":"Residential",
+		"to":["0100044"]
+	},
+	"0109000":{
+		"id":"0109000",
+		"name":"Rachel Carson Apartment 2",
+		"areas":"Rachel Carson",
+		"lat":36.992176,
+		"lng":-122.063762,
+		"type":"Residential",
+		"to":["0100043"]
+	},
+	"0110000":{
+		"id":"0110000",
+		"name":"Rachel Carson Apartment 3",
+		"areas":"Rachel Carson",
+		"lat":36.99116,
+		"lng":-122.063655,
+		"type":"Residential",
+		"to":["0100064"]
+	},
+	"0111000":{
+		"id":"0111000",
+		"name":"Rachel Carson Apartment 4",
+		"areas":"Rachel Carson",
+		"lat":36.991011,
+		"lng":-122.063387,
+		"type":"Residential",
+		"to":["0100064"]
+	},
+	"0112000":{
+		"id":"0112000",
+		"name":"Rachel Carson Apartment 5",
+		"areas":"Rachel Carson",
+		"lat":36.990826,
+		"lng":-122.06366,
+		"type":"Residential",
+		"to":["0100064"]
+	},
+	"0113000":{
+		"id":"0113000",
+		"name":"Rachel Carson Apartment 6",
+		"areas":"Rachel Carson",
+		"lat":36.990839,
+		"lng":-122.063971,
+		"type":"Residential",
+		"to":["0100064"]
 	},
 	"0101001":{					//bus stop
 		"id":"0101001",
@@ -450,7 +504,7 @@
 		"lat":36.991875,
 		"lng":-122.063923,
 		"type":null,
-		"to":["0100042","0100044"]
+		"to":["0100042","0100044","0100059","0109000"]
 		},
 	"0100044":{					//east of lot 146
 		"id":"0100044",
@@ -459,7 +513,7 @@
 		"lat":36.992056,
 		"lng":-122.064202,
 		"type":null,
-		"to":["0100043","0100058"]
+		"to":["0100043","0100058","0108000"]
 		},
 	"0100045":{					//west of lot 146 towards courts
 		"id":"0100045",
@@ -567,7 +621,7 @@
 		"lat":36.991347,
 		"lng":-122.064665,
 		"type":null,
-		"to":["0100013","0100057"]
+		"to":["0100013","0100057","0100063"]
 		},
 	"0100057":{	
 		"id":"0100057",
@@ -586,4 +640,58 @@
 		"lng":-122.064644,
 		"type":null,
 		"to":["0100006","0100007","0100044"]
+		},
+	"0100059":{	
+		"id":"0100059",
+		"name":null,
+		"areas":"Rachel Carson",
+		"lat":36.991726,
+		"lng":-122.063811,
+		"type":null,
+		"to":["0100043","0100060"]
+		},
+	"0100060":{	
+		"id":"0100060",
+		"name":null,
+		"areas":"Rachel Carson",
+		"lat":36.991525,
+		"lng":-122.063784,
+		"type":null,
+		"to":["0100059","0100061"]
+		},
+	"0100061":{	
+		"id":"0100061",
+		"name":null,
+		"areas":"Rachel Carson",
+		"lat":36.991405,
+		"lng":-122.063719,
+		"type":null,
+		"to":["0100060","0100062"]
+		},
+	"0100062":{	
+		"id":"0100062",
+		"name":null,
+		"areas":"Rachel Carson",
+		"lat":36.991272,
+		"lng":-122.063891,
+		"type":null,
+		"to":["0100061","0100063"]
+		},
+	"0100063":{	
+		"id":"0100063",
+		"name":null,
+		"areas":"Rachel Carson",
+		"lat":36.991079,
+		"lng":-122.063896,
+		"type":null,
+		"to":["0100056","0100062","0100064"]
+		},
+	"0100064":{	
+		"id":"0100064",
+		"name":null,
+		"areas":"Rachel Carson",
+		"lat":36.990989,
+		"lng":-122.063644,
+		"type":null,
+		"to":["0100063","0110000","0111000","0112000","0113000"]
 		},
