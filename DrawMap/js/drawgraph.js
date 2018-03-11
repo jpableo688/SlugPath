@@ -41,12 +41,11 @@ function drawGraph() {
                 console.log(key);
                 console.log("The node " + newKey + " doens't exist");
             } else {
-                idk = graph[newKey].to;
-                    
+                var toList = graph[newKey].to;
                 latlng2.push([graph[newKey].lat, graph[newKey].lng]);
                 var strong = false;
-                for(var again in idk){
-                    if(idk[again] == key){
+                for(var again in toList){
+                    if(toList[again] == key){
                         strong = true;
                     }
                 }
@@ -60,9 +59,9 @@ function drawGraph() {
             //used to find connected but missing keys
             //console.log(newKey);
             //console.log(latlng2);
-            polyline = L.polyline(latlng2);
-            polylines.push(polyline);
-            mymap.addLayer(polyline);
+            //polyline = L.polyline(latlng2);
+            //polylines.push(polyline);
+            //mymap.addLayer(polyline);
         }
         //console.log("}");
     }

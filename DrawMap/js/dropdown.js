@@ -196,6 +196,7 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     if(typeToDD.value == "Nearby"){
         clearMenu(nameToDD);
         addBlank(nameToDD);
+        //updateNearby(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo);
     }
     
     if(typeFromDD.value == "My Location"){
@@ -211,14 +212,17 @@ function updateNearby(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     var typeToDD = document.getElementById(typeTo);
     var areaToDD = document.getElementById(areaTo);
     var nameToDD = document.getElementById(nameTo);
+    
     if(typeToDD.value == "Nearby"){
         clearMenu(nameToDD);
         addBlank(nameToDD);
-        if(typeFrom.value == "My Location"){
+        if(typeFromDD.value == "My Location"){
             var list = nearTo(typeFromDD.value);
+            //console.log(list);
             populateByName(nameToDD, list);
         } else if(nameFromDD.value != "blank"){
             var list = nearTo(nameFromDD.value);
+            //console.log(list);
             populateByName(nameToDD, list);
         }
     }   
