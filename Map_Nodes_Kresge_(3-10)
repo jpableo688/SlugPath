@@ -1,5 +1,5 @@
-//Rough draft of the map nodes of Kresge College.
-//3/9/18: 51 total map nodes, 10 total big nodes.
+//Final draft of the map nodes of Kresge College.
+//3/10/18: 51 total map nodes, 10 total big nodes.
 //Bus stops added along with their corresponding type and new ID.
 
 	"0602000":{
@@ -549,7 +549,7 @@
         "lat":36.999208,
         "lng":-122.064545,
         "type":null,
-        "to":["0600050","0600052","0600053"]
+        "to":["0600050","0601052","0601053"]
     },
 	"0601052":{
         "id":"0601052",
