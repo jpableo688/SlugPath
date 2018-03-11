@@ -102,10 +102,10 @@ function testBigNodes(){
         }
     }
     console.log("full, " + paths.length);
-    for (var path in paths){
-        drawMap(paths[path]);
+   // for (var path in paths){
+     //   drawMap(paths[path]);
         //sleep(100);
-    }
+    //}
 }
 
 

@@ -24,13 +24,12 @@
 
     </head>
 
-    <header>
+      <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #9ebbc6;>
           <a class="navbar-brand" href="#"><img id="logo" src="./assets/images/flavicon/logo_icon.ico"><h2><b> &nbsp; SlugPath</b></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="navbarToggler">
             <span class="navbar-text" id="navText">
                 Never get lost at UC Santa Cruz ever again!
@@ -46,7 +45,6 @@
           </div>
         </nav>
     </header>
-
     <body onload="getLocation(); gatherTypes('typeFrom');gatherTypes('typeTo');drawInfoGather();">
         <br><br><br>
         <div class="container">
@@ -64,7 +62,6 @@
                     width: 100vw;
                 }
             </style>
-
             <br>
             <div class="row">
                 <div class="col-5">
@@ -102,24 +99,23 @@
                 
                 <div class="col">
                     <br>
-                    <button onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
+                    <button type="button" class="btn btn-success" onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
                 </div>
                 <p id="Distance">
                 
                 </p>
-                <p id"Time">
-
+                <p id="Time">
                 </p>
                 
                 <p id="testLocation"></p>
                 
-                
+                <!--  -->
                 <div id="testing" style="display: none">
                     <br>
-                    <button onclick="drawGraph()">Draw Graph</button>
-                    <button onclick="testBigNodes()">Test Big Nodes</button>
-                    <button onclick="testNodes()">Test All Nodes</button>
-                    <button onclick="clearMap()"> Clear Graph</button>
+                    <button type="button" class="btn btn-primary" onclick="drawGraph()">Draw Graph</button>
+                    <button type="button" class="btn btn-primary" onclick="testBigNodes()">Test Big Nodes</button>
+                    <button type="button" class="btn btn-primary" onclick="testNodes()">Test All Nodes</button>
+                    <button type="button" class="btn btn-primary" onclick="clearMap()"> Clear Graph</button>
                 </div>
                 
                 <div id="mapid"></div>
@@ -127,15 +123,11 @@
                 <script type="text/javascript" src="DrawMap/js/PriorityQueue.js"></script>
                 <script type="text/javascript" src="DrawMap/js/graph.js"></script>
                 <script type="text/javascript" src="DrawMap/js/locations.js"></script>
-
                 <script type="text/javascript" src="DrawMap/js/drawgraph.js"></script>
                 <script type="text/javascript" src="DrawMap/js/runAstar.js"></script>
                 <script type="text/javascript" src="DrawMap/js/myLocation.js"></script>
-
                 <script type="text/javascript" src="DrawMap/js/drawmap.js"></script>
-
         </div>
-            
-        
     </body>
+</html>
 </html>
