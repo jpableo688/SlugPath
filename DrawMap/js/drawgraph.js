@@ -41,12 +41,11 @@ function drawGraph() {
                 console.log(key);
                 console.log("The node " + newKey + " doens't exist");
             } else {
-                idk = graph[newKey].to;
-                    
+                var toList = graph[newKey].to;
                 latlng2.push([graph[newKey].lat, graph[newKey].lng]);
                 var strong = false;
-                for(var again in idk){
-                    if(idk[again] == key){
+                for(var again in toList){
+                    if(toList[again] == key){
                         strong = true;
                     }
                 }
@@ -88,6 +87,10 @@ function testBigNodes(){
                     graph.setState(key, key2);
                     var path1 = slugStar(graph);
                     paths.push(path1);
+<<<<<<< HEAD
+=======
+                    console.log(path1);
+>>>>>>> mergingWlayout
                     /*graph.setState(key, key2);
                     var path1 = slugStar(graph);
                     if(path1.length == 0){
@@ -100,6 +103,7 @@ function testBigNodes(){
                 }
             }
         }
+<<<<<<< HEAD
     }
     console.log("full, " + paths.length);
    // for (var path in paths){
@@ -128,6 +132,40 @@ function testButtons(){
         test.style.display= 'none';
     }
 }
+=======
+    }
+    console.log("full, " + paths.length);
+    /*for (var path in paths){
+        //drawMap(paths[path]);
+        //sleep(100);
+    }*/
+}
+
+
+function testNodes(){
+    var graph = new Graph();
+    var paths = [];
+    for(key in nodes){
+        for (key2 in nodes){
+            graph.setState(key, key2);
+            var path1 = slugStar(graph);
+            //paths.push(path1);
+            console.log(path1);
+        }
+    }
+    console.log("full, " + paths.length);
+}
+
+function testButtons(){
+    var test = document.getElementById('testing');
+    if (test.style.display === 'none') {
+        test.style.display = 'block';
+    } else {
+        test.style.display= 'none';
+    }
+}
+
+>>>>>>> mergingWlayout
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
    while (currentTime + miliseconds >= new Date().getTime()) {

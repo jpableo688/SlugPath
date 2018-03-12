@@ -11,11 +11,19 @@ function aStar(optFrom, optTo){
     if(path1dist > path2dist){
         path2.reverse();
         displayDist(path2dist);
+<<<<<<< HEAD
+=======
+        displayTime(calculateTime(path2dist));
+>>>>>>> mergingWlayout
         drawMap(path2);
         
     } else {
         drawMap(path1);
         displayDist(path1dist);
+<<<<<<< HEAD
+=======
+        displayTime(calculateTime(path1dist));
+>>>>>>> mergingWlayout
     }
     //sleep(10);
 }
@@ -28,7 +36,12 @@ function calculateDist(paths){
         thisDist = nodeDistance(nodes[paths[i-1]], nodes[paths[i]]);
         //console.log("current 2 node dist " + thisDist);
         totaldist = totaldist + thisDist;
+<<<<<<< HEAD
         //console.log("current total dist " + totaldist + "}");
+=======
+        totaldist = Math.round(totaldist * 100)/100
+        console.log("current total dist " + totaldist + "}");
+>>>>>>> mergingWlayout
     }
     return totaldist;
 
@@ -36,5 +49,25 @@ function calculateDist(paths){
 
 function displayDist(dist){
     var distanceItem = document.getElementById("Distance");
+<<<<<<< HEAD
     distanceItem.innerHTML = "Total Distance: " + dist;
+=======
+    distanceItem.innerHTML = "Total Distance: " + dist + " Miles";
+}
+
+function clearDist(){
+    distanceItem.innerHTML = "Total Distance: ";
+}
+
+function calculateTime(distance){
+    var constSpeed = 3.0;
+
+    var estTime = Math.ceil(distance/constSpeed*60);
+    return estTime;
+}
+
+function displayTime(time){
+    var distanceItem = document.getElementById("Time");
+    distanceItem.innerHTML = "Estimated Time Till Arrival: " + time + " Minutes";
+>>>>>>> mergingWlayout
 }
