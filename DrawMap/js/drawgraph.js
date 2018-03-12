@@ -87,10 +87,7 @@ function testBigNodes(){
                     graph.setState(key, key2);
                     var path1 = slugStar(graph);
                     paths.push(path1);
-<<<<<<< HEAD
-=======
                     console.log(path1);
->>>>>>> mergingWlayout
                     /*graph.setState(key, key2);
                     var path1 = slugStar(graph);
                     if(path1.length == 0){
@@ -103,7 +100,6 @@ function testBigNodes(){
                 }
             }
         }
-<<<<<<< HEAD
     }
     console.log("full, " + paths.length);
    // for (var path in paths){
@@ -132,7 +128,6 @@ function testButtons(){
         test.style.display= 'none';
     }
 }
-=======
     }
     console.log("full, " + paths.length);
     /*for (var path in paths){
@@ -164,8 +159,6 @@ function testButtons(){
         test.style.display= 'none';
     }
 }
-
->>>>>>> mergingWlayout
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
    while (currentTime + miliseconds >= new Date().getTime()) {
