@@ -3659,7 +3659,7 @@ var nodes = {
     "areas":"Crown/Merrill College",
     "lat":37.000044,
     "lng": -122.054839,
-    "type":"Classroom",
+    "type":"Academic",
     "to":["0500063","0500064"]
     },
     "0512000":{
