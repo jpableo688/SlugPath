@@ -200,6 +200,7 @@ function updateFrom(typeFrom, areaFrom, nameFrom, typeTo, areaTo, nameTo){
     }
     
     if(typeFromDD.value == "My Location"){
+        var x = document.getElementById("testLocation");
         clearMenu(nameFromDD);
         addBlank(nameFromDD);
     }

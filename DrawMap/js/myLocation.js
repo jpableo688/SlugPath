@@ -80,8 +80,6 @@ function createNode(pos){
     };
     
     
-    x.innerHTML = "Latitude: " + pos.coords.latitude.toFixed(6) +
-    "<br>Longitude: " + pos.coords.longitude.toFixed(6);
     locationNode.lat = pos.coords.latitude.toFixed(6);
     locationNode.lng = pos.coords.longitude.toFixed(6);
     
@@ -89,6 +87,9 @@ function createNode(pos){
     //will change once we settle on one data;
     var nearestBigNode = findNearestBigNode(locationNode);
     var nearestNode = findNearestNode(locationNode);
+    x.innerHTML = "Approximate Location: " + nearestBigNode.name;
+    //console.log("Current Location: " + nearestBigNode.name);
+
     if(nearestBigNode != undefined){
         nodes[locationNode.id] = locationNode;
         locationNode.areas = nearestBigNode.areas;
