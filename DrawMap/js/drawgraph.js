@@ -52,16 +52,16 @@ function drawGraph() {
                 if(strong == false){
                     console.log(key + " weak " + newKey);
                 } else {
-                    //console.log(key + " strong " + newKey);
+                    console.log(key + " strong " + newKey);
                 }
             }
 
             //used to find connected but missing keys
             //console.log(newKey);
             //console.log(latlng2);
-            //polyline = L.polyline(latlng2);
-            //polylines.push(polyline);
-            //mymap.addLayer(polyline);
+            polyline = L.polyline(latlng2);
+            polylines.push(polyline);
+            mymap.addLayer(polyline);
         }
         //console.log("}");
     }
