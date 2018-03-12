@@ -703,7 +703,7 @@ var nodes = {
     "areas":"College 9 & 10",
     "lat":37.000731,
     "lng":-122.057769,
-    "type":"Dining Hall",
+    "type":"Dining",
     "to":["0200025"]
     },
     "0202000":{                 
@@ -3569,7 +3569,7 @@ var nodes = {
     "areas":"Crown/Merrill College",
     "lat":37.000132,
     "lng":-122.054404,
-    "type":"Dining Hall",
+    "type":"Dining",
     "to": ["0500001"]
     },
     "0502000":{
@@ -3659,7 +3659,7 @@ var nodes = {
     "areas":"Crown/Merrill College",
     "lat":37.000044,
     "lng": -122.054839,
-    "type":"Classroom",
+    "type":"Academic",
     "to":["0500063","0500064"]
     },
     "0512000":{
