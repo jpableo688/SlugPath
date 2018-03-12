@@ -66,53 +66,40 @@
             <div class="row">
                 <div class="col-5">
                      From:
-                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
-                                                                                                           checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
-                                                                                                           clearMap()">
+                    <select class="custom-select custom-select-sm" id="typeFrom" name="typeFrom" onchange="updateFrom('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo'); checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo'); clearMap()">
                         <option value="blank"></option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom');
-                                                                                                           checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
-                                                                                                           clearMap()"
-                            style="display: none">
+                    <select class="custom-select custom-select-sm" id="areaFrom" name="areaFrom" onchange="updateArea('typeFrom', 'areaFrom', 'nameFrom'); checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo'); clearMap()" style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="nameFrom" name="nameFrom" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
-                                                                                                           clearMap()"
-                            style="display: none">
+                    <select class="custom-select custom-select-sm" id="nameFrom" name="nameFrom" onchange="checkIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo'); clearMap()" style="display: none">
                         <option value="blank"></option>
                     </select>
                     <hr />
+                    <h6 id="Distance"></h6>
                 </div>
                 <div class="col-5">
                     To:
-                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo');
-                                                                                                       clearMap()">
+                    <select class="custom-select custom-select-sm" id="typeTo" name="typeTo" onchange="updateTo('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo'); clearMap()">
                         <option value="blank"></option>
                         <option value="Nearby">Nearby</option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo');
-                                                                                                        clearMap()"
-                            style="display: none">
+                    <select class="custom-select custom-select-sm" id="areaTo" name="areaTo" onchange="updateArea('typeTo', 'areaTo', 'nameTo'); clearMap()" style="display: none">
                         <option value="blank"></option>
                     </select>
-                    <select class="custom-select custom-select-sm" id="nameTo" name="nameTo" onchange="clearMap()"
-                        style="display: none"
+                    <select class="custom-select custom-select-sm" id="nameTo" name="nameTo" onchange="clearMap()" style="display: none">
                         <option value="blank"></option>
                         
                     </select>
                     <hr />  
+                <h6 id="Time"></h6>
                 </div>
                 
                 <div class="col">
                     <br>
                     <button type="button" class="btn btn-success" onclick="findIDs('typeFrom', 'areaFrom', 'nameFrom', 'typeTo', 'areaTo', 'nameTo')">GO</button>
                 </div>
-                <p id="Distance">
-                
-                </p>
-                <p id="Time">
-                </p>
+
                 
                 <p id="testLocation"></p>
                 
