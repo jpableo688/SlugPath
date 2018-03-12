@@ -52,7 +52,7 @@ function drawGraph() {
                 if(strong == false){
                     console.log(key + " weak " + newKey);
                 } else {
-                    //console.log(key + " strong " + newKey);
+                    console.log(key + " strong " + newKey);
                 }
             }
 
@@ -102,34 +102,6 @@ function testBigNodes(){
         }
     }
     console.log("full, " + paths.length);
-   // for (var path in paths){
-     //   drawMap(paths[path]);
-        //sleep(100);
-    //}
-}
-
-
-function testNodes(){
-    var graph = new Graph();
-    for(key in nodes){
-        for (key2 in nodes){
-            graph.setState(key, key2);
-            var path1 = slugStar(graph);
-            //console.log(path1);
-        }
-    }
-}
-
-function testButtons(){
-    var test = document.getElementById('testing');
-    if (test.style.display === 'none') {
-        test.style.display = 'block';
-    } else {
-        test.style.display= 'none';
-    }
-}
-    }
-    console.log("full, " + paths.length);
     /*for (var path in paths){
         //drawMap(paths[path]);
         //sleep(100);
@@ -159,6 +131,7 @@ function testButtons(){
         test.style.display= 'none';
     }
 }
+
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
    while (currentTime + miliseconds >= new Date().getTime()) {

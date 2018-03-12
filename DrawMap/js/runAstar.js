@@ -40,7 +40,6 @@ function calculateDist(paths){
 
 function displayDist(dist){
     var distanceItem = document.getElementById("Distance");
-    distanceItem.innerHTML = "Total Distance: " + dist;
     distanceItem.innerHTML = "Total Distance: " + dist + " Miles";
 }
 
