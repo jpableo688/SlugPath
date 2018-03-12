@@ -3,7 +3,7 @@
 </html>
 
 ## Welcome to SlugPath! A navigational tool to get around the UC Santa Cruz Campus
-*TO INSERT IMAGE HERE OF INDEX*
+![Slugpath1](https://raw.githubusercontent.com/jpableo688/SlugPath/master/assets/images/readme/image1.jpg)
 For those who do not know, the UC Santa Cruz campus is the largest campus in the Univervsity of California system. Along with all the redwood trees that surrounds you, this means that it would be really easy to get lost if you are not familiar with the campus itself. With the creation of SlugPath, you would not have to worry about getting lost ever again! With our mobile friendly web application, all you need to do is decide two locations: your from location and your terminal destination. We then give you the shortest path from those two locations along with the estimated time to get there. With this tool, we, the team of SlugPath, hope that you have a better time exploring campus during your time at UC Santa Cruz!
 
 ## Usage
